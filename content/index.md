@@ -4,5 +4,5 @@ tags:
   - meta
 ---
 
-true and real
+true and real!!
 ![[aurora.png|floatr|74]]
