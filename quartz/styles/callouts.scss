@@ -138,6 +138,8 @@
     --border: var(--lightgray);
     --callout-icon: var(--callout-icon-quote);
   }
+  /* customs! exciting
+      below: setting them to no icon at all */
   &[data-callout="poise"], 
   &[data-callout="scorch"], 
   &[data-callout="burn"], 
@@ -169,6 +171,291 @@
   &[data-callout="noctis"], {
     --callout-icon: var(--callout-icon-none);
   }
+
+  /* long list of color settings. Probably took me half an hour,
+    due to all the color values being in RGB rather than HEX. */
+  &[data-callout="signature"] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+    --callout-icon: var(--callout-icon-signature);
+  }
+  &[data-callout="biography"] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+    --callout-icon: var(--callout-icon-biography);
+  }
+  &[data-callout="inv"] {
+    --color: #916548;
+    --border: #91654844;
+    --bg: #91654810;
+    --callout-icon: var(--callout-icon-inventory);
+  }
+  &[data-callout="menuu"] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+    --callout-icon: var(--callout-icon-menu);
+  }
+  &[data-callout="cyber"] {
+    --color: #bd9b2e;
+    --border: #bd9b2e44;
+    --bg: #bd9b2e10;
+    --callout-icon: var(--callout-icon-cyberware);
+  }
+  &[data-callout="hum"] {
+    --color: #53c43c;
+    --border: #53c43c44;
+    --bg: #53c43c10;
+    --callout-icon: var(--callout-icon-humanity);
+  }
+  &[data-callout="stats"] {
+    --color: #2ebd6e;
+    --border: #2ebd6e44;
+    --bg: #2ebd6e10;
+    --callout-icon: var(--callout-icon-stats);
+  }
+  &[data-callout="soulstats"],
+  &[data-callout-metadata*="s."] {
+    --color: #7251be;
+    --border: #7251be44;
+    --bg: #7251be10;
+  }
+  &[data-callout="soulstats"], {
+    --callout-icon: var(--callout-icon-soulstats);
+  }
+  &[data-callout="passives"] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+    --callout-icon: var(--callout-icon-passives);
+  }
+  &[data-callout="plus"] {
+    --color: #42c425;
+    --border: #42c42544;
+    --bg: #42c42510;
+    --callout-icon: var(--callout-icon-plus);
+  }
+  &[data-callout="minus"] {
+    --color: #c42542;
+    --border: #c4254244;
+    --bg: #c4254210;
+    --callout-icon: var(--callout-icon-signature);
+  }
+  &[data-callout="rolls"],
+  &[data-callout="body"],
+  &[data-callout="reflex"],
+  &[data-callout="tech"],
+  &[data-callout="intel"],
+  &[data-callout="cool"], {
+    --color: #45b37c;
+    --border: #45b37c44;
+    --bg: #45b37c10;
+  }
+  &[data-callout="rolls"] {
+    --callout-icon: var(--callout-icon-rolls);
+  }
+  &[data-callout="body"] {
+    --callout-icon: var(--callout-icon-body);
+  }
+  &[data-callout="reflex"] {
+    --callout-icon: var(--callout-icon-reflexes);
+  }
+  &[data-callout="tech"] {
+    --callout-icon: var(--callout-icon-technical);
+  }
+  &[data-callout="intel"] {
+    --callout-icon: var(--callout-icon-intelligence);
+  }
+  &[data-callout="cool"] {
+    --callout-icon: var(--callout-icon-cool);
+  }
+  &[data-callout="combat"] {
+    --color: #e66060;
+    --border: #e6606044;
+    --bg: #e6606010;
+    --callout-icon: var(--callout-icon-signature);
+  }
+  &[data-callout="sneak"] {
+    --color: #9a60e6;
+    --border: #9a60e644;
+    --bg: #9a60e610;
+    --callout-icon: var(--callout-icon-signature);
+  }
+  &[data-callout="mental"] {
+    --color: #60a5e6;
+    --border: #60a5e644;
+    --bg: #60a5e610;
+    --callout-icon: var(--callout-icon-signature);
+  }
+  &[data-callout="poise"] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  &[data-callout=""] {
+    --color: #999999;
+    --border: #99999944;
+    --bg: #99999910;
+  }
+  
+
 
   &.is-collapsed {
     & > .callout-title > .fold-callout-icon {
@@ -238,107 +525,12 @@
   }
 }
 
-/* last update: 02/20/2026, 20:02 */
-.callout[data-callout="signature"] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-signature;
-}
-.callout[data-callout="biography"] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-eye;
-}
-.callout[data-callout="inv"] {
-	--callout-color: 145, 101, 72;
-	--callout-icon: lucide-backpack;
-}
-.callout[data-callout="menuu"] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-menu;
-}
-.callout[data-callout="cyber"] {
-	--callout-color: 189, 155, 46;
-	--callout-icon: lucide-square-activity;
-}
-.callout[data-callout="hum"] {
-	--callout-color: 80, 196, 37;
-	--callout-icon: lucide-person-standing;
-}
-.callout[data-callout="stats"] {
-	--callout-color: 46, 189, 110;
-	--callout-icon: lucide-waypoints;
-}
-.callout[data-callout="soulstats"] {
-	--callout-icon: lucide-flame;
-}
-.callout[data-callout="passives"] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-dna;
-}
-.callout[data-callout="plus"] {
-	--callout-color: 66, 196, 37;
-	--callout-icon: lucide-plus;
-}
-.callout[data-callout="minus"] {
-	--callout-color: 196, 37, 66;
-	--callout-icon: lucide-minus;
-}
-	/* stats */
-.callout[data-callout="rolls"], .callout[data-callout="body"], .callout[data-callout="reflex"], .callout[data-callout="tech"], .callout[data-callout="intel"], .callout[data-callout="cool"] {
-	--callout-color: 69, 179, 124;
-}
-.callout[data-callout="body"] {
-	--callout-icon: lucide-biceps-flexed;
-}
-.callout[data-callout="reflex"] {
-	--callout-icon: lucide-eye;
-}
-.callout[data-callout="tech"] {
-	--callout-icon: lucide-cpu;
-}
-.callout[data-callout="intel"] {
-	--callout-icon: lucide-brain-cog;
-}
-.callout[data-callout="cool"] {
-	--callout-icon: lucide-scale;
-}
-.callout[data-callout="rolls"] {
-	--callout-icon: lucide-dices;
-}
-.callout[data-callout="combat"] {
-	--callout-color: 230, 96, 96;
-	--callout-icon: lucide-sword;
-}
-.callout[data-callout="sneak"] {
-	--callout-color: 154, 96, 230;
-	--callout-icon: lucide-eye-closed;
-}
-.callout[data-callout="mental"] {
-	--callout-color: 96, 165, 230;
-	--callout-icon: lucide-brain;
-}
-
-.callout[data-callout="soulstats"], .callout[data-callout-metadata*="s."] {
-	--callout-color: 114, 81, 190;
-}
-
-/*bah*/
-.callout[data-callout="bullshit"] {
-	--callout-color: 61, 24, 226;
-	--callout-icon: lucide-brain;
-}
-
-/* color picker */
-.nonexistant {
-	color: rgb(61, 24, 226);
-	color: rgb(71, 30, 152)
-}
-
 /* hide utilities */
 .callout[data-callout-metadata*="none"] > .callout-title {
 	display: none;
 }
 .callout[data-callout-metadata="none|min-0"] img {
-	border: 2px solid rgb(var(--callout-color));
+	border: 2px solid rgb(var(--color));
 }
 .callout[data-callout-metadata="none|min-0"] {
 	padding-right:24px;
