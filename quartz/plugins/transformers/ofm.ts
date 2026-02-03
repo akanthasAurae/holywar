@@ -30,6 +30,7 @@ import { capitalize } from "../../util/lang"
 import { PluggableList } from "unified"
 console.log("[FTC] ofm.ts loaded")
 
+
 export interface Options {
   comments: boolean
   highlight: boolean
@@ -115,12 +116,13 @@ type FTCColor = {
 
 const FTC_COLORS = new Map<string, FTCColor>()
 
-const FTC_DATA =
-  process.env.FTC_DATA ??
+const ftcPath = path.join(
+  process.cwd(),
   ".obsidian/plugins/fast-text-color/data.json"
+)
 
 try {
-  const raw = fs.readFileSync(FTC_DATA, "utf-8")
+  const raw = fs.readFileSync(ftcPath, "utf-8")
   const parsed = JSON.parse(raw)
 
   console.log("[FTC] Parsed JSON keys:", Object.keys(parsed))
