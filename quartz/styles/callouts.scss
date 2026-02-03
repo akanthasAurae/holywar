@@ -185,3 +185,136 @@
     font-weight: $semiBoldWeight;
   }
 }
+
+/* last update: 02/20/2026, 20:02 */
+.callout[data-callout="signature"] {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-signature;
+}
+.callout[data-callout="biography"] {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-eye;
+}
+.callout[data-callout="inv"] {
+	--callout-color: 145, 101, 72;
+	--callout-icon: lucide-backpack;
+}
+.callout[data-callout="menuu"] {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-menu;
+}
+.callout[data-callout="cyber"] {
+	--callout-color: 189, 155, 46;
+	--callout-icon: lucide-square-activity;
+}
+.callout[data-callout="hum"] {
+	--callout-color: 80, 196, 37;
+	--callout-icon: lucide-person-standing;
+}
+.callout[data-callout="stats"] {
+	--callout-color: 46, 189, 110;
+	--callout-icon: lucide-waypoints;
+}
+.callout[data-callout="soulstats"] {
+	--callout-icon: lucide-flame;
+}
+.callout[data-callout="passives"] {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-dna;
+}
+.callout[data-callout="plus"] {
+	--callout-color: 66, 196, 37;
+	--callout-icon: lucide-plus;
+}
+.callout[data-callout="minus"] {
+	--callout-color: 196, 37, 66;
+	--callout-icon: lucide-minus;
+}
+	/* stats */
+.callout[data-callout="rolls"], .callout[data-callout="body"], .callout[data-callout="reflex"], .callout[data-callout="tech"], .callout[data-callout="intel"], .callout[data-callout="cool"] {
+	--callout-color: 69, 179, 124;
+}
+.callout[data-callout="body"] {
+	--callout-icon: lucide-biceps-flexed;
+}
+.callout[data-callout="reflex"] {
+	--callout-icon: lucide-eye;
+}
+.callout[data-callout="tech"] {
+	--callout-icon: lucide-cpu;
+}
+.callout[data-callout="intel"] {
+	--callout-icon: lucide-brain-cog;
+}
+.callout[data-callout="cool"] {
+	--callout-icon: lucide-scale;
+}
+.callout[data-callout="rolls"] {
+	--callout-icon: lucide-dices;
+}
+.callout[data-callout="combat"] {
+	--callout-color: 230, 96, 96;
+	--callout-icon: lucide-sword;
+}
+.callout[data-callout="sneak"] {
+	--callout-color: 154, 96, 230;
+	--callout-icon: lucide-eye-closed;
+}
+.callout[data-callout="mental"] {
+	--callout-color: 96, 165, 230;
+	--callout-icon: lucide-brain;
+}
+
+.callout[data-callout="soulstats"], .callout[data-callout-metadata*="s."] {
+	--callout-color: 114, 81, 190;
+}
+
+/*bah*/
+.callout[data-callout="bullshit"] {
+	--callout-color: 61, 24, 226;
+	--callout-icon: lucide-brain;
+}
+
+/* color picker */
+.nonexistant {
+	color: rgb(61, 24, 226);
+	color: rgb(71, 30, 152)
+}
+
+/* hide utilities */
+.callout[data-callout-metadata*="none"] > .callout-title {
+	display: none;
+}
+.callout[data-callout-metadata="none|min-0"] img {
+	border: 2px solid rgb(var(--callout-color));
+}
+.callout[data-callout-metadata="none|min-0"] {
+	padding-right:24px;
+}
+.callout[data-callout-metadata="invis"] {
+	background-color: transparent;
+	border-inline-start: none;
+}
+.callout[data-callout-metadata="invis"] > .callout-title {
+	display: none;
+}
+
+.callout[data-callout-metadata="marginup"] {
+	margin-top: 15px !important;
+}
+.callout[data-callout-metadata="margindown"] {
+	margin-bottom: 10px !important;
+}
+.callout[data-callout-metadata*="halfpad"] {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	margin-right: 12px;
+}
+.inline-embed[alt="none"] > .markdown-embed-title {
+	display: none;
+}
+
+.span[alt="inline"] {
+	display: inline;
+}
