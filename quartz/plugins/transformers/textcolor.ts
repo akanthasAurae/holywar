@@ -16,30 +16,39 @@ type FastTextColor = {
   className: string
 }
 
-export const FastTextColor: QuartzTransformerPlugin<
-  { vaultRoot: string; outDir: string }
-> = (opts) => {
-  //  normalize options
-  const options = opts ?? {
-    vaultRoot: process.cwd(),
-    outDir: "public",
+export const FastTextColor: QuartzTransformerPlugin<{
+  vaultRoot?: string
+  outDir?: string
+}> = (opts) => {
+  const options = {
+    vaultRoot: opts?.vaultRoot ?? process.cwd(),
+    outDir: opts?.outDir ?? "public",
   }
 
-  // setup
   const configPath = path.join(
     options.vaultRoot,
     ".obsidian/plugins/fast-text-color/data.json"
   )
 
+  // ---- graceful fallback ----
+  if (!fs.existsSync(configPath)) {
+    console.warn(
+      "[FastTextColor] data.json not found; skipping fast-text-color support"
+    )
+    return () => {}
+  }
+
   const raw = fs.readFileSync(configPath, "utf8")
   const colors: FastTextColor[] = JSON.parse(raw).colors
+
+  if (colors.length > 0) {
+    const cssPath = path.join(options.outDir, "fast-text-color.css")
+    fs.writeFileSync(cssPath, generateCSS(colors))
+  }
+
   const colorMap = new Map(colors.map((c) => [c.id, c]))
-
-  const cssPath = path.join(options.outDir, "fast-text-color.css")
-  fs.writeFileSync(cssPath, generateCSS(colors))
-
   const REGEX = /~=\{([a-zA-Z0-9_-]+)\}([\s\S]+?)~/g
-
+  
   // transformer
   return (tree: Root) => {
     visit(tree, "text", (node: Text, index, parent) => {
