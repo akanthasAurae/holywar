@@ -47,8 +47,8 @@ export const FastTextColor: QuartzTransformerPlugin<{
   }
 
   const colorMap = new Map(colors.map((c) => [c.id, c]))
-  const REGEX = /~=\{([a-zA-Z0-9_-]+)\}([\s\S]+?)~/g
-  
+  const REGEX = /~=\{([a-zA-Z0-9_-]+)\}([\s\S]+?)=?~/g
+
   // transformer
   return (tree: Root) => {
     visit(tree, "text", (node: Text, index, parent) => {
