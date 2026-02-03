@@ -1,4 +1,10 @@
+---
+cssclasses:
+  - hidetags
+---
 > [!warning] Certain statuses do not yet have icons or custom colours.
+
+<h2 class="bleed">Bloodloss</h2>
 
 ## ~={blood}Bloodloss=~
 > [!bleed|none] 
