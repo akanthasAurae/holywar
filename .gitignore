@@ -9,3 +9,9 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+app.json
+appearance.json
+graph.json
+hotkeys.json
+workspace.json
+snippets/
