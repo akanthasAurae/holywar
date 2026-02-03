@@ -56,7 +56,8 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
-      Plugin.FastTextColor(),
+      Plugin.TextColorMarkdown(),
+      Plugin.TextColor(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
       }),

@@ -4,7 +4,7 @@ import { visit } from "unist-util-visit"
 import type { Root, Text } from "mdast"
 import { QuartzTransformerPlugin } from "../types"
 
-type FastTextColor = {
+type textColor = {
   color: string
   id: string
   bold: boolean
@@ -16,7 +16,7 @@ type FastTextColor = {
   className: string
 }
 
-export const FastTextColor: QuartzTransformerPlugin<{
+export const TextColor: QuartzTransformerPlugin<{
   vaultRoot?: string
   outDir?: string
 }> = (opts) => {
@@ -33,16 +33,16 @@ export const FastTextColor: QuartzTransformerPlugin<{
   // ---- graceful fallback ----
   if (!fs.existsSync(configPath)) {
     console.warn(
-      "[FastTextColor] data.json not found; skipping fast-text-color support"
+      "[TextColor] data.json not found; skipping text-color support"
     )
     return () => {}
   }
 
   const raw = fs.readFileSync(configPath, "utf8")
-  const colors: FastTextColor[] = JSON.parse(raw).colors
+  const colors: textColor[] = JSON.parse(raw).colors
 
   if (colors.length > 0) {
-    const cssPath = path.join(options.outDir, "fast-text-color.css")
+    const cssPath = path.join(options.outDir, "text-color.css")
     fs.writeFileSync(cssPath, generateCSS(colors))
   }
 
@@ -93,7 +93,7 @@ export const FastTextColor: QuartzTransformerPlugin<{
   }
 }
 
-function generateCSS(colors: FastTextColor[]): string {
+function generateCSS(colors: textColor[]): string {
   return colors
     .map((c) => {
       let css = `.${c.className} {\n`
