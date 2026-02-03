@@ -1,7 +1,4 @@
 export { FrontMatter } from "./frontmatter"
-export { TextColor } from "./textcolor"
-export { TextColorMarkdown } from "./textcolorMarkdown"
-export { TextColorSyntax } from "./textcolorsyntax"
 export { GitHubFlavoredMarkdown } from "./gfm"
 export { Citations } from "./citations"
 export { CreatedModifiedDate } from "./lastmod"
