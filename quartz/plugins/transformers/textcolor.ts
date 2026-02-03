@@ -19,13 +19,13 @@ type FastTextColor = {
 export const FastTextColor: QuartzTransformerPlugin<
   { vaultRoot: string; outDir: string }
 > = (opts) => {
-  // ---- normalize options (CRITICAL) ----
+  //  normalize options
   const options = opts ?? {
     vaultRoot: process.cwd(),
     outDir: "public",
   }
 
-  // ---- setup (runs once) ----
+  // setup
   const configPath = path.join(
     options.vaultRoot,
     ".obsidian/plugins/fast-text-color/data.json"
@@ -40,7 +40,7 @@ export const FastTextColor: QuartzTransformerPlugin<
 
   const REGEX = /~=\{([a-zA-Z0-9_-]+)\}([\s\S]+?)~/g
 
-  // ---- transformer (always returned) ----
+  // transformer
   return (tree: Root) => {
     visit(tree, "text", (node: Text, index, parent) => {
       if (!parent || index == null) return
