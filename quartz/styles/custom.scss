@@ -71,95 +71,98 @@ img[alt="floatr"] {
   --callout-icon-sneak: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-closed-icon lucide-eye-closed"><path d="m15 18-.722-3.25"/><path d="M2 8a10.645 10.645 0 0 0 20 0"/><path d="m20 15-1.726-2.05"/><path d="m4 15 1.726-2.05"/><path d="m9 18 .722-3.25"/></svg>';
   --callout-icon-mental: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-icon lucide-brain"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg>';
 
-    &[data-callout="poise"], 
-    &[data-callout="scorch"], 
-    &[data-callout="burn"], 
-    &[data-callout="bleed"], 
-    &[data-callout="hemo"], 
-    &[data-callout="vital"], 
-    &[data-callout="downed"], 
-    &[data-callout="dd"], 
-    &[data-callout="ddrec"], 
-    &[data-callout="down"], 
-    &[data-callout="up"], 
-    &[data-callout="guardbreak"], 
-    &[data-callout="tremor"], 
-    &[data-callout="tox"], 
-    &[data-callout="stealth"], 
-    &[data-callout="venom"], 
-    &[data-callout="poiseven"], 
-    &[data-callout="tremorhemo"], 
-    &[data-callout="crit"], 
-    &[data-callout="stance"], 
-    &[data-callout="stancebreak"], 
-    &[data-callout="sheath"], 
-    &[data-callout="unsheath"], 
-    &[data-callout="awakened"], 
-    &[data-callout="shatt"], 
-    &[data-callout="nimius"], 
-    &[data-callout="aether"], 
-    &[data-callout="aurora"], 
-    &[data-callout="noctis"] {
-        --callout-icon: var(--callout-icon-none);
+    &[data-callout="poise"] .callout-icon, 
+    &[data-callout="scorch"] .callout-icon, 
+    &[data-callout="burn"] .callout-icon, 
+    &[data-callout="bleed"] .callout-icon, 
+    &[data-callout="hemo"] .callout-icon, 
+    &[data-callout="vital"] .callout-icon, 
+    &[data-callout="downed"] .callout-icon, 
+    &[data-callout="dd"] .callout-icon, 
+    &[data-callout="ddrec"] .callout-icon, 
+    &[data-callout="down"] .callout-icon, 
+    &[data-callout="up"] .callout-icon, 
+    &[data-callout="guardbreak"] .callout-icon, 
+    &[data-callout="tremor"] .callout-icon, 
+    &[data-callout="tox"] .callout-icon, 
+    &[data-callout="stealth"] .callout-icon, 
+    &[data-callout="venom"] .callout-icon, 
+    &[data-callout="poiseven"] .callout-icon, 
+    &[data-callout="tremorhemo"] .callout-icon, 
+    &[data-callout="crit"] .callout-icon, 
+    &[data-callout="stance"] .callout-icon, 
+    &[data-callout="stancebreak"] .callout-icon, 
+    &[data-callout="sheath"] .callout-icon, 
+    &[data-callout="unsheath"] .callout-icon, 
+    &[data-callout="awakened"] .callout-icon, 
+    &[data-callout="shatt"] .callout-icon, 
+    &[data-callout="nimius"] .callout-icon, 
+    &[data-callout="aether"] .callout-icon, 
+    &[data-callout="aurora"] .callout-icon, 
+    &[data-callout="noctis"]  .callout-icon {
+        .callout-icon{--callout-icon: var(--callout-icon-none)};
     };
-    &[data-callout="signature"] {
+    &[data-callout="signature"] .callout-icon {
         --callout-icon: var(--callout-icon-signature);
+        --color: #999999;
+        --border: #99999944;
+        --bg: #99999910;
     };
-    &[data-callout="inv"] {
+    &[data-callout="inv"] .callout-icon {
         --callout-icon: var(--callout-icon-inv);
     };
-    &[data-callout="menuu"] {
+    &[data-callout="menuu"] .callout-icon {
         --callout-icon: var(--callout-icon-menuu);
     };
-    &[data-callout="hum"] {
+    &[data-callout="hum"] .callout-icon {
         --callout-icon: var(--callout-icon-hum);
     };
-    &[data-callout="stats"] {
+    &[data-callout="stats"] .callout-icon {
         --callout-icon: var(--callout-icon-stats);
     };
-    &[data-callout="soulstats"] {
+    &[data-callout="soulstats"] .callout-icon {
         --callout-icon: var(--callout-icon-soulstats);
     };
-    &[data-callout="passives"] {
+    &[data-callout="passives"] .callout-icon {
         --callout-icon: var(--callout-icon-passives);
     };
-    &[data-callout="plus"] {
+    &[data-callout="plus"] .callout-icon {
         --callout-icon: var(--callout-icon-plus);
     };
-    &[data-callout="minus"] {
+    &[data-callout="minus"] .callout-icon {
         --callout-icon: var(--callout-icon-minus);
     };
-    &[data-callout="body"] {
+    &[data-callout="body"] .callout-icon {
         --callout-icon: var(--callout-icon-body);
     };
-    &[data-callout="reflex"] {
+    &[data-callout="reflex"] .callout-icon {
         --callout-icon: var(--callout-icon-reflex);
     };
-    &[data-callout="tech"] {
+    &[data-callout="tech"] .callout-icon {
         --callout-icon: var(--callout-icon-tech);
     };
-    &[data-callout="intel"] {
+    &[data-callout="intel"] .callout-icon {
         --callout-icon: var(--callout-icon-intel);
     };
-    &[data-callout="cool"] {
+    &[data-callout="cool"] .callout-icon {
         --callout-icon: var(--callout-icon-cool);
     };
-    &[data-callout="rolls"] {
+    &[data-callout="rolls"] .callout-icon {
         --callout-icon: var(--callout-icon-rolls);
     };
-    &[data-callout="combat"] {
+    &[data-callout="combat"] .callout-icon {
         --callout-icon: var(--callout-icon-combat);
     };
-    &[data-callout="sneak"] {
+    &[data-callout="sneak"] .callout-icon {
         --callout-icon: var(--callout-icon-sneak);
     };
-    &[data-callout="mental"] {
+    &[data-callout="mental"] .callout-icon {
         --callout-icon: var(--callout-icon-mental);
     };
-    &[data-callout="cyber"] {
+    &[data-callout="cyber"] .callout-icon {
         --callout-icon: var(--callout-icon-cyber);
     };
-    &[data-callout="biography"] {
+    &[data-callout="biography"] .callout-icon {
         --callout-icon: var(--callout-icon-biography);
     };
     

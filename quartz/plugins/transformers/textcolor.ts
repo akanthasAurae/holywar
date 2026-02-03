@@ -1,114 +1,24 @@
-import fs from "fs"
-import path from "path"
 import { visit } from "unist-util-visit"
-import type { Root, Text } from "mdast"
-import { QuartzTransformerPlugin } from "../types"
+import type { Root } from "mdast"
+import type { QuartzTransformerPlugin } from "../types"
 
-type textColor = {
-  color: string
-  id: string
-  bold: boolean
-  italic: boolean
-  cap_mode: { state: "normal" | "all_caps" | "small_caps" }
-  line_mode: { state: "none" | "underline" | "overline" | "line-through" }
-  useCssColorVariable: boolean
-  colorVariable: string
-  className: string
-}
+export const TextColor: QuartzTransformerPlugin = () => {
+  return {
+    name: "TextColor",
 
-export const TextColor: QuartzTransformerPlugin<{
-  vaultRoot?: string
-  outDir?: string
-}> = (opts) => {
-  const options = {
-    vaultRoot: opts?.vaultRoot ?? process.cwd(),
-    outDir: opts?.outDir ?? "public",
-  }
+    transform(tree: Root) {
+      visit(tree, "textColor", (node: any, index, parent: any) => {
+        if (!parent || index == null) return
 
-  const configPath = path.join(
-    options.vaultRoot,
-    ".obsidian/plugins/fast-text-color/data.json"
-  )
-
-  // ---- graceful fallback ----
-  if (!fs.existsSync(configPath)) {
-    console.warn(
-      "[TextColor] data.json not found; skipping text-color support"
-    )
-    return () => {}
-  }
-
-  const raw = fs.readFileSync(configPath, "utf8")
-  const colors: textColor[] = JSON.parse(raw).colors
-
-  if (colors.length > 0) {
-    const cssPath = path.join(options.outDir, "text-color.css")
-    fs.writeFileSync(cssPath, generateCSS(colors))
-  }
-
-  const colorMap = new Map(colors.map((c) => [c.id, c]))
-  const REGEX = /~=\{([a-zA-Z0-9_-]+)\}([\s\S]+?)=?~/g
-
-  // transformer
-  return (tree: Root) => {
-    visit(tree, "text", (node: Text, index, parent) => {
-      if (!parent || index == null) return
-      if (!REGEX.test(node.value)) return
-
-      const out: any[] = []
-      let last = 0
-
-      for (const m of node.value.matchAll(REGEX)) {
-        const [full, id, text] = m
-        const start = m.index!
-        const end = start + full.length
-
-        if (start > last) {
-          out.push({ type: "text", value: node.value.slice(last, start) })
+        parent.children[index] = {
+          type: "element",
+          tagName: "span",
+          properties: {
+            className: [`textcolor-${node.color}`],
+          },
+          children: node.children,
         }
-
-        const color = colorMap.get(id)
-        out.push(
-          color
-            ? {
-              type: "element",
-              tagName: "span",
-              properties: {
-              className: [color.className],
-              },
-            children: [{ type: "text", value: text }],
-          }
-        : { type: "text", value: full }
-)
-
-        last = end
-      }
-
-      if (last < node.value.length) {
-        out.push({ type: "text", value: node.value.slice(last) })
-      }
-
-      parent.children.splice(index, 1, ...out)
-    })
+      })
+    },
   }
-}
-
-function generateCSS(colors: textColor[]): string {
-  return colors
-    .map((c) => {
-      let css = `.${c.className} {\n`
-      css += c.useCssColorVariable
-        ? `  color: var(${c.colorVariable});\n`
-        : `  color: ${c.color};\n`
-      if (c.bold) css += `  font-weight: bold;\n`
-      if (c.italic) css += `  font-style: italic;\n`
-      if (c.cap_mode.state === "all_caps")
-        css += `  text-transform: uppercase;\n`
-      if (c.cap_mode.state === "small_caps")
-        css += `  font-variant: small-caps;\n`
-      if (c.line_mode.state !== "none")
-        css += `  text-decoration: ${c.line_mode.state};\n`
-      return css + "}\n"
-    })
-    .join("\n")
 }
