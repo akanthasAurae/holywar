@@ -29,6 +29,7 @@ import { toHtml } from "hast-util-to-html"
 import { capitalize } from "../../util/lang"
 import { PluggableList } from "unified"
 console.log("[FTC] ofm.ts loaded")
+import type { QuartzPlugin } from "../types"
 
 export interface Options {
   comments: boolean
@@ -103,56 +104,52 @@ const arrowMapping: Record<string, string> = {
   "<==": "&lArr;",
 }
 //custom stuff.
-type FastTextColorDef = {
-  color: string
+type FTCColor = {
   id: string
-  bold: boolean
-  italic: boolean
+  color: string
+  className?: string
+  bold?: boolean
+  italic?: boolean
   cap_mode?: { state: string }
   line_mode?: { state: string }
 }
 
-const FTC_DATA_PATH = path.join(
+const FTC_COLORS = new Map<string, FTCColor>()
+
+const ftcPath = path.join(
   process.cwd(),
   ".obsidian/plugins/fast-text-color/data.json"
 )
 
-const FTC_COLORS = new Map<string, FastTextColorDef>()
-
 try {
-  console.log("[FTC] Attempting to read", FTC_DATA_PATH)
-  const raw = fs.readFileSync(FTC_DATA_PATH, "utf8")
+  const raw = fs.readFileSync(ftcPath, "utf-8")
   const parsed = JSON.parse(raw)
 
-  const rawColors = parsed.colors
+  console.log("[FTC] Parsed JSON keys:", Object.keys(parsed))
 
-if (Array.isArray(rawColors)) {
-  // array format
-  for (const c of rawColors) {
-    if (c?.id) FTC_COLORS.set(c.id, c)
-  }
-} else if (typeof rawColors === "object" && rawColors !== null) {
-  // object map format
-  for (const [id, c] of Object.entries(rawColors)) {
-    if (typeof c === "object" && c !== null) {
-      FTC_COLORS.set(id, { ...(c as any), id })
-    }
-  }
-} else {
-  console.warn("[FTC] Unrecognized colors format in data.json:", rawColors)
+const themeIndex = parsed.themeIndex ?? 0
+const theme = parsed.themes?.[themeIndex]
+const colors = theme?.colors
+
+if (!Array.isArray(colors)) {
+  throw new Error("colors is not an array")
 }
 
+for (const c of colors as FTCColor[]) {
+  if (!c.id) continue
+  FTC_COLORS.set(c.id, c)
+}
 
   console.log("[FTC] Loaded colors:", [...FTC_COLORS.keys()])
 } catch (err) {
-  console.warn("[FTC] Failed to load fast-text-color data.json", err)
+  console.error("[FTC] Failed to load fast-text-color data.json", err)
 }
 function generateFTCStyles(): string {
   console.log("[FTC] Generating CSS")
   let css = ""
 
   for (const [id, def] of FTC_COLORS) {
-    css += `.ftc-${id} { color: ${def.color};`
+    css += `.ftc-color-builtin-${id} { color: ${def.color};`
 
     if (def.bold) css += "font-weight: bold;"
     if (def.italic) css += "font-style: italic;"
@@ -181,6 +178,13 @@ function canonicalizeCallout(calloutName: string): keyof typeof calloutMapping {
   // if callout is not recognized, make it a custom one
   return calloutMapping[normalizedCallout] ?? calloutName
 }
+
+export const stylesheets = () => [
+  {
+    name: "fast-text-color",
+    content: generateFTCStyles(),
+  },
+]
 
 export const externalLinkRegex = /^https?:\/\//i
 

@@ -4,7 +4,7 @@ node_modules
 public
 prof
 tsconfig.tsbuildinfo
-.obsidian
+.obsidian/**!.obsidian/plugins/fast-text-color/data.json
 .quartz-cache
 private/
 .replit

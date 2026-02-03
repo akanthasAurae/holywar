@@ -1,0 +1,1649 @@
+{
+  "themes": [
+    {
+      "colors": [
+        {
+          "color": "#999999",
+          "id": "gray",
+          "keybind": "2",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-gray"
+        },
+        {
+          "color": "#ec8209",
+          "id": "burn",
+          "keybind": "2",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-burn"
+        },
+        {
+          "color": "#c8d0d0",
+          "id": "poise",
+          "keybind": "2",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-poise"
+        },
+        {
+          "color": "#1fdb4e",
+          "id": "vital",
+          "keybind": "A",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-vital"
+        },
+        {
+          "color": "#e00000",
+          "id": "dd",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "small_caps",
+            "index": 2
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-dd"
+        },
+        {
+          "color": "#fbae09",
+          "id": "igni",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-igni"
+        },
+        {
+          "color": "#760e06",
+          "id": "hemo",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-hemo"
+        },
+        {
+          "color": "#d53f1b",
+          "id": "scorch",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-scorch"
+        },
+        {
+          "color": "#b1120e",
+          "id": "blood",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-blood"
+        },
+        {
+          "color": "#ea5d23",
+          "id": "poiseburn",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-poiseburn"
+        },
+        {
+          "color": "#d00b0b",
+          "id": "poisebleed",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-poisebleed"
+        },
+        {
+          "color": "#ea5f1d",
+          "id": "downed",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-downed"
+        },
+        {
+          "color": "#1e84f1",
+          "id": "down",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-down"
+        },
+        {
+          "color": "#e11414",
+          "id": "up",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-up"
+        },
+        {
+          "color": "#3ed43c",
+          "id": "tox",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-tox"
+        },
+        {
+          "color": "#3ed43c",
+          "id": "intox",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-intox"
+        },
+        {
+          "color": "#bfbbbb",
+          "id": "ddrec",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-ddrec"
+        },
+        {
+          "color": "#e6a433",
+          "id": "action",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-action"
+        },
+        {
+          "color": "#d5a220",
+          "id": "stance",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-stance"
+        },
+        {
+          "color": "#641717",
+          "id": "guardbreak",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-guardbreak"
+        },
+        {
+          "color": "#eebc77",
+          "id": "tremor",
+          "keybind": "1",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-tremor"
+        },
+        {
+          "color": "#f2a854",
+          "id": "shock",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-shock"
+        },
+        {
+          "color": "#7549cc",
+          "id": "stealth",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-stealth"
+        },
+        {
+          "color": "#582dcd",
+          "id": "ven",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-ven"
+        },
+        {
+          "color": "#2c30b5",
+          "id": "enven",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-enven"
+        },
+        {
+          "color": "#5c12a5",
+          "id": "poiseven",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-poiseven"
+        },
+        {
+          "color": "#9f2d1e",
+          "id": "hemoshock",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-hemoshock"
+        },
+        {
+          "color": "#d24a28",
+          "id": "tremorhemo",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-tremorhemo"
+        },
+        {
+          "color": "#f5c724",
+          "id": "stancebreak",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-stancebreak"
+        },
+        {
+          "color": "#f8db9b",
+          "id": "crit",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-crit"
+        },
+        {
+          "color": "#53c43c",
+          "id": "hum",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-hum"
+        },
+        {
+          "color": "#d04339",
+          "id": "humlow",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-humlow"
+        },
+        {
+          "color": "#bd9b2e",
+          "id": "cyber",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-cyber"
+        },
+        {
+          "color": "#b485f9",
+          "id": "soul",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-soul"
+        },
+        {
+          "color": "#c7d2e0",
+          "id": "sheath",
+          "keybind": "",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-sheath"
+        },
+        {
+          "color": "#8db2e2",
+          "id": "unsheath",
+          "keybind": "",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-unsheath"
+        },
+        {
+          "color": "#af090f",
+          "id": "awakened",
+          "keybind": "",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-awakened"
+        },
+        {
+          "color": "#7719c8",
+          "id": "shatt",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-shatt"
+        },
+        {
+          "color": "#e79e5a",
+          "id": "aurora",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-aurora"
+        },
+        {
+          "color": "#5a9cd2",
+          "id": "aether",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-aether"
+        },
+        {
+          "color": "#c60c31",
+          "id": "nimius",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-nimius"
+        },
+        {
+          "color": "#ba7ad1",
+          "id": "noct",
+          "keybind": "",
+          "italic": false,
+          "bold": true,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-builtin-noct"
+        }
+      ],
+      "name": "builtin"
+    },
+    {
+      "colors": [
+        {
+          "color": "#ff0000",
+          "id": "red",
+          "keybind": "R",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-default-red"
+        },
+        {
+          "color": "#00ff00",
+          "id": "green",
+          "keybind": "G",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-default-green"
+        },
+        {
+          "color": "#0000ff",
+          "id": "blue",
+          "keybind": "B",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-default-blue"
+        },
+        {
+          "color": "#00ffff",
+          "id": "cyan",
+          "keybind": "C",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-default-cyan"
+        },
+        {
+          "color": "#ff00ff",
+          "id": "magenta",
+          "keybind": "M",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-default-magenta"
+        },
+        {
+          "color": "#ffff00",
+          "id": "yellow",
+          "keybind": "Y",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-default-yellow"
+        },
+        {
+          "color": "#000000",
+          "id": "black",
+          "keybind": "K",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-default-black"
+        }
+      ],
+      "name": "default"
+    },
+    {
+      "colors": [
+        {
+          "color": "#ff0000",
+          "id": "red",
+          "keybind": "R",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-limbus-red"
+        },
+        {
+          "color": "#00ff00",
+          "id": "green",
+          "keybind": "G",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-limbus-green"
+        },
+        {
+          "color": "#0000ff",
+          "id": "blue",
+          "keybind": "B",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-limbus-blue"
+        },
+        {
+          "color": "#00ffff",
+          "id": "cyan",
+          "keybind": "C",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-limbus-cyan"
+        },
+        {
+          "color": "#ff00ff",
+          "id": "magenta",
+          "keybind": "M",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-limbus-magenta"
+        },
+        {
+          "color": "#ffff00",
+          "id": "yellow",
+          "keybind": "Y",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-limbus-yellow"
+        },
+        {
+          "color": "#000000",
+          "id": "black",
+          "keybind": "K",
+          "italic": false,
+          "bold": false,
+          "cap_mode": {
+            "states": [
+              "normal",
+              "all_caps",
+              "small_caps"
+            ],
+            "state": "normal",
+            "index": 0
+          },
+          "line_mode": {
+            "states": [
+              "none",
+              "underline",
+              "overline",
+              "line-through"
+            ],
+            "state": "none",
+            "index": 0
+          },
+          "useCssColorVariable": false,
+          "colorVariable": "--color-base-00",
+          "className": "ftc-color-limbus-black"
+        }
+      ],
+      "name": "limbus"
+    }
+  ],
+  "themeIndex": 0,
+  "version": "3",
+  "interactiveDelimiters": true,
+  "useKeybindings": true,
+  "useNodeRebuilding": false,
+  "colorCodeSection": true
+}

@@ -1,0 +1,269 @@
+body {
+	--link-color: inherit !important;
+	--link-color-hover: inherit !important;
+}
+
+.testbullshit {
+	color: #2ebd6e;
+}
+
+/* biography utilities */
+.callout[data-callout="signature"] {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-signature;
+}
+.callout[data-callout="biography"] {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-eye;
+}
+.callout[data-callout="inv"] {
+	--callout-color: 145, 101, 72;
+	--callout-icon: lucide-backpack;
+}
+.callout[data-callout="menuu"] {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-menu;
+}
+.callout[data-callout="cyber"] {
+	--callout-color: 189, 155, 46;
+	--callout-icon: lucide-square-activity;
+}
+.callout[data-callout="hum"] {
+	--callout-color: 80, 196, 37;
+	--callout-icon: lucide-person-standing;
+}
+.callout[data-callout="stats"] {
+	--callout-color: 46, 189, 110;
+	--callout-icon: lucide-waypoints;
+}
+.callout[data-callout="soulstats"] {
+	--callout-icon: lucide-flame;
+}
+.callout[data-callout="passives"] {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-dna;
+}
+.callout[data-callout="plus"] {
+	--callout-color: 66, 196, 37;
+	--callout-icon: lucide-plus;
+}
+.callout[data-callout="minus"] {
+	--callout-color: 196, 37, 66;
+	--callout-icon: lucide-minus;
+}
+	/* stats */
+.callout[data-callout="rolls"], .callout[data-callout="body"], .callout[data-callout="reflex"], .callout[data-callout="tech"], .callout[data-callout="intel"], .callout[data-callout="cool"] {
+	--callout-color: 69, 179, 124;
+}
+.callout[data-callout="body"] {
+	--callout-icon: lucide-biceps-flexed;
+}
+.callout[data-callout="reflex"] {
+	--callout-icon: lucide-eye;
+}
+.callout[data-callout="tech"] {
+	--callout-icon: lucide-cpu;
+}
+.callout[data-callout="intel"] {
+	--callout-icon: lucide-brain-cog;
+}
+.callout[data-callout="cool"] {
+	--callout-icon: lucide-scale;
+}
+.callout[data-callout="rolls"] {
+	--callout-icon: lucide-dices;
+}
+.callout[data-callout="combat"] {
+	--callout-color: 230, 96, 96;
+	--callout-icon: lucide-sword;
+}
+.callout[data-callout="sneak"] {
+	--callout-color: 154, 96, 230;
+	--callout-icon: lucide-eye-closed;
+}
+.callout[data-callout="mental"] {
+	--callout-color: 96, 165, 230;
+	--callout-icon: lucide-brain;
+}
+.callout[data-callout="soulstats"], .callout[data-callout-metadata*="s."] {
+	--callout-color: 114, 81, 190;
+}
+
+/* hide utilities */
+.callout[data-callout-metadata*="none"] > .callout-title {
+	display: none;
+}
+.callout[data-callout-metadata="none|min-0"] img {
+	border: 2px solid rgb(var(--callout-color));
+}
+.callout[data-callout-metadata="none|min-0"] {
+	padding-right:24px;
+}
+.callout[data-callout-metadata="invis"] {
+	background-color: transparent;
+	border-inline-start: none;
+}
+.callout[data-callout-metadata="invis"] > .callout-title {
+	display: none;
+}
+
+.callout[data-callout-metadata="marginup"] {
+	margin-top: 15px !important;
+}
+.callout[data-callout-metadata="margindown"] {
+	margin-bottom: 10px !important;
+}
+.callout[data-callout-metadata*="halfpad"] {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	margin-right: 12px;
+}
+.inline-embed[alt="none"] > .markdown-embed-title {
+	display: none;
+}
+
+.span[alt="inline"] {
+	display: inline;
+}
+img[alt="floatl"] {
+	float: left;
+	margin-right: 10px;
+}
+img[alt="floatr"] {
+	float: right;
+	margin-left: 10px;
+}
+
+/* theme-specific: get rid of bg dimming */
+.modal-bg {
+	background-color: transparent;
+}
+.modal-container {
+	justify-content: flex-start;
+		margin-left: 2vw;
+}
+
+/* limbus customs */
+.callout[data-callout="poise"] {
+	--callout-color: 200,208,208;
+	--callout-icon: '';
+}
+.callout[data-callout="scorch"] {
+	--callout-color: 255,89,31;
+	--callout-icon: '';
+}
+.callout[data-callout="burn"] {
+	--callout-color: 255,120,31;
+	--callout-icon: '';
+}
+.callout[data-callout="bleed"] {
+	--callout-color: 223, 21, 7;
+	--callout-icon: '';
+}
+
+.callout[data-callout="hemo"] {
+	--callout-color: 198,16,0;
+	--callout-icon: '';
+}
+.callout[data-callout="vital"] {
+	--callout-color: 12,230,141;
+	--callout-icon: '';
+}
+.callout[data-callout="downed"] {
+	--callout-color: 160, 61, 4;
+	--callout-icon: '';
+}
+.callout[data-callout="dd"] {
+	--callout-color: 107, 9, 2;
+	--callout-icon: '';
+}
+.callout[data-callout="ddrec"] {
+	--callout-color: 191, 187, 187;
+	--callout-icon: '';
+}
+.callout[data-callout="down"] {
+	--callout-color:33, 132, 237;
+	--callout-icon: '';
+}
+.callout[data-callout="up"] {
+	--callout-color: 224, 26, 30;
+	--callout-icon: '';
+}
+.callout[data-callout="guardbreak"] {
+	--callout-color: 116, 6, 2;
+	--callout-icon: '';
+}
+
+.callout[data-callout="tremor"] {
+	--callout-color: 236, 182, 121;
+	--callout-icon: '';
+}
+.callout[data-callout="tox"] {
+	--callout-color: 62, 212, 60;
+	--callout-icon: '';
+}
+.callout[data-callout="stealth"] {
+	--callout-color: 117, 73, 204;
+	--callout-icon: '';
+}
+.callout[data-callout="venom"] {
+	--callout-color: 62, 30, 204;
+	--callout-icon: '';
+}
+.callout[data-callout="poiseven"] {
+	--callout-color: 68, 4, 151;
+	--callout-icon: '';
+}
+.callout[data-callout="tremorhemo"] {
+	--callout-color: 210, 74, 40;
+	--callout-icon: '';
+}
+.callout[data-callout="crit"] {
+	--callout-color: 248, 219, 155;
+	--callout-icon: '';
+}
+.callout[data-callout="stance"] {
+	--callout-color: 213, 162, 32;
+	--callout-icon: '';
+}
+.callout[data-callout="stancebreak"] {
+	--callout-color: 245, 199, 36;
+	--callout-icon: '';
+}
+.callout[data-callout="sheath"] {
+	--callout-color: 199, 210, 224;
+	--callout-icon: '';
+}
+.callout[data-callout="unsheath"] {
+	--callout-color: 141, 178, 226;
+	--callout-icon: '';
+}
+.callout[data-callout="awakened"] {
+	--callout-color: 197, 9, 15;
+	--callout-icon: '';
+}
+.callout[data-callout="shatt"] {
+	--callout-color: 71, 30, 152;
+	--callout-icon: '';
+}
+.callout[data-callout="nimius"] {
+	--callout-color: 167, 7, 28;
+	--callout-icon: '';
+}
+.callout[data-callout="aether"] {
+	--callout-color: 93, 161, 217;
+	--callout-icon: '';
+}
+.callout[data-callout="aurora"] {
+	--callout-color: 241, 200, 146;
+	--callout-icon: '';
+}
+.callout[data-callout="noctis"] + .noctis {
+	--callout-color: 152, 54, 197;
+	--callout-icon: '';
+}
+.nonexistant2 { /*another color picker for yours truly*/
+	color: rgb(241, 200, 146);
+	color: rgb(255, 255, 255)
+}
