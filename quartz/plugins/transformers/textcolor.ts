@@ -71,11 +71,15 @@ export const FastTextColor: QuartzTransformerPlugin<{
         out.push(
           color
             ? {
-                type: "html",
-                value: `<span class="${color.className}">${text}</span>`,
-              }
-            : { type: "text", value: full }
-        )
+              type: "element",
+              tagName: "span",
+              properties: {
+              className: [color.className],
+              },
+            children: [{ type: "text", value: text }],
+          }
+        : { type: "text", value: full }
+)
 
         last = end
       }
