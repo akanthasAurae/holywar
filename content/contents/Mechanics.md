@@ -39,12 +39,7 @@
 > ![[downed.png|floatl|74]] This unit is ~={downed}incapacitated=~ and cannot be targeted. If every other ally is ~={downed}incapacitated=~ or ~={dd}killed=~, this unit becomes targetable and can be ~={dd}executed=~, or they may naturally die.
 > *tags: #downed #deathsdoor #mechanics *
 
-### ~={stancebreak}Stancebroken=~
-> [!stancebreak|none] 
-> ![[stancebreak.png|floatl|74]] This unit becomes completely susceptible to ![[crit.png|18]] ~={crit}Critical Hits=~. If this unit is struck by a ![[crit.png|18]] ~={crit}Critical Hit=~, lose two ![[vital.png|18]] ~={vital}Vital States=~ and completely remove this status. If struck by a regular hit instead, remove one ![[vital.png|18]] ~={vital}Vital State=~ and decrease the stack by one.
-> 
-> **Max Stack:** 2
-> *tags: #stance #reflexes #criticalhit #mechanics *
+![[Stancebroken]]
 
 ### ~={guardbreak}Guardbroken=~
 > [!guardbreak|none] 

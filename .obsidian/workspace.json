@@ -6,7 +6,7 @@
       {
         "id": "975a59e42d0a6d61",
         "type": "tabs",
-        "dimension": 34.76312419974391,
+        "dimension": 47.96931407942238,
         "children": [
           {
             "id": "5f7085c954781874",
@@ -15,19 +15,48 @@
               "type": "markdown",
               "state": {
                 "file": "content/contents/Mechanics/Humanity.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
               "title": "Humanity"
             }
+          },
+          {
+            "id": "a4a9f67c75d2956c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/contents/Mechanics.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Mechanics"
+            }
+          },
+          {
+            "id": "a32f2fb6f063ea9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/contents/Mechanics/Stancebroken.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stancebroken"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "9fb4d92d57b07518",
         "type": "tabs",
-        "dimension": 65.23687580025607,
+        "dimension": 52.03068592057761,
         "children": [
           {
             "id": "09c8f35ea653b775",
@@ -42,8 +71,23 @@
               "icon": "lucide-file",
               "title": "Vital States"
             }
+          },
+          {
+            "id": "3ea8101ea735fed1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/contents/Mechanics/Stancebroken.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Stancebroken"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -116,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/contents/Mechanics/Vital States.md",
+                "file": "content/contents/Mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +170,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Vital States"
+              "title": "Backlinks for Mechanics"
             }
           },
           {
@@ -205,8 +249,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "09c8f35ea653b775",
+  "active": "a4a9f67c75d2956c",
   "lastOpenFiles": [
+    "content/contents/Mechanics/Stancebroken.md",
+    "content/contents/Mechanics/Humanity.md",
+    "content/contents/Mechanics.md",
+    "content/contents/Mechanics/Vital States.md",
+    "content/contents/Statuses/Bloodloss.md",
     "public/index-og-image.webp",
     "public/contents/Statuses/Tremor-—-Hemorrhage-og-image.webp",
     "public/contents/Statuses/Mental-Power-Down-og-image.webp",
@@ -217,23 +266,18 @@
     "public/contents/Mechanics/Stancebroken-og-image.webp",
     "public/contents/Mechanics/Stance-og-image.webp",
     "public/contents/Mechanics/Shattered-og-image.webp",
-    "public/contents/Mechanics/Noctis-og-image.webp",
-    "public/contents/photos",
-    "public/tags/index.html",
-    "public/tags/meta.html",
-    "public/tags/hemorrhage.html",
-    "public/tags/vengeance.html",
-    "public/tags/tremorhemorrhage.html",
-    "public/tags/tremor.html",
-    "public/tags/stancebreak.html",
-    "public/tags/poisescorching.html",
-    "public/tags/aurora.html",
-    "content/contents/Mechanics/Humanity.md",
-    "content/contents/Mechanics.md",
-    "content/contents/Statuses/Bloodloss.md",
-    "content/contents/Mechanics/Vital States.md",
-    "content/contents/Statuses/Tremor — Hemorrhage.md",
+    "public/static/giscus/light.css",
+    "public/static/giscus/dark.css",
+    "public/contents/Statuses/Tremor-—-Hemorrhage.html",
+    "public/contents/Statuses/Mental-Power-Down.html",
+    "public/contents/Statuses/index.html",
+    "public/contents/Statuses/Combat-Power-Up.html",
+    "public/contents/Statuses/Bloodloss.html",
+    "public/contents/Mechanics/Vital-States.html",
+    "public/contents/Mechanics/Stancebroken.html",
+    "public/contents/Mechanics/Stance.html",
     "content/contents/Statuses.md",
+    "content/contents/Statuses/Tremor — Hemorrhage.md",
     "content/contents/Statuses/Mental Power Down.md",
     "content/contents/Statuses/Combat Power Up.md",
     "content/contents/Mechanics/Noctis.md",
@@ -243,7 +287,6 @@
     "content/contents/Mechanics/Aether.md",
     "content/contents/Mechanics/Critical Hit.md",
     "content/contents/Mechanics/Guardbroken.md",
-    "content/contents/Mechanics/Stancebroken.md",
     "content/contents/Mechanics/Stance.md",
     "content/contents/Mechanics/Death's Door Recovery.md",
     "content/contents/Mechanics/Downed.md",

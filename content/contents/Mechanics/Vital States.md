@@ -9,7 +9,7 @@ tags:
 <h1 class=vital>Vital States</h1>
 
 > [!vital|none]
-> ![[vital.png|floatl|74]] Every character begins with 2 ![[vital.png|icon|20]] <span class=vital>Vital States</span>, representing their overall resilience and capacity to remain combat-effective. ![[vital.png|icon|20]] <span class=vital>Vital States</span> function as a character’s primary health measure.
+> <img src="../../contents/icons/vital.png" class="floatl statusicon"> Every character begins with 2 ![[vital.png|icon|20]] <span class=vital>Vital States</span>, representing their overall resilience and capacity to remain combat-effective. ![[vital.png|icon|20]] <span class=vital>Vital States</span> function as a character’s primary health measure.
 > 
 > ![[vital.png|icon|20]] <span class=vital>Vital States</span> are lost when a character suffers excessive damage or when they are explicitly removed by status effects or skills. When a character is reduced to 0 ![[vital.png|icon|20]] <span class=vital>Vital States</span>, they are either ![[downed.png|icon|20]] [[Downed]] or placed into ![[dd.png|icon|20]] [[Death's Door]], depending on the unit’s highest attribute.
 > 
