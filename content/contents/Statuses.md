@@ -1,19 +1,8 @@
----
-cssclasses:
-  - hidetags
----
 > [!warning] Certain statuses do not yet have icons or custom colours.
 
-<h2 class="bleed">Bloodloss</h2>
+![[Bloodloss]]
 
-## ~={blood}Bloodloss=~
-> [!bleed|none] 
-> ![[blood.png|floatl|74]] ~={blood}Bloodloss=~ builds through three levels — ~={blood}Minor=~, ~={blood}Moderate=~, and ~={blood}High=~. Any ![[blood.png|18]] ~={blood}Bloodloss=~ applied while in ![[blood.png|18]] ~={blood}High Bloodloss=~ immediately triggers ![[hemo.png|18]] ~={hemo}Hemorrhage=~.
-> 
-> When triggered, ![[hemo.png|18]] ~={hemo}Hemorrhage=~ consumes one of the unit’s ![[vital.png|18]] ~={vital}[[Mechanics#~={vital}Vital State=~|Vital States]]=~.
-> 
-> If ![[hemo.png|18]] ~={hemo}Hemorrhage=~ causes the unit to lose their final ![[vital.png|18]] ~={vital}[[Mechanics#~={vital}Vital State=~|Vital State]]=~, they will advance to ![[dd.png|18]] ~={dd}[[Mechanics#~={dd}Death's Door=~|Death’s Door]]=~/![[downed.png|18]] ~={downed}[[Mechanics#~={downed}Downed=~|Downed]]=~.
-> *tags: #bloodloss #hemorrhage #status*
+---
 
 ## ~={burn}Burn=~
 > [!burn|none] 

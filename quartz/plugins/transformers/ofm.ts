@@ -1,5 +1,3 @@
-import fs from "fs"
-import path from "path"
 import { QuartzTransformerPlugin } from "../types"
 import {
   Root,
@@ -14,6 +12,7 @@ import { Element, Literal, Root as HtmlRoot } from "hast"
 import { ReplaceFunction, findAndReplace as mdastFindReplace } from "mdast-util-find-and-replace"
 import rehypeRaw from "rehype-raw"
 import { SKIP, visit } from "unist-util-visit"
+import path from "path"
 import { splitAnchor } from "../../util/path"
 import { JSResource, CSSResource } from "../../util/resources"
 // @ts-ignore
@@ -28,8 +27,6 @@ import { toHast } from "mdast-util-to-hast"
 import { toHtml } from "hast-util-to-html"
 import { capitalize } from "../../util/lang"
 import { PluggableList } from "unified"
-console.log("[FTC] ofm.ts loaded")
-
 
 export interface Options {
   comments: boolean
@@ -49,7 +46,7 @@ export interface Options {
 
 const defaultOptions: Options = {
   comments: true,
-  highlight: false,
+  highlight: true,
   wikilinks: true,
   callouts: true,
   mermaid: true,
@@ -103,88 +100,12 @@ const arrowMapping: Record<string, string> = {
   "<=": "&lArr;",
   "<==": "&lArr;",
 }
-//custom stuff.
-type FTCColor = {
-  id: string
-  color: string
-  className?: string
-  bold?: boolean
-  italic?: boolean
-  cap_mode?: { state: string }
-  line_mode?: { state: string }
-}
-
-const FTC_COLORS = new Map<string, FTCColor>()
-
-const ftcPath = path.join(
-  process.cwd(),
-  ".obsidian/plugins/fast-text-color/data.json"
-)
-
-try {
-  const raw = fs.readFileSync(ftcPath, "utf-8")
-  const parsed = JSON.parse(raw)
-
-  console.log("[FTC] Parsed JSON keys:", Object.keys(parsed))
-
-const themeIndex = parsed.themeIndex ?? 0
-const theme = parsed.themes?.[themeIndex]
-const colors = theme?.colors
-
-if (!Array.isArray(colors)) {
-  throw new Error("colors is not an array")
-}
-
-for (const c of colors as FTCColor[]) {
-  if (!c.id) continue
-  FTC_COLORS.set(c.id, c)
-}
-
-  console.log("[FTC] Loaded colors:", [...FTC_COLORS.keys()])
-} catch (err) {
-  console.error("[FTC] Failed to load fast-text-color data.json", err)
-}
-function generateFTCStyles(): string {
-  console.log("[FTC] Generating CSS")
-  let css = ""
-
-  for (const [id, def] of FTC_COLORS) {
-    css += `.ftc-color-builtin-${id} { color: ${def.color};`
-
-    if (def.bold) css += "font-weight: bold;"
-    if (def.italic) css += "font-style: italic;"
-
-    if (def.cap_mode?.state === "all_caps")
-      css += "text-transform: uppercase;"
-
-    if (def.cap_mode?.state === "small_caps")
-      css += "font-variant: small-caps;"
-
-    if (def.line_mode?.state === "underline")
-      css += "text-decoration: underline;"
-
-    if (def.line_mode?.state === "line-through")
-      css += "text-decoration: line-through;"
-
-    css += "}\n"
-  }
-
-  console.log("[FTC] CSS length:", css.length)
-  return css
-}
 
 function canonicalizeCallout(calloutName: string): keyof typeof calloutMapping {
   const normalizedCallout = calloutName.toLowerCase() as keyof typeof calloutMapping
   // if callout is not recognized, make it a custom one
   return calloutMapping[normalizedCallout] ?? calloutName
 }
-
-export const stylesheets = () => [
-  {
-    name: "fast-text-color",
-    content: generateFTCStyles(),
-  },
-]
 
 export const externalLinkRegex = /^https?:\/\//i
 
@@ -289,46 +210,12 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
     },
     markdownPlugins(ctx) {
       const plugins: PluggableList = []
-      console.log("[FTC] markdownPlugins() called")
 
       // regex replacements
       plugins.push(() => {
         return (tree: Root, file) => {
           const replacements: [RegExp, string | ReplaceFunction][] = []
           const base = pathToRoot(file.data.slug!)
-          console.log("[FTC] FTC transformer running")
-
-      const textColorRegex = /~=\{([^}]+)\}([\s\S]+?)=~/g
-
-      replacements.push([
-  textColorRegex,
-  (full: string, id: string, inner: string) => {
-    console.log("[FTC] Matched text color:", { id, inner })
-
-    if (!FTC_COLORS.has(id)) {
-      console.warn("[FTC] Unknown color id:", id)
-      return full
-    }
-
-    if (!(file.data as any).ftcCssInjected) {
-      const css = generateFTCStyles()
-      console.log("[FTC] Injecting CSS, length:", css.length)
-
-      ;(file.data as any).ftcCssInjected = true
-      ;(file.data as any).headContent ??= []
-      ;(file.data as any).headContent.push({
-        tag: "style",
-        content: css,
-      })
-    }
-
-    return {
-      type: "html",
-      value: `<span class="ftc-${id}">${inner}</span>`,
-    }
-  },
-])
-
 
           if (opts.wikilinks) {
             replacements.push([

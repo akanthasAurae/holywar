@@ -2,6 +2,9 @@
   "enabledCssSnippets": [
     "multicolumns",
     "customcolors",
-    "colorblocks"
-  ]
+    "colorblocks",
+    "obsiexclusives",
+    "obsioverrides"
+  ],
+  "accentColor": "#f55c5c"
 }

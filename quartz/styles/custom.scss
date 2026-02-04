@@ -1,11 +1,13 @@
 @use "./base.scss";
+@use "../../.obsidian/snippets/customcolors.css" as *;
 
-a {
-    color: inherit !important;
+p {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
 }
 
 //* custom stuff for callouts *//
-.callout[data-callout-metadata*="none"] > .callout-title {
+.callout[data-callout-metadata*="none"] > .callout-title, .callout[data-callout-metadata*="none"] > .callout-title > .callout-icon {
     display: none;
 }
 .callout[data-callout-metadata="none|min-0"] img {
@@ -19,7 +21,7 @@ a {
     --color: transparent;
     --callout-icon: 'content/contents/icons/na.svg';
     
-    & > .callout-title {
+    & > .callout-title, & > .callout-title > .callout-icon {
         display: none;
     }
 }
@@ -39,397 +41,131 @@ a {
 .inline-embed[alt="none"] > .markdown-embed-title {
 	display: none;
 }
+
+blockquote.transclude {
+    border-left: 0px solid transparent;
+    padding-left: 0px; 
+> h1, > .internal {
+    display: none;
+}
+}
+
 img[alt="floatl"] {
 	float: left;
 	margin-right: 10px;
+    top: 1em;
+    position: relative;
 }
 img[alt="floatr"] {
 	float: right;
 	margin-left: 10px;
 }
-/* custom icon list */
-.callout {
-  --callout-icon-none: 'content/contents/icons/na.svg';
-  --callout-icon-signature: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-signature-icon lucide-signature"><path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/><path d="M3 21h18"/></svg>';
-  --callout-icon-biography: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-line-icon lucide-pencil-line"><path d="M13 21h8"/><path d="m15 5 4 4"/><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>';
-  --callout-icon-inv: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-backpack-icon lucide-backpack"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>';
-  --callout-icon-menuu: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>';
-  --callout-icon-cyber: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-activity-icon lucide-square-activity"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M17 12h-2l-2 5-2-10-2 5H7"/></svg>';
-  --callout-icon-hum: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-person-standing-icon lucide-person-standing"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg>';
-  --callout-icon-stats: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waypoints-icon lucide-waypoints"><path d="m10.586 5.414-5.172 5.172"/><path d="m18.586 13.414-5.172 5.172"/><path d="M6 12h12"/><circle cx="12" cy="20" r="2"/><circle cx="12" cy="4" r="2"/><circle cx="20" cy="12" r="2"/><circle cx="4" cy="12" r="2"/></svg>';
-  --callout-icon-soulstats: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame-icon lucide-flame"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>';
-  --callout-icon-passives: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dna-icon lucide-dna"><path d="m10 16 1.5 1.5"/><path d="m14 8-1.5-1.5"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m16.5 10.5 1 1"/><path d="m17 6-2.891-2.891"/><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="m20 9 .891.891"/><path d="M3.109 14.109 4 15"/><path d="m6.5 12.5 1 1"/><path d="m7 18 2.891 2.891"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/></svg>';
-  --callout-icon-plus: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>';
-  --callout-icon-minus: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus-icon lucide-minus"><path d="M5 12h14"/></svg>';
-  --callout-icon-body: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-biceps-flexed-icon lucide-biceps-flexed"><path d="M12.409 13.017A5 5 0 0 1 22 15c0 3.866-4 7-9 7-4.077 0-8.153-.82-10.371-2.462-.426-.316-.631-.832-.62-1.362C2.118 12.723 2.627 2 10 2a3 3 0 0 1 3 3 2 2 0 0 1-2 2c-1.105 0-1.64-.444-2-1"/><path d="M15 14a5 5 0 0 0-7.584 2"/><path d="M9.964 6.825C8.019 7.977 9.5 13 8 15"/></svg>';
-  --callout-icon-reflex: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-icon lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>';
-  --callout-icon-tech: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu-icon lucide-cpu"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>';
-  --callout-icon-intel: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-cog-icon lucide-brain-cog"><path d="m10.852 14.772-.383.923"/><path d="m10.852 9.228-.383-.923"/><path d="m13.148 14.772.382.924"/><path d="m13.531 8.305-.383.923"/><path d="m14.772 10.852.923-.383"/><path d="m14.772 13.148.923.383"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771"/><path d="M17.998 5.125a4 4 0 0 1 2.525 5.771"/><path d="M19.505 10.294a4 4 0 0 1-1.5 7.706"/><path d="M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516"/><path d="M4.5 10.291A4 4 0 0 0 6 18"/><path d="M6.002 5.125a3 3 0 0 0 .4 1.375"/><path d="m9.228 10.852-.923-.383"/><path d="m9.228 13.148-.923.383"/><circle cx="12" cy="12" r="3"/></svg>';
-  --callout-icon-cool: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scale-icon lucide-scale"><path d="M12 3v18"/><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M7 21h10"/></svg>';
-  --callout-icon-rolls: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dices-icon lucide-dices"><rect width="12" height="12" x="2" y="10" rx="2" ry="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></svg>';
-  --callout-icon-combat: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sword-icon lucide-sword"><path d="m11 19-6-6"/><path d="m5 21-2-2"/><path d="m8 16-4 4"/><path d="M9.5 17.5 21 6V3h-3L6.5 14.5"/></svg>';
-  --callout-icon-sneak: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-closed-icon lucide-eye-closed"><path d="m15 18-.722-3.25"/><path d="M2 8a10.645 10.645 0 0 0 20 0"/><path d="m20 15-1.726-2.05"/><path d="m4 15 1.726-2.05"/><path d="m9 18 .722-3.25"/></svg>';
-  --callout-icon-mental: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-icon lucide-brain"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg>';
-
-    &[data-callout="poise"] .callout-icon, 
-    &[data-callout="scorch"] .callout-icon, 
-    &[data-callout="burn"] .callout-icon, 
-    &[data-callout="bleed"] .callout-icon, 
-    &[data-callout="hemo"] .callout-icon, 
-    &[data-callout="vital"] .callout-icon, 
-    &[data-callout="downed"] .callout-icon, 
-    &[data-callout="dd"] .callout-icon, 
-    &[data-callout="ddrec"] .callout-icon, 
-    &[data-callout="down"] .callout-icon, 
-    &[data-callout="up"] .callout-icon, 
-    &[data-callout="guardbreak"] .callout-icon, 
-    &[data-callout="tremor"] .callout-icon, 
-    &[data-callout="tox"] .callout-icon, 
-    &[data-callout="stealth"] .callout-icon, 
-    &[data-callout="venom"] .callout-icon, 
-    &[data-callout="poiseven"] .callout-icon, 
-    &[data-callout="tremorhemo"] .callout-icon, 
-    &[data-callout="crit"] .callout-icon, 
-    &[data-callout="stance"] .callout-icon, 
-    &[data-callout="stancebreak"] .callout-icon, 
-    &[data-callout="sheath"] .callout-icon, 
-    &[data-callout="unsheath"] .callout-icon, 
-    &[data-callout="awakened"] .callout-icon, 
-    &[data-callout="shatt"] .callout-icon, 
-    &[data-callout="nimius"] .callout-icon, 
-    &[data-callout="aether"] .callout-icon, 
-    &[data-callout="aurora"] .callout-icon, 
-    &[data-callout="noctis"]  .callout-icon {
-        .callout-icon{--callout-icon: var(--callout-icon-none)};
-    };
-    &[data-callout="signature"] .callout-icon {
-        --callout-icon: var(--callout-icon-signature);
-        --color: #999999;
-        --border: #99999944;
-        --bg: #99999910;
-    };
-    &[data-callout="inv"] .callout-icon {
-        --callout-icon: var(--callout-icon-inv);
-    };
-    &[data-callout="menuu"] .callout-icon {
-        --callout-icon: var(--callout-icon-menuu);
-    };
-    &[data-callout="hum"] .callout-icon {
-        --callout-icon: var(--callout-icon-hum);
-    };
-    &[data-callout="stats"] .callout-icon {
-        --callout-icon: var(--callout-icon-stats);
-    };
-    &[data-callout="soulstats"] .callout-icon {
-        --callout-icon: var(--callout-icon-soulstats);
-    };
-    &[data-callout="passives"] .callout-icon {
-        --callout-icon: var(--callout-icon-passives);
-    };
-    &[data-callout="plus"] .callout-icon {
-        --callout-icon: var(--callout-icon-plus);
-    };
-    &[data-callout="minus"] .callout-icon {
-        --callout-icon: var(--callout-icon-minus);
-    };
-    &[data-callout="body"] .callout-icon {
-        --callout-icon: var(--callout-icon-body);
-    };
-    &[data-callout="reflex"] .callout-icon {
-        --callout-icon: var(--callout-icon-reflex);
-    };
-    &[data-callout="tech"] .callout-icon {
-        --callout-icon: var(--callout-icon-tech);
-    };
-    &[data-callout="intel"] .callout-icon {
-        --callout-icon: var(--callout-icon-intel);
-    };
-    &[data-callout="cool"] .callout-icon {
-        --callout-icon: var(--callout-icon-cool);
-    };
-    &[data-callout="rolls"] .callout-icon {
-        --callout-icon: var(--callout-icon-rolls);
-    };
-    &[data-callout="combat"] .callout-icon {
-        --callout-icon: var(--callout-icon-combat);
-    };
-    &[data-callout="sneak"] .callout-icon {
-        --callout-icon: var(--callout-icon-sneak);
-    };
-    &[data-callout="mental"] .callout-icon {
-        --callout-icon: var(--callout-icon-mental);
-    };
-    &[data-callout="cyber"] .callout-icon {
-        --callout-icon: var(--callout-icon-cyber);
-    };
-    &[data-callout="biography"] .callout-icon {
-        --callout-icon: var(--callout-icon-biography);
-    };
-    
-
+img[alt="icon"] {
+	vertical-align: sub;
 }
-    /* coloring & setting */
-[data-callout="signature"] + .signature {
-    --color: #999999;
-    --border: #99999944;
-    --bg: #99999910;
+/* custom list */
+.callout {
+  &.signature {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-signature-icon lucide-signature"><path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/><path d="M3 21h18"/></svg> '); //SVG icon code
+  }
+    &.biography {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-icon lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg> '); //SVG icon code
+  }
+    &.inv {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-backpack-icon lucide-backpack"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg> '); //SVG icon code
+  }
+    &.menuu {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg> ');
+  }
+    &.cyber {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-activity-icon lucide-square-activity"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M17 12h-2l-2 5-2-10-2 5H7"/></svg> ');
+  }
+    &.hum {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-person-standing-icon lucide-person-standing"><circle cx="12" cy="5" r="1"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/></svg> ');
+  }
+    &.stats {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waypoints-icon lucide-waypoints"><path d="m10.586 5.414-5.172 5.172"/><path d="m18.586 13.414-5.172 5.172"/><path d="M6 12h12"/><circle cx="12" cy="20" r="2"/><circle cx="12" cy="4" r="2"/><circle cx="20" cy="12" r="2"/><circle cx="4" cy="12" r="2"/></svg> ');
+  }
+    &.soulstats{
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame-icon lucide-flame"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg> ');
+  }
+    &.passives {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dna-icon lucide-dna"><path d="m10 16 1.5 1.5"/><path d="m14 8-1.5-1.5"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m16.5 10.5 1 1"/><path d="m17 6-2.891-2.891"/><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="m20 9 .891.891"/><path d="M3.109 14.109 4 15"/><path d="m6.5 12.5 1 1"/><path d="m7 18 2.891 2.891"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/></svg> ');
+  }
+    &.plus {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg> ');
+  }
+    &.minus {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus-icon lucide-minus"><path d="M5 12h14"/></svg> ');
+  }
+    &.rolls {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dices-icon lucide-dices"><rect width="12" height="12" x="2" y="10" rx="2" ry="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/></svg> ');
+  }
+    &.body {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-biceps-flexed-icon lucide-biceps-flexed"><path d="M12.409 13.017A5 5 0 0 1 22 15c0 3.866-4 7-9 7-4.077 0-8.153-.82-10.371-2.462-.426-.316-.631-.832-.62-1.362C2.118 12.723 2.627 2 10 2a3 3 0 0 1 3 3 2 2 0 0 1-2 2c-1.105 0-1.64-.444-2-1"/><path d="M15 14a5 5 0 0 0-7.584 2"/><path d="M9.964 6.825C8.019 7.977 9.5 13 8 15"/></svg> ');
+  }
+    &.reflex {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-icon lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg> ');
+  }
+    &.tech {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu-icon lucide-cpu"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="100%" height="100%" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg> ');
+  }
+    &.intel {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-cog-icon lucide-brain-cog"><path d="m10.852 14.772-.383.923"/><path d="m10.852 9.228-.383-.923"/><path d="m13.148 14.772.382.924"/><path d="m13.531 8.305-.383.923"/><path d="m14.772 10.852.923-.383"/><path d="m14.772 13.148.923.383"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771"/><path d="M17.998 5.125a4 4 0 0 1 2.525 5.771"/><path d="M19.505 10.294a4 4 0 0 1-1.5 7.706"/><path d="M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516"/><path d="M4.5 10.291A4 4 0 0 0 6 18"/><path d="M6.002 5.125a3 3 0 0 0 .4 1.375"/><path d="m9.228 10.852-.923-.383"/><path d="m9.228 13.148-.923.383"/><circle cx="12" cy="12" r="3"/></svg> ');
+  }
+    &.cool {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scale-icon lucide-scale"><path d="M12 3v18"/><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M7 21h10"/></svg> ');
+  }
+    &.combat {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sword-icon lucide-sword"><path d="m11 19-6-6"/><path d="m5 21-2-2"/><path d="m8 16-4 4"/><path d="M9.5 17.5 21 6V3h-3L6.5 14.5"/></svg> ');
+  }
+    &.sneak {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-closed-icon lucide-eye-closed"><path d="m15 18-.722-3.25"/><path d="M2 8a10.645 10.645 0 0 0 20 0"/><path d="m20 15-1.726-2.05"/><path d="m4 15 1.726-2.05"/><path d="m9 18 .722-3.25"/></svg> ');
+  }
+    &.mental {
+    --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-icon lucide-brain"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg> ');
+  }
+}
 
-  }
-[data-callout="biography"] + .biography {
-    --color: #999999;
-    --border: #99999944;
-    --bg: #99999910;
-  }
-[data-callout="inv"] + .inv {
-    --color: #916548;
-    --border: #91654844;
-    --bg: #91654810;
-    --callout-icon: var(--callout-icon-inv);
-  }
-[data-callout="menuu"] + .menuu {
-    --color: #999999;
-    --border: #99999944;
-    --bg: #99999910;
-    --callout-icon: var(--callout-icon-menu);
-  }
-[data-callout="cyber"] + .cyber {
-    --color: #bd9b2e;
-    --border: #bd9b2e44;
-    --bg: #bd9b2e10;
-    --callout-icon: var(--callout-icon-cyberware);
-  }
-[data-callout="hum"] + .hum {
-    --color: #53c43c;
-    --border: #53c43c44;
-    --bg: #53c43c10;
-    --callout-icon: var(--callout-icon-humanity);
-  }
-[data-callout="stats"] + .stats {
-    --color: #2ebd6e;
-    --border: #2ebd6e44;
-    --bg: #2ebd6e10;
-    --callout-icon: var(--callout-icon-stats);
-  }
-[data-callout="soulstats"] + .soulstats,
-[data-callout-metadata*="s."] {
-    --color: #7251be;
-    --border: #7251be44;
-    --bg: #7251be10;
-  }
-[data-callout="soulstats"] {
-    --callout-icon: var(--callout-icon-soulstats);
-  }
-[data-callout="passives"] + .passives {
-    --color: #999999;
-    --border: #99999944;
-    --bg: #99999910;
-    --callout-icon: var(--callout-icon-passives);
-  }
-[data-callout="plus"] + .plus {
-    --color: #42c425;
-    --border: #42c42544;
-    --bg: #42c42510;
-    --callout-icon: var(--callout-icon-plus);
-  }
-[data-callout="minus"] + .minus {
-    --color: #c42542;
-    --border: #c4254244;
-    --bg: #c4254210;
-    --callout-icon: var(--callout-icon-signature);
-  }
-[data-callout="rolls"] + .rolls,
-[data-callout="body"] + .body,
-[data-callout="reflex"] + .reflex,
-[data-callout="tech"] + .tech,
-[data-callout="intel"] + .intel,
-[data-callout="cool"] + .cool {
-    --color: #45b37c;
-    --border: #45b37c44;
-    --bg: #45b37c10;
-  }
-[data-callout="rolls"] {
-    --callout-icon: var(--callout-icon-rolls);
-  }
-[data-callout="body"] {
-    --callout-icon: var(--callout-icon-body);
-  }
-[data-callout="reflex"] {
-    --callout-icon: var(--callout-icon-reflexes);
-  }
-[data-callout="tech"] {
-    --callout-icon: var(--callout-icon-technical);
-  }
-[data-callout="intel"] {
-    --callout-icon: var(--callout-icon-intelligence);
-  }
-[data-callout="cool"] {
-    --callout-icon: var(--callout-icon-cool);
-  }
-[data-callout="combat"] + .combat {
-    --color: #e66060;
-    --border: #e6606044;
-    --bg: #e6606010;
-    --callout-icon: var(--callout-icon-signature);
-  }
-[data-callout="sneak"] + .sneak {
-    --color: #9a60e6;
-    --border: #9a60e644;
-    --bg: #9a60e610;
-    --callout-icon: var(--callout-icon-signature);
-  }
-[data-callout="mental"] + .mental {
-    --color: #60a5e6;
-    --border: #60a5e644;
-    --bg: #60a5e610;
-    --callout-icon: var(--callout-icon-signature);
-  }
-[data-callout="poise"] + .poise {
-    --color: #c8d0d0;
-    --border: #c8d0d044;
-    --bg: #c8d0d010;
-  }
-[data-callout="scorch"] + .scorch {
-    --color: #ff591f;
-    --border: #ff591f44;
-    --bg: #ff591f10;
-  }
-[data-callout="burn"] + .burn {
-    --color: #ff781f;
-    --border: #ff781f44;
-    --bg: #ff781f10;
-  }
-[data-callout="bleed"] + .bleed {
-    --color: #df1507;
-    --border: #df150744;
-    --bg: #df150710;
-  }
-[data-callout="hemo"] + .hemo {
-    --color: #c61000;
-    --border: #c6100044;
-    --bg: #c6100010;
-  }
-[data-callout="vital"] + .vital {
-    --color: #0ce68d;
-    --border: #0ce68d44;
-    --bg: #0ce68d10;
-  }
-[data-callout="downed"] + .downed {
-    --color: #a03d04;
-    --border: #a03d0444;
-    --bg: #a03d0410;
-  }
-[data-callout="dd"] + .dd {
-    --color: #6b0902;
-    --border: #6b090244;
-    --bg: #6b090210;
-  }
-[data-callout="ddrec"] + .ddrec {
-    --color: #bfbbbb;
-    --border: #bfbbbb44;
-    --bg: #bfbbbb10;
-  }
-[data-callout="down"] + .down {
-    --color: #2184ed;
-    --border: #2184ed44;
-    --bg: #2184ed10;
-  }
-[data-callout="up"] + .up {
-    --color: #e01a1e;
-    --border: #e01a1e44;
-    --bg: #e01a1e10;
-  }
-[data-callout="guardbreak"] + .guardbreak {
-    --color: #740602;
-    --border: #74060244;
-    --bg: #74060210;
-  }
-[data-callout="tremor"] + .tremor {
-    --color: #ecb679;
-    --border: #ecb67944;
-    --bg: #ecb67910;
-  }
-[data-callout="tox"] + .tox {
-    --color: #3ed43c;
-    --border: #3ed43c44;
-    --bg: #3ed43c10;
-  }
-[data-callout="stealth"] + .stealth {
-    --color: #7549cc;
-    --border: #7549cc44;
-    --bg: #7549cc10;
-  }
-[data-callout="venom"] + .venom {
-    --color: #3e1ecc;
-    --border: #3e1ecc44;
-    --bg: #3e1ecc10;
-  }
-[data-callout="poiseven"] + .poiseven {
-    --color: #440497;
-    --border: #44049744;
-    --bg: #44049710;
-  }
-[data-callout="tremorhemo"] + .tremorhemo {
-    --color: #d24a28;
-    --border: #d24a2844;
-    --bg: #d24a2810;
-  }
-[data-callout="crit"] + .crit {
-    --color: #f8db9b;
-    --border: #f8db9b44;
-    --bg: #f8db9b10;
-  }
-[data-callout="stance"] + .stance {
-    --color: #d5a220;
-    --border: #d5a22044;
-    --bg: #d5a22010;
-  }
-[data-callout="stancebreak"] + .stancebreak {
-    --color: #f5c724;
-    --border: #f5c72444;
-    --bg: #f5c72410;
-  }
-[data-callout="sheath"] + .sheath {
-    --color: #c7d2e0;
-    --border: #c7d2e044;
-    --bg: #c7d2e010;
-  }
-[data-callout="unsheath"] + .unsheath {
-    --color: #8db2e2;
-    --border: #8db2e244;
-    --bg: #8db2e210;
-  }
-[data-callout="awakened"] + .awakened {
-    --color: #c5090f;
-    --border: #c5090f44;
-    --bg: #c5090f10;
-  }
-[data-callout="shatt"] + .shatt {
-    --color: #471e98;
-    --border: #471e9844;
-    --bg: #471e9810;
-  }
-[data-callout="nimius"] + .nimius {
-    --color: #a7071c;
-    --border: #a7071c44;
-    --bg: #a7071c10;
-  }
-[data-callout="aether"] + .aether {
-    --color: #5da1d9;
-    --border: #5da1d944;
-    --bg: #5da1d910;
-  }
-[data-callout="aurora"] + .aurora {
-    --color: #f1c892;
-    --border: #f1c89244;
-    --bg: #f1c89210;
-  }
-[data-callout="noctis"] + .noctis {
-    --color: #9836c5;
-    --border: #9836c544;
-    --bg: #9836c510;
-  }
+    /* coloring & setting */
 .hidetags {
     .tags {
         display: none;
     }
 }
+/* set here link colors! */
+    /* quick notes about selectors:
+    1. they MUST be captalized and spaces joined instead by dashes (ie. Vital-States)
+    2. Bursts unfortunately cannot have link colors*
+    3. Stats like Combat do not need links
+    4. a[href=""] is exclusive to this .scss file, use a[data-href=""] for Obsidian links in customcolors.css.**
+    5. How to do selectors:
+        ="STRING"
+            > finds EXACTLY the STRING:
+				ex. ="Poise-Hemorrhage", does not select "Poise"
+        *= "STRING"
+            > anything CONTAINING the STRING:
+				ex. =*"Vital", selects "Vital-States", "Vital-State", "Vital State", etc
+        $= "STRING"
+            > anything ENDING with the STRING:
+				ex. $="Scorching", select "Poise-Scorching" and "Scorching"
+
+    *(this is due to a limitation: I can't select the contents of <a> within css, thus it cannot determine the difference between [[Tremor|Seisimic Shock]] and [[Tremor]]), and besides, bursts shouldn't need to link back to their statuses since it's likely it'll already be linked somewhere nearby...
+    **Unlike data-href, which permits spaces in the link in Obsidian, you might need to mess around with selectors to try and 'nab' the href, as quartz parses-links-like-this. Ask me for help if needed
+    */
+a[href="Poise"]  {
+    color: #c8d0d0;
+	font-weight:bold;
+  }
+a[href="Burn"] {
+    color: #ec8209;
+    font-weight:bold;
+}
+a[href="Bloodloss"] {
+    color: #b1120e;
+    font-weight:bold;
+}
+a[href*="Vital-State"] /* must be Captalized due to the way hrefs work */ {
+    color: #1fdb4e;
+	font-weight:bold;
+  }
