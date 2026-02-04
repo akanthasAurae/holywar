@@ -78,12 +78,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/contents/Mechanics/Stancebroken.md",
+                "file": "content/contents/Statuses/Bloodloss.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Stancebroken"
+              "title": "Bloodloss"
             }
           }
         ],
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/contents/Mechanics.md",
+                "file": "content/contents/Statuses/Bloodloss.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +170,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Mechanics"
+              "title": "Backlinks for Bloodloss"
             }
           },
           {
@@ -249,12 +249,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "a4a9f67c75d2956c",
+  "active": "3ea8101ea735fed1",
   "lastOpenFiles": [
-    "content/contents/Mechanics/Stancebroken.md",
-    "content/contents/Mechanics/Humanity.md",
-    "content/contents/Mechanics.md",
     "content/contents/Mechanics/Vital States.md",
+    "content/contents/Mechanics/Stancebroken.md",
+    "content/contents/Mechanics.md",
+    "content/contents/Mechanics/Humanity.md",
     "content/contents/Statuses/Bloodloss.md",
     "public/index-og-image.webp",
     "public/contents/Statuses/Tremor-—-Hemorrhage-og-image.webp",
