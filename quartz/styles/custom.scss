@@ -10,9 +10,10 @@ p {
 .callout[data-callout-metadata*="none"] > .callout-title, .callout[data-callout-metadata*="none"] > .callout-title > .callout-icon {
     display: none;
 }
-.callout-title {
-    padding-bottom: 0px;
+.callout[data-callout-metadata*="none"] > .callout-content {
+    padding-top: 1.4em;
 }
+
 .callout[data-callout-metadata="none|min-0"] img {
 	border: 2px solid rgb(var(--color));
 }
@@ -53,30 +54,36 @@ blockquote.transclude {
 }
 }
 
-.floatl, [alt="floatl"] {
-	float:inline-start;
-	margin-right: 10px;
+.floatl, [alt="floatl"], .floatr, [alt="floatr"] {
     vertical-align: sub;
 	height: 85px;
     width: 85px;
 }
+.floatl, [alt="floatl"] {
+    float:inline-start;
+    margin-right: 1em;
+}
 .floatr, [alt="floatr"] {
 	float: inline-end;
-	margin-left: 10px;
-	vertical-align: sub;
-	height: 85px;
-    width: 85px;
+	margin-left: 1em;
+
 }
 
-.callout[data-callout-metadata*="none"] .callout-content
+.callout[data-callout-metadata="status|none"] .callout-content
 {   padding-left: 1em;
     padding-right: 1em;
 > p:nth-child(1) {
-    margin-top: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 }
-img[alt="icon"] {
+.icon, img[alt="icon"] {
 	vertical-align: sub;
+    height: 20px;
+    width: 20px;
 }
 /* custom list */
 .callout { /* THESE WERE A FUCKING NIGHTMARE OH MY GOD */
@@ -321,152 +328,147 @@ a, a[role=anchor] {
 
     /* status */
 a, a[role=anchor] {
-    &[href$="Poise"], &[href$="poise"], &[href="Poise"], &[href="poise"] {
+    &[href*="oise"] {
     color: #c8d0d0;
 	font-weight:bold;
 	--highlight: #c8d0d026;
   };
-    &[href*="nvenoming"], &[href="envenoming"], &[href="Envenoming"] {
+    &[href*="nvenoming"] {
     color: #5c12a5;
 	--highlight: #5c12a526;
 	font-weight:bold; 
   };
-    &[href*="Poise-Hemorrhage"], &[href*="poise-hemorrhage"], &[href*="poisehemorrhage"],
-    &[href="Poise-Hemorrhage"], &[href="poise-hemorrhage"], &[href="poisehemorrhage"] {
+    &[href*="oise"][href*="emorrhage"] {
     color: #d00b0b;
 	--highlight: #d00b0b26;
 	font-weight:bold; 
   };
-    &[href*="Poise-Scorching"], &[href*="poise-scorching"], &[href*="poisescorching"],
-    &[href="Poise-Scorching"], &[href="poise-scorching"], &[href="poisescorching"]{
+    &[href*="oise"][href*="corching"] {
     color: #ea5d23;
 	font-weight:bold; 
 	--highlight: #ea5d2326;
   };
-    &[href*="Burn"], &[href*="burn"], &[href="Burn"], &[href="burn"]{
+    &[href*="urn"] {
     color: #ec8209;
     font-weight:bold;
 	--highlight: #ec820926;
   };
-    &[href*="Bloodloss"], &[href*="bloodloss"], &[href="Bloodloss"], &[href="bloodloss"] {
+    &[href*="loodloss"] {
     color: #b1120e;
     font-weight:bold;
 	--highlight: #b1120e26;
   };
-    &[href*="Vital-State"], &[href*="vital-state"], &[href*="vitalstate"], 
-    &[href="Vital-State"], &[href="vital-state"], &[href="vitalstate"] {
+    &[href*="ital"][href*="tate"] {
     color: #1fdb4e;
 	font-weight:bold;
 	--highlight: #1fdb4e26;
   };
-    &[href$="Door"], &[href$="door"] {
+    &[href*="eath"][href*="s"][href*="oor"] {
     color: #e00000;
 	font-weight:bold;
 	--highlight: #e0000026;
   };
-    &[href*="Downed"], &[href*="downed"] {
+    &[href*="owned"], &[href*="owned"] {
     color: #ea5f1d;
 	font-weight:bold;
 	--highlight: #ea5f1d26;
   };
-    &[href*="Recovery"], &[href*="recovery"] {
+    &[href*="eath"][href*="s"][href*="oor"][href*="ecovery"] {
     color: #bfbbbb;
 	--highlight: #bfbbbb26;
 	font-weight:bold;
   };
-    &[href*="mentalpowerdown"], &[href*="combatpowerup"], &[href*="defensepowerup"], 
-    &[href*="mental-power-down"], &[href*="combat-power-up"], &[href*="defense-power-up"]{
+    &[href*="ental"][href*="ower"][href*="own"], &[href*="ombat"][href*="ower"][href*="p"], &[href*="ombat"][href*="ower"][href*="p"] {
     color: #e11414;
 	--highlight: #e1141426;
 	font-weight:bold;
   };
-    &[href*="mentalpowerup"], &[href*="combatpowerdown"], &[href*="defensepowerdown"],
-    &[href*="mental-power-up"], &[href*="combat-power-down"], &[href*="defense-power-down"] {
+    &[href*="ental"][href*="ower"][href*="up"], &[href*="ombat"][href*="ower"][href*="own"], &[href*="ombat"][href*="ower"][href*="own"] {
     color: #1e84f1;
 	--highlight: #1e84f126;
 	font-weight:bold;
   };
-    &[href*="Guardbroken"], &[href*="guardbroken"] {
+    &[href*="uardbroken"] {
     color: #641717;
 	--highlight: #64171726;
 	font-weight:bold; 
   };
-    &[href$="Tremor"], &[href$="tremor"] {
+    &[href*="remor"] {
     color: #eebc77;
 	--highlight: #eebc7726;
 	font-weight:bold; 
   };
-    &[href*="Toxin"], &[href*="toxin"] {
+    &[href*="oxin"] {
     color: #3ed43c;
 	--highlight: #3ed43c26;
 	font-weight:bold; 
   };
-    &[href*="Stealth"], &[href*="stealth"] {
+    &[href*="tealth"] {
     color: #7549cc;
 	--highlight: #7549cc26;
 	font-weight:bold; 
   };
-    &[href$="Venom"], &[href$="venom"] {
+    &[href*="enom"] {
     color: #582dcd;
 	--highlight: #582dcd26;
 	font-weight:bold; 
   };
-    &[href*="tremor"][href*="hemorrhage"], &[href*="Tremor"][href*="Hemorrhage"]{
+    &[href*="remor"][href*="emorrhage"] {
     color: #d24a28;
 	--highlight: #d24a2826;
 	font-weight:bold; 
   };
-    &[href*="Crit"], &[href*="crit"] {
+    &[href*="ritical"][href*="it"] {
     color: #f8db9b;
 	--highlight: #f8db9b26;
 	font-weight:bold; 
   };
-    &[href$="Stance"], &[href$="stance"] {
+    &[href*="tance"] {
     color: #d5a220;
 	--highlight: #d5a22026;
 	font-weight:bold; 
   };
-    &[href*="Stancebroken"], &[href*="stancebroken"] {
+    &[href*="tancebroken"] {
     color: #f5c724;
 	--highlight: #f5c72426;
 	font-weight:bold; 
   };
-    &[href$="Sheathed"], &[href$="sheathed"] {
+    &[href$="heathed"] {
     color: #c7d2e0;
 	--highlight: #c7d2e026;
 	font-weight:bold; 
   };
-    &[href*="Unsheathed"], &[href*="unsheathed"] {
+    &[href*="nsheathed"] {
     color: #8db2e2;
 	--highlight: #8db2e226;
 	font-weight:bold; 
   };
-    &[href*="Awakened"], &[href*="awakened"] {
+    &[href*="wakened"] {
     color: #af090f;
 	--highlight: #af090f26;
 	font-weight:bold; 
   };
-    &[href*="Shattered"], &[href*="shattered"] {
+    &[href*="hattered"] {
     color: #7719c8;
 	--highlight: #7719c826;
 	font-weight:bold; 
   };
-    &[href*="Nimius"], &[href*="nimius"] {
+    &[href*="imius"] {
     color: #c60c31;
 	--highlight: #c60c3126;
 	font-weight:bold; 
   };
-    &[href*="Aether"], &[href*="aether"] {
+    &[href*="ether"] {
     color: #5a9cd2;
 	--highlight: #5a9cd226;
 	font-weight:bold; 
   };
-    &[href*="Aurora"], &[href*="aurora"] {
+    &[href*="urora"][href*="itae"] {
     color: #e79e5a;
 	--highlight: #e79e5a26;
 	font-weight:bold; 
   };
-    &[href*="Noctis"], &[href*="noctis"] {
+    &[href*="octis"] {
     color: #ba7ad1;
 	--highlight: #ba7ad126;
 	font-weight:bold; 

@@ -309,7 +309,7 @@ h1.burn, h2.burn, h3.burn, h4.burn, h5.burn, h6.burn, span.burn, a.burn, p.burn,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.bleed, h2.bleed, h3.bleed, h4.bleed, h5.bleed, h6.bleed, span.bleed, a.bleed, p.bleed, a[data-href*="Bloodloss"] {
+h1.bleed, h2.bleed, h3.bleed, h4.bleed, h5.bleed, h6.bleed, span.bleed, a.bleed, p.bleed, a[data-href~="Bloodloss"] {
 	color: #b1120e;
 	--link-color: #b1120e;
 	font-weight:bold;
@@ -397,7 +397,7 @@ a[data-href*="Recovery"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.down, h2.down, h3.down, h4.down, h5.down, h6.down, span.down, a.down, p.down,
-a[data-href*="Ment"][href$="Up"], a[data-href*="Com"][href$="Down"], a[data-href*="Def"][href$="Down"] {
+a[data-href~="Mental Power"][href$="Up"], a[data-href*="Com"][href$="Down"], a[data-href*="Def"][href$="Down"] {
 	color: #1e84f1;
 	--link-color: #1e84f1;
 	font-weight:bold;

@@ -1,6 +1,6 @@
 ---
 tags:
-  - vitalstate
+  - vital-state
   - body
   - reflexes
   - mechanics
@@ -8,10 +8,10 @@ tags:
 
 <h1 class=vital>Vital States</h1>
 
-> [!vital|none]
-> <img src="vital.png" class="floatl statusicon"> Every character begins with 2 ![[vital.png|icon|20]] <span class=vital>Vital States</span>, representing their overall resilience and capacity to remain combat-effective. ![[vital.png|icon|20]] <span class=vital>Vital States</span> function as a character’s primary health measure.
+> [!vital|status|none]
+> <img src="vital.png" class="floatl"><span> Every character begins with 2 <img src="vital.png" class="icon"> <span class=vital>Vital States</span>, representing their overall resilience and capacity to remain combat-effective. <img src="vital.png" class="icon"> <span class=vital>Vital States</span> function as a character’s primary health measure.</span>
 > 
-> ![[vital.png|icon|20]] <span class=vital>Vital States</span> are lost when a character suffers excessive damage or when they are explicitly removed by status effects or skills. When a character is reduced to 0 ![[vital.png|icon|20]] <span class=vital>Vital States</span>, they are either ![[downed.png|icon|20]] [[Downed]] or placed into ![[dd.png|icon|20]] [[Death's Door]], depending on the unit’s highest attribute.
+> ![[vital.png|icon|20]] <span class=vital>Vital States</span> are lost when a character suffers excessive damage or when they are explicitly removed by status effects or skills. When a character is reduced to ![[vital.png|icon|20]] <span class=vital>0 Vital States</span>, they are either ![[downed.png|icon|20]] [[Downed]] or placed into ![[dd.png|icon|20]] [[Death's Door]], depending on the unit’s highest attribute.
 > 
 > Units that have higher **Body** than **Reflexes** enter ![[dd.png|icon|20]] [[Death's Door]] when their ![[vital.png|icon|20]] <span class=vital>Vital State</span> is depleted, and units that have higher **Reflexes** than **Body** become ![[downed.png|icon|20]] [[Downed]] instead.
 > 

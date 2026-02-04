@@ -5,11 +5,10 @@ tags:
   - status
 ---
 
-<h2 class="bleed">Bloodloss</h2>
+<h1 class="bleed">Bloodloss</h1>
 
-> [!bleed|none]
-> 
->  <img src="blood.png" class="floatl statusicon"> <span class=bleed>Bloodloss</span> builds through three levels — <span class=bleed>Minor</span>, <span class=bleed>Moderate</span>, and <span class=bleed>High</span>. Any ![[blood.png|icon|20]] <span class=bleed>Bloodloss</span> applied while in ![[blood.png|icon|20]] <span class=bleed>High Bloodloss</span> immediately triggers ![[hemo.png|icon|20]] <span class=hemo>Hemorrhage</span>.
+> [!bleed|status|none]
+>  <img src="blood.png" class="floatl"><span><span class=bleed>Bloodloss</span> builds through three levels — <span class=bleed>Minor</span>, <span class=bleed>Moderate</span>, and <span class=bleed>High</span>. Any <img src="blood.png" class="icon"> <span class=bleed>Bloodloss</span> applied while in <img src="blood.png" class="icon"> <span class=bleed>High Bloodloss</span> immediately triggers <img src="hemo.png" class="icon"> <span class=hemo>Hemorrhage</span>.</span>
 > 
 > When triggered, ![[hemo.png|icon|20]] <span class=hemo>Hemorrhage</span> consumes one of the unit’s ![[vital.png|icon|20]] [[Vital States]].
 > 

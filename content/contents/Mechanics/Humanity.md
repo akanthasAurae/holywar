@@ -9,13 +9,13 @@ tags:
 > [!hum|none]
 > <span class="hum">Humanity</span> is what keeps one sane.
 > 
-> <span class="hum">Humanity</span> has a base of **100** alongside a <span class="hum">Humanity Modifier</span>.
+> As a stat, it has a base of **100** alongside a <span class="hum">Humanity Modifier</span>.
 > <br>**`(Technical + Intelligence) / ((Body/5) + (Reflexes/5)) = Humanity Modifier`**
 > <br>This modifier is then multiplied by the unit’s level; which will then be added to the base. 
 > 
-> <span class="hum">Humanity</span> can be gained and lowered via actions that impact one’s psyche. If one reaches their <span class="humlow">Low Humanity Threshold</span>, they will become unstable and will start showing proper <span class="cyber">Cyberpsychosis</span> symptoms. If by chance the value reaches zero, then the unit will become indiscriminate and will be labelled as a <span class="cyber">Cyberpsycho</span>.
+> It can be gained and lowered via actions that impact one’s psyche. If one reaches their <span class="humlow">Low Humanity Threshold</span>, they will become unstable and will start showing proper <span class="cyber">Cyberpsychosis</span> symptoms. If by chance the value reaches zero, then the unit will become indiscriminate and will be labelled as a <span class="cyber">Cyberpsycho</span>.
 > 
-> <span class="hum">Humanity</span> cannot be instantly gained back, which means that once a character reaches their <span class="humlow">Low Humanity Threshold</span>, they will become more of a liability to their team. Characters will have to eventually take breaks, stepping away from duty if they want to regain their <span class="hum">Humanity</span> and avoid <span class="cyber">Cyberpsychosis</span>.
+> However, it cannot be instantly gained back. Once a character reaches their <span class="humlow">Low Humanity Threshold</span>, they will become more of a liability to their team. Characters will have to eventually take breaks, stepping away from duty if they want to regain their <span class="hum">Humanity</span> and avoid <span class="cyber">Cyberpsychosis</span>.
 > 
 > <span class="cyber">Cyberware</span> influences the amount of <span class="hum">Humanity</span> one has, reducing its maximum depending on how much <span class="cyber">Cyberware</span> one has installed.
 > > [!plus]- Humanity increasing factors
