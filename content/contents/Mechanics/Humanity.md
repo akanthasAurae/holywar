@@ -1,29 +1,69 @@
-<h2 class=hum>Humanity</h2>
+---
+tags:
+  - humanity
+  - mechanics
+  - cyberware
+---
+<h2 class="hum">Humanity</h2>
 
-> [!hum] Humanity
-> ~={hum}**Humanity**=~ is what keeps one sane.
+> [!hum|none]
+> <span class="hum">Humanity</span> is what keeps one sane.
 > 
-> **~={hum}Humanity=~** has a base of **100** alongside a ~={hum}**Humanity Modifier**=~.
+> <span class="hum">Humanity</span> has a base of **100** alongside a <span class="hum">Humanity Modifier</span>.
 > <br>**`(Technical + Intelligence) / ((Body/5) + (Reflexes/5)) = Humanity Modifier`**
 > <br>This modifier is then multiplied by the unit’s level; which will then be added to the base. 
 > 
-> **~={hum}Humanity=~** can be gained and lowered via actions that impact one’s psyche. If one reaches their **~={humlow}Low Humanity Threshold=~**, they will become unstable and will start showing proper Cyberpsychosis symptoms. If by chance the value reaches zero, then the unit will become indiscriminate and will be labelled as a Cyberpsycho.
+> <span class="hum">Humanity</span> can be gained and lowered via actions that impact one’s psyche. If one reaches their <span class="humlow">Low Humanity Threshold</span>, they will become unstable and will start showing proper <span class="cyber">Cyberpsychosis</span> symptoms. If by chance the value reaches zero, then the unit will become indiscriminate and will be labelled as a <span class="cyber">Cyberpsycho</span>.
 > 
-> **~={hum}Humanity=~** cannot be properly gained back, which means that once a character reaches their ~={humlow}**Low Humanity Threshold**=~, they will become more of a liability to their team. Characters will have to eventually take breaks, stepping away from duty if they want to regain their **~={hum}Humanity=~** and avoid Cyberpsychosis.
+> <span class="hum">Humanity</span> cannot be instantly gained back, which means that once a character reaches their <span class="humlow">Low Humanity Threshold</span>, they will become more of a liability to their team. Characters will have to eventually take breaks, stepping away from duty if they want to regain their <span class="hum">Humanity</span> and avoid <span class="cyber">Cyberpsychosis</span>.
 > 
-> **~={cyber}Cyberware=~** influences the amount of **~={hum}Humanity=~** one has, reducing its maximum depending on how much **~={cyber}Cyberware=~** one has installed.
-> > [!plus]+ Humanity increasing factors
+> <span class="cyber">Cyberware</span> influences the amount of <span class="hum">Humanity</span> one has, reducing its maximum depending on how much <span class="cyber">Cyberware</span> one has installed.
+> > [!plus]- Humanity increasing factors
+> > 
 > > **Resting**
-> > <br>• Gain 40 **~={hum}Humanity=~** for every non-participated Mission (If character is restless and seeks action, the gain may be reduced)
+> > <br>• Gain 40 <span class="hum">Humanity</span> for every non-participated Mission (If character is restless and seeks action, the gain may be reduced)
 > > 
 > > **Healing**
-> > <br>• Gain 4 ~={hum}Humanity=~ per ![[vital.png|18]] ~={vital}Vital State=~ recovered
-> > <br>• When healing while ![[downed.png|18]] ~={downed}Downed=~, gain 16 ~={hum}Humanity=~, but ~={humlow}Humanity Loss=~ is increased by x1.2 until rest
-> > <br>• When healing out of ![[dd.png|18]] ~={dd}Death's Door=~, gain 22 ~={hum}Humanity=~, but ~={humlow}Humanity Loss=~ is increased by x1.5 until rest 
+> > <br>• Gain 4 <span class="hum">Humanity</span> per ![[vital.png|icon|20]] [[Vital States|Vital State]] recovered
+> > <br>• When healing while ![[downed.png|icon|20]] [[Downed]], gain 16 <span class="hum">Humanity</span>, but <span class="humlow">Humanity Loss</span> is increased by x1.2 until rest. Stackable.
+> > <br>• When healing out of ![[dd.png|icon|20]] [[Death's Door]], gain 22 <span class="hum">Humanity</span>, but <span class="humlow">Humanity Loss</span> is increased by x1.5 until rest. Stackable.
 > > 
 > > **Clash Win**
-> > <br>•
-
-- Gain 1 **Humanity**
-- Gain 2 **Humanity** if winning a second clash a row
-- Lose 4 **Humanity** if winning a clash after winning more than three clashes a row
+> > <br>• Gain 1 <span class="hum">Humanity</span>
+> > <br>• Gain 2 <span class="hum">Humanity</span>, if winning a second or third clash in a row
+> > <br>• Lose 4 <span class="hum">Humanity</span>, if winning a clash after winning four or more clashes in a row
+>
+> > [!minus]- Humanity decreasing factors
+> >
+> >**On Kill**
+> ><br>• Lose 5 <span class="hum">Humanity</span> vs. Enemy
+> ><br>• Lose 10 <span class="hum">Humanity</span> vs. Authorities
+> ><br>• Lose 15 <span class="hum">Humanity</span> vs. Civilian/Innocent
+> ><br> When [[Downed|executing]]: Multiply <span class="humlow">Humanity Loss</span> by 1.5x
+> >
+> >**Clash Lose**
+> ><br>• Lose 2 <span class="hum">Humanity</span>
+> ><br>• Lose 3 <span class="hum">Humanity</span>, if losing second or third clash in a row
+> ><br>• Lose 5 <span class="hum">Humanity</span> if losing a clash four or more times in a row
+> >
+> >**Ally Downed**
+> ><br>• Lose 15 <span class="hum">Humanity</span>
+> ><br>• Lose 25 <span class="hum">Humanity</span> if Friend
+> ><br>• Lose 35 <span class="hum">Humanity</span> if Close Friend
+> ><br>• Lose 45 <span class="hum">Humanity</span> if Best Friend
+> ><br>*Can increase depending on character relationship*
+> >
+> >**Ally Death**
+> ><br>• Lose 25 <span class="hum">Humanity</span>
+> ><br>• Lose 35 <span class="hum">Humanity</span> if Friend
+> ><br>• Lose 45 <span class="hum">Humanity</span> if Close Friend
+> ><br>• Lose 55 <span class="hum">Humanity</span> if Best Friend
+> ><br>*Can increase depending on character relationship*
+> >
+> >![[dd.png|icon|20]] [[Death's Door]]
+> ><br>• Lose 10 <span class="hum">Humanity</span>
+> ><br>• All allies lose 15 <span class="hum">Humanity</span>
+> >
+> >![[downed.png|icon|20]] [[Downed]]
+> ><br>• Lose 15 <span class="hum">Humanity</span>
+> ><br>• All allies lose 10 <span class="hum">Humanity</span>

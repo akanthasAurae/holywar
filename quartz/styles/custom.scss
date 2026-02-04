@@ -51,20 +51,22 @@ blockquote.transclude {
 }
 
 img[alt="floatl"] {
-	float: left;
+	float:left;
 	margin-right: 10px;
-    top: 1em;
-    position: relative;
 }
 img[alt="floatr"] {
 	float: right;
 	margin-left: 10px;
 }
+blockquote[data-callout-metadata*="none"] > .callout-content:first-child {
+    margin-top: 1em;
+}
+
 img[alt="icon"] {
 	vertical-align: sub;
 }
 /* custom list */
-.callout {
+.callout { /* THESE WERE A FUCKING NIGHTMARE OH MY GOD */
   &.signature {
     --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-signature-icon lucide-signature"><path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/><path d="M3 21h18"/></svg> '); //SVG icon code
   }
@@ -132,40 +134,327 @@ img[alt="icon"] {
     .tags {
         display: none;
     }
+*[stroke] {
+    stroke: inherit;
 }
-/* set here link colors! */
-    /* quick notes about selectors:
-    1. they MUST be captalized and spaces joined instead by dashes (ie. Vital-States)
-    2. Bursts unfortunately cannot have link colors*
-    3. Stats like Combat do not need links
-    4. a[href=""] is exclusive to this .scss file, use a[data-href=""] for Obsidian links in customcolors.css.**
-    5. How to do selectors:
-        ="STRING"
-            > finds EXACTLY the STRING:
-				ex. ="Poise-Hemorrhage", does not select "Poise"
-        *= "STRING"
-            > anything CONTAINING the STRING:
-				ex. =*"Vital", selects "Vital-States", "Vital-State", "Vital State", etc
-        $= "STRING"
-            > anything ENDING with the STRING:
-				ex. $="Scorching", select "Poise-Scorching" and "Scorching"
+}
+* {
+    &.signature, &.biography, &.menuu, &.passives {
+        color: #999999;
+        }
+}
+* {
+    &.rolls, &.body, &.reflex, &.tech, &.intel, &.cool {
+        color: #45b37c;
+        }
+}
+* {
+    &.inv {
+        color: #916548;
+        }
+}
+* {
+    &.cyber {
+        color: #bd9b2e;
+        }
+}
+* {
+    &.hum {
+        color: #50c425;
+        }
+}
+* {
+    &.humlow {
+        color: #d04339;
+        }
+}
+* {
+    &.stats {
+        color: #2ebd6e;
+        }
+}
+* {
+    &.plus {
+        color: #42c403;
+        }
+}
+* {
+    &.minus {
+        color: #c42542;
+        }
+}
+* {
+    &.combat {
+        color: #e66060;
+        }
+}
+* {
+    &.sneak {
+        color: #9a60e6;
+        }
+}
+* {
+    &.mental {
+        color: #60a5e6;
+        }
+}
+* {
+    &.soulstats, &[data-callout-metadata*="s."] {
+        color: #7251be;
+        }
+}
 
-    *(this is due to a limitation: I can't select the contents of <a> within css, thus it cannot determine the difference between [[Tremor|Seisimic Shock]] and [[Tremor]]), and besides, bursts shouldn't need to link back to their statuses since it's likely it'll already be linked somewhere nearby...
-    **Unlike data-href, which permits spaces in the link in Obsidian, you might need to mess around with selectors to try and 'nab' the href, as quartz parses-links-like-this. Ask me for help if needed
+    /* link colors yayyy yay yippie yayyyyyy */
+/* set here link colors! */
+/* quick notes about selectors:
+    1. they MUST be captalized and spaces joined instead by dashes (ie. Vital-States)
+    2. Bursts unfortunately cannot have link colors¹
+    3. Stats like Combat do not need links
+    4. a[href=""] is exclusive to this .scss file, use a[data-href=""] for Obsidian links in customcolors.css²
+
+    5. How to do selectors:
+        a. use one or both selectors:
+            *= "STRING"
+                > anything CONTAINING the STRING:
+				ex. =*"Vital", selects "Vital-States", "Vital-State", "Vital State", etc
+            $= "STRING"
+                > anything ENDING with the STRING:
+				ex. $="Scorching" -> "(Poise-...)Scorching" and "...Scorching"
+        b. You can join these for more complex and specific selectors:
+                ex. [href*="Ment"][href$="Down"] -> "...Ment(...al Power ...)Down"
+        c. Must have at least one selector for the end of the string (due to the way Quartz parses links).
+                ex. href="../../content/statuses/poise" -> =$poise
+        will not select Poise - Hemo or Poise - Scorch since they don't end with poise
+        Vital States is an exception due to (currently) no other status/mechanic using the word itsef.
+        May or may not change later as we develop this
+    
+
+    [¹] this is due to a limitation: I can't select the contents of <a> within css, thus it cannot determine the difference between [[Tremor|Seisimic Shock]] and [[Tremor]] as they both output <a href="Tremor">. and besides, bursts shouldn't need to link back to their statuses since it's likely it'll already be linked somewhere nearby...
+    [²] Unlike data-href, which permits spaces in the link in Obsidian, you might need to mess around with selectors to try and 'nab' the href, as quartz parses-links-like-this. Ask me for help if needed
     */
-a[href="Poise"]  {
+    .explorer-content ul li>a {
+        color: var(--gray) !important;
+        &:hover {
+        color: var(--darkgray) !important;
+    }
+        &.active {
+        color: var(--dark) !important; 
+        }
+    }
+/*
+a {
+    &[href$="Poise"]  {
     color: #c8d0d0;
 	font-weight:bold;
-  }
-a[href="Burn"] {
+	--highlight: #c8d0d026;
+  };
+*/
+    /* non-status */
+a {
+     
+    &[href$="ignature"], &[href$="iography"], &[href$="Menu"], [href$="menu"], &[href$="assives"] {
+        color: #999999;
+	--highlight: #99999926;
+        };
+    &[href$="rolls"], [href$="Rolls"], &[href$="body"], [href$="Body"], &[href$="eflexes"], &[href$="echnical"], &[href$="ntelligence"], &[href$="Cool"], [href$="cool"] {
+        color: #45b37c;
+	--highlight: #45b37c26;
+        };
+    &[href$="nventory"] {
+        color: #916548;
+	--highlight: #91654826;
+        };
+    &[href$="yber"] {
+        color: #bd9b2e;
+	--highlight: #bd9b2e26;
+        };
+    &[href$="umanity"] {
+        color: #50c425;
+	--highlight: #50c42526;
+        };
+    &[href*="umanity"][href*="loss"], [href*="umanity"][href*="Loss"], &[href*="Low"][href*="umanity"], [href*="low"][href*="umanity"] {
+        color: #d04339;
+	--highlight: #d0433926;
+        };
+    &[href*="Stats"], [href$="stats"] {
+        color: #2ebd6e;
+	--highlight: #2ebd6e26;
+        };
+    &[href*="Plus"], [href$="plus"] {
+        color: #42c403;
+	--highlight: #42c40326;
+        };
+    &[href*="Minus"], [href$="minus"] {
+        color: #c42542;
+	--highlight: #c4254226;
+        };
+    &[href*="Combat"], [href$="combat"] {
+        color: #e66060;
+	--highlight: #e6606026;
+        };
+    &[href*="Sneak"], [href$="sneak"] {
+        color: #9a60e6;
+	--highlight: #9a60e626;
+        };
+    &[href*="Mental"], [href$="mental"] {
+        color: #60a5e6;
+	--highlight: #60a5e626;
+        };
+    &[href*="Soul"][href*="Stats"], &[href*="soul"][href*="stats"], &[href*="S."], &[href$="s."] {
+        color: #7251be;
+	--highlight: #7251be26;
+        }
+}
+
+    /* status */
+a {
+    &[href$="Poise"], &[href$="poise"] {
+    color: #c8d0d0;
+	font-weight:bold;
+	--highlight: #c8d0d026;
+  };
+    &[href$="Envenoming"], &[href$="envenoming"]{
+    color: #5c12a5;
+	--highlight: #5c12a526;
+	font-weight:bold; 
+  };
+    &[href*="Poise"][href$="Hemorrhage"], &[href*="poise"][href$="hemorrhage"], &[href$="poisehemorrhage"]{
+    color: #d00b0b;
+	--highlight: #d00b0b26;
+	font-weight:bold; 
+  };
+    &[href*="Poise"][href$="Scorching"], &[href*="poise"][href$="scorching"], &[href$="poisescorching"]{
+    color: #ea5d23;
+	font-weight:bold; 
+	--highlight: #ea5d2326;
+  };
+    &[href$="Burn"], &[href$="burn"] {
     color: #ec8209;
     font-weight:bold;
-}
-a[href="Bloodloss"] {
+	--highlight: #ec820926;
+  };
+    &[href$="Bloodloss"], &[href$="bloodloss"] {
     color: #b1120e;
     font-weight:bold;
-}
-a[href*="Vital-State"] /* must be Captalized due to the way hrefs work */ {
+	--highlight: #b1120e26;
+  };
+    &[href*="Vital"][href$="State"], &[href*="vital"][href$="state"], &[href$="vitalstate"] {
     color: #1fdb4e;
 	font-weight:bold;
-  }
+	--highlight: #1fdb4e26;
+  };
+    &[href$="Door"], &[href$="door"] {
+    color: #e00000;
+	font-weight:bold;
+	--highlight: #e0000026;
+  };
+    &[href$="Downed"], &[href$="downed"] {
+    color: #ea5f1d;
+	font-weight:bold;
+	--highlight: #ea5f1d26;
+  };
+    &[href$="Recovery"], &[href$="recovery"] {
+    color: #bfbbbb;
+	--highlight: #bfbbbb26;
+	font-weight:bold;
+  };
+    &[href*="Ment"][href$="Down"], &[href*="Com"][href$="Up"], &[href*="Def"][href$="Up"],
+    &[href*="ment"][href$="down"], &[href*="com"][href$="up"], &[href*="def"][href$="up"],
+    &[href$="mentalpowerdown"], &[href$="combatpowerup"], &[href$="defensepowerup"]{
+    color: #e11414;
+	--highlight: #e1141426;
+	font-weight:bold;
+  };
+    &[href*="Ment"][href$="Up"], &[href*="Com"][href$="Down"], &[href*="Def"][href$="Down"],
+    &[href*="ment"][href$="up"], &[href*="com"][href$="down"], &[href*="def"][href$="down"],
+    &[href$="mentalpowerup"], &[href$="combatpowerdown"], &[href$="defensepowerdown"] {
+    color: #1e84f1;
+	--highlight: #1e84f126;
+	font-weight:bold;
+  };
+    &[href$="Guardbreak"], &[href$="guardbreak"] {
+    color: #641717;
+	--highlight: #64171726;
+	font-weight:bold; 
+  };
+    &[href$="Tremor"], &[href$="tremor"] {
+    color: #eebc77;
+	--highlight: #eebc7726;
+	font-weight:bold; 
+  };
+    &[href$="Toxin"], &[href$="toxin"] {
+    color: #3ed43c;
+	--highlight: #3ed43c26;
+	font-weight:bold; 
+  };
+    &[href$="Stealth"], &[href$="stealth"] {
+    color: #7549cc;
+	--highlight: #7549cc26;
+	font-weight:bold; 
+  };
+    &[href$="Venom"], &[href$="venom"] {
+    color: #582dcd;
+	--highlight: #582dcd26;
+	font-weight:bold; 
+  };
+    &[href*="Tremor"][href$="Hemorrhage"], &[href*="tremor"][href$="hemorrhage"], &[href$="tremorhemorrhage"] {
+    color: #d24a28;
+	--highlight: #d24a2826;
+	font-weight:bold; 
+  };
+    &[href*="Crit"], &[href*="crit"] {
+    color: #f8db9b;
+	--highlight: #f8db9b26;
+	font-weight:bold; 
+  };
+    &[href$="Stance"], &[href$="stance"] {
+    color: #d5a220;
+	--highlight: #d5a22026;
+	font-weight:bold; 
+  };
+    &[href$="Stancebreak"], &[href$="stancebreak"] {
+    color: #f5c724;
+	--highlight: #f5c72426;
+	font-weight:bold; 
+  };
+    &[href$="Sheathed"], &[href$="sheathed"] {
+    color: #c7d2e0;
+	--highlight: #c7d2e026;
+	font-weight:bold; 
+  };
+    &[href$="Unsheathed"], &[href$="unsheathed"] {
+    color: #8db2e2;
+	--highlight: #8db2e226;
+	font-weight:bold; 
+  };
+    &[href$="Awakened"], &[href$="awakened"] {
+    color: #af090f;
+	--highlight: #af090f26;
+	font-weight:bold; 
+  };
+    &[href$="Shattered"], &[href$="shattered"] {
+    color: #7719c8;
+	--highlight: #7719c826;
+	font-weight:bold; 
+  };
+    &[href$="Nimius"], &[href$="nimius"] {
+    color: #c60c31;
+	--highlight: #c60c3126;
+	font-weight:bold; 
+  };
+    &[href$="Aether"], &[href$="aether"] {
+    color: #5a9cd2;
+	--highlight: #5a9cd226;
+	font-weight:bold; 
+  };
+    &[href*="Aurora"], &[href*="aurora"] {
+    color: #e79e5a;
+	--highlight: #e79e5a26;
+	font-weight:bold; 
+  };
+    &[href$="Noctis"], &[href$="noctis"] {
+    color: #ba7ad1;
+	--highlight: #ba7ad126;
+	font-weight:bold; 
+  };
+}
