@@ -418,7 +418,7 @@ a[data-href*="Ment"][href$="Down"], a[data-href*="Com"][href$="Up"], a[data-href
 	font-weight:bold;
 }
 
-.callout[data-callout="guardbreak"], .guardbreak {
+.callout[data-callout="guardbreak"], .guardbreak, .guardbroken {
 	--callout-color: 116, 6, 2;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -427,7 +427,7 @@ a[data-href*="Ment"][href$="Down"], a[data-href*="Com"][href$="Up"], a[data-href
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.guardbreak, h2.guardbreak, h3.guardbreak, h4.guardbreak, h5.guardbreak, h6.guardbreak, span.guardbreak, a.guardbreak, p.guardbreak,
-a[data-href*="Guardbreak"] {
+a[data-href*="Guardbreak"], a[data-href*="Guardbroken"] {
 	color: #641717;
 	--link-color: #641717;
 	font-weight:bold;
@@ -441,6 +441,15 @@ h1.tremor, h2.tremor, h3.tremor, h4.tremor, h5.tremor, h6.tremor, span.tremor, a
 a[data-href$="Tremor"] {
 	color: #eebc77;
 	--link-color: #eebc77;
+	font-weight:bold;
+}
+.shock {
+	--callout-color: 236, 182, 121;
+	--callout-icon: '';
+}
+h1.shock, h2.shock, h3.shock, h4.shock, h5.shock, h6.shock, span.shock, a.shock, p.shock {
+	color: #f2a854;
+	--link-color: #f2a854;
 	font-weight:bold;
 }
 
@@ -584,7 +593,7 @@ a[data-href$="Stance"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.stancebreak, h2.stancebreak, h3.stancebreak, h4.stancebreak, h5.stancebreak, h6.stancebreak, span.stancebreak, a.stancebreak, p.stancebreak,
-a[data-href*="Stancebreak"] {
+a[data-href*="Stancebreak"], a[data-href*="Stancebroken"]  {
 	color: #f5c724;
 	--link-color: #f5c724;
 	font-weight:bold;
