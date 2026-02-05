@@ -2,16 +2,9 @@
 
 ![[Bloodloss]]
 
----
+![[Burn]]
 
-## ~={burn}Burn=~
-> [!burn|none] 
-> ![[burn.png|floatl|74]] ~={burn}Burn=~ builds through three levels — ~={burn}Minor=~, ~={burn}Moderate=~ and ~={burn}High=~. Any ![[burn.png|18]] ~={burn}Burn=~ applied while in ![[burn.png|18]] ~={burn}High Burn=~ immediately triggers ![[igni.png|18]] ~={igni}Ignition=~.
-> 
-> When triggered, the unit becomes ![[scorch.png|18]] ~={scorch}Scorched=~ for two ![[action.png|18]] ~={action}Actions=~, and will consume one ![[vital.png|18]] ~={vital} [[Mechanics#~={vital}Vital State=~|Vital State]]=~  at the end of each of their ![[action.png|18]] ~={action}Actions=~. If ![[igni.png|18]] ~={igni}Ignition=~ is triggered again while ![[scorch.png|18]] ~={scorch}Scorched=~ is still active, the duration is refreshed.
-> 
-> If ![[scorch.png|18]] ~={scorch}Scorched=~ causes the unit to lose their final ![[vital.png|18]] ~={vital}[[Mechanics#~={vital}Vital State=~|Vital State]]=~, they will advance to ![[dd.png|18]] ~={dd}[[Mechanics#~={dd}Death's Door=~|Death’s Door]]=~/![[downed.png|18]] ~={downed}[[Mechanics#~={downed}Downed=~|Downed]]=~.
-> *tags: #burn #scorched #ignition #status*
+---
 
 ## ~={down} Combat Power Down=~
 > [!down|none]

@@ -260,6 +260,20 @@ h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulsta
 }
 
 /* status customs */
+.callout[data-callout="action"], .action {
+	--callout-color: 230, 164, 51;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+	--highlight: rgba(var(--callout-color), 0.15);
+}
+h1.action, h2.action, h3.action, h4.action, h5.action, h6.action, span.action, a.action, p.action, [data-href*="Action"] {
+	color: #e6a433;
+	--link-color: #e6a433;
+	font-weight:bold;
+}
+
 .callout[data-callout="poise"], .poise {
 	--callout-color: 200,208,208;
 	--callout-icon: '';
@@ -268,7 +282,7 @@ h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulsta
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.poise, h2.poise, h3.poise, h4.poise, h5.poise, h6.poise, span.poise, a.poise, p.poise {
+h1.poise, h2.poise, h3.poise, h4.poise, h5.poise, h6.poise, span.poise, a.poise, p.poise, [data-href*="Poise"] {
 	color: #c8d0d0;
 	--link-color: #c8d0d0;
 	font-weight:bold;
@@ -298,6 +312,20 @@ h1.scorch, h2.scorch, h3.scorch, h4.scorch, h5.scorch, h6.scorch, span.scorch, a
 h1.burn, h2.burn, h3.burn, h4.burn, h5.burn, h6.burn, span.burn, a.burn, p.burn, a[data-href*="Burn"] {
 	color: #ec8209;
 	--link-color: #ec8209;
+	font-weight:bold;
+}
+
+.callout[data-callout="igni"], .igni {
+	--callout-color: 251, 174, 9;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+	--highlight: rgba(var(--callout-color), 0.15);
+}
+h1.igni, h2.igni, h3.igni, h4.igni, h5.igni, h6.igni, span.igni, a.igni, p.igni, a[data-href*="Ignition"] {
+	color: #fbae09;
+	--link-color: #fbae09;
 	font-weight:bold;
 }
 
@@ -397,7 +425,7 @@ a[data-href*="Recovery"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.down, h2.down, h3.down, h4.down, h5.down, h6.down, span.down, a.down, p.down,
-a[data-href~="Mental Power"][href$="Up"], a[data-href*="Com"][href$="Down"], a[data-href*="Def"][href$="Down"] {
+a[data-href*="Mental"][data-href*="Up"], a[data-href*="Combat"][data-href*="Down"], a[data-href*="Defense"][data-href*="Down"] {
 	color: #1e84f1;
 	--link-color: #1e84f1;
 	font-weight:bold;
@@ -412,7 +440,7 @@ a[data-href~="Mental Power"][href$="Up"], a[data-href*="Com"][href$="Down"], a[d
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.up, h2.up, h3.up, h4.up, h5.up, h6.up, span.up, a.up, p.up,
-a[data-href*="Ment"][href$="Down"], a[data-href*="Com"][href$="Up"], a[data-href*="Def"][href$="Up"] {
+a[data-href*="Mental"][data-href*="Down"], a[data-href*="Combat"][data-href*="Up"], a[data-href*="Defense"][data-href*="Up"] {
 	color: #e11414;
 	--link-color: #e11414;
 	font-weight:bold;

@@ -1,4 +1,4 @@
-/* hide utilities */
+/* utilities */
 .callout[data-callout-metadata*="none"] > .callout-title {
 	display: none;
 }
@@ -60,6 +60,16 @@
 	height: 20px;
 	width: 20px;
 	vertical-align: bottom;
+}
+
+
+.callout[data-callout-metadata="status|none"] .callout-content
+> p:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
 /* theme-specific: get rid of bg dimming */
