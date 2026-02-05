@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/contents/Mechanics/Vital States.md",
+                "file": "content/contents/Mechanics.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Vital States"
+              "title": "Mechanics"
             }
           }
         ],
@@ -193,16 +193,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "09c8f35ea653b775",
+  "active": "4262d8b08a10f200",
   "lastOpenFiles": [
+    "content/contents/icons/despair.png~",
+    "content/contents/Statuses/Untitled",
+    "public/contents/icons/adark.png",
+    "public/contents/icons/dark.png",
+    "content/contents/Statuses.md",
     "content/contents/Mechanics/Stancebroken.md",
     "content/contents/Mechanics/Vital States.md",
-    "content/contents/Statuses/Mental Power Down.md",
-    "content/contents/Statuses/Bloodloss.md",
-    "public/tags/vital-state.html",
-    "content/contents/Statuses/Combat Power Up.md",
-    "public/tags/critical-hit.html",
-    "public/tags/stancebroken.html",
     "public/index-og-image.webp",
     "public/contents/Statuses/Tremor-—-Hemorrhage-og-image.webp",
     "public/contents/Statuses/Mental-Power-Down-og-image.webp",
@@ -211,18 +210,20 @@
     "public/contents/Statuses-og-image.webp",
     "public/contents/Mechanics/Vital-States-og-image.webp",
     "public/contents/Mechanics/Stancebroken-og-image.webp",
-    "public/contents/Mechanics/Stance-og-image.webp",
-    "public/contents/Mechanics/Shattered-og-image.webp",
-    "public/static/giscus/light.css",
-    "public/static/giscus/dark.css",
-    "public/contents/Statuses/Tremor-—-Hemorrhage.html",
-    "public/contents/Statuses/Mental-Power-Down.html",
-    "public/contents/Statuses/index.html",
-    "public/contents/Statuses/Combat-Power-Up.html",
-    "public/contents/Statuses/Bloodloss.html",
+    "public/contents/icons/sheathed.png~",
+    "public/contents/icons/awakened.png~",
+    "public/index.css",
+    "public/index.xml",
+    "public/contents/index.html",
+    "public/contents/Mechanics.html",
+    "public/404.html",
+    "public/sitemap.xml",
+    "public/favicon.ico",
+    "content/contents/Statuses/Mental Power Down.md",
+    "content/contents/Statuses/Bloodloss.md",
+    "content/contents/Statuses/Combat Power Up.md",
     "content/contents/Mechanics/Humanity.md",
     "content/contents/Mechanics.md",
-    "content/contents/Statuses.md",
     "content/contents/Statuses/Tremor — Hemorrhage.md",
     "content/contents/Mechanics/Noctis.md",
     "content/contents/Mechanics/Shattered.md",
