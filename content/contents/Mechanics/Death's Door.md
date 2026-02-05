@@ -6,6 +6,7 @@ tags:
   - defense-power-down
   - vital-state
   - mechanics
+  - body
 ---
 
 <h1 class="dd"> Death's Door </h1>
