@@ -1,0 +1,72 @@
+/* hide utilities */
+.callout[data-callout-metadata*="none"] > .callout-title {
+	display: none;
+}
+.callout[data-callout-metadata="none|min-0"] img {
+	border: 2px solid rgb(var(--callout-color));
+}
+.callout[data-callout-metadata="none|min-0"] {
+	padding-right:24px;
+}
+.callout[data-callout-metadata="invis"] {
+	background-color: transparent;
+	border-inline-start: none;
+}
+.callout[data-callout-metadata="invis"] > .callout-title {
+	display: none;
+}
+
+.callout[data-callout-metadata="marginup"] {
+	margin-top: 15px !important;
+}
+.callout[data-callout-metadata="margindown"] {
+	margin-bottom: 10px !important;
+}
+.callout[data-callout-metadata*="halfpad"] {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	margin-right: 12px;
+}
+.inline-embed[alt="none"] > .markdown-embed-title, .inline-embed > .embed-title, .inline-title {
+	display: none;
+}
+.metadata-container.is-collapsed {
+	display: none !important;
+}
+
+.markdown-embed {
+	border-inline: solid 0px transparent;
+}
+
+.span[alt="inline"] {
+	display: inline;
+}
+.floatl, [alt="floatl"] {
+	float:inline-start;
+	margin-right: 10px;
+    vertical-align: sub;
+	height: 85px;
+    width: 85px;
+}
+.floatr, [alt="floatr"] {
+	float: inline-end;
+	margin-left: 10px;
+	vertical-align: sub;
+	height: 85px;
+    width: 85px;
+}
+.icon, [alt="icon"] {
+	height: 20px;
+	width: 20px;
+	vertical-align: bottom;
+}
+
+/* theme-specific: get rid of bg dimming */
+.modal-bg {
+	background-color: transparent;
+}
+.modal-container {
+	justify-content: flex-start;
+		margin-left: 2vw;
+}
