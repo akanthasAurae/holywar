@@ -380,7 +380,8 @@ a, a[role=anchor] {
     font-weight:bold;
 	--highlight: #760e0626;
   };
-    &[href$="Vital-States"], &[href$="vital-states"] {
+    &[href$="Vital-States"], &[href$="vital-states"],
+    &[href$="Vital-State"], &[href$="vital-state"] {
     color: #1fdb4e;
 	font-weight:bold;
 	--highlight: #1fdb4e26;
