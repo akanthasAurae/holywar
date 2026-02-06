@@ -294,7 +294,7 @@ h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulsta
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.action, h2.action, h3.action, h4.action, h5.action, h6.action, span.action, a.action, p.action, [data-href*="Action"] {
+h1.action, h2.action, h3.action, h4.action, h5.action, h6.action, span.action, a.action, p.action, [data-href*="Actions"] {
 	color: #e6a433;
 	--link-color: #e6a433;
 	font-weight:bold;
@@ -505,6 +505,10 @@ a[data-href*="Guardbreak"], a[data-href*="Guardbroken"] {
 .callout[data-callout="tremor"], .tremor {
 	--callout-color: 236, 182, 121;
 	--callout-icon: '';
+	--color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.tremor, h2.tremor, h3.tremor, h4.tremor, h5.tremor, h6.tremor, span.tremor, a.tremor, p.tremor,
 a[data-href*="Tremor"] {
