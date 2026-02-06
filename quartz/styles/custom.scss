@@ -277,8 +277,8 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #999999;
 	--highlight: #99999926;
         };
-    &[href$="Rolls"], [href$="Body"], &[href$="Reflexes"], &[href$="Technical"], &[href$="Intelligence"], &[href$="Cool"],
-    &[href$="rolls"], [href$="body"], &[href$="reflexes"], &[href$="technical"], &[href$="intelligence"], &[href$="cool"] {
+    &[href$="Rolls"], &[href$="Body"], &[href$="Reflexes"], &[href$="Technical"], &[href$="Intelligence"], &[href$="Cool"],
+    &[href$="rolls"], &[href$="body"], &[href$="reflexes"], &[href$="technical"], &[href$="intelligence"], &[href$="cool"] {
         color: #45b37c;
 	--highlight: #45b37c26;
         };
@@ -386,7 +386,8 @@ a, a[role=anchor] {
 	font-weight:bold;
 	--highlight: #1fdb4e26;
   };
-    &[href$="Death's-Door"], &[href$="death's-door"] {
+    &[href$="Death's-Door"], &[href$="death's-door"],
+    &[href$="Deaths-Door"], &[href$="deaths-door"] {
     color: #e00000;
 	font-weight:bold;
 	--highlight: #e0000026;
@@ -396,7 +397,8 @@ a, a[role=anchor] {
 	font-weight:bold;
 	--highlight: #ea5f1d26;
   };
-    &[href$="Death's-Door-Recovery"], &[href$="death's-door-recovery"] {
+    &[href$="Death's-Door-Recovery"], &[href$="death's-door-recovery"],
+    &[href$="Deaths-Door-Recovery"], &[href$="deaths-door-recovery"] {
     color: #bfbbbb;
 	--highlight: #bfbbbb26;
 	font-weight:bold;
