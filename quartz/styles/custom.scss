@@ -299,7 +299,7 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #d04339;
 	--highlight: #d0433926;
         };
-    &[href*="Stats"], &[href*=":starttats"] {
+    &[href*="Stats"], &[href*="stats"] {
         color: #2ebd6e;
 	--highlight: #2ebd6e26;
         };
@@ -354,15 +354,30 @@ a, a[role=anchor] {
 	font-weight:bold; 
 	--highlight: #ea5d2326;
   };
+    &[href$="Scorch"], &[href$="scorch"] {
+    color: #d53f1b;
+    font-weight:bold;
+	--highlight: #d53f1b26;
+  };
+    &[href$="Ignition"], &[href$="ignition"] {
+    color: #fbae09;
+    font-weight:bold;
+	--highlight: #fbae0926;
+  };
     &[href$="Burn"], &[href$="burn"] {
     color: #ec8209;
     font-weight:bold;
 	--highlight: #ec820926;
   };
-    &[href$="Bloodloss"], &[href$="nloodloss"] {
+    &[href$="Bloodloss"], &[href$="bloodloss"] {
     color: #b1120e;
     font-weight:bold;
 	--highlight: #b1120e26;
+  };
+    &[href$="Hemorrhage"], &[href$="hemorrhage"] {
+    color: #760e06;
+    font-weight:bold;
+	--highlight: #760e0626;
   };
     &[href$="Vital-States"], &[href$="vital-states"] {
     color: #1fdb4e;
@@ -411,6 +426,11 @@ a, a[role=anchor] {
 	--highlight: #eebc7726;
 	font-weight:bold; 
   };
+    &[href$="Seisimic-Shock"], &[href$="seisimic-shock"] {
+    color: #f2a854;
+	--highlight: #f2a85426;
+	font-weight:bold; 
+  };
     &[href$="Toxin"], &[href$="toxin"] {
     color: #3ed43c;
 	--highlight: #3ed43c26;
@@ -430,6 +450,12 @@ a, a[role=anchor] {
     &[href*="tremor"][href$="hemorrhage"] {
     color: #d24a28;
 	--highlight: #d24a2826;
+	font-weight:bold; 
+  };
+    &[href*="Seisimic"][href$="Hemorrhage"],
+    &[href*="seisimic"][href$="hemorrhage"] {
+    color: #9f2d1e;
+	--highlight: #9f2d1e26;
 	font-weight:bold; 
   };
     &[href$="Stance"], &[href$="stance"] {
