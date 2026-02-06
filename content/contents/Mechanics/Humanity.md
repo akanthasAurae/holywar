@@ -4,7 +4,8 @@ tags:
   - mechanics
   - cyberware
 ---
-<h2 class="hum">Humanity</h2>
+
+<h1 class="hum">Humanity</h1>
 
 > [!hum|none]
 > <span class="hum">Humanity</span> is what keeps one sane.

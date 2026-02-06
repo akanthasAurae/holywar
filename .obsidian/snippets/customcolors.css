@@ -50,8 +50,9 @@ quick notes about selectors:
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.signature, h2.signature, h3.signature, h4.signature, h5.signature, h6.signature, span.signature, a.signature, p.signature, h1.biography, h2.biography, h3.biography, h4.biography, h5.biography, h6.biography, span.biography, a.biography, p.biography, h1.menuu, h2.menuu, h3.menuu, h4.menuu, h5.menuu, h6.menuu, span.menuu, a.menuu, p.menuu, h1.passives, h2.passives, h3.passives, h4.passives, h5.passives, h6.passives, span.passives, a.passives, p.passives {
+h1.signature, h2.signature, h3.signature, h4.signature, h5.signature, h6.signature, span.signature, a.signature, p.signature, h1.biography, h2.biography, h3.biography, h4.biography, h5.biography, h6.biography, span.biography, a.biography, p.biography, h1.menuu, h2.menuu, h3.menuu, h4.menuu, h5.menuu, h6.menuu, span.menuu, a.menuu, p.menuu, h1.passives, h2.passives, h3.passives, h4.passives, h5.passives, h6.passives, span.passives, a.passives, p.passives, [data-href*="Signature"], [data-href*="Biography"], [data-href*="Menu"], [data-href*="Passives"] {
 	color: #999999;
+	--link-color: #999999;
 	font-weight:bold;
 }
 
@@ -73,8 +74,9 @@ h1.signature, h2.signature, h3.signature, h4.signature, h5.signature, h6.signatu
 	--highlight: rgba(var(--callout-color), 0.15);
 
 }
-h1.inv, h2.inv, h3.inv, h4.inv, h5.inv, h6.inv, span.inv, a.inv, p.inv {
+h1.inv, h2.inv, h3.inv, h4.inv, h5.inv, h6.inv, span.inv, a.inv, p.inv, [data-href*="Inventory"] {
 	color: #916548;
+	--link-color: #916548;
 	font-weight:bold;
 }
 
@@ -95,8 +97,9 @@ h1.inv, h2.inv, h3.inv, h4.inv, h5.inv, h6.inv, span.inv, a.inv, p.inv {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.cyber, h2.cyber, h3.cyber, h4.cyber, h5.cyber, h6.cyber, span.cyber, a.cyber, p.cyber {
+h1.cyber, h2.cyber, h3.cyber, h4.cyber, h5.cyber, h6.cyber, span.cyber, a.cyber, p.cyber, [data-href*="Cyberware"] {
 	color: #bd9b2e;
+	--link-color: #bd9b2e;
 	font-weight:bold;
 }
 
@@ -108,8 +111,9 @@ h1.cyber, h2.cyber, h3.cyber, h4.cyber, h5.cyber, h6.cyber, span.cyber, a.cyber,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.hum, h2.hum, h3.hum, h4.hum, h5.hum, h6.hum, span.hum, a.hum, p.hum {
+h1.hum, h2.hum, h3.hum, h4.hum, h5.hum, h6.hum, span.hum, a.hum, p.hum, [data-href*="Humanity"] {
 	color: #50c425;
+	--link-color: #50c425;
 	font-weight:bold;
 }
 .callout[data-callout="humlow"], .humlow {
@@ -120,8 +124,9 @@ h1.hum, h2.hum, h3.hum, h4.hum, h5.hum, h6.hum, span.hum, a.hum, p.hum {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.humlow, h2.humlow, h3.humlow, h4.humlow, h5.humlow, h6.humlow, span.humlow, a.humlow, p.humlow {
+h1.humlow, h2.humlow, h3.humlow, h4.humlow, h5.humlow, h6.humlow, span.humlow, a.humlow, p.humlow, [data-href*="Low Humanity"], [data-href*="Humanity Loss"] {
 	color: #d04339;
+	--link-color: #d04339;
 	font-weight:bold;
 }
 
@@ -133,8 +138,9 @@ h1.humlow, h2.humlow, h3.humlow, h4.humlow, h5.humlow, h6.humlow, span.humlow, a
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.stats, h2.stats, h3.stats, h4.stats, h5.stats, h6.stats, span.stats, a.stats, p.stats {
+h1.stats, h2.stats, h3.stats, h4.stats, h5.stats, h6.stats, span.stats, a.stats, p.stats, [data-href*="Stats"] {
 	color: #2ebd6e;
+	--link-color: #2ebd6e;
 	font-weight:bold;
 }
 
@@ -159,8 +165,9 @@ h1.stats, h2.stats, h3.stats, h4.stats, h5.stats, h6.stats, span.stats, a.stats,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.plus, h2.plus, h3.plus, h4.plus, h5.plus, h6.plus, span.plus, a.plus, p.plus {
+h1.plus, h2.plus, h3.plus, h4.plus, h5.plus, h6.plus, span.plus, a.plus, p.plus, [data-href*="Plus"] {
 	color: #42c403;
+	--link-color: #42c403;
 	font-weight:bold;
 }
 
@@ -172,8 +179,9 @@ h1.plus, h2.plus, h3.plus, h4.plus, h5.plus, h6.plus, span.plus, a.plus, p.plus 
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.minus, h2.minus, h3.minus, h4.minus, h5.minus, h6.minus, span.minus, a.minus, p.minus {
+h1.minus, h2.minus, h3.minus, h4.minus, h5.minus, h6.minus, span.minus, a.minus, p.minus, [data-href*="Minus"] {
 	color: #c42542;
+	--link-color: #c42542;
 	font-weight:bold;
 }
 
@@ -185,8 +193,9 @@ h1.minus, h2.minus, h3.minus, h4.minus, h5.minus, h6.minus, span.minus, a.minus,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.rolls, h2.rolls, h3.rolls, h4.rolls, h5.rolls, h6.rolls, span.rolls, a.rolls, p.rolls, h1.body, h2.body, h3.body, h4.body, h5.body, h6.body, span.body, a.body, p.body, h1.reflex, h2.reflex, h3.reflex, h4.reflex, h5.reflex, h6.reflex, span.reflex, a.reflex, p.reflex, h1.tech, h2.tech, h3.tech, h4.tech, h5.tech, h6.tech, span.tech, a.tech, p.tech, h1.intel, h2.intel, h3.intel, h4.intel, h5.intel, h6.intel, span.intel, a.intel, p.intel, h1.cool, h2.cool, h3.cool, h4.cool, h5.cool, h6.cool, span.cool, a.cool, p.cool {
+h1.rolls, h2.rolls, h3.rolls, h4.rolls, h5.rolls, h6.rolls, span.rolls, a.rolls, p.rolls, h1.body, h2.body, h3.body, h4.body, h5.body, h6.body, span.body, a.body, p.body, h1.reflex, h2.reflex, h3.reflex, h4.reflex, h5.reflex, h6.reflex, span.reflex, a.reflex, p.reflex, h1.tech, h2.tech, h3.tech, h4.tech, h5.tech, h6.tech, span.tech, a.tech, p.tech, h1.intel, h2.intel, h3.intel, h4.intel, h5.intel, h6.intel, span.intel, a.intel, p.intel, h1.cool, h2.cool, h3.cool, h4.cool, h5.cool, h6.cool, span.cool, a.cool, p.cool, [data-href*="Combat"], [data-href*="Rolls"], [data-href*="Body"], [data-href*="Reflexes"], [data-href*="Technical"], [data-href*="Intelligence"], [data-href*="Cool"] {
 	color: #45b37c;
+	--link-color: #45b37c;
 	font-weight:bold;
 }
 
@@ -216,8 +225,9 @@ h1.rolls, h2.rolls, h3.rolls, h4.rolls, h5.rolls, h6.rolls, span.rolls, a.rolls,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.combat, h2.combat, h3.combat, h4.combat, h5.combat, h6.combat, span.combat, a.combat, p.combat {
+h1.combat, h2.combat, h3.combat, h4.combat, h5.combat, h6.combat, span.combat, a.combat, p.combat, [data-href*="Combat"] {
 	color: #e66060;
+	--link-color: #e66060;
 	font-weight:bold;
 }
 
@@ -229,8 +239,9 @@ h1.combat, h2.combat, h3.combat, h4.combat, h5.combat, h6.combat, span.combat, a
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.sneak, h2.sneak, h3.sneak, h4.sneak, h5.sneak, h6.sneak, span.sneak, a.sneak, p.sneak {
+h1.sneak, h2.sneak, h3.sneak, h4.sneak, h5.sneak, h6.sneak, span.sneak, a.sneak, p.sneak, [data-href*="Sneak"] {
 	color: #9a60e6;
+	--link-color: #9a60e6;
 	font-weight:bold;
 }
 
@@ -242,8 +253,9 @@ h1.sneak, h2.sneak, h3.sneak, h4.sneak, h5.sneak, h6.sneak, span.sneak, a.sneak,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.mental, h2.mental, h3.mental, h4.mental, h5.mental, h6.mental, span.mental, a.mental, p.mental {
+h1.mental, h2.mental, h3.mental, h4.mental, h5.mental, h6.mental, span.mental, a.mental, p.mental, [data-href*="Mental"] {
 	color: #60a5e6;
+	--link-color: #60a5e6;
 	font-weight:bold;
 }
 
@@ -254,8 +266,9 @@ h1.mental, h2.mental, h3.mental, h4.mental, h5.mental, h6.mental, span.mental, a
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulstats, span.soulstats, a.soulstats, p.soulstats {
+h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulstats, span.soulstats, a.soulstats, p.soulstats, [data-href*="Soul Stats"] {
 	color: #7251be;
+	--link-color: #7251be;
 	font-weight:bold;
 }
 
@@ -395,7 +408,7 @@ a[data-href*="Downed"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.dd, h2.dd, h3.dd, h4.dd, h5.dd, h6.dd, span.dd, a.dd, p.dd,
-a[data-href$="Door"] {
+a[data-href*="Door"] {
 	color: #e00000;
 	--link-color: #e00000;
 	font-weight:bold;
@@ -466,18 +479,29 @@ a[data-href*="Guardbreak"], a[data-href*="Guardbroken"] {
 	--callout-icon: '';
 }
 h1.tremor, h2.tremor, h3.tremor, h4.tremor, h5.tremor, h6.tremor, span.tremor, a.tremor, p.tremor,
-a[data-href$="Tremor"] {
+a[data-href*="Tremor"] {
 	color: #eebc77;
 	--link-color: #eebc77;
 	font-weight:bold;
 }
+
 .shock {
 	--callout-color: 236, 182, 121;
 	--callout-icon: '';
 }
-h1.shock, h2.shock, h3.shock, h4.shock, h5.shock, h6.shock, span.shock, a.shock, p.shock {
+h1.shock, h2.shock, h3.shock, h4.shock, h5.shock, h6.shock, span.shock, a.shock, p.shock, a[data-href*="Seisimic Shock"] {
 	color: #f2a854;
 	--link-color: #f2a854;
+	font-weight:bold;
+}
+
+.hemoshock {
+	--callout-color: 236, 182, 121;
+	--callout-icon: '';
+}
+h1.hemoshock, h2.shock, h3.hemoshock, h4.hemoshock, h5.hemoshock, h6.hemoshock, span.hemoshock, a.hemoshock, p.hemoshock, a[data-href*="Seisimic Hemorrhage"] {
+	color: #9f2d1e;
+	--link-color: #9f2d1e;
 	font-weight:bold;
 }
 
@@ -516,7 +540,7 @@ a[data-href*="Stealth"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.venom, h2.venom, h3.venom, h4.venom, h5.venom, h6.venom, span.venom, a.venom, p.venom,
-a[data-href$="Venom"] {
+a[data-href*="Venom"] {
 	color: #582dcd;
 	--link-color: #582dcd;
 	font-weight:bold;
@@ -531,7 +555,7 @@ a[data-href$="Venom"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.poiseven, h2.poiseven, h3.poiseven, h4.poiseven, h5.poiseven, h6.poiseven, span.poiseven, a.poiseven, p.poiseven,
-a[data-href$="Envenoming"] {
+a[data-href*="Envenoming"] {
 	color: #5c12a5;
 	--link-color: #5c12a5;
 	font-weight:bold;
@@ -546,7 +570,7 @@ a[data-href$="Envenoming"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.poiseburn, h2.poiseburn, h3.poiseburn, h4.poiseburn, h5.poiseburn, h6.poiseburn, span.poiseburn, a.poiseburn, p.poiseburn,
-a[data-href*="Poise"][data-href$="Scorching"] {
+a[data-href*="Poise"][data-href*="Scorching"] {
 	color: #ea5d23;
 	--link-color: #ea5d23;
 	font-weight:bold;
@@ -561,7 +585,7 @@ a[data-href*="Poise"][data-href$="Scorching"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.poisebleed, h2.poisebleed, h3.poisebleed, h4.poisebleed, h5.poisebleed, h6.poisebleed, span.poisebleed, a.poisebleed, p.poisebleed,
-a[data-href*="Poise"][data-href$="Hemorrhage"] {
+a[data-href*="Poise"][data-href*="Hemorrhage"] {
 	color: #d00b0b;
 	--link-color: #d00b0b;
 	font-weight:bold;
@@ -576,7 +600,7 @@ a[data-href*="Poise"][data-href$="Hemorrhage"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.tremorhemo, h2.tremorhemo, h3.tremorhemo, h4.tremorhemo, h5.tremorhemo, h6.tremorhemo, span.tremorhemo, a.tremorhemo, p.tremorhemo,
-a[data-href$="Hemorrhage"] {
+a[data-href*="Hemorrhage"] {
 	color: #d24a28;
 	--link-color: #d24a28;
 	font-weight:bold;
@@ -606,7 +630,7 @@ a[data-href*="Critical"] {
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.stance, h2.stance, h3.stance, h4.stance, h5.stance, h6.stance, span.stance, a.stance, p.stance,
-a[data-href$="Stance"] {
+a[data-href*="Stance"] {
 	color: #d5a220;
 	--link-color: #d5a220;
 	font-weight:bold;

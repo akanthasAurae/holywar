@@ -1,24 +1,22 @@
 > [!warning] Certain statuses do not yet have icons or custom colours.
 
+<h3><a data-href="Bloodloss" href="Bloodloss" class="bleed internal-link">Bloodloss</a></h3>
+
 ![[Bloodloss]]
+
+<h3><a data-href="Burn" href="Burn" class="burn internal-link">Burn</a></h3>
 
 ![[Burn]]
 
+<h3><a data-href="Combat Power Down" href="Combat Power Down" class="down internal-link">Combat Power Down</a></h3>
+
+![[Combat Power Down]]
+
+<h3><a data-href="Combat Power Up" href="Combat Power Up" class="up internal-link">Combat Power Up</a></h3>
+
+![[Combat Power Up]]
+
 ---
-
-## ~={down} Combat Power Down=~
-> [!down|none]
-> ![[comdown.png|floatl|74]] Decrease the final value of a Combat Roll by this status’ Stack, then remove this status.
-> 
-> **Max Stack: 99**
-> *tags: #combatpowerdown #status*
-
-## ~={up} Combat Power Up=~
-> [!up|none]
-> ![[comup.png|floatl|74]] Increase the final value of a Combat Roll by this status’ Stack, then remove this status.
-> 
-> **Max Stack: 99**
-> *tags: #combatpowerup #status*
 
 ## ~={awakened}Crescent Moon — Awakened Flames of Crimson 【血は燃料だ】=~
 > [!awakened|none]
@@ -44,42 +42,38 @@
 > *~={unsheath}“Unsheathed at last, its blade — splendor matching its scabbard — conceals its candor in a gleam akin to moonlight.”=~*
 > *tags: #crescentmoon #status* 
 
-## ~={up}Defense Power Up=~
-> [!up|none] 
-> ![[defup.png|floatl|74]] Increase the final value of a **Defensive Roll** by this status’ Stack, then remove this status. 
-> 
->  **Max Stack: 99** 
->  *tags: #defensepowerup #status*
+---
 
-## ~={down}Defense Power Down=~ 
-> [!down|none]
-> ![[defdown.png|floatl|74]] Decrease the final value of a **Defensive Roll** by this status’ Stack, then remove this status. 
-> 
-> **Max Stack: 99** 
->  *tags: #defensepowerdown #status*
+<h3><a data-href="Defense Power Down" href="Defense Power Down" class="down internal-link">Defense Power Down</a></h3>
+
+![[Defense Power Down]]
+
+<h3><a data-href="Defense Power Up" href="Defense Power Up" class="up internal-link">Defense Power Up</a></h3>
+
+![[Defense Power Up]]
+
+---
 
 ## ~={poisebleed}Mark of the Oni=~
 > [!hemo|none] 
 > ![[markoftheoni.png|floatl|74]] Target becomes susceptible to ![[crit.png|18]] ~={crit}[[Mechanics#~={crit}Critical Hit=~|Critical Hits]]=~ from Tsukai
 > *tags: #tsukai #criticalhit #status*
 
-## ~={up}Mental Power Down=~
-> [!up|none]
-> ![[mentaldown.png|floatl|74]] Decrease the final value of a Mental Roll by this status’ Stack, then remove this status.
-> **Max Stack: 99**
-> *tags: #mentalpowerdown #status*
+---
 
-## ~={down}Mental Power Up=~
-> [!down|none]
-> ![[mentalup.png|floatl|74]] Increase the final value of a Mental Roll by this status’ Stack, then remove this status.
-> **Max Stack: 99**
-> *tags: #mentalpowerup #status*
+<h3><a data-href="Mental Power Down" href="Mental Power Down" class="up internal-link">Mental Power Down</a></h3>
 
-## ~={poise}Poise=~
-> [!poise|none] 
-> ![[poise.png|floatl|74]] This status can be consumed by skills with an ~={poise}[On Crit]=~ effect, expiring 1 stack of ![[poise.png|18]] ~={poise}Poise=~.
-> **Max Stack: 3**
-> *tags: #poise #status*
+![[Mental Power Down]]
+
+<h3><a data-href="Mental Power Up" href="Mental Power Up" class="down internal-link">Mental Power Up</a></h3>
+
+![[Mental Power Up]]
+
+<h3><a data-href="Poise" href="Poise" class="poise internal-link">Poise</a></h3>
+
+![[Poise]]
+
+---
 
 ## ~={blood}Poise — Bloodflames=~
 > [!guardbreak|none] 
@@ -110,19 +104,17 @@
 > ![[stealth.png|floatl|74]] This unit cannot be targeted by attacks unless it is the only remaining unit alive. The status ends, unless otherwise stated, by performing any ![[action.png|18]] ~={action}Action=~ while in stealth.
 > *tags: #stancebreak #stance #status*
 
-## ~={tremor}Tremor=~
-> [!tremor|none] 
-> ![[tremor.png|floatl|74]] ~={tremor}Tremor=~ builds through three levels — ~={tremor}Minor=~, ~={tremor}Moderate=~ and ~={tremor}Major=~. Any ![[tremor.png|18]] ~={tremor}Tremor=~ applied while in ![[tremor.png|18]] ~={tremor}High Tremor=~ immediately triggers ![[shock.png|18]] ~={shock}Seisimic Shock=~.
-> 
-> When triggered, the unit becomes ![[guardbreak.png|18]] ~={guardbreak}[[Mechanics#~={guardbreak}Guardbroken=~|Guardbroken]]=~ and loses one ![[stance.png|18]] ~={stance}[[Mechanics#~={stance}Stance=~|Stance]]=~.
-> *tags: #tremor #stance #guardbroken #status*
+---
 
-## ~={tremorhemo}Tremor — Hemorrhage=~
-> [!tremorhemo|none] 
-> ![[tremorhemo.png|floatl|74]] ~={tremorhemo}Tremor — Hemorrhage=~ builds through three levels — ~={tremorhemo}Minor=~, ~={tremorhemo}Moderate=~ and ~={tremorhemo}High=~. Any ![[tremorhemo.png|18]] ~={tremorhemo}Tremor-H=~ applied while in ![[tremorhemo.png|18]] ~={tremorhemo}High Tremor-H=~ immediately triggers ![[hemoshock.png|18]] ~={hemoshock}Seisimic Hemorrhage=~.
-> 
-> When triggered, the unit gains ![[blood.png|18]] ~={blood}Moderate Bloodloss=~ and loses one ![[stance.png|18]] ~={stance}[[Mechanics#~={stance}Stance=~|Stance]]=~.
-> *tags: #tremorhemorrhage #tremor #bloodloss #stance #status*
+<h3><a data-href="Tremor" href="Tremor" class="tremor internal-link">Tremor</a></h3>
+
+![[Tremor]]
+
+<h3><a data-href="Tremor — Hemorrhage" href="Tremor — Hemorrhage" class="tremorhemo internal-link">Tremor — Hemorrhage</a></h3>
+
+![[Tremor — Hemorrhage]]
+
+---
 
 ## ~={tox}Toxin=~
 > [!tox|none] 
@@ -146,3 +138,5 @@
 > 
 > **Max Stack:** 3
 > *tags: #vengeance #combatpowerup #defensepowerdown #status*
+
+## Void Statuses

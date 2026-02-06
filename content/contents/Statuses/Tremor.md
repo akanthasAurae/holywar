@@ -5,7 +5,7 @@ tags:
   - guardbroken
   - status
 ---
-<a data-href="Vital States" class="internal-link">text</a>
+
 <h1 class="tremor"> Tremor </h1>
 
 > [!tremor|status|none] 

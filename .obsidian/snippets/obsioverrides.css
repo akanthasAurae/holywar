@@ -28,7 +28,7 @@
 	padding-left: 12px;
 	margin-right: 12px;
 }
-.inline-embed[alt="none"] > .markdown-embed-title, .inline-embed > .embed-title, .inline-title {
+.inline-embed[alt="none"] > .markdown-embed-title, .inline-embed > .embed-title, .inline-title, .inline-embed h1:first-child {
 	display: none;
 }
 .metadata-container.is-collapsed {
