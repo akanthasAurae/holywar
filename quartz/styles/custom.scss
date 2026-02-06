@@ -311,7 +311,7 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #c42542;
 	--highlight: #c4254226;
         };
-    &[href*="Combat"], &[href*="combat"] {
+    &[href$="Combat"], &[href$="combat"] {
         color: #e66060;
 	--highlight: #e6606026;
         };
@@ -319,7 +319,7 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #9a60e6;
 	--highlight: #9a60e626;
         };
-    &[href*="Mental"], &[href*="mental"] {
+    &[href$="Mental"], &[href$="mental"] {
         color: #60a5e6;
 	--highlight: #60a5e626;
         };
