@@ -481,7 +481,7 @@ a[data-href*="Mental Power Up" i], a[data-href*="Combat Power Down" i], a[data-h
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.up, h2.up, h3.up, h4.up, h5.up, h6.up, span.up, a.up, p.up,
-a[data-href*="Mental Power Down" i], a[data-href*="Combat Power Up" i], a[data-href*="Defense Power Up" i ] {
+a[data-href*="Mental Power Down" i], a[data-href*="Combat Power Up" i], a[data-href*="Defense Power Up" i] {
 	color: #e11414;
 	--link-color: #e11414;
 	font-weight:bold;
