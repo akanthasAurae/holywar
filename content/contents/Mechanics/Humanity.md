@@ -68,3 +68,5 @@ tags:
 > >![[downed.png|icon|20]] [[Downed]]
 > ><br>• Lose 15 <span class="hum">Humanity</span>
 > ><br>• All allies lose 10 <span class="hum">Humanity</span>
+
+^3cc5de

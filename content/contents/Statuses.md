@@ -1,18 +1,18 @@
 > [!warning] Certain statuses do not yet have icons or custom colours.
 
-<h3><a data-href="Bloodloss" href="Bloodloss" class="bleed internal-link">Bloodloss</a></h3>
+### [[Bloodloss]]
 
 ![[Bloodloss]]
 
-<h3><a data-href="Burn" href="Burn" class="burn internal-link">Burn</a></h3>
+### [[Burn]]
 
 ![[Burn]]
 
-<h3><a data-href="Combat Power Down" href="Combat Power Down" class="down internal-link">Combat Power Down</a></h3>
+### [[Combat Power Down]]
 
 ![[Combat Power Down]]
 
-<h3><a data-href="Combat Power Up" href="Combat Power Up" class="up internal-link">Combat Power Up</a></h3>
+### [[Combat Power Up]]
 
 ![[Combat Power Up]]
 
@@ -44,11 +44,11 @@
 
 ---
 
-<h3><a data-href="Defense Power Down" href="Defense Power Down" class="down internal-link">Defense Power Down</a></h3>
+### [[Defense Power Down]]
 
 ![[Defense Power Down]]
 
-<h3><a data-href="Defense Power Up" href="Defense Power Up" class="up internal-link">Defense Power Up</a></h3>
+### [[Defense Power Up]]
 
 ![[Defense Power Up]]
 
@@ -61,15 +61,15 @@
 
 ---
 
-<h3><a data-href="Mental Power Down" href="Mental Power Down" class="up internal-link">Mental Power Down</a></h3>
+### [[Mental Power Down]]
 
 ![[Mental Power Down]]
 
-<h3><a data-href="Mental Power Up" href="Mental Power Up" class="down internal-link">Mental Power Up</a></h3>
+### [[Mental Power Up]]
 
 ![[Mental Power Up]]
 
-<h3><a data-href="Poise" href="Poise" class="poise internal-link">Poise</a></h3>
+### [[Poise]]
 
 ![[Poise]]
 
@@ -106,11 +106,11 @@
 
 ---
 
-<h3><a data-href="Tremor" href="Tremor" class="tremor internal-link">Tremor</a></h3>
+### [[Tremor]]
 
 ![[Tremor]]
 
-<h3><a data-href="Tremor — Hemorrhage" href="Tremor — Hemorrhage" class="tremorhemo internal-link">Tremor — Hemorrhage</a></h3>
+### [[Tremor — Hemorrhage]]
 
 ![[Tremor — Hemorrhage]]
 
