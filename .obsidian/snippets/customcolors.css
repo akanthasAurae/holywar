@@ -54,6 +54,7 @@ h1.signature, h2.signature, h3.signature, h4.signature, h5.signature, h6.signatu
 	color: #999999;
 	--link-color: #999999;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="biography"], .biography {
@@ -78,6 +79,7 @@ h1.inv, h2.inv, h3.inv, h4.inv, h5.inv, h6.inv, span.inv, a.inv, p.inv, [data-hr
 	color: #916548;
 	--link-color: #916548;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="menuu"], .menuu {
@@ -101,6 +103,7 @@ h1.cyber, h2.cyber, h3.cyber, h4.cyber, h5.cyber, h6.cyber, span.cyber, a.cyber,
 	color: #bd9b2e;
 	--link-color: #bd9b2e;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="hum"], .hum {
@@ -115,6 +118,7 @@ h1.hum, h2.hum, h3.hum, h4.hum, h5.hum, h6.hum, span.hum, a.hum, p.hum, [data-hr
 	color: #50c425;
 	--link-color: #50c425;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 .callout[data-callout="humlow"], .humlow {
 	--callout-color: 80, 196, 37;
@@ -128,6 +132,7 @@ h1.humlow, h2.humlow, h3.humlow, h4.humlow, h5.humlow, h6.humlow, span.humlow, a
 	color: #d04339;
 	--link-color: #d04339;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="stats"], .stats {
@@ -142,6 +147,7 @@ h1.stats, h2.stats, h3.stats, h4.stats, h5.stats, h6.stats, span.stats, a.stats,
 	color: #2ebd6e;
 	--link-color: #2ebd6e;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="soulstats"], .soulstats {
@@ -169,6 +175,7 @@ h1.plus, h2.plus, h3.plus, h4.plus, h5.plus, h6.plus, span.plus, a.plus, p.plus,
 	color: #42c403;
 	--link-color: #42c403;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="minus"], .minus {
@@ -183,6 +190,7 @@ h1.minus, h2.minus, h3.minus, h4.minus, h5.minus, h6.minus, span.minus, a.minus,
 	color: #c42542;
 	--link-color: #c42542;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 	/* stats */
@@ -197,6 +205,7 @@ h1.rolls, h2.rolls, h3.rolls, h4.rolls, h5.rolls, h6.rolls, span.rolls, a.rolls,
 	color: #45b37c;
 	--link-color: #45b37c;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="body"] {
@@ -229,6 +238,7 @@ h1.combat, h2.combat, h3.combat, h4.combat, h5.combat, h6.combat, span.combat, a
 	color: #e66060;
 	--link-color: #e66060;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="sneak"], .sneak {
@@ -243,6 +253,7 @@ h1.sneak, h2.sneak, h3.sneak, h4.sneak, h5.sneak, h6.sneak, span.sneak, a.sneak,
 	color: #9a60e6;
 	--link-color: #9a60e6;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="mental"], .mental {
@@ -257,6 +268,7 @@ h1.mental, h2.mental, h3.mental, h4.mental, h5.mental, h6.mental, span.mental, a
 	color: #60a5e6;
 	--link-color: #60a5e6;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="soulstats"], .soulstats, .callout[data-callout-metadata*="s."] {
@@ -270,6 +282,7 @@ h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulsta
 	color: #7251be;
 	--link-color: #7251be;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 /* status customs */
@@ -285,6 +298,7 @@ h1.action, h2.action, h3.action, h4.action, h5.action, h6.action, span.action, a
 	color: #e6a433;
 	--link-color: #e6a433;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="poise"], .poise {
@@ -299,6 +313,7 @@ h1.poise, h2.poise, h3.poise, h4.poise, h5.poise, h6.poise, span.poise, a.poise,
 	color: #c8d0d0;
 	--link-color: #c8d0d0;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="scorch"], .scorch {
@@ -312,6 +327,7 @@ h1.poise, h2.poise, h3.poise, h4.poise, h5.poise, h6.poise, span.poise, a.poise,
 h1.scorch, h2.scorch, h3.scorch, h4.scorch, h5.scorch, h6.scorch, span.scorch, a.scorch, p.scorch {
 	color: #d53f1b;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="burn"], .burn {
@@ -326,6 +342,7 @@ h1.burn, h2.burn, h3.burn, h4.burn, h5.burn, h6.burn, span.burn, a.burn, p.burn,
 	color: #ec8209;
 	--link-color: #ec8209;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="igni"], .igni {
@@ -340,6 +357,7 @@ h1.igni, h2.igni, h3.igni, h4.igni, h5.igni, h6.igni, span.igni, a.igni, p.igni,
 	color: #fbae09;
 	--link-color: #fbae09;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="bleed"] {
@@ -354,6 +372,7 @@ h1.bleed, h2.bleed, h3.bleed, h4.bleed, h5.bleed, h6.bleed, span.bleed, a.bleed,
 	color: #b1120e;
 	--link-color: #b1120e;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="hemo"], .hemo {
@@ -366,7 +385,9 @@ h1.bleed, h2.bleed, h3.bleed, h4.bleed, h5.bleed, h6.bleed, span.bleed, a.bleed,
 }
 h1.hemo, h2.hemo, h3.hemo, h4.hemo, h5.hemo, h6.hemo, span.hemo, a.hemo, p.hemo {
 	color: #760e06;
+	--link-color: #760e06;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="vital"], .vital {
@@ -382,6 +403,7 @@ a[data-href*="Vital"] {
 	color: #1fdb4e;
 	--link-color: #1fdb4e;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="downed"], .downed {
@@ -397,6 +419,7 @@ a[data-href*="Downed"] {
 	color: #ea5f1d;
 	--link-color: #ea5f1d;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="dd"], .dd {
@@ -412,6 +435,7 @@ a[data-href*="Door"] {
 	color: #e00000;
 	--link-color: #e00000;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="ddrec"], .ddrec {
@@ -427,6 +451,7 @@ a[data-href*="Recovery"] {
 	color: #bfbbbb;
 	--link-color: #bfbbbb;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="down"], .down {
@@ -442,6 +467,7 @@ a[data-href*="Mental"][data-href*="Up"], a[data-href*="Combat"][data-href*="Down
 	color: #1e84f1;
 	--link-color: #1e84f1;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="up"], .up {
@@ -457,6 +483,7 @@ a[data-href*="Mental"][data-href*="Down"], a[data-href*="Combat"][data-href*="Up
 	color: #e11414;
 	--link-color: #e11414;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="guardbreak"], .guardbreak, .guardbroken {
@@ -472,6 +499,7 @@ a[data-href*="Guardbreak"], a[data-href*="Guardbroken"] {
 	color: #641717;
 	--link-color: #641717;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="tremor"], .tremor {
@@ -483,6 +511,7 @@ a[data-href*="Tremor"] {
 	color: #eebc77;
 	--link-color: #eebc77;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .shock {
@@ -493,6 +522,7 @@ h1.shock, h2.shock, h3.shock, h4.shock, h5.shock, h6.shock, span.shock, a.shock,
 	color: #f2a854;
 	--link-color: #f2a854;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .hemoshock {
@@ -503,6 +533,7 @@ h1.hemoshock, h2.shock, h3.hemoshock, h4.hemoshock, h5.hemoshock, h6.hemoshock, 
 	color: #9f2d1e;
 	--link-color: #9f2d1e;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="tox"], .tox {
@@ -514,6 +545,7 @@ a[data-href*="Toxin"] {
 	color: #3ed43c;
 	--link-color: #3ed43c;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="stealth"], .stealth {
@@ -529,6 +561,7 @@ a[data-href*="Stealth"] {
 	color: #7549cc;
 	--link-color: #7549cc;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="venom"], .venom {
@@ -544,6 +577,7 @@ a[data-href*="Venom"] {
 	color: #582dcd;
 	--link-color: #582dcd;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="poiseven"], .poiseven {
@@ -559,6 +593,7 @@ a[data-href*="Envenoming"] {
 	color: #5c12a5;
 	--link-color: #5c12a5;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="poiseburn"], .poiseburn {
@@ -574,6 +609,7 @@ a[data-href*="Poise"][data-href*="Scorching"] {
 	color: #ea5d23;
 	--link-color: #ea5d23;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="poisebleed"], .poisebleed {
@@ -589,6 +625,7 @@ a[data-href*="Poise"][data-href*="Hemorrhage"] {
 	color: #d00b0b;
 	--link-color: #d00b0b;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="tremorhemo"], .tremorhemo {
@@ -604,6 +641,7 @@ a[data-href*="Hemorrhage"] {
 	color: #d24a28;
 	--link-color: #d24a28;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="crit"], .crit {
@@ -619,6 +657,7 @@ a[data-href*="Critical"] {
 	color: #f8db9b;
 	--link-color: #f8db9b;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="stance"], .stance {
@@ -634,6 +673,7 @@ a[data-href*="Stance"] {
 	color: #d5a220;
 	--link-color: #d5a220;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="stancebreak"], .stancebreak {
@@ -648,6 +688,7 @@ h1.stancebreak, h2.stancebreak, h3.stancebreak, h4.stancebreak, h5.stancebreak, 
 a[data-href*="Stancebreak"], a[data-href*="Stancebroken"]  {
 	color: #f5c724;
 	--link-color: #f5c724;
+	--highlight: rgba(var(--link-color), 0.15);
 	font-weight:bold;
 }
 
@@ -664,6 +705,7 @@ a[data-href*="Sheathed"] {
 	color: #c7d2e0;
 	--link-color: #c7d2e0;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="unsheath"], .unsheath {
@@ -679,6 +721,7 @@ a[data-href*="Unsheathed"] {
 	color: #8db2e2;
 	--link-color: #8db2e2;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="awakened"], .awakened {
@@ -694,6 +737,7 @@ a[data-href*="Awakened"] {
 	color: #af090f;
 	--link-color: #af090f;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="shatt"], .shatt {
@@ -709,6 +753,7 @@ a[data-href*="Shattered"] {
 	color: #7719c8;
 	--link-color: #7719c8;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="nimius"], .nimius {
@@ -724,6 +769,7 @@ a[data-href*="Nimius"] {
 	color: #c60c31;
 	--link-color: #c60c31;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="aether"], .aether {
@@ -739,6 +785,7 @@ a[data-href*="Aether"] {
 	color: #5a9cd2;
 	--link-color: #5a9cd2;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="aurora"], .aurora {
@@ -754,6 +801,7 @@ a[data-href*="Aurora"] {
 	color: #e79e5a;
 	--link-color: #e79e5a;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .callout[data-callout="noctis"], .noctis {
@@ -769,6 +817,7 @@ a[data-href*="Noctis"] {
 	color: #ba7ad1;
 	--link-color: #ba7ad1;
 	font-weight:bold;
+	--highlight: rgba(var(--link-color), 0.15);
 }
 
 .nonexistant2 { /*another color picker for yours truly*/
