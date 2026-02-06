@@ -272,42 +272,42 @@ a {
     /* non-status */
 a, a[role=anchor], a.tag-link, a.internal {
      
-    &[href*="Signature"], &[href*="Biography"], &[href*="Menu"], &[href*="Passives"],
-    &[href*="signature"], &[href*="biography"], &[href*="menu"], &[href*="Passives"] {
+    &[href$="Signature"], &[href$="Biography"], &[href$="Menu"], &[href$="Passives"],
+    &[href$="signature"], &[href$="biography"], &[href$="menu"], &[href$="Passives"] {
         color: #999999;
 	--highlight: #99999926;
         };
-    &[href*="Rolls"], [href*="Body"], &[href*="Reflexes"], &[href*="Technical"], &[href*="Intelligence"], &[href*="Cool"],
-    &[href*="rolls"], [href*="body"], &[href*="reflexes"], &[href*="technical"], &[href*="intelligence"], &[href*="cool"] {
+    &[href$="Rolls"], [href$="Body"], &[href$="Reflexes"], &[href$="Technical"], &[href$="Intelligence"], &[href$="Cool"],
+    &[href$="rolls"], [href$="body"], &[href$="reflexes"], &[href$="technical"], &[href$="intelligence"], &[href$="cool"] {
         color: #45b37c;
 	--highlight: #45b37c26;
         };
-    &[href*="Inventory"], &[href*="inventory"] {
+    &[href$="Inventory"], &[href$="inventory"] {
         color: #916548;
 	--highlight: #91654826;
         };
-    &[href*="Cyber"], &[href*="cyber"] {
+    &[href$="Cyberware"], &[href$="cyberware"] {
         color: #bd9b2e;
 	--highlight: #bd9b2e26;
         };
-    &[href*="Humanity"], &[href*="humanity"] {
+    &[href$="Humanity"], &[href$="humanity"] {
         color: #50c425;
 	--highlight: #50c42526;
         };
-    &[href*="Humanity-Loss"], &[href*="Low-Humanity"],
-    &[href*="humanity-loss"], &[href*="low-humanity"] {
+    &[href$="Humanity-Loss"], &[href$="Low-Humanity"],
+    &[href$="humanity-loss"], &[href$="low-humanity"] {
         color: #d04339;
 	--highlight: #d0433926;
         };
-    &[href*="Stats"], &[href*="stats"] {
+    &[href$="Stats"], &[href$="stats"] {
         color: #2ebd6e;
 	--highlight: #2ebd6e26;
         };
-    &[href*="Plus"], &[href*="plus"] {
+    &[href$="Plus"], &[href$="plus"] {
         color: #42c403;
 	--highlight: #42c40326;
         };
-    &[href*="Minus"], &[href*="minus"] {
+    &[href$="Minus"], &[href$="minus"] {
         color: #c42542;
 	--highlight: #c4254226;
         };
@@ -315,7 +315,7 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #e66060;
 	--highlight: #e6606026;
         };
-    &[href*="Sneak"], &[href*="sneak"] {
+    &[href$="Sneak"], &[href$="sneak"] {
         color: #9a60e6;
 	--highlight: #9a60e626;
         };
@@ -323,8 +323,8 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #60a5e6;
 	--highlight: #60a5e626;
         };
-    &[href*="Soul-Stats"], &[href*="S."],
-    &[href*="soul-stats"], &[href*="s."] {
+    &[href$="Soul-Stats"], &[href$="S."],
+    &[href$="soul-stats"], &[href$="s."] {
         color: #7251be;
 	--highlight: #7251be26;
         }
@@ -332,7 +332,8 @@ a, a[role=anchor], a.tag-link, a.internal {
 
     /* status */
 a, a[role=anchor] {
-    &[href$="Poise"], &[href$="poise"]  {
+    &[href$="Poise"], &[href$="poise"],
+    &[href$="On-Crit"], &[href$="on-crit"] {
     color: #c8d0d0;
 	font-weight:bold;
 	--highlight: #c8d0d026;
@@ -354,7 +355,7 @@ a, a[role=anchor] {
 	font-weight:bold; 
 	--highlight: #ea5d2326;
   };
-    &[href$="Scorch"], &[href$="scorch"] {
+    &[href$="Scorched"], &[href$="scorched"] {
     color: #d53f1b;
     font-weight:bold;
 	--highlight: #d53f1b26;
