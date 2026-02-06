@@ -21,7 +21,7 @@ aliases:
 > > **height:** 168cm / 5'5"
 > > **notes:** no system records upon scanning. affiliated with ryūji suzuki
 > > 
-> > *tags:* ![[poise.png|18]] ~={poise}[[Statuses#~={poise}Poise=~|Poise]]=~, ![[burn.png|18]] ~={burn}[[Statuses#~={burn}Burn=~|Burn]]=~, ![[tox.png|18]] ~={tox}[[Statuses#~={tox}Toxin=~|Toxin]]=~, ![[stealth.png|18]] ~={stealth}[[Statuses#~={stealth}Stealth=~|Stealth]]=~, ![[venom.png|18]] ~={ven}[[Statuses#~={ven}Toxin — Venom=~|Venom]]=~, Black Onis
+> > *tags:* ![[poise.png|18]] ~={poise}[[content/compendium/Statuses/index#~={poise}Poise=~|Poise]]=~, ![[burn.png|18]] ~={burn}[[content/compendium/Statuses/index#~={burn}Burn=~|Burn]]=~, ![[tox.png|18]] ~={tox}[[content/compendium/Statuses/index#~={tox}Toxin=~|Toxin]]=~, ![[stealth.png|18]] ~={stealth}[[content/compendium/Statuses/index#~={stealth}Stealth=~|Stealth]]=~, ![[venom.png|18]] ~={ven}[[content/compendium/Statuses/index#~={ven}Toxin — Venom=~|Venom]]=~, Black Onis
 
 > [!cite] — *I got a hole inside my heart to be your girl.*
 > *“ひらり、はらりと乱れ舞い— はらり、はらり、乱れてはらり、夜のビートに身をまかせ…”*
