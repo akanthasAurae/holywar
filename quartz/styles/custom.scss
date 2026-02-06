@@ -272,55 +272,55 @@ a {
     /* non-status */
 a, a[role=anchor] {
      
-    &[href*="Signature"], &[href*="Biography"], &[href*="Menu"], &[href*="Passives"] {
+    &[href*="Signature" i], &[href*="Biography" i], &[href*="Menu" i], &[href*="Passives" i] {
         color: #999999;
 	--highlight: #99999926;
         };
-    &[href*="Rolls"], [href*="Body"], &[href*="Reflexes"], &[href*="Technical"], &[href*="Intelligence"], &[href*="Cool"] {
+    &[href*="Rolls" i], [href*="Body" i], &[href*="Reflexes" i], &[href*="Technical" i], &[href*="Intelligence" i], &[href*="Cool" i] {
         color: #45b37c;
 	--highlight: #45b37c26;
         };
-    &[href*="Inventory"] {
+    &[href*="Inventory" i] {
         color: #916548;
 	--highlight: #91654826;
         };
-    &[href*="Cyber"] {
+    &[href*="Cyber" i] {
         color: #bd9b2e;
 	--highlight: #bd9b2e26;
         };
-    &[href*="Humanity"] {
+    &[href*="Humanity" i] {
         color: #50c425;
 	--highlight: #50c42526;
         };
-    &[href*="Humanity-Loss"], &[href*="Low-Humanity"] {
+    &[href*="Humanity-Loss" i], &[href*="Low-Humanity" i] {
         color: #d04339;
 	--highlight: #d0433926;
         };
-    &[href*="Stats"] {
+    &[href*="Stats" i] {
         color: #2ebd6e;
 	--highlight: #2ebd6e26;
         };
-    &[href*="Plus"] {
+    &[href*="Plus" i] {
         color: #42c403;
 	--highlight: #42c40326;
         };
-    &[href*="Minus"] {
+    &[href*="Minus" i] {
         color: #c42542;
 	--highlight: #c4254226;
         };
-    &[href*="Combat"] {
+    &[href*="Combat" i] {
         color: #e66060;
 	--highlight: #e6606026;
         };
-    &[href*="Sneak"] {
+    &[href*="Sneak" i] {
         color: #9a60e6;
 	--highlight: #9a60e626;
         };
-    &[href*="Mental"] {
+    &[href*="Mental" i] {
         color: #60a5e6;
 	--highlight: #60a5e626;
         };
-    &[href*="Soul-Stats"], &[href*="S."], &[href$="s."] {
+    &[href*="Soul-Stats" i], &[href*="S." i] {
         color: #7251be;
 	--highlight: #7251be26;
         }
@@ -328,152 +328,152 @@ a, a[role=anchor] {
 
     /* status */
 a, a[role=anchor] {
-    &[href$="Poise"] {
+    &[href$="Poise" i] {
     color: #c8d0d0;
 	font-weight:bold;
 	--highlight: #c8d0d026;
   };
-    &[href$="Envenoming"] {
+    &[href$="Envenoming" i] {
     color: #5c12a5;
 	--highlight: #5c12a526;
 	font-weight:bold; 
   };
-    &[href*="Poise"][href$="Hemorrhage"] {
+    &[href*="Poise" i][href$="Hemorrhage" i] {
     color: #d00b0b;
 	--highlight: #d00b0b26;
 	font-weight:bold; 
   };
-    &[href*="Poise"][href$="Scorching"] {
+    &[href*="Poise" i][href$="Scorching" i] {
     color: #ea5d23;
 	font-weight:bold; 
 	--highlight: #ea5d2326;
   };
-    &[href$="Burn"] {
+    &[href$="Burn" i] {
     color: #ec8209;
     font-weight:bold;
 	--highlight: #ec820926;
   };
-    &[href$="Bloodloss"] {
+    &[href$="Bloodloss" i] {
     color: #b1120e;
     font-weight:bold;
 	--highlight: #b1120e26;
   };
-    &[href$="Vital-States"] {
+    &[href$="Vital-States" i] {
     color: #1fdb4e;
 	font-weight:bold;
 	--highlight: #1fdb4e26;
   };
-    &[href$="Death's-Door"] {
+    &[href$="Death's-Door" i] {
     color: #e00000;
 	font-weight:bold;
 	--highlight: #e0000026;
   };
-    &[href$="Downed"] {
+    &[href$="Downed" i] {
     color: #ea5f1d;
 	font-weight:bold;
 	--highlight: #ea5f1d26;
   };
-    &[href$="Death's-Door-Recovery"] {
+    &[href$="Death's-Door-Recovery" i] {
     color: #bfbbbb;
 	--highlight: #bfbbbb26;
 	font-weight:bold;
   };
-    &[href$="Mental-Power-Down"], &[href$="Combat-Power-Up"], &[href$="Defense-Power-Up"] {
+    &[href$="Mental-Power-Down" i], &[href$="Combat-Power-Up" i], &[href$="Defense-Power-Up" i] {
     color: #e11414;
 	--highlight: #e1141426;
 	font-weight:bold;
   };
-    &[href$="Mental-Power-Up"], &[href$="Combat-Power-Down"], &[href$="Defense-Power-Down"] {
+    &[href$="Mental-Power-Up" i], &[href$="Combat-Power-Down" i], &[href$="Defense-Power-Down" i] {
     color: #1e84f1;
 	--highlight: #1e84f126;
 	font-weight:bold;
   };
-    &[href$="Guardbroken"] {
+    &[href$="Guardbroken" i] {
     color: #641717;
 	--highlight: #64171726;
 	font-weight:bold; 
   };
-    &[href$="Actions"] {
+    &[href$="Actions" i] {
     color: #e6a433;
 	font-weight:bold;
 	--highlight: #e6a43326;
   };
-    &[href$="Tremor"] {
+    &[href$="Tremor" i] {
     color: #eebc77;
 	--highlight: #eebc7726;
 	font-weight:bold; 
   };
-    &[href$="Toxin"] {
+    &[href$="Toxin" i] {
     color: #3ed43c;
 	--highlight: #3ed43c26;
 	font-weight:bold; 
   };
-    &[href$="Stealth"] {
+    &[href$="Stealth" i] {
     color: #7549cc;
 	--highlight: #7549cc26;
 	font-weight:bold; 
   };
-    &[href$="Venom"] {
+    &[href$="Venom" i] {
     color: #582dcd;
 	--highlight: #582dcd26;
 	font-weight:bold; 
   };
-    &[href*="Tremor"][href$="Hemorrhage"] {
+    &[href*="Tremor" i][href$="Hemorrhage" i] {
     color: #d24a28;
 	--highlight: #d24a2826;
 	font-weight:bold; 
   };
-    &[href$="Stance"] {
+    &[href$="Stance" i] {
     color: #d5a220;
 	--highlight: #d5a22026;
 	font-weight:bold; 
   };
-    &[href$="Stancebroken"] {
+    &[href$="Stancebroken" i] {
     color: #f5c724;
 	--highlight: #f5c72426;
 	font-weight:bold; 
   };
-    &[href$="Critical-Hit"] {
+    &[href$="Critical-Hit" i] {
     color: #f8db9b;
 	--highlight: #f8db9b26;
 	font-weight:bold; 
   };
-    &[href$="Sheathed"] {
+    &[href$="Sheathed" i] {
     color: #c7d2e0;
 	--highlight: #c7d2e026;
 	font-weight:bold; 
   };
-    &[href$="Unsheathed"] {
+    &[href$="Unsheathed" i] {
     color: #8db2e2;
 	--highlight: #8db2e226;
 	font-weight:bold; 
   };
-    &[href*="Awakened"] {
+    &[href*="Awakened" i] {
     color: #af090f;
 	--highlight: #af090f26;
 	font-weight:bold; 
   };
-    &[href$="Shattered"] {
+    &[href$="Shattered" i] {
     color: #7719c8;
 	--highlight: #7719c826;
 	font-weight:bold; 
   };
-    &[href$="Nimius"] {
+    &[href$="Nimius" i] {
     color: #c60c31;
 	--highlight: #c60c3126;
 	font-weight:bold; 
   };
-    &[href$="Aether"] {
+    &[href$="Aether" i] {
     color: #5a9cd2;
 	--highlight: #5a9cd226;
 	font-weight:bold; 
   };
-    &[href$="Aurora-Vitae"] {
+    &[href$="Aurora-Vitae" i] {
     color: #e79e5a;
 	--highlight: #e79e5a26;
 	font-weight:bold; 
   };
-    &[href$="Noctis"] {
+    &[href$="Noctis" i] {
     color: #ba7ad1;
 	--highlight: #ba7ad126;
 	font-weight:bold; 
