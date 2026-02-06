@@ -273,7 +273,7 @@ a {
 a, a[role=anchor], a.tag-link, a.internal {
      
     &[href*="Signature"], &[href*="Biography"], &[href*="Menu"], &[href*="Passives"],
-    &[href*="signature"], &[href*="biography"], &[href*="menu"], &[href*=":pastassives"] {
+    &[href*="signature"], &[href*="biography"], &[href*="menu"], &[href*="Passives"] {
         color: #999999;
 	--highlight: #99999926;
         };
