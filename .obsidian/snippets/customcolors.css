@@ -286,7 +286,7 @@ h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulsta
 }
 
 /* status customs */
-.callout[data-callout="action"], .action {
+.callout[data-callout="actions"], .actions {
 	--callout-color: 230, 164, 51;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -294,7 +294,7 @@ h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulsta
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.action, h2.action, h3.action, h4.action, h5.action, h6.action, span.action, a.action, p.action, [data-href*="Actions"] {
+h1.actions, h2.action, h3.actions, h4.actions, h5.actions, h6.actions, span.actions, a.actions, p.actions, [data-href*="Actions"] {
 	color: #e6a433;
 	--link-color: #e6a433;
 	font-weight:bold;

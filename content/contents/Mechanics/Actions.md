@@ -4,9 +4,9 @@ tags:
   - mechanics
 ---
 
-<h1 class=action>Actions</h1>
+<h1 class=actions>Actions</h1>
 
-> [!action|status|none]
+> [!actions|status|none]
 > <img src="action.png" class="floatl"> <span>bla bla bla something smething idfk</span>
 > 
 > do later
