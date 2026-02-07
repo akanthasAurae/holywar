@@ -545,6 +545,10 @@ h1.hemoshock, h2.shock, h3.hemoshock, h4.hemoshock, h5.hemoshock, h6.hemoshock, 
 .callout[data-callout="tox"], .tox {
 	--callout-color: 62, 212, 60;
 	--callout-icon: '';
+	--color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+	--highlight: rgba(var(--callout-color), 0.15);
 }
 h1.tox, h2.tox, h3.tox, h4.tox, h5.tox, h6.tox, span.tox, a.tox, p.tox,
 a[data-href*="Toxin" i] {

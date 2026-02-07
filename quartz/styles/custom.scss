@@ -66,7 +66,20 @@ blockquote.transclude {
 .floatr, [alt="floatr"] {
 	float: inline-end;
 	margin-left: 1em;
+}
 
+/* naming indexes */
+body[data-slug$="Statuses/index"] h1.article-title, a.internal[href$="Statuses/"] {
+    text-transform: capitalize;
+    &::before {
+    content:'Statuses — ';
+    }
+}
+body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics/"]{
+    text-transform: capitalize;
+    &::before {
+    content:'Mechanics — ';
+    }
 }
 
 .callout[data-callout-metadata="status|none"] .callout-content
@@ -261,9 +274,8 @@ blockquote.transclude {
         color: var(--dark) !important; 
         }
     }
-/*
-a {
-    &[href$="Poise"]  {
+/* make sure to include 
+    &[href$="Poise"],&[href$="poise"]  {
     color: #c8d0d0;
 	font-weight:bold;
 	--highlight: #c8d0d026;

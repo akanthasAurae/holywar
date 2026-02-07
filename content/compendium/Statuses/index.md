@@ -18,6 +18,8 @@
 
 ---
 
+
+### [[Crescent Moon — Awakened|Crescent Moon — Awakened Flames of Crimson 【血は燃料だ】]]
 ## ~={awakened}Crescent Moon — Awakened Flames of Crimson 【血は燃料だ】=~
 > [!awakened|none]
 > ![[content/compendium/icons/awakened.png|floatl|74]] Combat Min. +5, Combat Max. +10, ![[content/compendium/icons/stance.png|18]] ~={stance}[[content/compendium/Mechanics/index#~={stance}Stance=~|Stance]]=~ +1.
