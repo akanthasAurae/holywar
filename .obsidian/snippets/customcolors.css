@@ -1,30 +1,37 @@
 /* templates */
 
-.callout[data-callout="customname"], .customname { /* uses callout-name for callouts, and .classes for any elements you want to color with this. note you cannot nest markdown inside HTML in obsidian. */
-	/* the reason why class is included is because of the fact quartz transcribes data-callout as a class as well in the output, this ensures things can remain colored despite maybe not having data-callout for whatever reason */
+.callout[data-callout="customname"], .customname {
+	/* the reason why class is included is because of the fact quartz transcribes data-callout as a class as well in the output, this ensures things can remain colored */
 	--callout-color: 200,208,208; /* must be R, G, B (255, 255, 255) */
-	--callout-icon: ''; /* for custom statuses ie. Poise, leave as ''. otherwise use Lucide */
+	--callout-icon: ''; /* for custom statuses (ie. Poise), leave as ''. otherwise use Lucide icons */
     --color: rgba(var(--callout-color), 1); /* this is for Quartz */
     --border: rgba(var(--callout-color), 0.267); /* this is for Quartz */
     --bg: rgba(var(--callout-color), 0.063); /* this is for Quartz */
 	--highlight: rgba(var(--callout-color), 0.15); /* this is for Quartz */
-}
-h1.customname, h2.customname, h3.customname, h4.customname, h5.customname, h6.customname, span.customname, a.customname, p.customname, a[data-href="customname" i] /* should cover all your bases, tell me if something's missing */ {
-	color: #ffffff; /* will use this color */
+} /* should cover all your bases, 'i' is for insensitive case (so Customname and customname both get 'caught'). data-href can have spaces; href can't (dashes instead) */
+.customname, [data-href="custom name" i], .tag[href*="custom-name" i] { 
+	--custom-color: #ffffff; /* color here */
 	font-weight: bold; /* use normal for no bold */
 	font-style: normal; /* use italic for italics, or oblique */
 	font-variant: normal; /* use small-caps for small caps */
-	--link-color: #999999; /* repeat color here, it's for quartz */
-	--highlight: #99999926; /* repeat color here, 26 is for opacity. it's also for quartz */
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+ /* repeat color here, */
+	color: var(--custom-color);
+	--highlight: #ffffff26; /* repeat color here, 26 is for opacity*/
 }
 
-/* note: link colors *for Quartz* must be set in custom.scss (quartz/styles/custom.scss)
+/* note: colors *for Quartz* must be set in custom.scss as well! (quartz/styles/custom.scss)
 quick notes about selectors:
-    1. they MUST be captalized! (Poise = yes, poise = no)
-    2. Bursts unfortunately cannot have link colors (this is due to a limitation: I can't select the contents of <a> within css, thus it cannot determine the difference between [[Tremor|Seisimic Shock]] and [[Tremor]] since it renders the data-href and href attributes as Tremor), and besides, bursts shouldn't need to link back to their statuses since it's likely it'll already be linked somewhere nearby...
-    3. Stats like Combat do not need links
-    4. use a[data-href="Name"] HERE for Obsidian links in customcolors.css, a[href="Name"] is exclusive to custom.scss (and comes with its own bundles of fucking joy /sarc)
-    5. How to do selectors:
+    1. Bursts unfortunately cannot have their own link colors (this is due to a limitation: I can't select the contents of <a> within css, thus it cannot determine the difference between [[Tremor|Seisimic Shock]] and [[Tremor]] since it renders the data-href and href attributes as Tremor).
+	HOWEVER, in lieu of tags now being included in here for QoL, they CAN and SHOULD have colors anyways.
+    2. How to do selectors:
         ="STRING"
             > finds EXACTLY the STRING:
 				ex. ="Poise - Hemorrhage", ="Poise - Scorching", does not select "Poise"
@@ -52,14 +59,30 @@ quick notes about selectors:
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.signature, h2.signature, h3.signature, h4.signature, h5.signature, h6.signature, span.signature, a.signature, p.signature, h1.biography, h2.biography, h3.biography, h4.biography, h5.biography, h6.biography, span.biography, a.biography, p.biography, h1.menuu, h2.menuu, h3.menuu, h4.menuu, h5.menuu, h6.menuu, span.menuu, a.menuu, p.menuu, h1.passives, h2.passives, h3.passives, h4.passives, h5.passives, h6.passives, span.passives, a.passives, p.passives, [data-href*="Signature" i], [data-href*="Biography" i], [data-href*="Menu" i], [data-href*="Passives" i] {
-	color: #999999;
-	--link-color: #999999;
+.neutral, .signature, .biography, .menuu, .passives, [data-href*="Signature" i], [data-href*="Biography" i], [data-href*="Menu" i], [data-href*="Passives" i], [data-href*="Neutral" i], .tag[href*="Biography" i], .tag[href*="Menu" i], .tag[href*="Passives" i], .tag[href*="Neutral" i],
+[data-href*="Base Power"], [data-href*="Ceiling Power"], [data-href*="Final Power"] {
+	--custom-color: #999999;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #99999926;
 }
 
 .callout[data-callout="biography"], .biography {
+	--callout-color: 153, 153, 153;
+	--callout-icon: lucide-eye;
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+	--highlight: rgba(var(--callout-color), 0.15);
+}
+
+.callout[data-callout="neutral"], .neutral {
 	--callout-color: 153, 153, 153;
 	--callout-icon: lucide-eye;
     --color: rgba(var(--callout-color), 1);
@@ -77,9 +100,15 @@ h1.signature, h2.signature, h3.signature, h4.signature, h5.signature, h6.signatu
 	--highlight: rgba(var(--callout-color), 0.15);
 
 }
-h1.inv, h2.inv, h3.inv, h4.inv, h5.inv, h6.inv, span.inv, a.inv, p.inv, [data-href*="Inventory" i] {
-	color: #916548;
-	--link-color: #916548;
+.inv, [data-href*="Inventory" i], .tag[href*="Inventory" i] {
+	--custom-color: #916548;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #91654826;
 }
@@ -101,9 +130,15 @@ h1.inv, h2.inv, h3.inv, h4.inv, h5.inv, h6.inv, span.inv, a.inv, p.inv, [data-hr
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.cyber, h2.cyber, h3.cyber, h4.cyber, h5.cyber, h6.cyber, span.cyber, a.cyber, p.cyber, [data-href*="Cyberware" i] {
-	color: #bd9b2e;
-	--link-color: #bd9b2e;
+.cyber, [data-href*="Cyberware" i], .tag[href*="Cyberware" i] {
+	--custom-color: #bd9b2e;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #bd9b2e26;
 }
@@ -116,9 +151,15 @@ h1.cyber, h2.cyber, h3.cyber, h4.cyber, h5.cyber, h6.cyber, span.cyber, a.cyber,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.hum, h2.hum, h3.hum, h4.hum, h5.hum, h6.hum, span.hum, a.hum, p.hum, [data-href*="Humanity" i] {
-	color: #50c425;
-	--link-color: #50c425;
+.hum, [data-href*="Humanity" i], .tag[href*="Humanity" i] {
+	--custom-color: #50c425;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #50c42526;
 }
@@ -130,9 +171,15 @@ h1.hum, h2.hum, h3.hum, h4.hum, h5.hum, h6.hum, span.hum, a.hum, p.hum, [data-hr
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.humlow, h2.humlow, h3.humlow, h4.humlow, h5.humlow, h6.humlow, span.humlow, a.humlow, p.humlow, [data-href*="Low Humanity" i], [data-href*="Humanity Loss" i] {
-	color: #d04339;
-	--link-color: #d04339;
+.humlow, [data-href*="Low Humanity" i], [data-href*="Humanity Loss" i], .tag[href*="Low Humanity" i], .tag[href*="Humanity Loss" i] {
+	--custom-color: #d04339;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #d0433926;
 }
@@ -145,9 +192,15 @@ h1.humlow, h2.humlow, h3.humlow, h4.humlow, h5.humlow, h6.humlow, span.humlow, a
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.stats, h2.stats, h3.stats, h4.stats, h5.stats, h6.stats, span.stats, a.stats, p.stats, [data-href*="Stats" i] {
-	color: #2ebd6e;
-	--link-color: #2ebd6e;
+.stats, [data-href*="Stats" i], .tag[href*="Stats" i] {
+	--custom-color: #2ebd6e;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #2ebd6e26;
 }
@@ -165,7 +218,7 @@ h1.stats, h2.stats, h3.stats, h4.stats, h5.stats, h6.stats, span.stats, a.stats,
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 
-.callout[data-callout="plus"], .plus {
+.callout[data-callout="plus"], .plus, .callout[data-callout="positive"], .positive {
 	--callout-color: 66, 196, 37;
 	--callout-icon: lucide-plus;
     --color: rgba(var(--callout-color), 1);
@@ -173,14 +226,20 @@ h1.stats, h2.stats, h3.stats, h4.stats, h5.stats, h6.stats, span.stats, a.stats,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.plus, h2.plus, h3.plus, h4.plus, h5.plus, h6.plus, span.plus, a.plus, p.plus, [data-href*="Plus" i] {
-	color: #42c403;
-	--link-color: #42c403;
+.plus, [data-href*="Plus" i], .tag[href*="Plus" i], .positive, [data-href*="Positive" i], .tag[href*="Positive" i] {
+	--custom-color: #42c403;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #42c40326;
 }
 
-.callout[data-callout="minus"], .minus {
+.callout[data-callout="minus"], .minus, .callout[data-callout="negative"], .negative {
 	--callout-color: 196, 37, 66;
 	--callout-icon: lucide-minus;
     --color: rgba(var(--callout-color), 1);
@@ -188,9 +247,15 @@ h1.plus, h2.plus, h3.plus, h4.plus, h5.plus, h6.plus, span.plus, a.plus, p.plus,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.minus, h2.minus, h3.minus, h4.minus, h5.minus, h6.minus, span.minus, a.minus, p.minus, [data-href*="Minus" i] {
-	color: #c42542;
-	--link-color: #c42542;
+.negative, [data-href*="Negative" i], .tag[href*="Negative" i], .minus, [data-href*="Minus" i], .tag[href*="Minus" i] {
+	--custom-color: #c42542;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #c4254226;
 }
@@ -203,9 +268,15 @@ h1.minus, h2.minus, h3.minus, h4.minus, h5.minus, h6.minus, span.minus, a.minus,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.rolls, h2.rolls, h3.rolls, h4.rolls, h5.rolls, h6.rolls, span.rolls, a.rolls, p.rolls, h1.body, h2.body, h3.body, h4.body, h5.body, h6.body, span.body, a.body, p.body, h1.reflex, h2.reflex, h3.reflex, h4.reflex, h5.reflex, h6.reflex, span.reflex, a.reflex, p.reflex, h1.tech, h2.tech, h3.tech, h4.tech, h5.tech, h6.tech, span.tech, a.tech, p.tech, h1.intel, h2.intel, h3.intel, h4.intel, h5.intel, h6.intel, span.intel, a.intel, p.intel, h1.cool, h2.cool, h3.cool, h4.cool, h5.cool, h6.cool, span.cool, a.cool, p.cool, [data-href*="Combat"], [data-href*="Rolls" i], [data-href*="Body" i], [data-href*="Reflexes" i], [data-href*="Technical" i], [data-href*="Intelligence" i], [data-href*="Cool" i] {
-	color: #45b37c;
-	--link-color: #45b37c;
+.rolls, .body, .reflex, .tech, .intel, .cool, [data-href*="Combat"], .tag[href*="Combat"], [data-href*="Rolls" i], .tag[href*="Rolls" i], [data-href*="Body" i], .tag[href*="Body" i], [data-href*="Reflexes" i], .tag[href*="Reflexes" i], [data-href*="Technical" i], .tag[href*="Technical" i], [data-href*="Intelligence" i], .tag[href*="Intelligence" i], [data-href*="Cool" i], .tag[href*="Cool" i] {
+	--custom-color: #45b37c;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #45b37c26;
 }
@@ -236,9 +307,15 @@ h1.rolls, h2.rolls, h3.rolls, h4.rolls, h5.rolls, h6.rolls, span.rolls, a.rolls,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.combat, h2.combat, h3.combat, h4.combat, h5.combat, h6.combat, span.combat, a.combat, p.combat, [data-href*="Combat" i] {
-	color: #e66060;
-	--link-color: #e66060;
+.combat, [data-href*="Combat" i], .tag[href*="Combat" i] {
+	--custom-color: #e66060;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #e6606026;
 }
@@ -251,9 +328,15 @@ h1.combat, h2.combat, h3.combat, h4.combat, h5.combat, h6.combat, span.combat, a
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.sneak, h2.sneak, h3.sneak, h4.sneak, h5.sneak, h6.sneak, span.sneak, a.sneak, p.sneak, [data-href*="Sneak" i] {
-	color: #9a60e6;
-	--link-color: #9a60e6;
+.sneak, [data-href*="Sneak" i], .tag[href*="Sneak" i] {
+	--custom-color: #9a60e6;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #9a60e626;
 }
@@ -266,11 +349,38 @@ h1.sneak, h2.sneak, h3.sneak, h4.sneak, h5.sneak, h6.sneak, span.sneak, a.sneak,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.mental, h2.mental, h3.mental, h4.mental, h5.mental, h6.mental, span.mental, a.mental, p.mental, [data-href*="Mental" i] {
-	color: #60a5e6;
-	--link-color: #60a5e6;
+.mental, [data-href*="Mental" i], .tag[href*="Mental" i] {
+	--custom-color: #60a5e6;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #60a5e626;
+}
+
+.callout[data-callout="defense"], .defense {
+	--callout-color: 230, 172, 96;
+	--callout-icon: lucide-shield;
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+	--highlight: rgba(var(--callout-color), 0.15);
+}
+.defense, [data-href*="Defense" i], .tag[href*="Defense" i] {
+	--custom-color: #e6ac60;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #e6ac6026;
 }
 
 .callout[data-callout="soulstats"], .soulstats, .callout[data-callout-metadata*="s."] {
@@ -280,13 +390,40 @@ h1.mental, h2.mental, h3.mental, h4.mental, h5.mental, h6.mental, span.mental, a
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulstats, span.soulstats, a.soulstats, p.soulstats, [data-href*="Soul Stats" i] {
-	color: #7251be;
-	--link-color: #7251be;
+.soulstats, [data-href*="Soul Stats" i], .tag[href*="Soul Stats" i] {
+	--custom-color: #7251be;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #7251be26;
 }
 
+.callout[data-callout="soul"], .soul {
+	--callout-color: 180, 133, 249;
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+	--highlight: rgba(var(--callout-color), 0.15);
+}
+.soul, [data-href*="Soul" i], .tag[href*="Soul" i] {
+	--custom-color: #b485f9;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #b485f926;
+}
+
+/*b485f9*/
 /* status customs */
 .callout[data-callout="actions"], .actions {
 	--callout-color: 230, 164, 51;
@@ -296,9 +433,15 @@ h1.soulstats, h2.soulstats, h3.soulstats, h4.soulstats, h5.soulstats, h6.soulsta
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.actions, h2.action, h3.actions, h4.actions, h5.actions, h6.actions, span.actions, a.actions, p.actions, [data-href*="Actions" i] {
-	color: #e6a433;
-	--link-color: #e6a433;
+.actions, [data-href*="Actions" i], .tag[href*="Actions" i] {
+	--custom-color: #e6a433;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #e6a43326;
 }
@@ -311,9 +454,15 @@ h1.actions, h2.action, h3.actions, h4.actions, h5.actions, h6.actions, span.acti
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.poise, h2.poise, h3.poise, h4.poise, h5.poise, h6.poise, span.poise, a.poise, p.poise, [data-href*="Poise" i] {
-	color: #c8d0d0;
-	--link-color: #c8d0d0;
+.poise, [data-href*="Poise" i], .tag[href*="Poise" i] {
+	--custom-color: #c8d0d0;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #c8d0d026;
 }
@@ -326,8 +475,15 @@ h1.poise, h2.poise, h3.poise, h4.poise, h5.poise, h6.poise, span.poise, a.poise,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.scorch, h2.scorch, h3.scorch, h4.scorch, h5.scorch, h6.scorch, span.scorch, a.scorch, p.scorch, [data-href*="Scorching" i] {
-	color: #d53f1b;
+.scorch, [data-href*="Scorching" i], .tag[href*="Scorching" i] {
+	--custom-color: #d53f1b;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #d53f1b26;
 }
@@ -340,9 +496,15 @@ h1.scorch, h2.scorch, h3.scorch, h4.scorch, h5.scorch, h6.scorch, span.scorch, a
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.burn, h2.burn, h3.burn, h4.burn, h5.burn, h6.burn, span.burn, a.burn, p.burn, a[data-href*="Burn" i] {
-	color: #ec8209;
-	--link-color: #ec8209;
+.burn, [data-href*="Burn" i], .tag[href*="Burn" i] {
+	--custom-color: #ec8209;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #ec820926;
 }
@@ -355,9 +517,15 @@ h1.burn, h2.burn, h3.burn, h4.burn, h5.burn, h6.burn, span.burn, a.burn, p.burn,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.igni, h2.igni, h3.igni, h4.igni, h5.igni, h6.igni, span.igni, a.igni, p.igni, a[data-href*="Ignition" i] {
-	color: #fbae09;
-	--link-color: #fbae09;
+.igni, [data-href*="Ignition" i], .tag[href*="Ignition" i] {
+	--custom-color: #fbae09;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #fbae0926;
 }
@@ -370,9 +538,15 @@ h1.igni, h2.igni, h3.igni, h4.igni, h5.igni, h6.igni, span.igni, a.igni, p.igni,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.bleed, h2.bleed, h3.bleed, h4.bleed, h5.bleed, h6.bleed, span.bleed, a.bleed, p.bleed, a[data-href*="Bloodloss" i] {
-	color: #b1120e;
-	--link-color: #b1120e;
+.bleed, [data-href*="Bloodloss" i], .tag[href*="Bloodloss" i] {
+	--custom-color: #b1120e;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #b1120e26;
 }
@@ -385,9 +559,15 @@ h1.bleed, h2.bleed, h3.bleed, h4.bleed, h5.bleed, h6.bleed, span.bleed, a.bleed,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.hemo, h2.hemo, h3.hemo, h4.hemo, h5.hemo, h6.hemo, span.hemo, a.hemo, p.hemo, [data-href*="Hemorrhage" i] {
-	color: #760e06;
-	--link-color: #760e06;
+.hemo, [data-href*="Hemorrhage" i], .tag[href*="Hemorrhage" i] {
+	--custom-color: #760e06;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #760e0626;
 }
@@ -400,10 +580,15 @@ h1.hemo, h2.hemo, h3.hemo, h4.hemo, h5.hemo, h6.hemo, span.hemo, a.hemo, p.hemo,
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.vital, h2.vital, h3.vital, h4.vital, h5.vital, h6.vital, span.vital, a.vital, p.vital,
-a[data-href*="Vital" i] {
-	color: #1fdb4e;
-	--link-color: #1fdb4e;
+.vital, [data-href*="Vital" i], .tag[href*="Vital" i] {
+	--custom-color: #1fdb4e;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #1fdb4e26;
 }
@@ -416,10 +601,15 @@ a[data-href*="Vital" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.downed, h2.downed, h3.downed, h4.downed, h5.downed, h6.downed, span.downed, a.downed, p.downed,
-a[data-href*="Downed" i] {
-	color: #ea5f1d;
-	--link-color: #ea5f1d;
+.downed, [data-href*="Downed" i], .tag[href*="Downed" i] {
+	--custom-color: #ea5f1d;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #ea5f1d26;
 }
@@ -432,10 +622,15 @@ a[data-href*="Downed" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.dd, h2.dd, h3.dd, h4.dd, h5.dd, h6.dd, span.dd, a.dd, p.dd,
-a[data-href*="Death's Door" i] {
-	color: #e00000;
-	--link-color: #e00000;
+.dd, [data-href*="Death's Door" i], .tag[href*="Death's Door" i] {
+	--custom-color: #e00000;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #e0000026;
 }
@@ -448,10 +643,15 @@ a[data-href*="Death's Door" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.ddrec, h2.ddrec, h3.ddrec, h4.ddrec, h5.ddrec, h6.ddrec, span.ddrec, a.ddrec, p.ddrec,
-a[data-href*="Recovery" i] {
-	color: #bfbbbb;
-	--link-color: #bfbbbb;
+.ddrec, [data-href*="Recovery" i], .tag[href*="Recovery" i] {
+	--custom-color: #bfbbbb;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #bfbbbb26;
 }
@@ -464,10 +664,15 @@ a[data-href*="Recovery" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.down, h2.down, h3.down, h4.down, h5.down, h6.down, span.down, a.down, p.down,
-a[data-href*="Mental Power Up" i], a[data-href*="Combat Power Down" i], a[data-href*="Defense Power Down" i] {
-	color: #1e84f1;
-	--link-color: #1e84f1;
+.down {
+	--custom-color: #1e84f1;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #1e84f126;
 }
@@ -480,10 +685,15 @@ a[data-href*="Mental Power Up" i], a[data-href*="Combat Power Down" i], a[data-h
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.up, h2.up, h3.up, h4.up, h5.up, h6.up, span.up, a.up, p.up,
-a[data-href*="Mental Power Down" i], a[data-href*="Combat Power Up" i], a[data-href*="Defense Power Up" i] {
-	color: #e11414;
-	--link-color: #e11414;
+.up {
+	--custom-color: #e11414;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #e1141426;
 }
@@ -496,10 +706,15 @@ a[data-href*="Mental Power Down" i], a[data-href*="Combat Power Up" i], a[data-h
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.guardbreak, h2.guardbreak, h3.guardbreak, h4.guardbreak, h5.guardbreak, h6.guardbreak, span.guardbreak, a.guardbreak, p.guardbreak,
-a[data-href*="Guardbreak" i], a[data-href*="Guardbroken" i] {
-	color: #641717;
-	--link-color: #641717;
+.guardbreak, [data-href*="Guardbreak" i], [data-href*="Guardbroken" i], .tag[href*="Guardbreak" i], .tag[href*="Guardbroken" i] {
+	--custom-color: #641717;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #64171726;
 }
@@ -512,10 +727,15 @@ a[data-href*="Guardbreak" i], a[data-href*="Guardbroken" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.tremor, h2.tremor, h3.tremor, h4.tremor, h5.tremor, h6.tremor, span.tremor, a.tremor, p.tremor,
-a[data-href*="Tremor" i] {
-	color: #eebc77;
-	--link-color: #eebc77;
+.tremor, [data-href*="Tremor" i], .tag[href*="Tremor" i] {
+	--custom-color: #eebc77;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #eebc7726;
 }
@@ -524,9 +744,15 @@ a[data-href*="Tremor" i] {
 	--callout-color: 236, 182, 121;
 	--callout-icon: '';
 }
-h1.shock, h2.shock, h3.shock, h4.shock, h5.shock, h6.shock, span.shock, a.shock, p.shock, a[data-href*="Seisimic Shock" i] {
-	color: #f2a854;
-	--link-color: #f2a854;
+.shock, [data-href*="Seisimic Shock" i], .tag[href*="Seisimic-Shock" i] {
+	--custom-color: #f2a854;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #f2a85426;
 }
@@ -535,9 +761,15 @@ h1.shock, h2.shock, h3.shock, h4.shock, h5.shock, h6.shock, span.shock, a.shock,
 	--callout-color: 236, 182, 121;
 	--callout-icon: '';
 }
-h1.hemoshock, h2.shock, h3.hemoshock, h4.hemoshock, h5.hemoshock, h6.hemoshock, span.hemoshock, a.hemoshock, p.hemoshock, a[data-href*="Seisimic Hemorrhage" i] {
-	color: #9f2d1e;
-	--link-color: #9f2d1e;
+.hemoshock, [data-href*="Seisimic Hemorrhage" i], .tag[href*="Seisimic-Hemorrhage" i] {
+	--custom-color: #9f2d1e;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #9f2d1e26;
 }
@@ -550,10 +782,15 @@ h1.hemoshock, h2.shock, h3.hemoshock, h4.hemoshock, h5.hemoshock, h6.hemoshock, 
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.tox, h2.tox, h3.tox, h4.tox, h5.tox, h6.tox, span.tox, a.tox, p.tox,
-a[data-href*="Toxin" i] {
-	color: #3ed43c;
-	--link-color: #3ed43c;
+.tox, [data-href*="Toxin" i], .tag[href*="Toxin" i] {
+	--custom-color: #3ed43c;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #3ed43c26;
 }
@@ -566,10 +803,15 @@ a[data-href*="Toxin" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.stealth, h2.stealth, h3.stealth, h4.stealth, h5.stealth, h6.stealth, span.stealth, a.stealth, p.stealth,
-a[data-href*="Stealth" i] {
-	color: #7549cc;
-	--link-color: #7549cc;
+.stealth, [data-href*="Stealth" i], .tag[href*="Stealth" i] {
+	--custom-color: #7549cc;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #7549cc26;
 }
@@ -582,10 +824,15 @@ a[data-href*="Stealth" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.venom, h2.venom, h3.venom, h4.venom, h5.venom, h6.venom, span.venom, a.venom, p.venom,
-a[data-href*="Venom" i] {
-	color: #582dcd;
-	--link-color: #582dcd;
+.venom, [data-href*="Venom" i], .tag[href*="Venom" i] {
+	--custom-color: #582dcd;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #582dcd26;
 }
@@ -598,10 +845,15 @@ a[data-href*="Venom" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.poiseven, h2.poiseven, h3.poiseven, h4.poiseven, h5.poiseven, h6.poiseven, span.poiseven, a.poiseven, p.poiseven,
-a[data-href*="Envenoming" i] {
-	color: #5c12a5;
-	--link-color: #5c12a5;
+.poiseven, [data-href*="Envenoming" i], .tag[href*="Envenoming" i] {
+	--custom-color: #5c12a5;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #5c12a526;
 }
@@ -614,10 +866,15 @@ a[data-href*="Envenoming" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.poiseburn, h2.poiseburn, h3.poiseburn, h4.poiseburn, h5.poiseburn, h6.poiseburn, span.poiseburn, a.poiseburn, p.poiseburn,
-a[data-href*="Poise" i][data-href*="Scorching" i] {
-	color: #ea5d23;
-	--link-color: #ea5d23;
+p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise-Scorching" i] {
+	--custom-color: #ea5d23;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #ea5d2326;
 }
@@ -630,10 +887,15 @@ a[data-href*="Poise" i][data-href*="Scorching" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.poisebleed, h2.poisebleed, h3.poisebleed, h4.poisebleed, h5.poisebleed, h6.poisebleed, span.poisebleed, a.poisebleed, p.poisebleed,
-a[data-href*="Poise" i][data-href*="Hemorrhage" i] {
-	color: #d00b0b;
-	--link-color: #d00b0b;
+.poisebleed, [data-href*="Poise" i][data-href*="Hemorrhage" i], .tag[href*="Poise-Hemorrhage" i] {
+	--custom-color: #d00b0b;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #d00b0b26;
 }
@@ -646,10 +908,15 @@ a[data-href*="Poise" i][data-href*="Hemorrhage" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.tremorhemo, h2.tremorhemo, h3.tremorhemo, h4.tremorhemo, h5.tremorhemo, h6.tremorhemo, span.tremorhemo, a.tremorhemo, p.tremorhemo,
-a[data-href*="Tremor" i][data-href*="Hemorrhage" i] {
-	color: #d24a28;
-	--link-color: #d24a28;
+.tremorhemo, [data-href*="Tremor" i][data-href*="Hemorrhage" i], .tag[href*="Tremor-Hemorrhage" i] {
+	--custom-color: #d24a28;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #d24a2826;
 }
@@ -662,10 +929,15 @@ a[data-href*="Tremor" i][data-href*="Hemorrhage" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.crit, h2.crit, h3.crit, h4.crit, h5.crit, h6.crit, span.crit, a.crit, p.crit,
-a[data-href*="Critical" i] {
-	color: #f8db9b;
-	--link-color: #f8db9b;
+.crit, [data-href*="Critical" i], .tag[href*="Critical" i] {
+	--custom-color: #f8db9b;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #f8db9b26;
 }
@@ -678,10 +950,16 @@ a[data-href*="Critical" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.stance, h2.stance, h3.stance, h4.stance, h5.stance, h6.stance, span.stance, a.stance, p.stance,
-a[data-href*="Stance" i] {
-	color: #d5a220;
-	--link-color: #d5a220;
+
+.stance, [data-href*="Stance" i], .tag[href*="Stance" i] {
+	--custom-color: #d5a220;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #d5a22026;
 }
@@ -694,10 +972,15 @@ a[data-href*="Stance" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.stancebreak, h2.stancebreak, h3.stancebreak, h4.stancebreak, h5.stancebreak, h6.stancebreak, span.stancebreak, a.stancebreak, p.stancebreak,
-a[data-href*="Stancebreak" i], a[data-href*="Stancebroken" i]  {
-	color: #f5c724;
-	--link-color: #f5c724;
+.stancebreak, [data-href*="Stancebreak" i], [data-href*="Stancebroken" i], .tag[href*="Stancebreak" i], .tag[href*="Stancebroken" i]  {
+	--custom-color: #f5c724;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	--highlight: #f5c72426;
 	font-weight:bold;
 }
@@ -710,10 +993,15 @@ a[data-href*="Stancebreak" i], a[data-href*="Stancebroken" i]  {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.sheath, h2.sheath, h3.sheath, h4.sheath, h5.sheath, h6.sheath, span.sheath, a.sheath, p.sheath,
-a[data-href*="Sheathed" i] {
-	color: #c7d2e0;
-	--link-color: #c7d2e0;
+.sheath, [data-href*="Sheathed" i], .tag[href*="Sheathed" i] {
+	--custom-color: #c7d2e0;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #c7d2e026;
 }
@@ -726,10 +1014,15 @@ a[data-href*="Sheathed" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.unsheath, h2.unsheath, h3.unsheath, h4.unsheath, h5.unsheath, h6.unsheath, span.unsheath, a.unsheath, p.unsheath,
-a[data-href*="Unsheathed" i] {
-	color: #8db2e2;
-	--link-color: #8db2e2;
+.unsheath, [data-href*="Unsheathed" i], .tag[href*="Unsheathed" i] {
+	--custom-color: #8db2e2;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #8db2e226;
 }
@@ -742,10 +1035,15 @@ a[data-href*="Unsheathed" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.awakened, h2.awakened, h3.awakened, h4.awakened, h5.awakened, h6.awakened, span.awakened, a.awakened, p.awakened,
-a[data-href*="Awakened" i] {
-	color: #af090f;
-	--link-color: #af090f;
+.awakened, [data-href*="Awakened" i], .tag[href*="Awakened" i] {
+	--custom-color: #af090f;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #af090f26;
 }
@@ -758,10 +1056,15 @@ a[data-href*="Awakened" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.shatt, h2.shatt, h3.shatt, h4.shatt, h5.shatt, h6.shatt, span.shatt, a.shatt, p.shatt,
-a[data-href*="Shattered" i] {
-	color: #7719c8;
-	--link-color: #7719c8;
+.shatt, [data-href*="Shattered" i], .tag[href*="Shattered" i] {
+	--custom-color: #7719c8;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #7719c826;
 }
@@ -774,10 +1077,15 @@ a[data-href*="Shattered" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.nimius, h2.nimius, h3.nimius, h4.nimius, h5.nimius, h6.nimius, span.nimius, a.nimius, p.nimius,
-a[data-href*="Nimius" i] {
-	color: #c60c31;
-	--link-color: #c60c31;
+.nimius, [data-href*="Nimius" i], .tag[href*="Nimius" i] {
+	--custom-color: #c60c31;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #c60c3126;
 }
@@ -790,10 +1098,15 @@ a[data-href*="Nimius" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.aether, h2.aether, h3.aether, h4.aether, h5.aether, h6.aether, span.aether, a.aether, p.aether,
-a[data-href*="Aether" i] {
-	color: #5a9cd2;
-	--link-color: #5a9cd2;
+.aether, [data-href*="Aether" i], .tag[href*="Aether" i] {
+	--custom-color: #5a9cd2;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #5a9cd226;
 }
@@ -806,10 +1119,15 @@ a[data-href*="Aether" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.aurora, h2.aurora, h3.aurora, h4.aurora, h5.aurora, h6.aurora, span.aurora, a.aurora, p.aurora,
-a[data-href*="Aurora" i] {
-	color: #e79e5a;
-	--link-color: #e79e5a;
+.aurora, [data-href*="Aurora" i], .tag[href*="Aurora" i] {
+	--custom-color: #e79e5a;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #e79e5a26;
 }
@@ -822,15 +1140,15 @@ a[data-href*="Aurora" i] {
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-h1.noctis, h2.noctis, h3.noctis, h4.noctis, h5.noctis, h6.noctis, span.noctis, a.noctis, p.noctis,
-a[data-href*="Noctis" i] {
-	color: #ba7ad1;
-	--link-color: #ba7ad1;
+.noctis, [data-href*="Noctis" i], .tag[href*="Noctis" i] {
+	--custom-color: #ba7ad1;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #ba7ad126;
-}
-
-.nonexistant2 { /*another color picker for yours truly*/
-	color: rgba(241, 200, 146, 0.267);
-	color: rgb(255, 255, 255)
 }

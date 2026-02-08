@@ -2,11 +2,13 @@
 tags:
 - mental-power-down
 - status
+- modifier
+- negative-modifier
 ---
 
-<h1 class=up>Mental Power Down</h1>
+<h1 class=mental>Mental Power Down</h1>
 
-> [!up|status|none]
-> <img src="mentaldown.png" class=floatl> <span>Decrease the final value of a Mental Roll by this status’ Stack, then remove this status.<span>
+> [!mental|status|none]
+> <img src="mendown.png" class=floatl> <span>Decrease the final value of a <span class=mental>Mental Roll</span> by this status’ Stack, then remove this status.</span>
 > 
 > **Max Stack: 99**

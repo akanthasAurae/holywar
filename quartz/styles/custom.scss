@@ -5,6 +5,9 @@ p {
     margin-top: 0.4em;
     margin-bottom: 0.4em;
 }
+.no-b {
+	font-weight:normal !important;
+} 
 
 //* custom stuff for callouts *//
 .callout[data-callout-metadata*="none"] > .callout-title, .callout[data-callout-metadata*="none"] > .callout-title > .callout-icon {
@@ -57,7 +60,7 @@ blockquote.transclude {
 .floatl, [alt="floatl"], .floatr, [alt="floatr"] {
     vertical-align: sub;
 	height: 85px;
-    width: 85px;
+    width: auto;
 }
 .floatl, [alt="floatl"] {
     float:inline-start;
@@ -96,7 +99,7 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
 .icon, img[alt="icon"] {
 	vertical-align: sub;
     height: 20px;
-    width: 20px;
+    width: auto;
 }
 /* custom list */
 .callout { /* THESE WERE A FUCKING NIGHTMARE OH MY GOD */
@@ -160,6 +163,9 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
     &.mental {
     --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-icon lucide-brain"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg> ');
   }
+    &.defense {
+      --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-icon lucide-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> ');
+    }
 }
 
     /* coloring & setting */
@@ -172,7 +178,7 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
 }
 }
 * {
-    &.signature, &.biography, &.menuu, &.passives {
+    &.signature, &.biography, &.menuu, &.passives, &.neutral {
         color: #999999;
         }
 }
@@ -207,12 +213,12 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
         }
 }
 * {
-    &.plus {
+    &.plus, &.positive {
         color: #42c403;
         }
 }
 * {
-    &.minus {
+    &.minus, &.negative {
         color: #c42542;
         }
 }
@@ -232,6 +238,11 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
         }
 }
 * {
+    &.defense {
+        color: #e6ac60
+    }
+}
+* {
     &.soulstats, &[data-callout-metadata*="s."] {
         color: #7251be;
         }
@@ -248,19 +259,14 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
     5. How to do selectors:
         a. use one or both selectors:
             *= "STRING"
-                > anything CONTAINING the STRING:
-				ex. =*"Vital", selects "Vital-States", "Vital-State", "Vital State", etc
+                > anything CONTAINING the STRING
             $= "STRING"
-                > anything ENDING with the STRING:
-				ex. $="Scorching" -> "(Poise-...)Scorching" and "...Scorching"
+                > anything ENDING with the STRING
         b. You can join these for more complex and specific selectors:
-                ex. [href*="Ment"][href$="Down"] -> "...Ment(...al Power ...)Down"
+                ex. [href*="Poise"][href$="Hemorrhage"] -> "Poise (... - ...) Hemorrhage"
         c. Must have at least one selector for the end of the string (due to the way Quartz parses links).
                 ex. href="../../content/statuses/poise" -> =$poise
         will not select Poise - Hemo or Poise - Scorch since they don't end with poise
-        Vital States is an exception due to (currently) no other status/mechanic using the word itsef.
-        May or may not change later as we develop this
-    
 
     [¹] this is due to a limitation: I can't select the contents of <a> within css, thus it cannot determine the difference between [[Tremor|Seisimic Shock]] and [[Tremor]] as they both output <a href="Tremor">. and besides, bursts shouldn't need to link back to their statuses since it's likely it'll already be linked somewhere nearby...
     [²] Unlike data-href, which permits spaces in the link in Obsidian, you might need to mess around with selectors to try and 'nab' the href, as quartz parses-links-like-this. Ask me for help if needed
@@ -274,7 +280,7 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
         color: var(--dark) !important; 
         }
     }
-/* make sure to include 
+/* make sure to include both upper & lowercase
     &[href$="Poise"],&[href$="poise"]  {
     color: #c8d0d0;
 	font-weight:bold;
@@ -315,11 +321,15 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #2ebd6e;
 	--highlight: #2ebd6e26;
         };
-    &[href$="Plus"], &[href$="plus"] {
+    &[href$="Plus"], &[href$="plus"],
+    &[href$="Positive"], &[href$="positive"],
+    &[href$="positive-modifier"], &[href$="positive modifier"] {
         color: #42c403;
 	--highlight: #42c40326;
         };
-    &[href$="Minus"], &[href$="minus"] {
+    &[href$="Minus"], &[href$="minus"],
+    &[href$="Negative"], &[href$="negative"],
+    &[href$="negative-modifier"], &[href$="negative modifier"] {
         color: #c42542;
 	--highlight: #c4254226;
         };
@@ -335,10 +345,18 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #60a5e6;
 	--highlight: #60a5e626;
         };
+    &[href$="Defense"], &[href$="defense"] {
+        color: #e6ac60;
+	--highlight: #e6ac6026;
+        };
     &[href$="Soul-Stats"], &[href$="S."],
     &[href$="soul-stats"], &[href$="s."] {
         color: #7251be;
 	--highlight: #7251be26;
+        };
+    &[href$="Soul"], &[href$="soul"] {
+        color: #b485f9;
+	--highlight: #b485f926;
         }
 }
 
@@ -415,6 +433,7 @@ a, a[role=anchor] {
 	--highlight: #bfbbbb26;
 	font-weight:bold;
   };
+  /* read changelog; deprecated
     &[href$="Mental-Power-Down"], &[href$="Combat-Power-Up"], &[href$="Defense-Power-Up"],
     &[href$="mental-power-down"], &[href$="combat-power-up"], &[href$="defense-power-up"] {
     color: #e11414;
@@ -427,6 +446,7 @@ a, a[role=anchor] {
 	--highlight: #1e84f126;
 	font-weight:bold;
   };
+  */
     &[href$="Guardbroken"], &[href$="guardbroken"] {
     color: #641717;
 	--highlight: #64171726;

@@ -13,4 +13,5 @@ replit.nix
 .obsidian/graph.json
 .obsidian/hotkeys.json
 .obsidian/workspace.json
+.obsidian/plugins
 !.obsidian/snippets/**

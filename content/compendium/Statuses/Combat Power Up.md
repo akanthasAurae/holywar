@@ -2,11 +2,14 @@
 tags:
 - combat-power-up
 - status
+- modifier
+- positive-modifier
+- combat
 ---
 
-<h1 class=up>Combat Power up</h1>
+<h1 class=combat>Combat Power up</h1>
 
-> [!up|status|none]
-> <img src="comup.png" class=floatl> <span>Increase the final value of a Combat Roll by this status’ Stack, then remove this status.<span>
+> [!combat|status|none]
+> <img src=combatup.png class=floatl> <span>Increase the final value of a <span class=combat>Combat Roll</span> by this status’ Stack, then remove this status.</span>
 > 
 > **Max Stack: 99**

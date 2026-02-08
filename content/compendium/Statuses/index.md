@@ -1,5 +1,13 @@
 > [!warning] Certain statuses do not yet have icons or custom colours.
 
+### [[Base Power Down]]
+
+![[Base Power Down]]
+
+### [[Base Power Up]]
+
+![[Base Power Up]]
+
 ### [[Bloodloss]]
 
 ![[Bloodloss]]
@@ -7,6 +15,34 @@
 ### [[Burn]]
 
 ![[Burn]]
+
+### [[Ceiling Power Down]]
+
+![[Ceiling Power Down]]
+
+### [[Ceiling Power Up]]
+
+![[Ceiling Power Up]]
+
+### [[Cloaked]]
+
+![[Cloaked]]
+
+### [[Combat Base Down]]
+
+![[Combat Power Down]]
+
+### [[Combat Base Up]]
+
+![[Combat Base Up]]
+
+### [[Combat Ceiling Down]]
+
+![[Combat Ceiling Down]]
+
+### [[Combat Ceiling Up]]
+
+![[Combat Ceiling Up]]
 
 ### [[Combat Power Down]]
 
@@ -16,35 +52,33 @@
 
 ![[Combat Power Up]]
 
----
-
-
 ### [[Crescent Moon — Awakened|Crescent Moon — Awakened Flames of Crimson 【血は燃料だ】]]
-## ~={awakened}Crescent Moon — Awakened Flames of Crimson 【血は燃料だ】=~
-> [!awakened|none]
-> ![[content/compendium/icons/awakened.png|floatl|74]] Combat Min. +5, Combat Max. +10, ![[content/compendium/icons/stance.png|18]] ~={stance}[[content/compendium/Mechanics/index#~={stance}Stance=~|Stance]]=~ +1.
-> 
-> When using a **Combat Skill**, inflict ![[blood.png|18]] ~={blood}Minor Bloodloss=~ on self and gain 2 ![[content/compendium/icons/comup.png|18]] ~={dd}Combat Power Up=~. Gain 1 ![[content/compendium/icons/comup.png|18]] ~={up}Combat Power Up=~ for every ![[vital.png|18]] ~={vital}[[content/compendium/Mechanics/index#~={vital}Vital State=~|Vital State]]=~ missing.
-> 
-> ![[content/compendium/icons/noctis.png|18]] ~={noct}Noctis Aether=~ regeneration is increased by 100%. When losing a ![[vital.png|18]] ~={vital}[[content/compendium/Mechanics/index#~={vital}Vital State=~|Vital State]]=~, regain 20 ![[content/compendium/icons/noctis.png|18]] ~={noct}Noctis Aether=~.
-> *~={awakened}“Power does not answer the weak. It answers those willing to burn for it; to stand bleeding, unyielding, as the flames take hold.”=~*
-> *tags: #crescentmoon #bloodloss #noctis #combatpowerup #status*
 
-## ~={sheath}Crescent Moon — Sheathed=~
-> [!sheath|none]
-> ![[content/compendium/icons/sheathed.png|floatl|74]] This status does nothing on its own.
-> 
-> *~={sheath}“...A relic of a past era, its scabbard elegantly etched with crescent moons.”=~*
-> *tags: #crescentmoon #status*
+![[Crescent Moon — Awakened]]
 
-## ~={unsheath}Crescent Moon — Unsheathed=~
-> [!unsheath|none]
-> ![[unsheathed.png|floatl|74]] Combat Min. +2, Combat Max. +4
-> 
-> *~={unsheath}“Unsheathed at last, its blade — splendor matching its scabbard — conceals its candor in a gleam akin to moonlight.”=~*
-> *tags: #crescentmoon #status* 
+### [[Crescent Moon — Sheathed]]
 
----
+![[Crescent Moon — Sheathed]]
+
+### [[Crescent Moon — Unsheathed]]
+
+![[Crescent Moon — Unsheathed]]
+
+### [[Defense Base Down]]
+
+![[Defense Base Down]]
+
+### [[Defense Base Up]]
+
+![[Defense Base Up]]
+
+### [[Defense Ceiling Down]]
+
+![[Defense Ceiling Down]]
+
+### [[Defense Ceiling Up]]
+
+![[Defense Ceiling Up]]
 
 ### [[Defense Power Down]]
 
@@ -54,14 +88,33 @@
 
 ![[Defense Power Up]]
 
----
+### [[Final Power Down]]
 
-## ~={poisebleed}Mark of the Oni=~
-> [!hemo|none] 
-> ![[markoftheoni.png|floatl|74]] Target becomes susceptible to ![[crit.png|18]] ~={crit}[[content/compendium/Mechanics/index#~={crit}Critical Hit=~|Critical Hits]]=~ from Tsukai
-> *tags: #tsukai #criticalhit #status*
+![[Final Power Down]]
 
----
+### [[Final Power Up]]
+
+![[Final Power Up]]
+
+### [[Mark of the Oni]]
+
+![[Mark of the On]]
+
+### [[Mental Base Down]]
+
+![[Mental Base Down]]
+
+### [[Mental Base Up]]
+
+![[Mental Base Up]]
+
+### [[Mental Ceiling Down]]
+
+![[Mental Ceiling Down]]
+
+### [[Mental Ceiling Up]]
+
+![[Mental Ceiling Up]]
 
 ### [[Mental Power Down]]
 
@@ -101,12 +154,31 @@
 > **Max Stack: 3**
 > *tags: #poise #toxin #venom #stealth #status*
 
-## ~={stealth}Stealth=~
-> [!stealth|none] 
-> ![[stealth.png|floatl|74]] This unit cannot be targeted by attacks unless it is the only remaining unit alive. The status ends, unless otherwise stated, by performing any ![[content/compendium/icons/action.png|18]] ~={action}Action=~ while in stealth.
-> *tags: #stancebreak #stance #status*
-
 ---
+
+### [[Stealth Base Down]]
+
+![[Stealth Base Down]]
+
+### [[Stealth Base Up]]
+
+![[Stealth Base Up]]
+
+### [[Stealth Ceiling Down]]
+
+![[Stealth Ceiling Down]]
+
+### [[Stealth Ceiling Up]]
+
+![[Stealth Ceiling Up]]
+
+### [[Stealth Power Down]]
+
+![[Stealth Power Down]]
+
+### [[Stealth Power Up]]
+
+![[Stealth Power Up]]
 
 ### [[Tremor]]
 
@@ -136,7 +208,7 @@
 
 ## ~={blood}Vengeance=~
 > [!bleed|none] 
-> ![[vengeance.png|floatl|74]] Gain ![[content/compendium/icons/comup.png|18]] ~={up}Combat Power Up=~ and ![[defdown.png|18]] ~={down}Defense Power Down=~ equal to ![[vengeance.png|18]] ~={blood}Vengeance=~ on self.
+> ![[vengeance.png|floatl|74]] Gain ![[combatup.png|18]] ~={up}Combat Power Up=~ and ![[defdown.png|18]] ~={down}Defense Power Down=~ equal to ![[vengeance.png|18]] ~={blood}Vengeance=~ on self.
 > 
 > **Max Stack:** 3
 > *tags: #vengeance #combatpowerup #defensepowerdown #status*

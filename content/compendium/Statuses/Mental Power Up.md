@@ -2,11 +2,13 @@
 tags:
 - mental-power-up
 - status
+- modifier
+- positive-modifier
 ---
 
-<h1 class=down>Mental Power Up</h1>
+<h1 class=mental>Mental Power Up</h1>
 
-> [!down|status|none]
-> <img src="mentalup.png" class=floatl> <span>Increase the final value of a Mental Roll by this status’ Stack, then remove this status.<span>
+> [!mental|status|none]
+> <img src="menup.png" class=floatl> <span>Increase the final value of a <span class=mental>Mental Roll</span> by this status’ Stack, then remove this status.</span>
 > 
 > **Max Stack: 99**
