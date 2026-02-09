@@ -7,6 +7,7 @@ tags:
   - deaths-door
   - downed
   - shattered
+  - mechanic
 ---
 
 <h1 class="shatt"> Shattered </h1>

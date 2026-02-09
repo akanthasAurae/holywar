@@ -1,19 +1,25 @@
 /* templates */
 
-.callout[data-callout="customname"], .customname {
-	/* the reason why class is included is because of the fact quartz transcribes data-callout as a class as well in the output, this ensures things can remain colored */
-	--callout-color: 200,208,208; /* must be R, G, B (255, 255, 255) */
+.customname,
+.callout[data-callout="customname"],
+[customname],
+[data-href="custom name" i],
+.tag[href*="custom-name" i] {
+		/* callout specifics */
+	--callout-color: 200,208,208; /* must be R, G, B (255, 255, 255). */
 	--callout-icon: ''; /* for custom statuses (ie. Poise), leave as ''. otherwise use Lucide icons */
-    --color: rgba(var(--callout-color), 1); /* this is for Quartz */
-    --border: rgba(var(--callout-color), 0.267); /* this is for Quartz */
-    --bg: rgba(var(--callout-color), 0.063); /* this is for Quartz */
-	--highlight: rgba(var(--callout-color), 0.15); /* this is for Quartz */
-} /* should cover all your bases, 'i' is for insensitive case (so Customname and customname both get 'caught'). data-href can have spaces; href can't (dashes instead) */
-.customname, [data-href="custom name" i], .tag[href*="custom-name" i] { 
-	--custom-color: #ffffff; /* color here */
+    --color: rgba(var(--callout-color), 1); /* for Quartz */
+    --border: rgba(var(--callout-color), 0.267); /* for Quartz */
+    --bg: rgba(var(--callout-color), 0.063); /* for Quartz */
+
+		/* actual stuff */
+	/* if none are used, feel free to erase them. these are the default values. */
 	font-weight: bold; /* use normal for no bold */
 	font-style: normal; /* use italic for italics, or oblique */
 	font-variant: normal; /* use small-caps for small caps */
+
+	--custom-color: #ffffff; /* color here */
+
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
 	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
@@ -22,9 +28,9 @@
 	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
 	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
 	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
- /* repeat color here, */
+    --highlight: color-mix(in srgb, var(--custom-color) 18%, transparent 100%);
 	color: var(--custom-color);
-	--highlight: #ffffff26; /* repeat color here, 26 is for opacity*/
+
 }
 
 /* note: colors *for Quartz* must be set in custom.scss as well! (quartz/styles/custom.scss)
@@ -51,7 +57,7 @@ quick notes about selectors:
 
 
 /* biography utilities */
-.callout[data-callout="signature"], .signature {
+.callout[data-callout="signature"], .signature, [signature] {
 	--callout-color: 153, 153, 153;
 	--callout-icon: lucide-signature;
     --color: rgba(var(--callout-color), 1);
@@ -59,8 +65,14 @@ quick notes about selectors:
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
 }
-.neutral, .signature, .biography, .menuu, .passives, [data-href*="Signature" i], [data-href*="Biography" i], [data-href*="Menu" i], [data-href*="Passives" i], [data-href*="Neutral" i], .tag[href*="Biography" i], .tag[href*="Menu" i], .tag[href*="Passives" i], .tag[href*="Neutral" i],
-[data-href*="Base Power"], [data-href*="Ceiling Power"], [data-href*="Final Power"] {
+ 
+.signature, [signature], [data-href*="Signature" i], .tag[href*="Signature" i],
+.biography, [biography], [data-href*="Biography" i], .tag[href*="Biography" i],
+.menuu, [menuu], [data-href*="Menu" i], .tag[href*="Menu" i],
+.passives, [passives], [data-href*="Passives" i], .tag[href*="Passives" i],
+.neutral, [neutral], [data-href*="Neutral" i], .tag[href*="Neutral" i],
+[data-href*="Base Power"], [data-href*="Ceiling Power"], [data-href*="Final Power"]
+{
 	--custom-color: #999999;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -73,7 +85,7 @@ quick notes about selectors:
 	--highlight: #99999926;
 }
 
-.callout[data-callout="biography"], .biography {
+.callout[data-callout="biography"], .biography, [biography] {
 	--callout-color: 153, 153, 153;
 	--callout-icon: lucide-eye;
     --color: rgba(var(--callout-color), 1);
@@ -82,7 +94,7 @@ quick notes about selectors:
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 
-.callout[data-callout="neutral"], .neutral {
+.callout[data-callout="neutral"], .neutral, [neutral] {
 	--callout-color: 153, 153, 153;
 	--callout-icon: lucide-eye;
     --color: rgba(var(--callout-color), 1);
@@ -91,16 +103,13 @@ quick notes about selectors:
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 
-.callout[data-callout="inv"], .inv {
+.callout[data-callout="inv"], .inv, [inv], [data-href*="Inventory" i], .tag[href*="Inventory" i] {
 	--callout-color: 145, 101, 72;
 	--callout-icon: lucide-backpack;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
 
-}
-.inv, [data-href*="Inventory" i], .tag[href*="Inventory" i] {
 	--custom-color: #916548;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -113,7 +122,7 @@ quick notes about selectors:
 	--highlight: #91654826;
 }
 
-.callout[data-callout="menuu"], .menuu {
+.callout[data-callout="menuu"], .menuu, [menuu] {
 	--callout-color: 153, 153, 153;
 	--callout-icon: lucide-menu;
     --color: rgba(var(--callout-color), 1);
@@ -122,15 +131,13 @@ quick notes about selectors:
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 
-.callout[data-callout="cyber"], .cyber {
+.callout[data-callout="cyber"], .cyber, [cyber], [data-href*="Cyberware" i], .tag[href*="Cyberware" i] {
 	--callout-color: 189, 155, 46;
 	--callout-icon: lucide-square-activity;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.cyber, [data-href*="Cyberware" i], .tag[href*="Cyberware" i] {
+
 	--custom-color: #bd9b2e;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -143,15 +150,13 @@ quick notes about selectors:
 	--highlight: #bd9b2e26;
 }
 
-.callout[data-callout="hum"], .hum {
+.callout[data-callout="hum"], .hum, [hum], [data-href*="Humanity" i], .tag[href*="Humanity" i] {
 	--callout-color: 80, 196, 37;
 	--callout-icon: lucide-person-standing;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.hum, [data-href*="Humanity" i], .tag[href*="Humanity" i] {
+
 	--custom-color: #50c425;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -163,15 +168,13 @@ quick notes about selectors:
 	font-weight:bold;
 	--highlight: #50c42526;
 }
-.callout[data-callout="humlow"], .humlow {
+.callout[data-callout="humlow"], .humlow, [humlow], [data-href*="Low Humanity" i], [data-href*="Humanity Loss" i], .tag[href*="Low Humanity" i], .tag[href*="Humanity Loss" i] {
 	--callout-color: 80, 196, 37;
 	--callout-icon: lucide-person-standing;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.humlow, [data-href*="Low Humanity" i], [data-href*="Humanity Loss" i], .tag[href*="Low Humanity" i], .tag[href*="Humanity Loss" i] {
+
 	--custom-color: #d04339;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -184,15 +187,13 @@ quick notes about selectors:
 	--highlight: #d0433926;
 }
 
-.callout[data-callout="stats"], .stats {
+.callout[data-callout="stats"], .stats, [stats], [data-href*="Stats" i], .tag[href*="Stats" i] {
 	--callout-color: 46, 189, 110;
 	--callout-icon: lucide-waypoints;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.stats, [data-href*="Stats" i], .tag[href*="Stats" i] {
+
 	--custom-color: #2ebd6e;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -205,11 +206,11 @@ quick notes about selectors:
 	--highlight: #2ebd6e26;
 }
 
-.callout[data-callout="soulstats"], .soulstats {
+.callout[data-callout="soulstats"], .soulstats, [soulstats] {
 	--callout-icon: lucide-flame;
 }
 
-.callout[data-callout="passives"], .passives {
+.callout[data-callout="passives"], .passives, [passives] {
 	--callout-color: 153, 153, 153;
 	--callout-icon: lucide-dna;
     --color: rgba(var(--callout-color), 1);
@@ -218,15 +219,14 @@ quick notes about selectors:
 	--highlight: rgba(var(--callout-color), 0.15);
 }
 
-.callout[data-callout="plus"], .plus, .callout[data-callout="positive"], .positive {
+.callout[data-callout="plus"], .plus, [plus], [data-href*="Plus" i], .tag[href*="Plus" i],
+.callout[data-callout="positive"], .positive, [positive], [data-href*="Positive" i], .tag[href*="Positive" i] {
 	--callout-color: 66, 196, 37;
 	--callout-icon: lucide-plus;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.plus, [data-href*="Plus" i], .tag[href*="Plus" i], .positive, [data-href*="Positive" i], .tag[href*="Positive" i] {
+
 	--custom-color: #42c403;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -239,15 +239,14 @@ quick notes about selectors:
 	--highlight: #42c40326;
 }
 
-.callout[data-callout="minus"], .minus, .callout[data-callout="negative"], .negative {
+.callout[data-callout="minus"], .minus, [minus], [data-href*="Minus" i], .tag[href*="Minus" i],
+.callout[data-callout="negative"], .negative, [negative], [data-href*="Negative" i], .tag[href*="Negative" i] {
 	--callout-color: 196, 37, 66;
 	--callout-icon: lucide-minus;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.negative, [data-href*="Negative" i], .tag[href*="Negative" i], .minus, [data-href*="Minus" i], .tag[href*="Minus" i] {
+
 	--custom-color: #c42542;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -259,16 +258,19 @@ quick notes about selectors:
 	font-weight:bold;
 	--highlight: #c4254226;
 }
-
+ 
 	/* stats */
-.callout[data-callout="rolls"], .rolls, .callout[data-callout="body"], .body, .callout[data-callout="reflex"], .reflex, .callout[data-callout="tech"], .tech, .callout[data-callout="intel"], .intel, .callout[data-callout="cool"], .cool {
+.callout[data-callout="rolls"], .rolls, [rolls], [data-href*="Rolls" i], .tag[href*="Rolls" i], 
+.callout[data-callout="body"], .body, [body], [data-href*="Body" i], .tag[href*="Body" i],
+.callout[data-callout="reflex"], .reflex, [reflex], [data-href*="Reflexes" i], .tag[href*="Reflexes" i],
+.callout[data-callout="tech"], .tech, [tech], [data-href*="Technical" i], .tag[href*="Technical" i],
+.callout[data-callout="intel"], .intel, [intel], [data-href*="Intelligence" i], .tag[href*="Intelligence" i],
+.callout[data-callout="cool"], .cool, [cool], [data-href*="Cool" i], .tag[href*="Cool" i] {
 	--callout-color: 69, 179, 124;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.rolls, .body, .reflex, .tech, .intel, .cool, [data-href*="Combat"], .tag[href*="Combat"], [data-href*="Rolls" i], .tag[href*="Rolls" i], [data-href*="Body" i], .tag[href*="Body" i], [data-href*="Reflexes" i], .tag[href*="Reflexes" i], [data-href*="Technical" i], .tag[href*="Technical" i], [data-href*="Intelligence" i], .tag[href*="Intelligence" i], [data-href*="Cool" i], .tag[href*="Cool" i] {
+
 	--custom-color: #45b37c;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -299,15 +301,13 @@ quick notes about selectors:
 .callout[data-callout="rolls"] {
 	--callout-icon: lucide-dices;
 }
-.callout[data-callout="combat"], .combat {
+.callout[data-callout="combat"], .combat, [combat], [data-href*="Combat" i], .tag[href*="Combat" i] {
 	--callout-color: 230, 96, 96;
 	--callout-icon: lucide-sword;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.combat, [data-href*="Combat" i], .tag[href*="Combat" i] {
+
 	--custom-color: #e66060;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -320,15 +320,13 @@ quick notes about selectors:
 	--highlight: #e6606026;
 }
 
-.callout[data-callout="sneak"], .sneak {
+.callout[data-callout="sneak"], .sneak, [sneak], [data-href*="Sneak" i], .tag[href*="Sneak" i] {
 	--callout-color: 154, 96, 230;
 	--callout-icon: lucide-eye-closed;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.sneak, [data-href*="Sneak" i], .tag[href*="Sneak" i] {
+
 	--custom-color: #9a60e6;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -341,15 +339,13 @@ quick notes about selectors:
 	--highlight: #9a60e626;
 }
 
-.callout[data-callout="mental"], .mental {
+.callout[data-callout="mental"], .mental, [mental], [data-href*="Mental" i], .tag[href*="Mental" i] {
 	--callout-color: 96, 165, 230;
 	--callout-icon: lucide-brain;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.mental, [data-href*="Mental" i], .tag[href*="Mental" i] {
+
 	--custom-color: #60a5e6;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -362,15 +358,13 @@ quick notes about selectors:
 	--highlight: #60a5e626;
 }
 
-.callout[data-callout="defense"], .defense {
+.callout[data-callout="defense"], .defense, [defense], [data-href*="Defense" i], .tag[href*="Defense" i] {
 	--callout-color: 230, 172, 96;
 	--callout-icon: lucide-shield;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.defense, [data-href*="Defense" i], .tag[href*="Defense" i] {
+
 	--custom-color: #e6ac60;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -383,14 +377,12 @@ quick notes about selectors:
 	--highlight: #e6ac6026;
 }
 
-.callout[data-callout="soulstats"], .soulstats, .callout[data-callout-metadata*="s."] {
+.callout[data-callout="soulstats"], .soulstats, [soulstats], .callout[data-callout-metadata*="s."], [data-href*="Soul Stats" i], .tag[href*="Soul Stats" i] {
 	--callout-color: 114, 81, 190;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.soulstats, [data-href*="Soul Stats" i], .tag[href*="Soul Stats" i] {
+
 	--custom-color: #7251be;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -403,14 +395,12 @@ quick notes about selectors:
 	--highlight: #7251be26;
 }
 
-.callout[data-callout="soul"], .soul {
+.callout[data-callout="soul"], .soul, [soul], [data-href*="Soul" i], .tag[href*="Soul" i] {
 	--callout-color: 180, 133, 249;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.soul, [data-href*="Soul" i], .tag[href*="Soul" i] {
+
 	--custom-color: #b485f9;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -425,15 +415,13 @@ quick notes about selectors:
 
 /*b485f9*/
 /* status customs */
-.callout[data-callout="actions"], .actions {
+.callout[data-callout="actions"], .actions, [actions], [data-href*="Actions" i], .tag[href*="Actions" i] {
 	--callout-color: 230, 164, 51;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.actions, [data-href*="Actions" i], .tag[href*="Actions" i] {
+
 	--custom-color: #e6a433;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -446,15 +434,13 @@ quick notes about selectors:
 	--highlight: #e6a43326;
 }
 
-.callout[data-callout="poise"], .poise {
+.callout[data-callout="poise"], .poise, [poise], [data-href*="Poise" i], .tag[href*="Poise" i] {
 	--callout-color: 200,208,208;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.poise, [data-href*="Poise" i], .tag[href*="Poise" i] {
+
 	--custom-color: #c8d0d0;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -467,15 +453,13 @@ quick notes about selectors:
 	--highlight: #c8d0d026;
 }
 
-.callout[data-callout="scorch"], .scorch {
+.callout[data-callout="scorch"], .scorch, [scorch], [data-href*="Scorching" i], .tag[href*="Scorching" i] {
 	--callout-color: 255,89,31;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.scorch, [data-href*="Scorching" i], .tag[href*="Scorching" i] {
+
 	--custom-color: #d53f1b;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -488,15 +472,13 @@ quick notes about selectors:
 	--highlight: #d53f1b26;
 }
 
-.callout[data-callout="burn"], .burn {
+.callout[data-callout="burn"], .burn, [burn], [data-href*="Burn" i], .tag[href*="Burn" i] {
 	--callout-color: 255,120,31;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.burn, [data-href*="Burn" i], .tag[href*="Burn" i] {
+
 	--custom-color: #ec8209;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -509,15 +491,13 @@ quick notes about selectors:
 	--highlight: #ec820926;
 }
 
-.callout[data-callout="igni"], .igni {
+.callout[data-callout="igni"], .igni, [igni], [data-href*="Ignition" i], .tag[href*="Ignition" i] {
 	--callout-color: 251, 174, 9;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.igni, [data-href*="Ignition" i], .tag[href*="Ignition" i] {
+
 	--custom-color: #fbae09;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -530,15 +510,16 @@ quick notes about selectors:
 	--highlight: #fbae0926;
 }
 
-.callout[data-callout="bleed"] {
+.callout[data-callout="bleed"], .bleed, [bleed], [data-href*="Bloodloss" i], .tag[href*="Bloodloss" i],
+/* aliases */
+[data-href*="Vengeance" i], [data-href*="Bloodflame" i], [data-href*="Mark of the Oni" i]
+.tag[href*="Vengeance" i], .tag[href*="Bloodflame" i], .tag[href*="Mark of the Oni" i] {
 	--callout-color: 223, 21, 7;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.bleed, [data-href*="Bloodloss" i], .tag[href*="Bloodloss" i] {
+
 	--custom-color: #b1120e;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -551,15 +532,13 @@ quick notes about selectors:
 	--highlight: #b1120e26;
 }
 
-.callout[data-callout="hemo"], .hemo {
+.callout[data-callout="hemo"], .hemo, [hemo], [data-href*="Hemorrhage" i], .tag[href*="Hemorrhage" i] {
 	--callout-color: 198,16,0;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.hemo, [data-href*="Hemorrhage" i], .tag[href*="Hemorrhage" i] {
+
 	--custom-color: #760e06;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -572,15 +551,13 @@ quick notes about selectors:
 	--highlight: #760e0626;
 }
 
-.callout[data-callout="vital"], .vital {
+.callout[data-callout="vital"], .vital, [vital], [data-href*="Vital" i], .tag[href*="Vital" i] {
 	--callout-color: 12,230,141;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.vital, [data-href*="Vital" i], .tag[href*="Vital" i] {
+
 	--custom-color: #1fdb4e;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -593,15 +570,13 @@ quick notes about selectors:
 	--highlight: #1fdb4e26;
 }
 
-.callout[data-callout="downed"], .downed {
+.callout[data-callout="downed"], .downed, [downed], [data-href*="Downed" i], .tag[href*="Downed" i] {
 	--callout-color: 160, 61, 4;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.downed, [data-href*="Downed" i], .tag[href*="Downed" i] {
+
 	--custom-color: #ea5f1d;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -614,15 +589,13 @@ quick notes about selectors:
 	--highlight: #ea5f1d26;
 }
 
-.callout[data-callout="dd"], .dd {
+.callout[data-callout="dd"], .dd, [dd], [data-href*="Death's Door" i], .tag[href*="Death's Door" i] {
 	--callout-color: 107, 9, 2;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.dd, [data-href*="Death's Door" i], .tag[href*="Death's Door" i] {
+
 	--custom-color: #e00000;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -635,15 +608,13 @@ quick notes about selectors:
 	--highlight: #e0000026;
 }
 
-.callout[data-callout="ddrec"], .ddrec {
+.callout[data-callout="ddrec"], .ddrec, [ddrec], [data-href*="Recovery" i], .tag[href*="Recovery" i] {
 	--callout-color: 191, 187, 187;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.ddrec, [data-href*="Recovery" i], .tag[href*="Recovery" i] {
+	
 	--custom-color: #bfbbbb;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -656,15 +627,13 @@ quick notes about selectors:
 	--highlight: #bfbbbb26;
 }
 
-.callout[data-callout="down"], .down {
+.callout[data-callout="down"], .down, [up] {
 	--callout-color:33, 132, 237;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.down {
+
 	--custom-color: #1e84f1;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -677,15 +646,13 @@ quick notes about selectors:
 	--highlight: #1e84f126;
 }
 
-.callout[data-callout="up"], .up {
+.callout[data-callout="up"], .up, [up] {
 	--callout-color: 224, 26, 30;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.up {
+
 	--custom-color: #e11414;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -698,15 +665,13 @@ quick notes about selectors:
 	--highlight: #e1141426;
 }
 
-.callout[data-callout="guardbreak"], .guardbreak, .guardbroken {
+.callout[data-callout="guardbreak"], .guardbreak, .guardbroken, [guardbreak], [guardbroken], [data-href*="Guardbreak" i], [data-href*="Guardbroken" i], .tag[href*="Guardbreak" i], .tag[href*="Guardbroken" i] {
 	--callout-color: 116, 6, 2;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.guardbreak, [data-href*="Guardbreak" i], [data-href*="Guardbroken" i], .tag[href*="Guardbreak" i], .tag[href*="Guardbroken" i] {
+
 	--custom-color: #641717;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -719,15 +684,13 @@ quick notes about selectors:
 	--highlight: #64171726;
 }
 
-.callout[data-callout="tremor"], .tremor {
+.callout[data-callout="tremor"], .tremor, [tremor], [data-href*="Tremor" i], .tag[href*="Tremor" i] {
 	--callout-color: 236, 182, 121;
 	--callout-icon: '';
 	--color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.tremor, [data-href*="Tremor" i], .tag[href*="Tremor" i] {
+
 	--custom-color: #eebc77;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -740,11 +703,10 @@ quick notes about selectors:
 	--highlight: #eebc7726;
 }
 
-.shock {
+.callout[data-callout="shock"], .shock, [shock], [data-href*="Seisimic Shock" i], .tag[href*="Seisimic-Shock" i] {
 	--callout-color: 236, 182, 121;
 	--callout-icon: '';
-}
-.shock, [data-href*="Seisimic Shock" i], .tag[href*="Seisimic-Shock" i] {
+
 	--custom-color: #f2a854;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -757,11 +719,10 @@ quick notes about selectors:
 	--highlight: #f2a85426;
 }
 
-.hemoshock {
+.callout[data-callout="hemoshock"], .hemoshock, [hemoshock], [data-href*="Seisimic Hemorrhage" i], .tag[href*="Seisimic-Hemorrhage" i] {
 	--callout-color: 236, 182, 121;
 	--callout-icon: '';
-}
-.hemoshock, [data-href*="Seisimic Hemorrhage" i], .tag[href*="Seisimic-Hemorrhage" i] {
+
 	--custom-color: #9f2d1e;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -774,15 +735,13 @@ quick notes about selectors:
 	--highlight: #9f2d1e26;
 }
 
-.callout[data-callout="tox"], .tox {
+.callout[data-callout="tox"], .tox, [tox], [data-href*="Toxin" i], .tag[href*="Toxin" i] {
 	--callout-color: 62, 212, 60;
 	--callout-icon: '';
 	--color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.tox, [data-href*="Toxin" i], .tag[href*="Toxin" i] {
+
 	--custom-color: #3ed43c;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -795,15 +754,14 @@ quick notes about selectors:
 	--highlight: #3ed43c26;
 }
 
-.callout[data-callout="stealth"], .stealth {
+.callout[data-callout="stealth"], .stealth, [stealth], [data-href*="Stealth" i], .tag[href*="Stealth" i],
+.callout[data-callout="cloaked"], .cloaked, [cloaked], [data-href*="Cloaked" i], .tag[href*="Cloaked" i]   {
 	--callout-color: 117, 73, 204;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.stealth, [data-href*="Stealth" i], .tag[href*="Stealth" i] {
+
 	--custom-color: #7549cc;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -816,15 +774,87 @@ quick notes about selectors:
 	--highlight: #7549cc26;
 }
 
-.callout[data-callout="venom"], .venom {
+.callout[data-callout="void"], .void, [void], [data-href*="void" i], .tag[href*="void" i] {
 	--callout-color: 62, 30, 204;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
+
+	--custom-color: #0c0c16; /* works as the 'bg' color */
+	--custom-color-2: #bec5cf;
+	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
+	--tag-background-hover: black;
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
+
+	/* special to Void */
+	text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-3),
+		0px 0px 3px var(--custom-color-3),
+		0px 0px 2px var(--custom-color-3),
+		0px 0px 1px var(--custom-color-3);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #ada3db26;
 }
-.venom, [data-href*="Venom" i], .tag[href*="Venom" i] {
+
+.callout[data-callout="deathblight"], .deathblight, [deathblight], [data-href*="deathblight" i], .tag[href*="deathblight" i] {
+	--callout-color: 13, 13, 14;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #6c6b79; /* works as the 'bg' color */
+	--custom-color-2: #0d0d0e;
+	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
+	--tag-background-hover: black;
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
+
+	/* special to Deathblight */
+	text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-2),
+		0px 0px 3px var(--custom-color-2),
+		0px 0px 2px var(--custom-color-2),
+		0px 0px 1px var(--custom-color-2);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #6c6b7926;
+}
+
+.callout[data-callout="venom"], .venom, [venom], [data-href*="Venom" i], .tag[href*="Venom" i] {
+	--callout-color: 62, 30, 204;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
 	--custom-color: #582dcd;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -837,15 +867,13 @@ quick notes about selectors:
 	--highlight: #582dcd26;
 }
 
-.callout[data-callout="poiseven"], .poiseven {
+.callout[data-callout="poiseven"], .poiseven, [poiseven], [data-href*="Envenoming" i], .tag[href*="Envenoming" i] {
 	--callout-color: 68, 4, 151;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.poiseven, [data-href*="Envenoming" i], .tag[href*="Envenoming" i] {
+
 	--custom-color: #5c12a5;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -858,15 +886,13 @@ quick notes about selectors:
 	--highlight: #5c12a526;
 }
 
-.callout[data-callout="poiseburn"], .poiseburn {
+.callout[data-callout="poiseburn"], .poiseburn, [poiseburn], [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise-Scorching" i] {
 	--callout-color: 68, 4, 151;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise-Scorching" i] {
+
 	--custom-color: #ea5d23;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -879,15 +905,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #ea5d2326;
 }
 
-.callout[data-callout="poisebleed"], .poisebleed {
+.callout[data-callout="poisebleed"], .poisebleed, [poisebleed], [data-href*="Poise" i][data-href*="Hemorrhage" i], .tag[href*="Poise-Hemorrhage" i] {
 	--callout-color: 68, 4, 151;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.poisebleed, [data-href*="Poise" i][data-href*="Hemorrhage" i], .tag[href*="Poise-Hemorrhage" i] {
+
 	--custom-color: #d00b0b;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -900,15 +924,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #d00b0b26;
 }
 
-.callout[data-callout="tremorhemo"], .tremorhemo {
+.callout[data-callout="tremorhemo"], .tremorhemo, [tremorhemo], [data-href*="Tremor" i][data-href*="Hemorrhage" i], .tag[href*="Tremor-Hemorrhage" i] {
 	--callout-color: 210, 74, 40;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.tremorhemo, [data-href*="Tremor" i][data-href*="Hemorrhage" i], .tag[href*="Tremor-Hemorrhage" i] {
+
 	--custom-color: #d24a28;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -921,15 +943,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #d24a2826;
 }
 
-.callout[data-callout="crit"], .crit {
+.callout[data-callout="crit"], .crit, [crit], [data-href*="Critical" i], .tag[href*="Critical" i] {
 	--callout-color: 248, 219, 155;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.crit, [data-href*="Critical" i], .tag[href*="Critical" i] {
+
 	--custom-color: #f8db9b;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -942,16 +962,14 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #f8db9b26;
 }
 
-.callout[data-callout="stance"], .stance {
+.callout[data-callout="stance"], .stance, [stance], [data-href*="Stance" i], .tag[href*="Stance" i] {
 	--callout-color: 213, 162, 32;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
 	--highlight: rgba(var(--callout-color), 0.15);
-}
 
-.stance, [data-href*="Stance" i], .tag[href*="Stance" i] {
 	--custom-color: #d5a220;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -964,15 +982,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #d5a22026;
 }
 
-.callout[data-callout="stancebreak"], .stancebreak {
+.callout[data-callout="stancebreak"], .stancebreak, [stancebreak], [data-href*="Stancebreak" i], [data-href*="Stancebroken" i], .tag[href*="Stancebreak" i], .tag[href*="Stancebroken" i] {
 	--callout-color: 245, 199, 36;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.stancebreak, [data-href*="Stancebreak" i], [data-href*="Stancebroken" i], .tag[href*="Stancebreak" i], .tag[href*="Stancebroken" i]  {
+
 	--custom-color: #f5c724;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -985,15 +1001,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	font-weight:bold;
 }
 
-.callout[data-callout="sheath"], .sheath {
+.callout[data-callout="sheath"], .sheath, [sheath], [data-href*="Sheathed" i], .tag[href*="Sheathed" i] {
 	--callout-color: 199, 210, 224;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.sheath, [data-href*="Sheathed" i], .tag[href*="Sheathed" i] {
+
 	--custom-color: #c7d2e0;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -1006,15 +1020,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #c7d2e026;
 }
 
-.callout[data-callout="unsheath"], .unsheath {
+.callout[data-callout="unsheath"], .unsheath, [unsheath], [data-href*="Unsheathed" i], .tag[href*="Unsheathed" i] {
 	--callout-color: 141, 178, 226;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.unsheath, [data-href*="Unsheathed" i], .tag[href*="Unsheathed" i] {
+
 	--custom-color: #8db2e2;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -1027,15 +1039,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #8db2e226;
 }
 
-.callout[data-callout="awakened"], .awakened {
+.callout[data-callout="awakened"], .awakened, [awakened], [data-href*="Awakened" i], .tag[href*="Awakened" i] {
 	--callout-color: 197, 9, 15;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.awakened, [data-href*="Awakened" i], .tag[href*="Awakened" i] {
+
 	--custom-color: #af090f;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -1048,15 +1058,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #af090f26;
 }
 
-.callout[data-callout="shatt"], .shatt {
+.callout[data-callout="shatt"], .shatt, [shatt], [data-href*="Shattered" i], .tag[href*="Shattered" i] {
 	--callout-color: 71, 30, 152;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.shatt, [data-href*="Shattered" i], .tag[href*="Shattered" i] {
+
 	--custom-color: #7719c8;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -1069,15 +1077,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #7719c826;
 }
 
-.callout[data-callout="nimius"], .nimius {
+.callout[data-callout="nimius"], .nimius, [nimius], [data-href*="Nimius" i], .tag[href*="Nimius" i] {
 	--callout-color: 167, 7, 28;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.nimius, [data-href*="Nimius" i], .tag[href*="Nimius" i] {
+
 	--custom-color: #c60c31;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -1090,15 +1096,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #c60c3126;
 }
 
-.callout[data-callout="aether"], .aether {
+.callout[data-callout="aether"], .aether, [aether], [data-href*="Aether" i], .tag[href*="Aether" i] {
 	--callout-color: 93, 161, 217;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.aether, [data-href*="Aether" i], .tag[href*="Aether" i] {
+
 	--custom-color: #5a9cd2;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -1111,15 +1115,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #5a9cd226;
 }
 
-.callout[data-callout="aurora"], .aurora {
+.callout[data-callout="aurora"], .aurora, [aurora], [data-href*="Aurora" i], .tag[href*="Aurora" i] {
 	--callout-color: 241, 200, 146;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.aurora, [data-href*="Aurora" i], .tag[href*="Aurora" i] {
+
 	--custom-color: #e79e5a;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -1132,15 +1134,13 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	--highlight: #e79e5a26;
 }
 
-.callout[data-callout="noctis"], .noctis {
+.callout[data-callout="noctis"], .noctis, [noctis], [data-href*="Noctis" i], .tag[href*="Noctis" i] {
 	--callout-color: 152, 54, 197;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-.noctis, [data-href*="Noctis" i], .tag[href*="Noctis" i] {
+
 	--custom-color: #ba7ad1;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
@@ -1151,4 +1151,17 @@ p.poiseburn, [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise
 	color: var(--custom-color);
 	font-weight:bold;
 	--highlight: #ba7ad126;
+}
+
+/* do NOT touch */
+
+.callout p:not(.no-mix, [data-callout-metadata="no-mix"]) {
+		color: var(--mixed-color);
+		--mixed-color: color-mix(in srgb, var(--custom-color) 30%, white 70%);
+		font-weight:normal;
+}
+
+.callout strong:not(.no-mix, [data-callout-metadata="no-mix"]), .callout em:not(.no-mix, [data-callout-metadata="no-mix"]), .callout b:not(.no-mix, [data-callout-metadata="no-mix"]), .callout i:not(.no-mix, [data-callout-metadata="no-mix"]) {
+		color: var(--mixed-color);
+		  --mixed-color: color-mix(in srgb, var(--custom-color) 80%, white 20%);
 }

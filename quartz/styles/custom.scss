@@ -8,6 +8,9 @@ p {
 .no-b {
 	font-weight:normal !important;
 } 
+.no-i {
+	font-style:normal !important;
+} 
 
 //* custom stuff for callouts *//
 .callout[data-callout-metadata*="none"] > .callout-title, .callout[data-callout-metadata*="none"] > .callout-title > .callout-icon {
@@ -56,6 +59,11 @@ blockquote.transclude {
     display: none;
 }
 }
+[data-slug="compendium/Statuses/index"] {
+  div[id="#popover-/compendium/Statuses/"] {
+    display: none;
+  }
+}
 
 .floatl, [alt="floatl"], .floatr, [alt="floatr"] {
     vertical-align: sub;
@@ -72,19 +80,39 @@ blockquote.transclude {
 }
 
 /* naming indexes */
-body[data-slug$="Statuses/index"] h1.article-title, a.internal[href$="Statuses/"] {
+body {
+  a.internal{
     text-transform: capitalize;
-    &::before {
-    content:'Statuses — ';
+    &[href$="Statuses/"] {
+    &::before {content:'Statuses — ';}
+    };
+    &[href$="Mechanics/"]{
+    &::before {content:'Mechanics — ';}
+    };
+    &[href$="Void-Mechanics/"]{
+    &::before {content:'Void Mechanics — ';}
+    };
+    &[href$="Void-Statuses/"]{
+    &::before {content:'Void Statuses — ';}
+    };
+    &[href$="Modifiers/"]{
+    &::before {content:'Modifiers — ';}
+    };
+  }; /* hide their natural/namefile titles, in favour of the <h1> ones
+        already existing within the goddamned indexes
+        additionally hides their popovers, since they look ugly, and
+        they're annoying on top of being useless */
+  &[data-slug$="Statuses/index"],
+  &[data-slug$="Mechanics/index"],
+  &[data-slug$="Void-Mechanics/index"],
+  &[data-slug$="Void-Statuses/index"],
+  &[data-slug$="Modifiers/index"] {
+    h1.article-title, div[id*="popover"]{
+      display: none;
     }
+    
+  }
 }
-body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics/"]{
-    text-transform: capitalize;
-    &::before {
-    content:'Mechanics — ';
-    }
-}
-
 .callout[data-callout-metadata="status|none"] .callout-content
 {   padding-left: 1em;
     padding-right: 1em;
@@ -166,6 +194,15 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
     &.defense {
       --callout-icon: url('data:image/svg+xml; utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-icon lucide-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> ');
     }
+    p:not(.no-mix, [data-callout-metadata="no-mix"]) {
+		  color: var(--mixed-color);
+		  --mixed-color: color-mix(in srgb, var(--custom-color) 30%, white 70%);
+		  font-weight:normal;
+    }
+    strong:not(.no-mix, [data-callout-metadata="no-mix"]), em:not(.no-mix, [data-callout-metadata="no-mix"]), b:not(.no-mix, [data-callout-metadata="no-mix"]), i:not(.no-mix, [data-callout-metadata="no-mix"]) {
+      color: var(--mixed-color) ! important;
+		  --mixed-color: color-mix(in srgb, var(--custom-color) 80%, white 20%);
+    }
 }
 
     /* coloring & setting */
@@ -173,9 +210,11 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
     .tags {
         display: none;
     }
+/* ?????????? I do no t know wtf this is for lol */
 *[stroke] {
     stroke: inherit;
 }
+
 }
 * {
     &.signature, &.biography, &.menuu, &.passives, &.neutral {
@@ -271,8 +310,9 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
     [¹] this is due to a limitation: I can't select the contents of <a> within css, thus it cannot determine the difference between [[Tremor|Seisimic Shock]] and [[Tremor]] as they both output <a href="Tremor">. and besides, bursts shouldn't need to link back to their statuses since it's likely it'll already be linked somewhere nearby...
     [²] Unlike data-href, which permits spaces in the link in Obsidian, you might need to mess around with selectors to try and 'nab' the href, as quartz parses-links-like-this. Ask me for help if needed
     */
-    .explorer-content ul li>a {
+    .explorer-content ul li a {
         color: var(--gray) !important;
+        text-shadow: none !important;
         &:hover {
         color: var(--darkgray) !important;
     }
@@ -288,7 +328,7 @@ body[data-slug$="Mechanics/index"] h1.article-title, a.internal[href$="Mechanics
   };
 */
     /* non-status */
-a, a[role=anchor], a.tag-link, a.internal {
+a:not(.folder-title), a[role=anchor], a.tag-link, a.internal {
      
     &[href$="Signature"], &[href$="Biography"], &[href$="Menu"], &[href$="Passives"],
     &[href$="signature"], &[href$="biography"], &[href$="menu"], &[href$="Passives"] {
@@ -333,7 +373,9 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #c42542;
 	--highlight: #c4254226;
         };
-    &[href$="Combat"], &[href$="combat"] {
+    &[href$="Combat"], &[href$="combat"],
+    &[href*="Combat"][href$="Down"], &[href*="combat"][href$="down"],
+    &[href*="Combat"][href$="Up"], &[href*="combat"][href$="up"] {
         color: #e66060;
 	--highlight: #e6606026;
         };
@@ -341,11 +383,15 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #9a60e6;
 	--highlight: #9a60e626;
         };
-    &[href$="Mental"], &[href$="mental"] {
+    &[href$="Mental"], &[href$="mental"],
+    &[href*="Mental"][href$="Down"], &[href*="mental"][href$="down"],
+    &[href*="Mental"][href$="Up"], &[href*="mental"][href$="up"] {
         color: #60a5e6;
 	--highlight: #60a5e626;
         };
-    &[href$="Defense"], &[href$="defense"] {
+    &[href$="Defense"], &[href$="defense"],
+    &[href*="Defense"][href$="Down"], &[href*="defense"][href$="down"],
+    &[href*="Defense"][href$="Up"], &[href*="defense"][href$="up"] {
         color: #e6ac60;
 	--highlight: #e6ac6026;
         };
@@ -354,7 +400,9 @@ a, a[role=anchor], a.tag-link, a.internal {
         color: #7251be;
 	--highlight: #7251be26;
         };
-    &[href$="Soul"], &[href$="soul"] {
+    &[href$="Soul"], &[href$="soul"],
+    &[href*="Soul"][href$="Down"], &[href*="soul"][href$="down"],
+    &[href*="Soul"][href$="Up"], &[href*="soul"][href$="up"] {
         color: #b485f9;
 	--highlight: #b485f926;
         }
@@ -400,7 +448,8 @@ a, a[role=anchor] {
     font-weight:bold;
 	--highlight: #ec820926;
   };
-    &[href$="Bloodloss"], &[href$="bloodloss"] {
+    &[href$="Bloodloss"], &[href$="bloodloss"],
+    &[href$="Vengeance"], &[href$="vengeance"] {
     color: #b1120e;
     font-weight:bold;
 	--highlight: #b1120e26;
@@ -427,8 +476,7 @@ a, a[role=anchor] {
 	font-weight:bold;
 	--highlight: #ea5f1d26;
   };
-    &[href$="Death's-Door-Recovery"], &[href$="death's-door-recovery"],
-    &[href$="Deaths-Door-Recovery"], &[href$="deaths-door-recovery"] {
+    &[href*="Door"][href$="Recovery"], &[href*="door"][href$="recovery"] {
     color: #bfbbbb;
 	--highlight: #bfbbbb26;
 	font-weight:bold;
@@ -447,6 +495,15 @@ a, a[role=anchor] {
 	font-weight:bold;
   };
   */
+    &[href$="Neutral"], &[href$="neutral"],
+    &[href*="Base"][href*="Power"], &[href*="base"][href*="power"],
+    &[href*="Ceiling"][href*="Power"], &[href*="ceiling"][href*="power"],
+    &[href*="Final"][href*="Power"], &[href*="final"][href*="power"]
+     {
+    color: #999999;
+	--highlight: #99999926;
+	font-weight:bold; 
+  };
     &[href$="Guardbroken"], &[href$="guardbroken"] {
     color: #641717;
 	--highlight: #64171726;
@@ -472,10 +529,61 @@ a, a[role=anchor] {
 	--highlight: #3ed43c26;
 	font-weight:bold; 
   };
-    &[href$="Stealth"], &[href$="stealth"] {
+    &[href$="Stealth"], &[href$="stealth"],
+    &[href$="Cloaked"], &[href$="cloaked"],
+    /* temporary support */
+    &[href*="Stealth"][href$="Up"], &[href*="stealth"][href$="up"],
+    &[href*="Stealth"][href$="Down"], &[href*="stealth"][href$="down"] {
     color: #7549cc;
 	--highlight: #7549cc26;
 	font-weight:bold; 
+  };
+    /* colors only the tags */
+    /* literal nightmare selectors bro */
+    &[href$="void-mechanics/"],&[href$="Void-Mechanics/"],
+    &[href$="Void Mechanics/"],&[href$="void mechanics/"],
+    &[href$="void-statuses/"],&[href$="Void-Statuses/"],
+    &[href$="Void Statuses/"],&[href$="void statuses/"],
+    &[href*="tags"][href*="void"]{
+      /* fancy mcpants */
+    --custom-color: #0c0c16; /* works as the 'bg' color */
+	  --custom-color-2: #bec5cf98;  
+  	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+    color: var(--custom-color);
+    text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-3),
+		0px 0px 3px var(--custom-color-3),
+		0px 0px 2px var(--custom-color-3),
+		0px 0px 1px var(--custom-color-3);
+  };
+    &[href$="Deathblight"], &[href$="deathblight"] {
+    --custom-color: #6c6b79; /* works as the 'bg' color */
+	  --custom-color-2: #0d0d0e;  
+  	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+    color: var(--custom-color);
+    text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-2),
+		0px 0px 3px var(--custom-color-2),
+		0px 0px 2px var(--custom-color-2),
+		0px 0px 1px var(--custom-color-2);
   };
     &[href$="Venom"], &[href$="venom"] {
     color: #582dcd;

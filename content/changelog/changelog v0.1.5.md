@@ -30,16 +30,16 @@ it is i, master of bullshit, jack of none
 > > - ![[commindown.png|icon]] [[Combat Base Down]]
 > > - ![[commaxup.png|icon]] [[Combat Ceiling Up]]
 > > - ![[commaxdown.png|icon]] [[Combat Ceiling Down]]
-> > - ![[combatup.png|icon]] [[Combat Power Up]]
-> > - ![[combatdown.png|icon]] [[Combat Power Down]]
+> > - ![[content/compendium/icons/comup.png|icon]] [[Combat Power Up]]
+> > - ![[content/compendium/icons/comdown.png|icon]] [[Combat Power Down]]
 >  
 > > [!defense]- Defense modifiers  
 > > - ![[defminup.png|icon]] [[Defense Base Up]]
 > > - ![[defmindown.png|icon]] [[Defense Base Down]]
 > > - ![[defmaxup.png|icon]] [[Defense Ceiling Up]]
 > > - ![[defmaxdown.png|icon]] [[Defense Ceiling Down]]
-> > - ![[Defenseup.png|icon]] [[Defense Power Up]]
-> > - ![[defensedown.png|icon]] [[Defense Power Down]]
+> > - ![[content/compendium/icons/defup.png|icon]] [[Defense Power Up]]
+> > - ![[content/compendium/icons/defdown.png|icon]] [[Defense Power Down]]
 > 
 > > [!mental]- Mental modifiers  
 > > - ![[menminup.png|icon]] [[Mental Base Up]]

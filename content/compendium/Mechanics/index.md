@@ -1,5 +1,16 @@
+> [!toc] Table of Contents
+> - [[content/compendium/Mechanics/index#^9831b4|General Mechanics]]
+> 	- [[compendium/Mechanics/index#^e58a21|Attributes]]
+> 	- [[compendium/Mechanics/index#^64c69b|Status-Related Mechanics]]
+> - [[compendium/Mechanics/index#^1112f5|Void Mechanics]]
+
 # General Mechanics
+
+^9831b4
+
 ## Attributes
+
+^e58a21
 
 ### [[Humanity]]
 
@@ -19,13 +30,15 @@
 
 ## Status-Related Mechanics
 
+^64c69b
+
 ### [[Death's Door]]
 
 ![[Death's Door]]
 
-### [[Death's Door Recovery]]
+### [[Death's Door — Recovery]]
 
-![[Death's Door Recovery]]
+![[Death's Door — Recovery]]
 
 ### [[Downed]]
 
@@ -55,15 +68,8 @@
 
 ![[Nimius]]
 
-# Void-Related Mechanics
-## Attributes
+## <span class=void>Void Mechanics</span>
 
-### [[Noctis]]
+^1112f5
 
-![[Noctis]]
-
-## Status-Related Mechanics
-
-### [[Shattered]]
-
-![[Shattered]]
+![[compendium/Mechanics/Void Mechanics/index|index]]

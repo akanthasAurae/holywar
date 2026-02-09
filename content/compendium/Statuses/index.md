@@ -1,12 +1,14 @@
 > [!warning] Certain statuses do not yet have icons or custom colours.
 
-### [[Base Power Down]]
+> [!toc] Table of Contents
+> - [[compendium/Statuses/index#^ca8c78|General Statuses]]
+> 	- [[compendium/Statuses/index#^c953da|Modifiers]]
+> - [[compendium/Statuses/index#^55559f|Void Statuses]]
 
-![[Base Power Down]]
 
-### [[Base Power Up]]
+## General Statuses
 
-![[Base Power Up]]
+^ca8c78
 
 ### [[Bloodloss]]
 
@@ -16,41 +18,9 @@
 
 ![[Burn]]
 
-### [[Ceiling Power Down]]
-
-![[Ceiling Power Down]]
-
-### [[Ceiling Power Up]]
-
-![[Ceiling Power Up]]
-
 ### [[Cloaked]]
 
 ![[Cloaked]]
-
-### [[Combat Base Down]]
-
-![[Combat Power Down]]
-
-### [[Combat Base Up]]
-
-![[Combat Base Up]]
-
-### [[Combat Ceiling Down]]
-
-![[Combat Ceiling Down]]
-
-### [[Combat Ceiling Up]]
-
-![[Combat Ceiling Up]]
-
-### [[Combat Power Down]]
-
-![[Combat Power Down]]
-
-### [[Combat Power Up]]
-
-![[Combat Power Up]]
 
 ### [[Crescent Moon — Awakened|Crescent Moon — Awakened Flames of Crimson 【血は燃料だ】]]
 
@@ -64,65 +34,9 @@
 
 ![[Crescent Moon — Unsheathed]]
 
-### [[Defense Base Down]]
-
-![[Defense Base Down]]
-
-### [[Defense Base Up]]
-
-![[Defense Base Up]]
-
-### [[Defense Ceiling Down]]
-
-![[Defense Ceiling Down]]
-
-### [[Defense Ceiling Up]]
-
-![[Defense Ceiling Up]]
-
-### [[Defense Power Down]]
-
-![[Defense Power Down]]
-
-### [[Defense Power Up]]
-
-![[Defense Power Up]]
-
-### [[Final Power Down]]
-
-![[Final Power Down]]
-
-### [[Final Power Up]]
-
-![[Final Power Up]]
-
 ### [[Mark of the Oni]]
 
-![[Mark of the On]]
-
-### [[Mental Base Down]]
-
-![[Mental Base Down]]
-
-### [[Mental Base Up]]
-
-![[Mental Base Up]]
-
-### [[Mental Ceiling Down]]
-
-![[Mental Ceiling Down]]
-
-### [[Mental Ceiling Up]]
-
-![[Mental Ceiling Up]]
-
-### [[Mental Power Down]]
-
-![[Mental Power Down]]
-
-### [[Mental Power Up]]
-
-![[Mental Power Up]]
+![[Mark of the Oni]]
 
 ### [[Poise]]
 
@@ -156,30 +70,6 @@
 
 ---
 
-### [[Stealth Base Down]]
-
-![[Stealth Base Down]]
-
-### [[Stealth Base Up]]
-
-![[Stealth Base Up]]
-
-### [[Stealth Ceiling Down]]
-
-![[Stealth Ceiling Down]]
-
-### [[Stealth Ceiling Up]]
-
-![[Stealth Ceiling Up]]
-
-### [[Stealth Power Down]]
-
-![[Stealth Power Down]]
-
-### [[Stealth Power Up]]
-
-![[Stealth Power Up]]
-
 ### [[Tremor]]
 
 ![[Tremor]]
@@ -194,23 +84,28 @@
 > [!tox|none] 
 > ![[tox.png|floatl|74]] ~={tox}Toxin=~ builds through three levels — ~={tox}Minor=~, ~={tox}Moderate=~ and ~={tox}High=~. Any ![[tox.png|18]] ~={tox}Toxin=~ applied while in ![[tox.png|18]] ~={tox}High Toxin=~ immediately triggers ![[intox.png|18]] ~={intox}Intoxicated=~.
 > 
-> When triggered, the unit gains 2 ![[comdown.png|18]] ~={down}Combat Power Down=~ and 2 ![[defdown.png|18]] ~={down}Defense Power Down=~. After three ![[content/compendium/icons/action.png|18]] ~={action}Actions=~, it will consume one ![[vital.png|18]] ~={vital}[[content/compendium/Mechanics/index#~={vital}Vital State=~|Vital State]]=~, causing the unit to vomit and expiring the status. If ![[tox.png|18]] ~={tox}Toxin=~ is applied while the unit is ![[intox.png|18]] ~={intox}Intoxicated=~, refresh the duration of it.
+> When triggered, the unit gains 2 ![[public/compendium/icons/comdown.png|18]] ~={down}Combat Power Down=~ and 2 ![[public/compendium/icons/defdown.png|18]] ~={down}Defense Power Down=~. After three ![[content/compendium/icons/action.png|18]] ~={action}Actions=~, it will consume one ![[vital.png|18]] ~={vital}[[content/compendium/Mechanics/index#~={vital}Vital State=~|Vital State]]=~, causing the unit to vomit and expiring the status. If ![[tox.png|18]] ~={tox}Toxin=~ is applied while the unit is ![[intox.png|18]] ~={intox}Intoxicated=~, refresh the duration of it.
 > *tags: #toxin #combatpowerdown #defensepowerdown #status*
 
 ## ~={ven}Toxin — Venom=~
 > [!venom|none] 
 > ![[venom.png|floatl|74]] ~={ven}Venom=~ builds through three levels — ~={ven}Minor=~, ~={ven}Moderate=~ and ~={ven}High=~. Any ![[venom.png|18]] ~={ven}Venom=~ applied while in ![[venom.png|18]] ~={ven}High Venom=~ immediately triggers ![[envenomed.png|18]] ~={enven}Envenomed=~.
 > 
-> When triggered, the unit gains 4 ![[comdown.png|18]] ~={down}Combat Power Down=~ and 4 ![[defdown.png|18]] ~={down}Defense Power Down=~. After two ![[content/compendium/icons/action.png|18]] ~={action}Actions=~, it will consume one ![[vital.png|18]] ~={vital}[[content/compendium/Mechanics/index#~={vital}Vital State=~|Vital State]]=~, causing the unit to vomit and replacing the status with ![[intox.png|18]] ~={intox}Intoxicated=~.
+> When triggered, the unit gains 4 ![[public/compendium/icons/comdown.png|18]] ~={down}Combat Power Down=~ and 4 ![[public/compendium/icons/defdown.png|18]] ~={down}Defense Power Down=~. After two ![[content/compendium/icons/action.png|18]] ~={action}Actions=~, it will consume one ![[vital.png|18]] ~={vital}[[content/compendium/Mechanics/index#~={vital}Vital State=~|Vital State]]=~, causing the unit to vomit and replacing the status with ![[intox.png|18]] ~={intox}Intoxicated=~.
 > 
 > If ![[venom.png|18]] ~={ven}Venom=~ is applied while the target has ![[tox.png|18]] ~={tox}Toxin=~ or is ![[intox.png|18]] ~={intox}Intoxicated=~,  replace it with ![[venom.png|18]] ~={ven}Venom=~.
 > *tags: #toxin #venom #combatpowerdown #defensepowerdown #status*
 
-## ~={blood}Vengeance=~
-> [!bleed|none] 
-> ![[vengeance.png|floatl|74]] Gain ![[combatup.png|18]] ~={up}Combat Power Up=~ and ![[defdown.png|18]] ~={down}Defense Power Down=~ equal to ![[vengeance.png|18]] ~={blood}Vengeance=~ on self.
-> 
-> **Max Stack:** 3
-> *tags: #vengeance #combatpowerup #defensepowerdown #status*
+### [[Vengeance]]
 
-## Void Statuses
+![[Vengeance]]
+
+## Modifiers
+^c953da
+
+![[compendium/Statuses/Modifiers/index|]]
+
+## <span class=void>Void Statuses</span>
+^55559f
+
+![[compendium/Statuses/Void Statuses/index]] 
