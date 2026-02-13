@@ -80,40 +80,10 @@ blockquote.transclude {
 }
 
 /* naming indexes */
-body {
-  a.internal{
-    text-transform: capitalize;
-    &[href$="Statuses/"] {
-    &::before {content:'Statuses — ';}
-    };
-    &[href$="Mechanics/"]{
-    &::before {content:'Mechanics — ';}
-    };
-    &[href$="Void-Mechanics/"]{
-    &::before {content:'Void Mechanics — ';}
-    };
-    &[href$="Void-Statuses/"]{
-    &::before {content:'Void Statuses — ';}
-    };
-    &[href$="Modifiers/"]{
-    &::before {content:'Modifiers — ';}
-    };
-  }; /* hide their natural/namefile titles, in favour of the <h1> ones
-        already existing within the goddamned indexes
-        additionally hides their popovers, since they look ugly, and
-        they're annoying on top of being useless */
-  &[data-slug$="Statuses/index"],
-  &[data-slug$="Mechanics/index"],
-  &[data-slug$="Void-Mechanics/index"],
-  &[data-slug$="Void-Statuses/index"],
-  &[data-slug$="Modifiers/index"] {
-    h1.article-title, div[id*="popover"]{
+body[data-slug*="index"] div.popover{
       display: none;
     }
-    
-  }
-}
-.callout[data-callout-metadata="status|none"] .callout-content
+.callout[data-callout-metadata*="status|none"] .callout-content
 {   padding-left: 1em;
     padding-right: 1em;
 > p:nth-child(1) {
@@ -123,6 +93,8 @@ body {
     flex-wrap: nowrap;
     flex-direction: row;
 }
+
+
 }
 .icon, img[alt="icon"] {
 	vertical-align: sub;
@@ -459,6 +431,33 @@ a, a[role=anchor] {
     font-weight:bold;
 	--highlight: #760e0626;
   };
+    &[href$="Bloodflame"], &[href$="bloodflame"],
+    /* tags as aliases */
+    &[href$="Enflamed"], &[href$="enflamed"],
+    &[href$="Seared"], &[href$="seared"] {
+    color: var(--custom-color);
+    font-weight:bold;
+	--highlight: #e0060226;
+
+	--custom-color: #470000;
+	--custom-color-2: #e00602;
+	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+
+  text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-3),
+		0px 0px 3px var(--custom-color-3),
+		0px 0px 2px var(--custom-color-3),
+		0px 0px 1px var(--custom-color-3);
+  };
     &[href$="Vital-States"], &[href$="vital-states"],
     &[href$="Vital-State"], &[href$="vital-state"] {
     color: #1fdb4e;
@@ -657,4 +656,8 @@ a, a[role=anchor] {
 	--highlight: #ba7ad126;
 	font-weight:bold; 
   };
+}
+
+.callout[data-callout-metadata*="no-mix"] {
+	text-shadow: none;
 }

@@ -1,5 +1,8 @@
+---
+title: Void Mechanics
+---
 > [!toc|no-mix] Table of Contents
-> - [[content/compendium/Mechanics/Void Mechanics/index#^e131cc|Void-Related Mechanics]]
+> - [[compendium/Mechanics/Void Mechanics/index#^e131cc|Void-Related Mechanics]]
 > 	- [[compendium/Mechanics/Void Mechanics/index#^4af7c1|Attributes]]
 > 	- [[compendium/Mechanics/Void Mechanics/index#^876d9e|Status-Related Mechanics]]
 

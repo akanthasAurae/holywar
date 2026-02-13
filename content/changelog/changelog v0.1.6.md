@@ -13,12 +13,12 @@ it is i, master of fuckall, jack of nil
 - just kidding
 - continued The Great Expansion That's Ever Been Done where i continue porting broken statuses into functional pages.
 >[!plus]+ ported stuff
-> - <span class=stealth>Stealth</span> has become ![[stealth.png|icon]] [[Cloaked]] - in the CSS, ``cloaked`` is now an alias for ``stealth``
->    - This change is to keep consistency; Stealth itself is a mechanic (of sorts) meanwhile the status itself of being in stealth is now ![[stealth.png|icon]] [[Cloaked]]. Technically i'm counting this as an addition rather than a modification.
+> - <span class=stealth>Stealth</span> has become ![[cloaked.png|icon]] [[Cloaked]] - in the CSS, ``cloaked`` is now an alias for ``stealth``
+>    - This change is to keep consistency; Stealth itself is a mechanic (of sorts) meanwhile the status itself of being in stealth is now ![[cloaked.png|icon]] [[Cloaked]]. Technically i'm counting this as an addition rather than a modification.
 >    - Includes the addition of #cloaked as a tag, further showing the alias usage.
 
 - All modifiers are now correctly tagged as #combat, #defense, #mental, #neutral, #stealth and later on #soul. Soul tags will NOT be used as loosely as the #void tag, as they pertain specifically to soul-related statuses and mechanics, while void is a more broad category. Most soul-related statuses will be tagged #void, but not all void statuses will be tagged #soul.
-- All three states of Crescent Moon (![[sheathed.png|icon]] [[Crescent Moon — Sheathed|Sheathed]], ![[unsheathed.png|icon]] [[Crescent Moon — Unsheathed|Unsheathed]] and ![[awakened.png|icon]] [[Crescent Moon — Awakened|Awakened]]) are present, and so are its sub-statuses including  ![[bloodflamepoise.png|icon]] [[poise bloodflame]] (mostly, excluding Bloodflame itself, because what the fuck does that do in *this* system's context? Bloodloss + Burn?)
+- All three states of Crescent Moon (![[sheathed.png|icon]] [[Crescent Moon — Sheathed|Sheathed]], ![[unsheathed.png|icon]] [[Crescent Moon — Unsheathed|Unsheathed]] and ![[awakened.png|icon]] [[Crescent Moon — Awakened|Awakened]]) are present, and so are its sub-statuses including  ![[bloodflamepoise.png|icon]] [[Poise — Bloodflame]] (mostly, excluding Bloodflame itself, because what the fuck does that do in *this* system's context? Bloodloss + Burn?)
 - added colour for the <span class=void>scary stuff</span> also known as the ``void`` class! it's special because it uses text-shadow magics to add a border & glow to itself~ future special classes in the future can use `void` as a template for their glows. use sparingly; CAN and WILL be laggy in huge amounts! its current sibling is <span class=deathblight>deathblight!</span>
 - in celebration of Void now being real, i have added two sub-folders: Void Statuses and Void Mechanics, in their own parent folders respectively. It SHOULD hopefully help with some of the HUGE clutter!
 - and in celebration of less clutter, Modifiers now have their own sub-folder in Statuses.

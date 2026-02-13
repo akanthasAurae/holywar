@@ -4,6 +4,8 @@ tags:
   - mechanics
   - divine
   - aurora-vitae
+aliases:
+  - aurora
 ---
 
 <h1 class=aurora>Aurora Vitae</h1>

@@ -415,14 +415,17 @@ quick notes about selectors:
 
 /*b485f9*/
 /* status customs */
-.callout[data-callout="actions"], .actions, [actions], [data-href*="Actions" i], .tag[href*="Actions" i] {
-	--callout-color: 230, 164, 51;
+.callout[data-callout="actions"], .actions, [actions], [data-href*="Actions" i], .tag[href*="Actions" i],
+/* aliases */
+.callout[data-callout="action"], .action, [action], [data-href*="Action" i], .tag[href*="Action" i],
+.callout[data-callout="stun"], .stun, [stun], [data-href*="stun" i], .tag[href*="stun" i] {
+	--callout-color: 235, 147, 32;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
 
-	--custom-color: #e6a433;
+	--custom-color: #eb9320;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
 	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
@@ -431,7 +434,7 @@ quick notes about selectors:
 
 	color: var(--custom-color);
 	font-weight:bold;
-	--highlight: #e6a43326;
+	--highlight: #eb932026;
 }
 
 .callout[data-callout="poise"], .poise, [poise], [data-href*="Poise" i], .tag[href*="Poise" i] {
@@ -512,8 +515,9 @@ quick notes about selectors:
 
 .callout[data-callout="bleed"], .bleed, [bleed], [data-href*="Bloodloss" i], .tag[href*="Bloodloss" i],
 /* aliases */
-[data-href*="Vengeance" i], [data-href*="Bloodflame" i], [data-href*="Mark of the Oni" i]
-.tag[href*="Vengeance" i], .tag[href*="Bloodflame" i], .tag[href*="Mark of the Oni" i] {
+.callout[data-callout="vengeance"], .vengeance, [vengeance], [data-href*="Vengeance" i], .tag[href*="Vengeance" i],
+.callout[data-callout="onimark"], .onimark, [onimark], [data-href*="Mark of the Oni" i],  .tag[href*="Mark of the Oni" i],
+.callout[data-callout="unbreak"], .unbreak, [unbreak], [data-href*="unbreak" i], .tag[href*="unbreak" i] {
 	--callout-color: 223, 21, 7;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -532,7 +536,50 @@ quick notes about selectors:
 	--highlight: #b1120e26;
 }
 
-.callout[data-callout="hemo"], .hemo, [hemo], [data-href*="Hemorrhage" i], .tag[href*="Hemorrhage" i] {
+
+.callout[data-callout="bf"], .bf, [bf], [data-href*="Bloodflame" i], .tag[href*="Bloodflame" i],
+/* aliases */
+[data-href*="Enflamed" i], .tag[href*="Enflamed" i],
+[data-href*="Seared" i], .tag[href*="Seared" i]
+{
+	--callout-color: 224, 6, 2;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #470000;
+	--custom-color-2: #e00602;
+	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 80%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 80%);
+
+	text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-3),
+		0px 0px 3px var(--custom-color-3),
+		0px 0px 2px var(--custom-color-3),
+		0px 0px 1px var(--custom-color-3);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #e0060226;
+}
+
+.callout[data-callout="hemo"], .hemo, [hemo], [data-href*="Hemorrhage" i], .tag[href*="Hemorrhage" i],
+/* aliases */
+.callout[data-callout="cracked"], .cracked, [cracked], [data-href*="cracked" i], .tag[href*="cracked" i] {
 	--callout-color: 198,16,0;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -905,7 +952,9 @@ quick notes about selectors:
 	--highlight: #ea5d2326;
 }
 
-.callout[data-callout="poisebleed"], .poisebleed, [poisebleed], [data-href*="Poise" i][data-href*="Hemorrhage" i], .tag[href*="Poise-Hemorrhage" i] {
+.callout[data-callout="poisebleed"], .poisebleed, [poisebleed], [data-href*="Poise" i][data-href*="Hemorrhage" i], .tag[href*="Poise-Hemorrhage" i],
+/* aliases */
+[data-href*="Mark of the Oni" i][data-href*="Mark of the Oni" i], .tag[href*="Mark" i][href*="of" i][href*="the" i][href*="Oni" i]{
 	--callout-color: 68, 4, 151;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -1058,7 +1107,9 @@ quick notes about selectors:
 	--highlight: #af090f26;
 }
 
-.callout[data-callout="shatt"], .shatt, [shatt], [data-href*="Shattered" i], .tag[href*="Shattered" i] {
+.callout[data-callout="shatt"], .shatt, [shatt], [data-href*="Shattered" i], .tag[href*="Shattered" i],
+/* aliases */
+.callout[data-callout="shattered"], .shattered, [shattered], [data-href*="shattered" i], .tag[href*="shattered" i] {
 	--callout-color: 71, 30, 152;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -1077,7 +1128,9 @@ quick notes about selectors:
 	--highlight: #7719c826;
 }
 
-.callout[data-callout="nimius"], .nimius, [nimius], [data-href*="Nimius" i], .tag[href*="Nimius" i] {
+.callout[data-callout="nimius"], .nimius, [nimius], [data-href*="Nimius" i], .tag[href*="Nimius" i],
+/* aliases */
+.callout[data-callout="infernal"], .infernal, [infernal], [data-href*="infernal" i], .tag[href*="infernal" i] {
 	--callout-color: 167, 7, 28;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -1096,7 +1149,9 @@ quick notes about selectors:
 	--highlight: #c60c3126;
 }
 
-.callout[data-callout="aether"], .aether, [aether], [data-href*="Aether" i], .tag[href*="Aether" i] {
+.callout[data-callout="aether"], .aether, [aether], [data-href*="Aether" i], .tag[href*="Aether" i],
+/* aliases */
+.callout[data-callout="indomitable"], .indomitable, [indomitable], [data-href*="indomitable" i], .tag[href*="indomitable" i] {
 	--callout-color: 93, 161, 217;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -1115,7 +1170,9 @@ quick notes about selectors:
 	--highlight: #5a9cd226;
 }
 
-.callout[data-callout="aurora"], .aurora, [aurora], [data-href*="Aurora" i], .tag[href*="Aurora" i] {
+.callout[data-callout="aurora"], .aurora, [aurora], [data-href*="Aurora" i], .tag[href*="Aurora" i],
+/* aliases */
+.callout[data-callout="unyielding"], .unyielding, [unyielding], [data-href*="unyielding" i], .tag[href*="unyielding" i] {
 	--callout-color: 241, 200, 146;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);
@@ -1153,15 +1210,93 @@ quick notes about selectors:
 	--highlight: #ba7ad126;
 }
 
+.callout[data-callout="radiance"], .radiance, [radiance], [data-href*="Radiance" i], .tag[href*="Radiance" i] {
+	--callout-color: 226, 173, 56;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #e2ad38;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #e2ad3826;
+}
+
+.callout[data-callout="blinded"], .blinded, [blinded], [data-href*="blinded" i], .tag[href*="blinded" i] {
+	--callout-color: 255, 250, 130;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #fffa82;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #fffa8226;
+}
+
+.callout[data-callout="daybroken"], .daybroken, [daybroken], [data-href*="daybroken" i], .tag[href*="daybroken" i],
+/* aliases */
+.callout[data-callout="daybreak"], .daybreak, [daybreak], [data-href*="daybreak" i], .tag[href*="daybreak" i] {
+
+	--callout-color: 192, 138, 22;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #181102;
+	--custom-color-2: #ffe4a9;
+	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
+	--tag-background-hover: black;
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
+
+	/* special to Void */
+	text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-3),
+		0px 0px 3px var(--custom-color-3),
+		0px 0px 2px var(--custom-color-3),
+		0px 0px 1px var(--custom-color-3);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #c08a1626;
+}
+
 /* do NOT touch */
 
-.callout p:not(.no-mix, [data-callout-metadata="no-mix"]) {
+.callout p:not(.no-mix, [data-callout-metadata*="no-mix"]) {
 		color: var(--mixed-color);
 		--mixed-color: color-mix(in srgb, var(--custom-color) 30%, white 70%);
 		font-weight:normal;
 }
 
-.callout strong:not(.no-mix, [data-callout-metadata="no-mix"]), .callout em:not(.no-mix, [data-callout-metadata="no-mix"]), .callout b:not(.no-mix, [data-callout-metadata="no-mix"]), .callout i:not(.no-mix, [data-callout-metadata="no-mix"]) {
+.callout strong:not(.no-mix, [data-callout-metadata*="no-mix"]), .callout em:not(.no-mix, [data-callout-metadata*="no-mix"]), .callout b:not(.no-mix, [data-callout-metadata="no-mix"]), .callout i:not(.no-mix, [data-callout-metadata="no-mix"]) {
 		color: var(--mixed-color);
 		  --mixed-color: color-mix(in srgb, var(--custom-color) 80%, white 20%);
 }

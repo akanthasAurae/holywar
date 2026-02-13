@@ -94,7 +94,7 @@
 }
 
 
-.callout[data-callout-metadata="status|none"] .callout-content
+.callout[data-callout-metadata*="status|none"] .callout-content
 > p:nth-child(1) {
     display: flex;
     align-items: center;
@@ -111,9 +111,18 @@
 	justify-content: flex-start;
 		margin-left: 2vw;
 }
+
 .no-b {
 	font-weight:normal !important;
 }
 .no-i {
 	font-style:normal !important;
 } 
+
+.callout[data-callout-metadata*="no-mix"] {
+	text-shadow: none;
+}
+
+.scratchpad-canvas, .scratchpad-toolbar {
+	display:none;
+}

@@ -1,19 +1,23 @@
+---
+title: Modifiers
+---
+
 > [!toc] Table of Contents
-> - [[content/compendium/Statuses/Modifiers/index#^7c41f0|Modifiers]]
-> 	- [[compendium/Statuses/Modifiers/index#^792fc5|Positive Modifiers]]
-> 		- [[compendium/Statuses/Modifiers/index#^650c19|Neutral]]
-> 		- [[compendium/Statuses/Modifiers/index#^06030c|Combat]]
-> 		- [[compendium/Statuses/Modifiers/index#^fe6397|Defense]]
-> 		- [[compendium/Statuses/Modifiers/index#^bbc474|Mental]]
-> 		- [[compendium/Statuses/Modifiers/index#^db8092|Stealth]]
-> 		- [[compendium/Statuses/Modifiers/index#^6163aa|Soul]]
-> 	- [[compendium/Statuses/Modifiers/index#^dacaa1|Negative Modifiers]]
-> 		- [[compendium/Statuses/Modifiers/index#^7bb32e|Neutral]]
-> 		- [[compendium/Statuses/Modifiers/index#^8b7255|Combat]]
-> 		- [[compendium/Statuses/Modifiers/index#^ba24ca|Defense]]
-> 		- [[compendium/Statuses/Modifiers/index#^1d7b43|Mental]]
-> 		- [[compendium/Statuses/Modifiers/index#^779874|Stealth]]
-> 		- [[compendium/Statuses/Modifiers/index#^d62534|Soul]]
+> - [[content/compendium/Statuses/General Modifiers/index#^7c41f0|Modifiers]]
+> 	- [[content/compendium/Statuses/General Modifiers/index#^792fc5|Positive Modifiers]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^650c19|Neutral]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^06030c|Combat]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^fe6397|Defense]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^bbc474|Mental]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^db8092|Stealth]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^6163aa|Soul]]
+> 	- [[content/compendium/Statuses/General Modifiers/index#^dacaa1|Negative Modifiers]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^7bb32e|Neutral]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^8b7255|Combat]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^ba24ca|Defense]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^1d7b43|Mental]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^779874|Stealth]]
+> 		- [[content/compendium/Statuses/General Modifiers/index#^d62534|Soul]]
 
 # Modifiers
 

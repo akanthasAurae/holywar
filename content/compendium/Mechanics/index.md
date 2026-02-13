@@ -1,5 +1,9 @@
+---
+title: Mechanics
+---
+
 > [!toc] Table of Contents
-> - [[content/compendium/Mechanics/index#^9831b4|General Mechanics]]
+> - [[compendium/Mechanics/index#^9831b4|General Mechanics]]
 > 	- [[compendium/Mechanics/index#^e58a21|Attributes]]
 > 	- [[compendium/Mechanics/index#^64c69b|Status-Related Mechanics]]
 > - [[compendium/Mechanics/index#^1112f5|Void Mechanics]]
