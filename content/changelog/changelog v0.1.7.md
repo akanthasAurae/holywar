@@ -71,3 +71,5 @@ it is i, master of fucknone bitchall, jack of your mo-
 - added some aliases to colour links. bloodflame poise is now coloured the same as bloodflame itself
 - renamed `stealth` to `cloaked` (![[cloaked.png|icon]])
 - fixed some typos
+
+<h2 class=burn>Pending:</h2>

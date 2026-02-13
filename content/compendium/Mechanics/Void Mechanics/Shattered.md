@@ -13,9 +13,12 @@ tags:
 <h1 class="shatt"> Shattered </h1>
 
 > [!shatt|status|none]
-> <img src="shattered.png" class="floatl"><span> The last stage of your damaged soul, you are vulnerable; your soul's integrity is compromised. </span>
+> <img src="shattered.png" class="floatl"><span> Whatever remains of your soul, a hollow core. </span>
 > 
-> Gain 10 ![[comdown.png|icon]] [[Combat Power Down]] and 10 ![[defdown.png|icon]] [[Defense Power Down]]. <br>
-> When ![[vital.png|icon]] [[Vital States|Vital State]] is lost due to a Physical Attack, lose two additional ![[vital.png|icon]] [[Vital States]]. When ![[vital.png|icon]] [[Vital States|Vital State]] is lost due to a Status Effect Attack, lose an additional ![[vital.png|icon]] [[Vital States|Vital State]].
+> Gain 15 ![[minmaxdown.png|icon]] [[Final Power Down]] 
 > 
-> ![[dd.png|icon]] [[Death's Door]] and ![[downed.png|icon]] [[Downed]] are not triggered while this status is active.
+> ![[dd.png|icon]] [[Death's Door]] and ![[downed.png|icon]] [[Downed]] are completely nullified while this Status is active. There's no soul, no will to live. If the body dies, it dies.
+> 
+> If a unit with this status effect lives for long enough, they end up corrupting into a dangerous enemy called the ‘Shattered’. These enemies remain permanently ![[shattered.png|icon]] [[Shattered]]. 
+> 
+>  <i class="shatt no-b no-mix">"You are a husk of who you once were. You still have a chance to be put out of your misery before you become like the rest of them."</i>

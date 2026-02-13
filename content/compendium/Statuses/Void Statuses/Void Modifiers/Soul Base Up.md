@@ -1,7 +1,7 @@
 ---
 tags:
   - template
-draft: true
+draft: false
 ---
 %%
 no explanation version
