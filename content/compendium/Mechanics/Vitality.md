@@ -1,6 +1,6 @@
 ---
 tags:
-  - vitallity
+  - vitality
   - body
   - reflexes
   - mechanics

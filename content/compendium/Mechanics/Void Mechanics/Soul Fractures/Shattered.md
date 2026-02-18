@@ -5,7 +5,7 @@ tags:
   - deaths-door
   - downed
   - shattered
-  - mechanic
+  - mechanics
 ---
 
 %% clarify if this state can still be healed from? "if a unit with this status lives for long enough" -> implies healing can possibly begin reverting this %%

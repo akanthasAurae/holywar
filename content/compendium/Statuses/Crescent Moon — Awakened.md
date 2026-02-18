@@ -6,8 +6,8 @@ tags:
 - bloodloss
 - noctis
 - combat-power-up
-- combat-minimum-up
-- combat-maximum-up
+- combat-base-up
+- combat-ceiling-up
 ---
 
 <h1 class=awakened>Crescent Moon — Awakened Flames of Crimson 【血は燃料だ】</h1>

@@ -684,6 +684,7 @@ a, a[role=anchor] {
 	font-weight:bold; 
   };
     &[href$="Aurora"], &[href$="aurora"],
+    &[href$="Aurora-Vitae"], &[href$="aurora-vitae"],
     &[href$="Divine"], &[href$="divine"],
     &[href*="Unyielding"][href$="Radiance"], &[href*="unyielding"][href$="radiance"] {
     color: #e79e5a;
