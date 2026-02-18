@@ -464,8 +464,7 @@ a, a[role=anchor] {
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
   };
-    &[href$="Vital-States"], &[href$="vital-states"],
-    &[href$="Vital-State"], &[href$="vital-state"] {
+    &[href$="Vitality"], &[href$="vitality"] {
     color: #1fdb4e;
 	font-weight:bold;
 	--highlight: #1fdb4e26;
@@ -666,6 +665,7 @@ a, a[role=anchor] {
 	font-weight:bold; 
   };
     &[href$="Nimius"], &[href$="nimius"],
+    &[href$="Infernal"], &[href$="Infernal"],
     &[href*="Unchained"][href$="Will"], &[href*="unchained"][href$="will"] {
     color: #c60c31;
 	--highlight: #c60c3126;
@@ -678,6 +678,7 @@ a, a[role=anchor] {
 	font-weight:bold; 
   };
     &[href$="Aurora"], &[href$="aurora"],
+    &[href$="Divine"], &[href$="divine"],
     &[href*="Unyielding"][href$="Radiance"], &[href*="unyielding"][href$="radiance"] {
     color: #e79e5a;
 	--highlight: #e79e5a26;
