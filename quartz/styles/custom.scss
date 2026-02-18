@@ -463,6 +463,8 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
+    color: var(--custom-color-2);
+    --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
     &[href$="Vitality"], &[href$="vitality"] {
     color: #1fdb4e;
@@ -570,6 +572,8 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
+    color: var(--custom-color-2);
+    --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
     &[href$="Deathblight"], &[href$="deathblight"] {
     --custom-color: #6c6b79; /* works as the 'bg' color */
@@ -590,6 +594,8 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-2),
 		0px 0px 2px var(--custom-color-2),
 		0px 0px 1px var(--custom-color-2);
+    color: var(--custom-color-2);
+    --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
     &[href$="Venom"], &[href$="venom"] {
     color: #582dcd;
@@ -721,6 +727,8 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
+    color: var(--custom-color-2);
+    --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
   &[href$="Flicker-of-Despair"], &[href$="flicker-of-despair"] {
       /* fancy mcpants */
@@ -742,6 +750,8 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
+    color: var(--custom-color-2);
+    --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
   &[href$="Absolute-Darkness"], &[href$="absolute-darkness"]{
       /* fancy mcpants */
@@ -763,6 +773,8 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
+    color: var(--custom-color-2);
+    --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
   &[href$="Darkness"], &[href$="darkness"] {
     color: #7b2bb4;
