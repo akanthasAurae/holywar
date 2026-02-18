@@ -580,7 +580,7 @@ quick notes about selectors:
 	--highlight: #760e0626;
 }
 
-.callout[data-callout="vital"], .vital, [vital], [data-href*="Vital" i], .tag[href*="Vital" i] {
+.callout[data-callout="vital"], .vital, [vital], [data-href*="Vitality" i], .tag[href*="Vitality" i] {
 	--callout-color: 12,230,141;
 	--callout-icon: '';
     --color: rgba(var(--callout-color), 1);

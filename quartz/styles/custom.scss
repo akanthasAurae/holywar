@@ -463,7 +463,7 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
-    color: var(--custom-color-2);
+    color: var(--custom-color);
     --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
     &[href$="Vitality"], &[href$="vitality"] {
@@ -572,7 +572,7 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
-    color: var(--custom-color-2);
+    color: var(--custom-color);
     --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
     &[href$="Deathblight"], &[href$="deathblight"] {
@@ -594,7 +594,7 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-2),
 		0px 0px 2px var(--custom-color-2),
 		0px 0px 1px var(--custom-color-2);
-    color: var(--custom-color-2);
+    color: var(--custom-color);
     --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
     &[href$="Venom"], &[href$="venom"] {
@@ -671,7 +671,7 @@ a, a[role=anchor] {
 	font-weight:bold; 
   };
     &[href$="Nimius"], &[href$="nimius"],
-    &[href$="Infernal"], &[href$="Infernal"],
+    &[href$="Infernal"], &[href$="infernal"],
     &[href*="Unchained"][href$="Will"], &[href*="unchained"][href$="will"] {
     color: #c60c31;
 	--highlight: #c60c3126;
@@ -727,7 +727,7 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
-    color: var(--custom-color-2);
+    color: var(--custom-color);
     --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
   };
   &[href$="Flicker-of-Despair"], &[href$="flicker-of-despair"] {
@@ -750,8 +750,13 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
-    color: var(--custom-color-2);
+    color: var(--custom-color);
     --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
+  };
+  &[href$="Darkness"], &[href$="darkness"] {
+    color: #7b2bb4;
+	--highlight: #7b2bb426;
+	font-weight:bold; 
   };
   &[href$="Absolute-Darkness"], &[href$="absolute-darkness"]{
       /* fancy mcpants */
@@ -773,13 +778,8 @@ a, a[role=anchor] {
 		0px 0px 3px var(--custom-color-3),
 		0px 0px 2px var(--custom-color-3),
 		0px 0px 1px var(--custom-color-3);
-    color: var(--custom-color-2);
+    color: var(--custom-color);
     --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
-  };
-  &[href$="Darkness"], &[href$="darkness"] {
-    color: #7b2bb4;
-	--highlight: #7b2bb426;
-	font-weight:bold; 
   };
 }
 
