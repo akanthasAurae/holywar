@@ -3,7 +3,7 @@ tags:
 - crescent-moon
 - unsheathed
 - status
-- combat-base-up
+- combat-floor-up
 - combat-ceiling-up
 ---
 
@@ -12,4 +12,4 @@ tags:
 > [!unsheath|status|none]
 > <img src="unsheathed.png" class=floatl> <i class="unsheath no-b no-mix">“Unsheathed at last, its blade — splendour matching its scabbard — conceals its candor in a gleam akin to moonlight.”</i>
 > 
-> +2 ![[comminup.png|icon]] [[Combat Base Up]], +4 ![[commaxup.png|icon]] [[Combat Ceiling Up]]
+> +2 ![[comminup.png|icon]] [[Combat Floor Up]], +4 ![[commaxup.png|icon]] [[Combat Ceiling Up]]

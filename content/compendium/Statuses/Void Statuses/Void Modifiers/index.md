@@ -2,13 +2,13 @@
 title: Void Modifiers
 ---
 
-### [[Soul Base Down]]
+### [[Soul Floor Down]]
 
-![[Soul Base Down]]
+![[Soul Floor Down]]
 
-### [[Soul Base Up]]
+### [[Soul Floor Up]]
 
-![[Soul Base Up]]
+![[Soul Floor Up]]
 
 ### [[Soul Ceiling Down]]
 

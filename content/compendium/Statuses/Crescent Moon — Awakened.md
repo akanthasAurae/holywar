@@ -6,7 +6,7 @@ tags:
 - bloodloss
 - noctis
 - combat-power-up
-- combat-base-up
+- combat-floor-up
 - combat-ceiling-up
 ---
 
@@ -16,7 +16,7 @@ tags:
 > <img src="awakened.png" class=floatl> <i class="awakened no-b no-mix">“Power does not answer the weak. It answers those willing to burn for it; to stand bleeding, unyielding, as the flames take hold.”</i>
 > 
 > 
-> +5 ![[comminup.png|icon]] [[Combat Base Up]], +10 ![[commaxup.png|icon]] [[Combat Ceiling Up]], +1 ![[stance.png|icon]] [[Stance]].
+> +5 ![[comminup.png|icon]] [[Combat Floor Up]], +10 ![[commaxup.png|icon]] [[Combat Ceiling Up]], +1 ![[stance.png|icon]] [[Stance]].
 > 
 > When using a <span class=combat>Combat Skill</span>, inflict minor ![[blood.png|icon]] [[Bloodloss]] on self and gain 2 ![[comup.png|icon]] [[Combat Power Up]]. Gain 1 ![[comup.png|icon]] [[Combat Power Up]] for every ![[vital.png|icon]] [[Vitality]] missing.
 > 

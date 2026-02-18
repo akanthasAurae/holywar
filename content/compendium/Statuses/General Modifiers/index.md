@@ -31,9 +31,9 @@ title: Modifiers
 
 ^650c19
 
-#### [[Base Power Up]]
+#### [[Floor Power Up]]
 
-![[Base Power Up]]
+![[Floor Power Up]]
 
 #### [[Ceiling Power Up]]
 
@@ -47,9 +47,9 @@ title: Modifiers
 
 ^06030c
 
-#### [[Combat Base Up]]
+#### [[Combat Floor Up]]
 
-![[Combat Base Up]]
+![[Combat Floor Up]]
 
 #### [[Combat Ceiling Up]]
 
@@ -63,9 +63,9 @@ title: Modifiers
 
 ^fe6397
 
-#### [[Defense Base Up]]
+#### [[Defense Floor Up]]
 
-![[Defense Base Up]]
+![[Defense Floor Up]]
 
 #### [[Defense Ceiling Up]]
 
@@ -79,9 +79,9 @@ title: Modifiers
 
 ^bbc474
 
-#### [[Mental Base Up]]
+#### [[Mental Floor Up]]
 
-![[Mental Base Up]]
+![[Mental Floor Up]]
 
 #### [[Mental Ceiling Up]]
 
@@ -96,9 +96,9 @@ title: Modifiers
 
 ^db8092
 
-#### [[Stealth Base Up]]
+#### [[Stealth Floor Up]]
 
-![[Stealth Base Up]]
+![[Stealth Floor Up]]
 
 #### [[Stealth Ceiling Up]]
 
@@ -120,9 +120,9 @@ title: Modifiers
 
 ^7bb32e
 
-#### [[Base Power Down]]
+#### [[Floor Power Down]]
 
-![[Base Power Down]]
+![[Floor Power Down]]
 
 #### [[Ceiling Power Down]]
 
@@ -136,9 +136,9 @@ title: Modifiers
 
 ^8b7255
 
-#### [[Combat Base Down]]
+#### [[Combat Floor Down]]
 
-![[Combat Base Down]]
+![[Combat Floor Down]]
 
 #### [[Combat Ceiling Down]]
 
@@ -152,9 +152,9 @@ title: Modifiers
 
 ^ba24ca
 
-#### [[Defense Base Down]]
+#### [[Defense Floor Down]]
 
-![[Defense Base Down]]
+![[Defense Floor Down]]
 
 #### [[Defense Ceiling Down]]
 
@@ -168,9 +168,9 @@ title: Modifiers
 
 ^1d7b43
 
-#### [[Mental Base Down]]
+#### [[Mental Floor Down]]
 
-![[Mental Base Down]]
+![[Mental Floor Down]]
 
 #### [[Mental Ceiling Down]]
 
@@ -184,9 +184,9 @@ title: Modifiers
 
 ^779874
 
-#### [[Stealth Base Down]]
+#### [[Stealth Floor Down]]
 
-![[Stealth Base Down]]
+![[Stealth Floor Down]]
 
 #### [[Stealth Ceiling Down]]
 

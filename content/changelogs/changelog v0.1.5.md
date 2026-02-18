@@ -18,40 +18,40 @@ it is i, master of bullshit, jack of none
 - the official list is now as follows: 
 > [!menuu]- Added modifiers
 > > [!neutral]- Neutral modifiers
-> > - ![[minup.png|icon]] [[Base Power Up]]
-> > - ![[mindown.png|icon]] [[Base Power Down]]
+> > - ![[minup.png|icon]] [[Floor Power Up]]
+> > - ![[mindown.png|icon]] [[Floor Power Down]]
 > > - ![[maxup.png|icon]] [[Ceiling Power Up]]
 > > - ![[maxdown.png|icon]] [[Ceiling Power Down]]
 > > - ![[minmaxup.png|icon]] [[Final Power Up]]
 > > - ![[minmaxdown.png|icon]] [[Final Power Down]]
 >   
 > > [!combat]- Combat modifiers  
-> > - ![[comminup.png|icon]] [[Combat Base Up]]
-> > - ![[commindown.png|icon]] [[Combat Base Down]]
+> > - ![[comminup.png|icon]] [[Combat Floor Up]]
+> > - ![[commindown.png|icon]] [[Combat Floor Down]]
 > > - ![[commaxup.png|icon]] [[Combat Ceiling Up]]
 > > - ![[commaxdown.png|icon]] [[Combat Ceiling Down]]
 > > - ![[content/compendium/icons/comup.png|icon]] [[Combat Power Up]]
 > > - ![[content/compendium/icons/comdown.png|icon]] [[Combat Power Down]]
 >  
 > > [!defense]- Defense modifiers  
-> > - ![[defminup.png|icon]] [[Defense Base Up]]
-> > - ![[defmindown.png|icon]] [[Defense Base Down]]
+> > - ![[defminup.png|icon]] [[Defense Floor Up]]
+> > - ![[defmindown.png|icon]] [[Defense Floor Down]]
 > > - ![[defmaxup.png|icon]] [[Defense Ceiling Up]]
 > > - ![[defmaxdown.png|icon]] [[Defense Ceiling Down]]
 > > - ![[content/compendium/icons/defup.png|icon]] [[Defense Power Up]]
 > > - ![[content/compendium/icons/defdown.png|icon]] [[Defense Power Down]]
 > 
 > > [!mental]- Mental modifiers  
-> > - ![[menminup.png|icon]] [[Mental Base Up]]
-> > - ![[menmindown.png|icon]] [[Mental Base Down]]
+> > - ![[menminup.png|icon]] [[Mental Floor Up]]
+> > - ![[menmindown.png|icon]] [[Mental Floor Down]]
 > > - ![[menmaxup.png|icon]] [[Mental Ceiling Up]]
 > > - ![[menmaxdown.png|icon]] [[Mental Ceiling Down]]
 > > - ![[menup.png|icon]] [[Mental Power Up]]
 > > - ![[mendown.png|icon]] [[Mental Power Down]]
 >   
 > > [!sneak]- Stealth modifiers  
-> > - ![[stminup.png|icon]] [[Stealth Base Up]]
-> > - ![[stmindown.png|icon]] [[Stealth Base Down]]
+> > - ![[stminup.png|icon]] [[Stealth Floor Up]]
+> > - ![[stmindown.png|icon]] [[Stealth Floor Down]]
 > > - ![[stmaxup.png|icon]] [[Stealth Ceiling Up]]
 > > - ![[stmaxdown.png|icon]] [[Stealth Ceiling Down]]
 > > - ![[stup.png|icon]] [[Stealth Power Up]]

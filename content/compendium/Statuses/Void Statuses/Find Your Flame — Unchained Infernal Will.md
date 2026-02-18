@@ -5,7 +5,7 @@ tags:
   - void
   - burn
   - combat-power-up
-  - base-power-up
+  - floor-power-up
   - ceiling-power-up
 ---
 
@@ -16,7 +16,7 @@ tags:
 > [!nimius|status|none]
 > <img src="unchained.png" class=floatl> <i class="nimius no-b no-mix">“Wrath and fervor boil within your soul. Kindle your infernal spark, claim your burning flame, and devour the darkness until only your will remains.”</i>
 > 
-> +3 ![[vital.png|icon]] [[Vitality]], +15 ![[minup.png|icon]] [[Base Power Up]], +5 ![[maxup.png|icon]] [[Ceiling Power Up]]<br>
+> +3 ![[vital.png|icon]] [[Vitality]], +15 ![[minup.png|icon]] [[Floor Power Up]], +5 ![[maxup.png|icon]] [[Ceiling Power Up]]<br>
 > <span class=plus>[Clash Win]</span> Inflict ![[burn.png|icon]] [[Burn|Minor Burn]]<br>
 > <span class=minus>[Clash Lose]</span> Gain 5 ![[comup.png|icon]] [[Combat Power Up]] for one ![[action.png|icon]] [[Actions|Action]]
 > 

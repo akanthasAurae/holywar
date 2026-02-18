@@ -47,7 +47,7 @@ it ok ily bb ♥
 - added icon for ![[soulfrac.png|icon]] `soulfrac`
 - ~~removed `status` metadata from [[compendium/Mechanics/Void Mechanics/Soul Fractures/index|Soul Fractures]]  `soul` callout~~
 - modified [[compendium/Mechanics/Void Mechanics/Soul Fractures/index|Soul Fractures]] — now a folder, the note is an ``index`` with the ``title`` property of ``Soul Fractures``. this means levels I~IV are all independent pages now; this is an uncommon practice but can be done with anything that has multiple, variable stages like this. [[Shattered]] has been added to this.
-- [[Crescent Moon — Unsheathed]] now correctly has #combat-base-up and #combat-ceiling-up tags
+- [[Crescent Moon — Unsheathed]] now correctly has #combat-floor-up and #combat-ceiling-up tags
 - fixed some wording consistency in [[Radiance]] to match other statuses
 - added some other tags to the new stuff
 - [[Mark of the Oni]] did not have ``status`` in callout metadata

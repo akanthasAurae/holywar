@@ -42,8 +42,8 @@ it is i, master of fucknone bitchall, jack of your mo-
 	- **void modifiers:**
 		- ![[soulup.png|icon]] [[Soul Power Up]];
 		- ![[souldown.png|icon]] [[Soul Power Down]];
-		- ![[soulminup.png|icon]] [[Soul Base Up]];
-		- ![[soulmindown.png|icon]] [[Soul Base Down]];
+		- ![[soulminup.png|icon]] [[Soul Floor Up]];
+		- ![[soulmindown.png|icon]] [[Soul Floor Down]];
 		- ![[soulmaxup.png|icon]] [[Soul Ceiling Up]];
 		- ![[soulmaxdown.png|icon]] [[Soul Ceiling Down]]
 		- mainly added them for posterity, not necessarily because they're used anywhere at the moment. 

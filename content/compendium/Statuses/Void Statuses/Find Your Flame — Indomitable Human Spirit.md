@@ -3,7 +3,7 @@ tags:
   - status
   - void
   - unbreakable
-  - base-power-up
+  - floor-power-up
   - ceiling-power-up
 ---
 
