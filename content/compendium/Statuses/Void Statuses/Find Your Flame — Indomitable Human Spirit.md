@@ -1,6 +1,5 @@
 ---
 tags:
-  - mike-todo
   - status
   - void
   - unbreakable

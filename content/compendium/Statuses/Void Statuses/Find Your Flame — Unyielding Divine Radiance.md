@@ -2,7 +2,6 @@
 tags:
 - divine
 - void
-- mike-todo
 - status
 - base-power-up
 - ceiling-power-up
