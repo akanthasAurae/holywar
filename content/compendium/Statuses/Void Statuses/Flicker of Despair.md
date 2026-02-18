@@ -1,14 +1,20 @@
 ---
 tags:
+- flicker-of-despair
+- final-power-down
+- unbreakable
+- soul-fracture-I
+- void
+- status
 ---
 
-<h1 class=down>Status Title</h1>
+<h1 class=despair>Flicker of Despair</h1>
 
-> [!down|status|none]
-> <img src="sinkdeluge.png" class=floatl> <span>Hello, this should inform the reader of what your status is! Any additional effects like <img src="comminup.png" class=icon> <a data-href="Combat Base Up" href="Combat Base Up" class=internal-link>Combat Base Up</a> must be formatted in a special way in the first paragraph, with 'a' for links and 'img' for icons.</span>
+> [!despair|status|none|no-mix]
+> <img src="despair.png" class=floatl> <i class="despair no-b no-mix">"... Am I a bad person?"</i>
 > 
-> Any *italicized* or **bold** text will also have colors, and most status classes are bold, but you can use the classes no-b, no-i and no-mix to avoid those. <i class=no-mix>I'm free! <b class=no-mix>Free as the wind!</b></i> You can also use status classes to <span class=burn>colour things</span>.
-> 
-> If you want to mention statuses like ![[noctis.png|icon]] [[Noctis|Noctis Aether]], links can be handled by markdown by here. Links are automatically colored. Icons must have the metadata/class 'icon'.
-> 
-> <i class="vital no-b no-mix">Some funky green text! This would be bold if it wasn't for the no-b class.</i>
+> While this effect is active:
+> <br>• Gain 5 ![[minmaxdown.png|icon]] [[Final Power Down]].
+> <br>• <span class=soul>Soul Fragments</span> gained are increased by 50%
+> <br>• All Skills become ![[unbreak.png|icon]] [[Unbreakable Skills|Unbreakable]] and inflict ![[soulfrac1.png|icon]] [[Soul Fracture I]]
+> <br>• When <span class=minus>losing</span> a clash, lose 15 <span class=hum>Humanity</span>

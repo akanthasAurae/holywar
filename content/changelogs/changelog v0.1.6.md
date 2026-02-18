@@ -18,7 +18,7 @@ it is i, master of fuckall, jack of nil
 >    - Includes the addition of #cloaked as a tag, further showing the alias usage.
 
 - All modifiers are now correctly tagged as #combat, #defense, #mental, #neutral, #stealth and later on #soul. Soul tags will NOT be used as loosely as the #void tag, as they pertain specifically to soul-related statuses and mechanics, while void is a more broad category. Most soul-related statuses will be tagged #void, but not all void statuses will be tagged #soul.
-- All three states of Crescent Moon (![[sheathed.png|icon]] [[Crescent Moon — Sheathed|Sheathed]], ![[unsheathed.png|icon]] [[Crescent Moon — Unsheathed|Unsheathed]] and ![[awakened.png|icon]] [[Crescent Moon — Awakened|Awakened]]) are present, and so are its sub-statuses including  ![[bloodflamepoise.png|icon]] [[Poise — Bloodflame]] (mostly, excluding Bloodflame itself, because what the fuck does that do in *this* system's context? Bloodloss + Burn?)
+- All three states of Crescent Moon (![[sheathed.png|icon]] [[Crescent Moon — Sheathed|Sheathed]], ![[unsheathed.png|icon]] [[Crescent Moon — Unsheathed|Unsheathed]] and ![[awakened.png|icon]] [[Crescent Moon — Awakened|Awakened]]) are present, and so are its sub-statuses including  ![[bloodflamepoise.png|icon]] [[Poise — Bloodflame]] (~~mostly, excluding Bloodflame itself, because what the fuck does that do in *this* system's context? Bloodloss + Burn?~~) and ![[bloodflame.png|icon]] [[Burn — Bloodflame]]
 - added colour for the <span class=void>scary stuff</span> also known as the ``void`` class! it's special because it uses text-shadow magics to add a border & glow to itself~ future special classes in the future can use `void` as a template for their glows. use sparingly; CAN and WILL be laggy in huge amounts! its current sibling is <span class=deathblight>deathblight!</span>
 - in celebration of Void now being real, i have added two sub-folders: Void Statuses and Void Mechanics, in their own parent folders respectively. It SHOULD hopefully help with some of the HUGE clutter!
 - and in celebration of less clutter, Modifiers now have their own sub-folder in Statuses.
@@ -31,7 +31,7 @@ it is i, master of fuckall, jack of nil
 
 - as mentioned before, ``cloaked`` is now an alias for ``stealth``; any element with the class of either should be <span class=cloaked>ourple</span>
 - since the previous update was pushed out, I've changed ``combatdown.png`` to ``comdown.png`` and ``combatup.png`` to ``comup.png`` to continue consistency. this change can also be seen for ``defenseup.png`` becoming ``defup.png`` and ``defensedown.png`` becoming ``defdown.png``. this should fix some broken links hopefully, i'll double-check where needed
-- modified [[content/compendium/Statuses/index|the Statuses index]] accordingly to fit the ported changes
+- modified [[compendium/Statuses/index|the Statuses index]] accordingly to fit the ported changes
 - as is consistent as my will to live, ``customcolors.css`` and ``custom.scss`` have both, of course, been horrendously altered (half-joke). Testing in ``npx quartz build --serve``, I've attempted to recreate <span class=void>void's</span> new effects!
 - ``custom.scss`` now correctly colours <span class=combat>combat tags</span>, <span class=defense>defense tags</span>, <span class=mental>mental tags</span>, and <span class=stealth>stealth tags</span>, but not soul tags yet.
 	- note for stealth: they are NOT the same as ``sneak`` since I don't actually know the direction Mike is going to take concerning Stealth as a mechanic vs Cloaked as a status, for example. stealth may be aliased into sneak, or cloaked may become its own thing. fuzzy grounds. there is *some* support for soul tags such as Soul Ceiling Up being correctly processed, but this is on the loose assumption such a thing would even exist.
@@ -47,9 +47,4 @@ it is i, master of fuckall, jack of nil
 
 <h2 class=burn>pending:</h2>
 
-- [[content/compendium/Statuses/index|Statuses]] REALLY needs clean-up (on it bawss!)
-- need to do soul statuses next & soul mechanics as a sub-folder of [[content/compendium/Mechanics/index|Mechanics]] + add css rule concerning naming that index
-- character templates being functional (ie multi-column outputting actual multi-columns in Quartz)
-- actually do soul modifiers whoopsiiieeee
-- uhhhhhhhhhhhhhhhhhhh void statuses yeag
-- figure out stealth (mechanic) vs cloaked (status), we currently have 2 existing classes for technically the same thing (sneak is lighter, stealth is darker) & cloaked is using stealth's class colours atum
+![[to-do]]

@@ -1,0 +1,23 @@
+- [x] [[compendium/Statuses/index|Statuses]] REALLY needs clean-up
+- [x] need to do soul statuses next & soul mechanics as a sub-folder of [[compendium/Mechanics/index|Mechanics]] + add css rule concerning naming that index
+- [ ] character templates being functional (ie multi-column outputting actual multi-columns in Quartz)
+- [x] actually do soul modifiers oops
+- [x] uhhhhhhhhhhhhhhhhhhh void statuses yeag
+- [ ] figure out stealth (mechanic) vs cloaked (status), we currently have 2 existing classes for technically the same thing (sneak is lighter, stealth is darker) & cloaked is using stealth's class colours atm
+- [x] update templates to current statuses
+- [x] fix all mentions of Vital States & tags
+- [ ] add Sinking
+- [ ] add Charge
+- [ ] figure out:
+	- [ ] Sanity?
+	- [ ] Panic A? Panic B? Intelligence/Technical?
+	- [ ] Additional sanity-related mechanic for Panic B's attribute? (ie. Reflexes -> Stance, Body -> Vitality, Ref > Body = Down, Body > Ref = DD)
+- [ ] add quotes to:
+	- [ ] [[Soul Fragility]]
+	- [ ] [[Flicker of Despair]]
+	- [ ] [[Darkness]]
+	- [ ] [[Absolute Darkness]]
+- [ ] update or fix:
+	- [ ] [[Radiance]]? i have it marked as WIP for some reason
+	- [ ] [[Daybreak]]
+	- [ ] [[Soul]]

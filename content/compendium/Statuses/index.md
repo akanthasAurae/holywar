@@ -43,6 +43,10 @@ title: Statuses
 
 ![[Crescent Moon — Unsheathed]]
 
+### [[Daybreak]]
+
+![[Daybreak]]
+
 ### [[Mark of the Oni]]
 
 ![[Mark of the Oni]]
@@ -66,6 +70,11 @@ title: Statuses
 ### [[Poise — Scorching]]
 
 ![[Poise — Scorching]]
+
+### [[Radiance]]
+
+![[Radiance]]
+
 ### [[Tremor]]
 
 ![[Tremor]]
@@ -89,7 +98,7 @@ title: Statuses
 ## General Modifiers
 ^c953da
 
-![[content/compendium/Statuses/General Modifiers/index]]
+![[compendium/Statuses/General Modifiers/index]]
 
 ## <span class=void>Void Statuses</span>
 ^55559f

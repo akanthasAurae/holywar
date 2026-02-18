@@ -2,10 +2,26 @@
 title: Void Modifiers
 ---
 
+### [[Soul Base Down]]
 
-> [!warning] Certain statuses do not yet have icons or custom colours.
+![[Soul Base Down]]
 
-> [!toc] Table of Contents
-> - [[compendium/Statuses/index#^ca8c78|General Statuses]]
-> 	- [[compendium/Statuses/index#^c953da|Modifiers]]
-> - [[compendium/Statuses/index#^55559f|Void Statuses]]
+### [[Soul Base Up]]
+
+![[Soul Base Up]]
+
+### [[Soul Ceiling Down]]
+
+![[Soul Ceiling Down]]
+
+### [[Soul Ceiling Up]]
+
+![[Soul Ceiling Up]]
+
+### [[Soul Power Down]]
+
+![[Soul Power Down]]
+
+### [[Soul Power Up]]
+
+![[Soul Power Up]]

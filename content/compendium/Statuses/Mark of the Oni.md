@@ -7,5 +7,5 @@ tags:
 
 <h1 class=poisebleed>Mark of the Oni</h1>
 
-> [!hemo|none] 
-> <img src=markoftheoni.png class=floatl><span> Target becomes susceptible to <img src=crit.png class=icon> <a data-href="Critical Hit" href="Critical Hit" class="internal-link">Critical Hits</a> from Tsukai</span>
+> [!hemo|status|none] 
+> <img src=markoftheoni.png class=floatl> <span> Target becomes susceptible to <img src=crit.png class=icon> <a data-href="Critical Hit" href="Critical Hit" class="internal-link">Critical Hits</a> from Tsukai</span>

@@ -57,7 +57,7 @@ aliases:
 > > [!none|invis]
 > > > [!stats]+ stats
 > > > **level 39**
-> > > ~={vital}vital state: II=~
+> > > ~={vital}vitality: II=~
 > > > ~={stance}stance: I=~
 > > > ~={hum}humanity: 244=~ ~={cyber}- 0=~ ~={hum}\[244]=~
 > > > ~={hum}humanity modifier: 3.7=~

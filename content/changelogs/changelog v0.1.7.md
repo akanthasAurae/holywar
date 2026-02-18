@@ -59,7 +59,7 @@ it is i, master of fucknone bitchall, jack of your mo-
 		- ![[despair.png|icon]] [[Flicker of Despair]];
 		- ![[soulfragility.png|icon]] [[Soul Fragility]];
 	- **void mechanics:**
-		- ![[soulfrac.png|icon]] [[Soul Fracture]]
+		- ![[soulfrac.png|icon]] [[compendium/Mechanics/Void Mechanics/Soul Fractures/index|Soul Fractures]]
 		- ![[soul.png|icon]] [[Soul]]
 - any Unique statuses such as the above have a special line at the end clarifying their uniqueness, to provide a backlink to their original Status.
 - added respective aliases or made new colors for the above statuses.
@@ -72,4 +72,6 @@ it is i, master of fucknone bitchall, jack of your mo-
 - renamed `stealth` to `cloaked` (![[cloaked.png|icon]])
 - fixed some typos
 
-<h2 class=burn>Pending:</h2>
+<h2 class=burn>pending:</h2>
+
+![[to-do]]

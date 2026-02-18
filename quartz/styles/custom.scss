@@ -1,5 +1,5 @@
 @use "./base.scss";
-@use "../../.obsidian/snippets/customcolors.css" as *;
+@use "../../content/.obsidian/snippets/customcolors.css" as *;
 
 p {
     margin-top: 0.4em;
@@ -361,6 +361,14 @@ a:not(.folder-title), a[role=anchor], a.tag-link, a.internal {
         color: #60a5e6;
 	--highlight: #60a5e626;
         };
+    &[href$="Soul"], &[href$="soul"],
+    &[href*="Soul"][href$="Down"], &[href*="soul"][href$="down"],
+    &[href*="Soul"][href$="Up"], &[href*="soul"][href$="up"],
+    &[href$="Soul-Fractures"], &[href$="soul-fractures"],
+    &[href$="Soul-Fractures/"], &[href$="soul-fractures/"] {
+        color: #b485f9;
+	--highlight: #b485f926;
+        }s
     &[href$="Defense"], &[href$="defense"],
     &[href*="Defense"][href$="Down"], &[href*="defense"][href$="down"],
     &[href*="Defense"][href$="Up"], &[href*="defense"][href$="up"] {
@@ -372,12 +380,7 @@ a:not(.folder-title), a[role=anchor], a.tag-link, a.internal {
         color: #7251be;
 	--highlight: #7251be26;
         };
-    &[href$="Soul"], &[href$="soul"],
-    &[href*="Soul"][href$="Down"], &[href*="soul"][href$="down"],
-    &[href*="Soul"][href$="Up"], &[href*="soul"][href$="up"] {
-        color: #b485f9;
-	--highlight: #b485f926;
-        }
+    
 }
 
     /* status */
@@ -421,7 +424,9 @@ a, a[role=anchor] {
 	--highlight: #ec820926;
   };
     &[href$="Bloodloss"], &[href$="bloodloss"],
-    &[href$="Vengeance"], &[href$="vengeance"] {
+    &[href$="Vengeance"], &[href$="vengeance"],
+    &[href$="Mark-of-the-Oni"], &[href$="mark-of-the-oni"],
+    &[href$="Unbreakable-Skills"], &[href$="unbreakable-skills"], &[href$="Unbreakable"], &[href$="unbreakable"] &[href$="Unbreakables"], &[href$="unbreakables"] {
     color: #b1120e;
     font-weight:bold;
 	--highlight: #b1120e26;
@@ -508,7 +513,9 @@ a, a[role=anchor] {
 	--highlight: #64171726;
 	font-weight:bold; 
   };
-    &[href$="Actions"], &[href$="actions"] {
+    &[href$="Actions"], &[href$="actions"],
+    &[href$="Action"], &[href$="action"],
+    &[href$="Stun"], &[href$="stun"] {
     color: #e6a433;
 	font-weight:bold;
 	--highlight: #e6a43326;
@@ -631,22 +638,45 @@ a, a[role=anchor] {
 	--highlight: #af090f26;
 	font-weight:bold; 
   };
-    &[href$="Shattered"], &[href$="shattered"] {
-    color: #7719c8;
-	--highlight: #7719c826;
+    &[href$="Soul-Fracture-I"], &[href$="soul-fracture-i"] {
+    color: #9c55a3;
+	--highlight: #9c55a326;
 	font-weight:bold; 
   };
-    &[href$="Nimius"], &[href$="nimius"] {
+    &[href$="Soul-Fracture-II"], &[href$="soul-fracture-ii"] {
+    color: #933a76;
+	--highlight: #933a7626;
+	font-weight:bold; 
+  };
+    &[href$="Soul-Fracture-III"], &[href$="soul-fracture-iii"] {
+    color: #ae2354;
+	--highlight: #ae235426;
+	font-weight:bold; 
+  };
+    &[href$="Soul-Fracture-IV"], &[href$="soul-fracture-iv"] {
+    color: #af1632;
+	--highlight: #af163226;
+	font-weight:bold; 
+  };
+    &[href$="Shattered"], &[href$="shattered"] {
+    color: #b30b12;
+	--highlight: #b30b1226;
+	font-weight:bold; 
+  };
+    &[href$="Nimius"], &[href$="nimius"],
+    &[href*="Unchained"][href$="Will"], &[href*="unchained"][href$="will"] {
     color: #c60c31;
 	--highlight: #c60c3126;
 	font-weight:bold; 
   };
-    &[href$="Aether"], &[href$="aether"] {
+    &[href$="Aether"], &[href$="aether"],
+    &[href*="Indomitable"][href$="Spirit"], &[href*="indomitable"][href$="spirit"] {
     color: #5a9cd2;
 	--highlight: #5a9cd226;
 	font-weight:bold; 
   };
-    &[href$="Aurora-Vitae"], &[href$="aurora-vitae"] {
+    &[href$="Aurora"], &[href$="aurora"],
+    &[href*="Unyielding"][href$="Radiance"], &[href*="unyielding"][href$="radiance"] {
     color: #e79e5a;
 	--highlight: #e79e5a26;
 	font-weight:bold; 
@@ -655,6 +685,39 @@ a, a[role=anchor] {
     color: #ba7ad1;
 	--highlight: #ba7ad126;
 	font-weight:bold; 
+  };
+    &[href$="Radiance"], &[href$="radiance"] {
+    color: #e2ad38;
+	--highlight: #e2ad3826;
+	font-weight:bold; 
+  };
+    &[href$="Blinded"], &[href$="blinded"] {
+    color: #fffa82;
+	--highlight: #fffa8226;
+	font-weight:bold; 
+  };
+    &[href$="Daybreak"], &[href$="daybreak"],
+    &[href$="Daybroken"], &[href$="daybroken"],
+    &[href$="Eruption"], &[href$="eruption"] {
+      /* fancy mcpants */
+    --custom-color: #181102; /* works as the 'bg' color */
+	  --custom-color-2: #ffe4a9;  
+  	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+    color: var(--custom-color);
+    text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-3),
+		0px 0px 3px var(--custom-color-3),
+		0px 0px 2px var(--custom-color-3),
+		0px 0px 1px var(--custom-color-3);
   };
 }
 

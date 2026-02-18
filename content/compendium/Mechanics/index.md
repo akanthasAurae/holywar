@@ -24,9 +24,9 @@ title: Mechanics
 
 ![[Stance]]
 
-### [[Vital States]]
+### [[Vitality]]
 
-![[Vital States]]
+![[Vitality]]
 
 ### [[Actions]]
 
@@ -64,9 +64,9 @@ title: Mechanics
 
 ![[Aether]]
 
-### [[Aurora Vitae]]
+### [[Aurora]]
 
-![[Aurora Vitae]]
+![[Aurora]]
 
 ### [[Nimius]]
 

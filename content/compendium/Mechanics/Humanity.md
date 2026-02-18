@@ -25,12 +25,12 @@ tags:
 > > <br>• Gain 40 <span class="hum">Humanity</span> for every non-participated Mission (If character is restless and seeks action, the gain may be reduced)
 > > 
 > > **Healing**
-> > <br>• Gain 4 <span class="hum">Humanity</span> per ![[vital.png|icon|20]] [[Vital States|Vital State]] recovered
+> > <br>• Gain 4 <span class="hum">Humanity</span> per ![[vital.png|icon|20]] [[Vitality]] recovered
 > > <br>• When healing while ![[downed.png|icon|20]] [[Downed]], gain 16 <span class="hum">Humanity</span>, but <span class="humlow">Humanity Loss</span> is increased by x1.2 until rest. Stackable.
 > > <br>• When healing out of ![[dd.png|icon|20]] [[Death's Door]], gain 22 <span class="hum">Humanity</span>, but <span class="humlow">Humanity Loss</span> is increased by x1.5 until rest. Stackable.
 > > 
 > > **Clash Win**
-> > <br>• Gain 1 <span class="hum">Humanity</span>
+> > • Gain 1 <span class="hum">Humanity</span>
 > > <br>• Gain 2 <span class="hum">Humanity</span>, if winning a second or third clash in a row
 > > <br>• Lose 4 <span class="hum">Humanity</span>, if winning a clash after winning four or more clashes in a row
 >

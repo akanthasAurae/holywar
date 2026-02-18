@@ -20,7 +20,7 @@ hello! this comment will not show up (i believe) on Quartz pages, but it is reco
    100% free game for markdown! you can still use `<span>`s to colour text, but like before, links will automatically be colored. you can use metadata to set display text instead. images must be prefixed by `!`, in order to be embedded. they must have the metadata of `icon`, such as `![[nonsense.png|icon]]`.
 
 5. tags
-   generally speaking, tags should include any sub-effects; such as Bloodloss, or Combat Power Up. they do not need to necessarily include attribute mechanics such as Stance or Vital State unless they uniquely affect the way those behave (such as Stancebroken). additionally, they must include the name of the status itself, and any pertaining categories such as status, mechanic, or void.
+   generally speaking, tags should include any sub-effects; such as Bloodloss, or Combat Power Up. they do not need to necessarily include attribute mechanics such as Stance or Vitality unless they uniquely affect the way those behave (such as Stancebroken). additionally, they must include the name of the status itself, and any pertaining categories such as status, mechanic, or void.
 
 6. use other stuff as examples, and make sure to remove the draft tag once your status is done and in the right folder!
    heavily encouraged overall but do look at other statuses if you need guidance or ask me! :)
@@ -32,10 +32,8 @@ we work with strict markdown breaks, so if you need a breakline instead of a new
 <h1 class=down>Status Title</h1>
 
 > [!down|status|none]
-> <img src="sinkdeluge.png" class=floatl> <span>Hello, this should inform the reader of what your status is! Any additional effects like <img src="comminup.png" class=icon> <a data-href="Combat Base Up" href="Combat Base Up" class=internal-link>Combat Base Up</a> must be formatted in a special way in the first paragraph, with 'a' for links and 'img' for icons.</span>
+> <img src="sinkdeluge.png" class=floatl> <i class="down no-b no-mix">"This is a quote."</i>
 > 
 > Any *italicized* or **bold** text will also have colors, and most status classes are bold, but you can use the classes no-b, no-i and no-mix to avoid those. <i class=no-mix>I'm free! <b class=no-mix>Free as the wind!</b></i> You can also use status classes to <span class=burn>colour things</span>.
 > 
 > If you want to mention statuses like ![[noctis.png|icon]] [[Noctis|Noctis Aether]], links can be handled by markdown by here. Links are automatically colored. Icons must have the metadata/class 'icon'.
-> 
-> <i class="vital no-b no-mix">Some funky green text! This would be bold if it wasn't for the no-b class.</i>

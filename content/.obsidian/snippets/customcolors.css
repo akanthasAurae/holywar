@@ -395,24 +395,6 @@ quick notes about selectors:
 	--highlight: #7251be26;
 }
 
-.callout[data-callout="soul"], .soul, [soul], [data-href*="Soul" i], .tag[href*="Soul" i] {
-	--callout-color: 180, 133, 249;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #b485f9;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #b485f926;
-}
-
 /*b485f9*/
 /* status customs */
 .callout[data-callout="actions"], .actions, [actions], [data-href*="Actions" i], .tag[href*="Actions" i],
@@ -1107,16 +1089,13 @@ quick notes about selectors:
 	--highlight: #af090f26;
 }
 
-.callout[data-callout="shatt"], .shatt, [shatt], [data-href*="Shattered" i], .tag[href*="Shattered" i],
-/* aliases */
-.callout[data-callout="shattered"], .shattered, [shattered], [data-href*="shattered" i], .tag[href*="shattered" i] {
-	--callout-color: 71, 30, 152;
-	--callout-icon: '';
+.callout[data-callout="soul"], .soul, [soul], [data-href*="Soul" i], .tag[href*="Soul" i] {
+	--callout-color: 180, 133, 249;
     --color: rgba(var(--callout-color), 1);
     --border: rgba(var(--callout-color), 0.267);
     --bg: rgba(var(--callout-color), 0.063);
 
-	--custom-color: #7719c8;
+	--custom-color: #b485f9;
 	--link-color: var(--custom-color);
 	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
 	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
@@ -1125,7 +1104,106 @@ quick notes about selectors:
 
 	color: var(--custom-color);
 	font-weight:bold;
-	--highlight: #7719c826;
+	--highlight: #b485f926;
+	text-shadow: none;
+}
+
+.callout[data-callout="shatt"], .shatt, [shatt], [data-href*="Shattered" i], .tag[href*="Shattered" i],
+/* aliases */
+.callout[data-callout="shattered"], .shattered, [shattered], [data-href*="shattered" i], .tag[href*="shattered" i],
+.callout[data-callout="frag"], .frag, [frag], [data-href*="fragility" i], .tag[href*="fragility" i]  {
+	--callout-color: 179, 11, 18;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #b30b12;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #b30b1226;
+}
+
+.callout[data-callout="frac1"], .frac1, [frac1], [data-href="Soul Fracture I" i], .tag[href="Soul Fracture I" i] {
+	--callout-color: 156, 85, 163;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #9c55a3;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #9c55a326;
+}
+
+.callout[data-callout="frac2"], .frac2, [frac2], [data-href="Soul Fracture II" i], .tag[href="Soul Fracture II" i] {
+	--callout-color: 147, 58, 118;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #933a76;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #933a7626;
+}
+
+.callout[data-callout="frac3"], .frac3, [frac3], [data-href="Soul Fracture III" i], .tag[href="Soul Fracture III" i] {
+	--callout-color: 174, 35, 84;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #ae2354;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #ae235426;
+}
+
+.callout[data-callout="frac4"], .frac4, [frac4], [data-href="Soul Fracture IV" i], .tag[href="Soul Fracture IV" i] {
+	--callout-color: 175, 22, 50;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #af1632;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #af163226;
 }
 
 .callout[data-callout="nimius"], .nimius, [nimius], [data-href*="Nimius" i], .tag[href*="Nimius" i],
@@ -1288,9 +1366,104 @@ quick notes about selectors:
 	--highlight: #c08a1626;
 }
 
+.callout[data-callout="despair"], .despair, [despair], [data-href*="despair" i], .tag[href*="despair" i] {
+
+	--callout-color: 14, 13, 26;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #0e0d1a;
+	--custom-color-2: #313e8f;
+	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
+	--tag-background-hover: black;
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
+
+	/* special to Void */
+	text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-3),
+		0px 0px 3px var(--custom-color-3),
+		0px 0px 2px var(--custom-color-3),
+		0px 0px 1px var(--custom-color-3);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #313e8f26;
+}
+
+.callout[data-callout="dark"], .dark, [dark], [data-href*="darkness" i], .tag[href*="dark" i] {
+	--callout-color: 123, 43, 180;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #7b2bb4;
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #7b2bb426;
+}
+
+.callout[data-callout="adark"], .adark, [adark], [data-href*="Absolute Darkness" i], .tag[href*="adark" i] {
+
+	--callout-color: 0, 1, 5;
+	--callout-icon: '';
+    --color: rgba(var(--callout-color), 1);
+    --border: rgba(var(--callout-color), 0.267);
+    --bg: rgba(var(--callout-color), 0.063);
+
+	--custom-color: #000105;
+	--custom-color-2: #35077a;
+	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
+	--link-color: var(--custom-color);
+	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
+	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
+	--tag-background-hover: black;
+	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
+
+	/* special to Void */
+	text-shadow: /* border */
+		1px 0px var(--custom-color-2),
+		0px 1px var(--custom-color-2),
+		-1px 0px var(--custom-color-2),
+		0px -1px var(--custom-color-2),
+		0.5px 0.5px var(--custom-color-2),
+		-0.5px -0.5px var(--custom-color-2),
+		0.5px -0.5px var(--custom-color-2),
+		-0.5px 0.5px var(--custom-color-2),
+		/*shadow */
+		0px 0px 5px var(--custom-color-3),
+		0px 0px 3px var(--custom-color-3),
+		0px 0px 2px var(--custom-color-3),
+		0px 0px 1px var(--custom-color-3);
+
+	color: var(--custom-color);
+	font-weight:bold;
+	--highlight: #35077a26;
+}
+
 /* do NOT touch */
 
-.callout p:not(.no-mix, [data-callout-metadata*="no-mix"]) {
+.callout p:not(.no-mix, [data-callout-metadata*="no-mix"], ul, li) {
 		color: var(--mixed-color);
 		--mixed-color: color-mix(in srgb, var(--custom-color) 30%, white 70%);
 		font-weight:normal;

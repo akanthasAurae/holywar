@@ -10,10 +10,36 @@ title: Void Statuses
 
 ^2e80c3
 
-gooball
+### [[Absolute Darkness]]
+
+![[Absolute Darkness]]
+
+### [[Darkness]]
+
+![[Darkness]]
+
+### [[Find Your Flame — Indomitable Human Spirit]]
+
+![[Find Your Flame — Indomitable Human Spirit]]
+
+### [[Find Your Flame — Unchained Infernal Will]]
+
+![[Find Your Flame — Unchained Infernal Will]]
+
+### [[Find Your Flame — Unyielding Divine Radiance]]
+
+![[Find Your Flame — Unyielding Divine Radiance]]
+
+### [[Flicker of Despair]]
+
+![[Flicker of Despair]]
+
+### [[Soul Fragility]]
+
+![[Soul Fragility]]
 
 ## <span class=void>Void Modifiers</span>
 
 ^66244b
 
-fooball
+![[compendium/Statuses/Void Statuses/Void Modifiers/index|index]]

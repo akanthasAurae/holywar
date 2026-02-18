@@ -83,7 +83,4 @@ it is i, master of bullshit, jack of none
 
 <h2 class=burn>pending:</h2>
 
-- [[content/compendium/Statuses/index|Statuses]] REALLY needs clean-up
-- need to do soul statuses next & soul mechanics as a sub-folder of [[content/compendium/Mechanics/index|Mechanics]] + add css rule concerning naming that index
-- character templates being functional (ie multi-column outputting actual multi-columns in Quartz)
-- actually do soul modifiers oops
+![[to-do]]
