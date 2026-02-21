@@ -8,7 +8,7 @@ tags:
 - status
 ---
 
-<h1 class=despair>Flicker of Despair</h1>
+<h1 class="despair no-mix">Flicker of Despair</h1>
 
 > [!despair|status|none|no-mix]
 > <img src="despair.png" class=floatl> <i class="despair no-b no-mix">"... Am I a bad person?"</i>

@@ -1,1475 +1,1401 @@
-/* templates */
-
-.customname,
-.callout[data-callout="customname"],
-[customname],
-[data-href="custom name" i],
-.tag[href*="custom-name" i] {
-		/* callout specifics */
-	--callout-color: 200,208,208; /* must be R, G, B (255, 255, 255). */
-	--callout-icon: ''; /* for custom statuses (ie. Poise), leave as ''. otherwise use Lucide icons */
-    --color: rgba(var(--callout-color), 1); /* for Quartz */
-    --border: rgba(var(--callout-color), 0.267); /* for Quartz */
-    --bg: rgba(var(--callout-color), 0.063); /* for Quartz */
-
-		/* actual stuff */
-	/* if none are used, feel free to erase them. these are the default values. */
-	font-weight: bold; /* use normal for no bold */
-	font-style: normal; /* use italic for italics, or oblique */
-	font-variant: normal; /* use small-caps for small caps */
-
-	--custom-color: #ffffff; /* color here */
-
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-    --highlight: color-mix(in srgb, var(--custom-color) 18%, transparent 100%);
-	color: var(--custom-color);
-
-}
-
-/* note: colors *for Quartz* must be set in custom.scss as well! (quartz/styles/custom.scss)
-quick notes about selectors:
-    1. Bursts unfortunately cannot have their own link colors (this is due to a limitation: I can't select the contents of <a> within css, thus it cannot determine the difference between [[Tremor|Seisimic Shock]] and [[Tremor]] since it renders the data-href and href attributes as Tremor).
-	HOWEVER, in lieu of tags now being included in here for QoL, they CAN and SHOULD have colors anyways.
-    2. How to do selectors:
-        ="STRING"
-            > finds EXACTLY the STRING:
-				ex. ="Poise - Hemorrhage", ="Poise - Scorching", does not select "Poise"
-        *= "STRING"
-            > anything CONTAINING the STRING:
-				ex. "Vital States" -> =*"Vital"
-        |= "STRING"
-            > anything BEGINNING or EQUAL to the STRING:
-				ex. "S. Body" -> |="S."
-        ^= "STRING"
-            > anything BEGINNING with the STRING:
-				ex. is more specific: "Soul level" -> ^="Soul"
-        $= "STRING"
-            > anything ENDING with the STRING:
-				ex. "Poise - Scorching" -> $="Scorching"
-*/
-
-
-/* biography utilities */
-.callout[data-callout="signature"], .signature, [signature] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-signature;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
- 
-.signature, [signature], [data-href*="Signature" i], .tag[href*="Signature" i],
-.biography, [biography], [data-href*="Biography" i], .tag[href*="Biography" i],
-.menuu, [menuu], [data-href*="Menu" i], .tag[href*="Menu" i],
-.passives, [passives], [data-href*="Passives" i], .tag[href*="Passives" i],
-.neutral, [neutral], [data-href*="Neutral" i], .tag[href*="Neutral" i],
-[data-href*="Base Power"], [data-href*="Ceiling Power"], [data-href*="Final Power"]
-{
-	--custom-color: #999999;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #99999926;
-}
-
-.callout[data-callout="biography"], .biography, [biography] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-eye;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-
-.callout[data-callout="neutral"], .neutral, [neutral] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-eye;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-
-.callout[data-callout="inv"], .inv, [inv], [data-href*="Inventory" i], .tag[href*="Inventory" i] {
-	--callout-color: 145, 101, 72;
-	--callout-icon: lucide-backpack;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #916548;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #91654826;
-}
-
-.callout[data-callout="menuu"], .menuu, [menuu] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-menu;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-
-.callout[data-callout="cyber"], .cyber, [cyber], [data-href*="Cyberware" i], .tag[href*="Cyberware" i] {
-	--callout-color: 189, 155, 46;
-	--callout-icon: lucide-square-activity;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #bd9b2e;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #bd9b2e26;
-}
-
-.callout[data-callout="hum"], .hum, [hum], [data-href*="Humanity" i], .tag[href*="Humanity" i] {
-	--callout-color: 80, 196, 37;
-	--callout-icon: lucide-person-standing;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #50c425;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #50c42526;
-}
-.callout[data-callout="humlow"], .humlow, [humlow], [data-href*="Low Humanity" i], [data-href*="Humanity Loss" i], .tag[href*="Low Humanity" i], .tag[href*="Humanity Loss" i] {
-	--callout-color: 80, 196, 37;
-	--callout-icon: lucide-person-standing;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #d04339;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #d0433926;
-}
-
-.callout[data-callout="stats"], .stats, [stats], [data-href*="Stats" i], .tag[href*="Stats" i] {
-	--callout-color: 46, 189, 110;
-	--callout-icon: lucide-waypoints;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #2ebd6e;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #2ebd6e26;
-}
-
-.callout[data-callout="soulstats"], .soulstats, [soulstats] {
-	--callout-icon: lucide-flame;
-}
-
-.callout[data-callout="passives"], .passives, [passives] {
-	--callout-color: 153, 153, 153;
-	--callout-icon: lucide-dna;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-}
-
-.callout[data-callout="plus"], .plus, [plus], [data-href*="Plus" i], .tag[href*="Plus" i],
-.callout[data-callout="positive"], .positive, [positive], [data-href*="Positive" i], .tag[href*="Positive" i] {
-	--callout-color: 66, 196, 37;
-	--callout-icon: lucide-plus;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #42c403;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #42c40326;
-}
-
-.callout[data-callout="minus"], .minus, [minus], [data-href*="Minus" i], .tag[href*="Minus" i],
-.callout[data-callout="negative"], .negative, [negative], [data-href*="Negative" i], .tag[href*="Negative" i] {
-	--callout-color: 196, 37, 66;
-	--callout-icon: lucide-minus;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #c42542;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #c4254226;
-}
- 
-	/* stats */
-.callout[data-callout="rolls"], .rolls, [rolls], [data-href*="Rolls" i], .tag[href*="Rolls" i], 
-.callout[data-callout="body"], .body, [body], [data-href*="Body" i], .tag[href*="Body" i],
-.callout[data-callout="reflex"], .reflex, [reflex], [data-href*="Reflexes" i], .tag[href*="Reflexes" i],
-.callout[data-callout="tech"], .tech, [tech], [data-href*="Technical" i], .tag[href*="Technical" i],
-.callout[data-callout="intel"], .intel, [intel], [data-href*="Intelligence" i], .tag[href*="Intelligence" i],
-.callout[data-callout="cool"], .cool, [cool], [data-href*="Cool" i], .tag[href*="Cool" i] {
-	--callout-color: 69, 179, 124;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #45b37c;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #45b37c26;
-}
-
-.callout[data-callout="body"] {
-	--callout-icon: lucide-biceps-flexed;
-}
-.callout[data-callout="reflex"] {
-	--callout-icon: lucide-eye;
-}
-.callout[data-callout="tech"] {
-	--callout-icon: lucide-cpu;
-}
-.callout[data-callout="intel"] {
-	--callout-icon: lucide-brain-cog;
-}
-.callout[data-callout="cool"] {
-	--callout-icon: lucide-scale;
-}
-.callout[data-callout="rolls"] {
-	--callout-icon: lucide-dices;
-}
-.callout[data-callout="combat"], .combat, [combat], [data-href*="Combat" i], .tag[href*="Combat" i] {
-	--callout-color: 230, 96, 96;
-	--callout-icon: lucide-sword;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #e66060;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #e6606026;
-}
-
-.callout[data-callout="sneak"], .sneak, [sneak], [data-href*="Sneak" i], .tag[href*="Sneak" i] {
-	--callout-color: 154, 96, 230;
-	--callout-icon: lucide-eye-closed;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #9a60e6;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #9a60e626;
-}
-
-.callout[data-callout="mental"], .mental, [mental], [data-href*="Mental" i], .tag[href*="Mental" i] {
-	--callout-color: 96, 165, 230;
-	--callout-icon: lucide-brain;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #60a5e6;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #60a5e626;
-}
-
-.callout[data-callout="defense"], .defense, [defense], [data-href*="Defense" i], .tag[href*="Defense" i] {
-	--callout-color: 230, 172, 96;
-	--callout-icon: lucide-shield;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #e6ac60;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #e6ac6026;
-}
-
-.callout[data-callout="soulstats"], .soulstats, [soulstats], .callout[data-callout-metadata*="s."], [data-href*="Soul Stats" i], .tag[href*="Soul Stats" i] {
-	--callout-color: 114, 81, 190;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #7251be;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #7251be26;
-}
-
-/*b485f9*/
-/* status customs */
-.callout[data-callout="actions"], .actions, [actions], [data-href*="Actions" i], .tag[href*="Actions" i],
-/* aliases */
-.callout[data-callout="action"], .action, [action], [data-href*="Action" i], .tag[href*="Action" i],
-.callout[data-callout="stun"], .stun, [stun], [data-href*="stun" i], .tag[href*="stun" i] {
-	--callout-color: 235, 147, 32;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #eb9320;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #eb932026;
-}
-
-.callout[data-callout="poise"], .poise, [poise], [data-href*="Poise" i], .tag[href*="Poise" i] {
-	--callout-color: 200,208,208;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #c8d0d0;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #c8d0d026;
-}
-
-.callout[data-callout="scorch"], .scorch, [scorch], [data-href*="Scorching" i], .tag[href*="Scorching" i] {
-	--callout-color: 255,89,31;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #d53f1b;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #d53f1b26;
-}
-
-.callout[data-callout="burn"], .burn, [burn], [data-href*="Burn" i], .tag[href*="Burn" i] {
-	--callout-color: 255,120,31;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #ec8209;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #ec820926;
-}
-
-.callout[data-callout="igni"], .igni, [igni], [data-href*="Ignition" i], .tag[href*="Ignition" i] {
-	--callout-color: 251, 174, 9;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #fbae09;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #fbae0926;
-}
-
-.callout[data-callout="bleed"], .bleed, [bleed], [data-href*="Bloodloss" i], .tag[href*="Bloodloss" i],
-/* aliases */
-.callout[data-callout="vengeance"], .vengeance, [vengeance], [data-href*="Vengeance" i], .tag[href*="Vengeance" i],
-.callout[data-callout="onimark"], .onimark, [onimark], [data-href*="Mark of the Oni" i],  .tag[href*="Mark of the Oni" i],
-.callout[data-callout="unbreak"], .unbreak, [unbreak], [data-href*="unbreak" i], .tag[href*="unbreak" i] {
-	--callout-color: 223, 21, 7;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #b1120e;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #b1120e26;
-}
-
-
-.callout[data-callout="bf"], .bf, [bf], [data-href*="Bloodflame" i], .tag[href*="Bloodflame" i],
-/* aliases */
-[data-href*="Enflamed" i], .tag[href*="Enflamed" i],
-[data-href*="Seared" i], .tag[href*="Seared" i]
-{
-	--callout-color: 224, 6, 2;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #470000;
-	--custom-color-2: #e00602;
-	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 80%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 80%);
-
-	text-shadow: /* border */
-		1px 0px var(--custom-color-2),
-		0px 1px var(--custom-color-2),
-		-1px 0px var(--custom-color-2),
-		0px -1px var(--custom-color-2),
-		0.5px 0.5px var(--custom-color-2),
-		-0.5px -0.5px var(--custom-color-2),
-		0.5px -0.5px var(--custom-color-2),
-		-0.5px 0.5px var(--custom-color-2),
-		/*shadow */
-		0px 0px 5px var(--custom-color-3),
-		0px 0px 3px var(--custom-color-3),
-		0px 0px 2px var(--custom-color-3),
-		0px 0px 1px var(--custom-color-3);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #e0060226;
-}
-
-.callout[data-callout="hemo"], .hemo, [hemo], [data-href*="Hemorrhage" i], .tag[href*="Hemorrhage" i],
-/* aliases */
-.callout[data-callout="cracked"], .cracked, [cracked], [data-href*="cracked" i], .tag[href*="cracked" i] {
-	--callout-color: 198,16,0;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #760e06;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #760e0626;
-}
-
-.callout[data-callout="vital"], .vital, [vital], [data-href*="Vitality" i], .tag[href*="Vitality" i] {
-	--callout-color: 12,230,141;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #1fdb4e;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #1fdb4e26;
-}
-
-.callout[data-callout="downed"], .downed, [downed], [data-href*="Downed" i], .tag[href*="Downed" i] {
-	--callout-color: 160, 61, 4;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #ea5f1d;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #ea5f1d26;
-}
-
-.callout[data-callout="dd"], .dd, [dd], [data-href*="Death's Door" i], .tag[href*="Death's Door" i] {
-	--callout-color: 107, 9, 2;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #e00000;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #e0000026;
-}
-
-.callout[data-callout="ddrec"], .ddrec, [ddrec], [data-href*="Recovery" i], .tag[href*="Recovery" i] {
-	--callout-color: 191, 187, 187;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
+/* defining stuff */
+* :root {
+	/*
+		this is what's used in custom statuses/mechanics.
+		for the template, please scroll down to line 168
+	*/
+	color: rgb(var(--custom-color));
+	--custom-color: auto;
+	--custom-color-2: auto;
+    --custom-color-3: color-mix(in hsl, rgb(var(--custom-color)) 50%, rgb(var(--custom-color-2)) 50%); /* we don't even use this... oh well */
+
+	--custom-font-weight: normal;
+	--custom-font-style: normal;
+	--custom-font-variant: normal;
+
+	--text-shadow-1: rgba(var(--custom-color), 0);
+	--text-shadow-2: rgba(var(--custom-color-2), 0);
+	--text-shadow-3: rgba(var(--custom-color-2), 0.5);
+
+	--border: rgba(var(--custom-color), 0.267);
+    --bg: rgba(var(--custom-color), 0.063);
+
+	--highlight: rgba(var(--custom-color), 0.15);
+	--link-color: rgb(var(--custom-color));
+	--link-color-hover: color-mix(in hsl, rgb(var(--custom-color)) 50%, rgb(var(--custom-hover-mix-color)) 50%);
+
+	--tag-background: color-mix(in hsl, rgb(var(--custom-color)) 30%, transparent 100%);
+	--tag-background-hover: color-mix(in hsl, rgb(var(--custom-color)) 40%, transparent 70%);
+	--tag-color-hover: color-mix(in hsl, rgb(var(--custom-color)) 50%, rgb(var(--custom-hover-mix-color)) 50%);
 	
-	--custom-color: #bfbbbb;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #bfbbbb26;
 }
-
-.callout[data-callout="down"], .down, [up] {
-	--callout-color:33, 132, 237;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #1e84f1;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #1e84f126;
+* {
+	text-shadow: 
+		1px 0px var(--text-shadow-2), 
+		0px 1px var(--text-shadow-2), 
+		-1px 0px var(--text-shadow-2), 
+		0px -1px var(--text-shadow-2), 
+		0.5px 0.5px var(--text-shadow-2), 
+		-0.5px -0.5px var(--text-shadow-2), 
+		0.5px -0.5px var(--text-shadow-2), 
+		-0.5px 0.5px var(--text-shadow-2), 
+		0px 0px 5px var(--text-shadow-3), 
+		0px 0px 3px var(--text-shadow-3), 
+		0px 0px 2px var(--text-shadow-3), 
+		0px 0px 1px var(--text-shadow-3);
 }
-
-.callout[data-callout="up"], .up, [up] {
-	--callout-color: 224, 26, 30;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #e11414;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #e1141426;
+*:not(ul, li) {
+	--h1-color: rgb(var(--custom-color));
+	--h2-color: rgb(var(--custom-color));
+	--h3-color: rgb(var(--custom-color));
+	--h4-color: rgb(var(--custom-color));
+	--h5-color: rgb(var(--custom-color));
+	--h6-color: rgb(var(--custom-color));
+	caret-color: hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 20%), 0.75);
+	}
+span {
+	font-weight: var(--custom-font-weight);
+	--font-weight: var(--custom-font-weight);
+	font-style: var(--custom-font-style);
+	font-variant: var(--custom-font-variant);
 }
-
-.callout[data-callout="guardbreak"], .guardbreak, .guardbroken, [guardbreak], [guardbroken], [data-href*="Guardbreak" i], [data-href*="Guardbroken" i], .tag[href*="Guardbreak" i], .tag[href*="Guardbroken" i] {
-	--callout-color: 116, 6, 2;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #641717;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #64171726;
+strong {
+	font-weight: bold;
 }
-
-.callout[data-callout="tremor"], .tremor, [tremor], [data-href*="Tremor" i], .tag[href*="Tremor" i] {
-	--callout-color: 236, 182, 121;
-	--callout-icon: '';
-	--color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #eebc77;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #eebc7726;
+.markdown-rendered a.internal-link {
+	color: rgb(var(--custom-color));
+	--font-weight: var(--custom-font-weight);
+	--link-weight: var(--custom-font-weight);
 }
-
-.callout[data-callout="shock"], .shock, [shock], [data-href*="Seisimic Shock" i], .tag[href*="Seisimic-Shock" i] {
-	--callout-color: 236, 182, 121;
-	--callout-icon: '';
-
-	--custom-color: #f2a854;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #f2a85426;
-}
-
-.callout[data-callout="hemoshock"], .hemoshock, [hemoshock], [data-href*="Seisimic Hemorrhage" i], .tag[href*="Seisimic-Hemorrhage" i] {
-	--callout-color: 236, 182, 121;
-	--callout-icon: '';
-
-	--custom-color: #9f2d1e;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #9f2d1e26;
-}
-
-.callout[data-callout="tox"], .tox, [tox], [data-href*="Toxin" i], .tag[href*="Toxin" i] {
-	--callout-color: 62, 212, 60;
-	--callout-icon: '';
-	--color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #3ed43c;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #3ed43c26;
-}
-
-.callout[data-callout="stealth"], .stealth, [stealth], [data-href*="Stealth" i], .tag[href*="Stealth" i],
-.callout[data-callout="cloaked"], .cloaked, [cloaked], [data-href*="Cloaked" i], .tag[href*="Cloaked" i]   {
-	--callout-color: 117, 73, 204;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #7549cc;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #7549cc26;
-}
-
-.callout[data-callout="void"], .void, [void], [data-href*="void" i], .tag[href*="void" i] {
-	--callout-color: 62, 30, 204;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #0c0c16; /* works as the 'bg' color */
-	--custom-color-2: #bec5cf;
-	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
-	--tag-background-hover: black;
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
-
-	/* special to Void */
-	text-shadow: /* border */
-		1px 0px var(--custom-color-2),
-		0px 1px var(--custom-color-2),
-		-1px 0px var(--custom-color-2),
-		0px -1px var(--custom-color-2),
-		0.5px 0.5px var(--custom-color-2),
-		-0.5px -0.5px var(--custom-color-2),
-		0.5px -0.5px var(--custom-color-2),
-		-0.5px 0.5px var(--custom-color-2),
-		/*shadow */
-		0px 0px 5px var(--custom-color-3),
-		0px 0px 3px var(--custom-color-3),
-		0px 0px 2px var(--custom-color-3),
-		0px 0px 1px var(--custom-color-3);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #ada3db26;
-}
-
-.callout[data-callout="deathblight"], .deathblight, [deathblight], [data-href*="deathblight" i], .tag[href*="deathblight" i] {
-	--callout-color: 13, 13, 14;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #6c6b79; /* works as the 'bg' color */
-	--custom-color-2: #0d0d0e;
-	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
-	--tag-background-hover: black;
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
-
-	/* special to Deathblight */
-	text-shadow: /* border */
-		1px 0px var(--custom-color-2),
-		0px 1px var(--custom-color-2),
-		-1px 0px var(--custom-color-2),
-		0px -1px var(--custom-color-2),
-		0.5px 0.5px var(--custom-color-2),
-		-0.5px -0.5px var(--custom-color-2),
-		0.5px -0.5px var(--custom-color-2),
-		-0.5px 0.5px var(--custom-color-2),
-		/*shadow */
-		0px 0px 5px var(--custom-color-2),
-		0px 0px 3px var(--custom-color-2),
-		0px 0px 2px var(--custom-color-2),
-		0px 0px 1px var(--custom-color-2);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #6c6b7926;
-}
-
-.callout[data-callout="venom"], .venom, [venom], [data-href*="Venom" i], .tag[href*="Venom" i] {
-	--callout-color: 62, 30, 204;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #582dcd;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #582dcd26;
-}
-
-.callout[data-callout="poiseven"], .poiseven, [poiseven], [data-href*="Envenoming" i], .tag[href*="Envenoming" i] {
-	--callout-color: 68, 4, 151;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #5c12a5;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #5c12a526;
-}
-
-.callout[data-callout="poiseburn"], .poiseburn, [poiseburn], [data-href*="Poise" i][data-href*="Scorching" i], .tag[href*="Poise-Scorching" i] {
-	--callout-color: 68, 4, 151;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #ea5d23;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #ea5d2326;
-}
-
-.callout[data-callout="poisebleed"], .poisebleed, [poisebleed], [data-href*="Poise" i][data-href*="Hemorrhage" i], .tag[href*="Poise-Hemorrhage" i],
-/* aliases */
-[data-href*="Mark of the Oni" i][data-href*="Mark of the Oni" i], .tag[href*="Mark" i][href*="of" i][href*="the" i][href*="Oni" i]{
-	--callout-color: 68, 4, 151;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #d00b0b;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #d00b0b26;
-}
-
-.callout[data-callout="tremorhemo"], .tremorhemo, [tremorhemo], [data-href*="Tremor" i][data-href*="Hemorrhage" i], .tag[href*="Tremor-Hemorrhage" i] {
-	--callout-color: 210, 74, 40;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #d24a28;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #d24a2826;
-}
-
-.callout[data-callout="crit"], .crit, [crit], [data-href*="Critical" i], .tag[href*="Critical" i] {
-	--callout-color: 248, 219, 155;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #f8db9b;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #f8db9b26;
-}
-
-.callout[data-callout="stance"], .stance, [stance], [data-href*="Stance" i], .tag[href*="Stance" i] {
-	--callout-color: 213, 162, 32;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-	--highlight: rgba(var(--callout-color), 0.15);
-
-	--custom-color: #d5a220;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #d5a22026;
-}
-
-.callout[data-callout="stancebreak"], .stancebreak, [stancebreak], [data-href*="Stancebreak" i], [data-href*="Stancebroken" i], .tag[href*="Stancebreak" i], .tag[href*="Stancebroken" i] {
-	--callout-color: 245, 199, 36;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #f5c724;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	--highlight: #f5c72426;
-	font-weight:bold;
-}
-
-.callout[data-callout="sheath"], .sheath, [sheath], [data-href*="Sheathed" i], .tag[href*="Sheathed" i] {
-	--callout-color: 199, 210, 224;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #c7d2e0;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #c7d2e026;
-}
-
-.callout[data-callout="unsheath"], .unsheath, [unsheath], [data-href*="Unsheathed" i], .tag[href*="Unsheathed" i] {
-	--callout-color: 141, 178, 226;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #8db2e2;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #8db2e226;
-}
-
-.callout[data-callout="awakened"], .awakened, [awakened], [data-href*="Awakened" i], .tag[href*="Awakened" i] {
-	--callout-color: 197, 9, 15;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #af090f;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #af090f26;
-}
-
-.callout[data-callout="soul"], .soul, [soul], [data-href*="Soul" i], .tag[href*="Soul" i] {
-	--callout-color: 180, 133, 249;
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #b485f9;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #b485f926;
+.callout {
+	--callout-color: var(--custom-color);
 	text-shadow: none;
 }
 
-.callout[data-callout="shatt"], .shatt, [shatt], [data-href*="Shattered" i], .tag[href*="Shattered" i],
-/* aliases */
-.callout[data-callout="shattered"], .shattered, [shattered], [data-href*="shattered" i], .tag[href*="shattered" i],
-.callout[data-callout="frag"], .frag, [frag], [data-href*="fragility" i], .tag[href*="fragility" i]  {
-	--callout-color: 179, 11, 18;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #b30b12;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #b30b1226;
+.callout[data-callout-metadata*="no-ts"] {
+	text-shadow: none;
 }
 
-.callout[data-callout="frac1"], .frac1, [frac1], [data-href="Soul Fracture I" i], .tag[href="Soul Fracture I" i] {
-	--callout-color: 156, 85, 163;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #9c55a3;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #9c55a326;
+.callout[data-callout-metadata*="no-mix"] p:not([class]), .callout[data-callout-metadata*="no-mix"] ul:not([class]), .callout[data-callout-metadata*="no-mix"] li:not([class]) {
+	text-shadow: none;
+}
+.callout[data-callout-metadata*="no-mix"] strong:not([class]), .callout[data-callout-metadata*="no-mix"] em:not([class]), .callout[data-callout-metadata*="no-mix"] b:not([class]), .callout[data-callout-metadata*="no-mix"] i:not([class]), .callout[data-callout-metadata*="no-mix"] code:not([class]) {
+	color: var(--mixed-color);
+	--mixed-color: color-mix(in hsl, rgb(var(--custom-color)) 100%, white 40%);
+	text-shadow: none;
+}
+.callout p, .callout ul, .callout li {
+	color: var(--mixed-color);
+	--mixed-color: color-mix(in hsl, rgb(var(--custom-color)) 50%, white 70%);
+	text-shadow: none;
+}
+.callout strong:not([class]), .callout em:not([class]), .callout b:not([class]), .callout i:not([class]), .callout code:not([class]) {
+	color: var(--mixed-color);
+	--mixed-color: color-mix(in hsl, rgb(var(--custom-color)) 100%, white 40%);
+	text-shadow: none;
 }
 
-.callout[data-callout="frac2"], .frac2, [frac2], [data-href="Soul Fracture II" i], .tag[href="Soul Fracture II" i] {
-	--callout-color: 147, 58, 118;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #933a76;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #933a7626;
+.callout strong.no-mix, .callout em.no-mix, .callout b.no-mix, .callout i.no-mix, .callout code.no-mix {
+	color: var(--mixed-color);
+	--mixed-color: color-mix(in hsl, rgb(var(--custom-color)) 50%, white 70%);
+	text-shadow: none;
 }
 
-.callout[data-callout="frac3"], .frac3, [frac3], [data-href="Soul Fracture III" i], .tag[href="Soul Fracture III" i] {
-	--callout-color: 174, 35, 84;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #ae2354;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #ae235426;
+.callout strong.pure, .callout em.pure, .callout b.pure, .callout i.pure, .callout code.pure {
+	color: rgb(var(--custom-color));
 }
 
-.callout[data-callout="frac4"], .frac4, [frac4], [data-href="Soul Fracture IV" i], .tag[href="Soul Fracture IV" i] {
-	--callout-color: 175, 22, 50;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #af1632;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #af163226;
+.callout[data-callout-metadata*="none"] > .callout-title {
+	display: none !important;
 }
 
-.callout[data-callout="nimius"], .nimius, [nimius], [data-href*="Nimius" i], .tag[href*="Nimius" i],
-/* aliases */
-.callout[data-callout="infernal"], .infernal, [infernal], [data-href*="infernal" i], .tag[href*="infernal" i] {
-	--callout-color: 167, 7, 28;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #c60c31;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #c60c3126;
+.callout[data-callout-metadata*="status"] .callout-content > p:nth-child(1) {
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+.callout[data-callout-metadata*="status"] .callout-content > p:nth-child(1) span:not([class]) {
+	font-weight: normal;
+	text-shadow: none;
 }
 
-.callout[data-callout="aether"], .aether, [aether], [data-href*="Aether" i], .tag[href*="Aether" i],
-/* aliases */
-.callout[data-callout="indomitable"], .indomitable, [indomitable], [data-href*="indomitable" i], .tag[href*="indomitable" i] {
-	--callout-color: 93, 161, 217;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #5a9cd2;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #5a9cd226;
+.callout[data-callout-metadata*="no-mix"] {
+	background-color: rgba(var(--callout-color), 0.35);
+	text-shadow: none;
 }
 
-.callout[data-callout="aurora"], .aurora, [aurora], [data-href*="Aurora" i], .tag[href*="Aurora" i],
-/* aliases */
-.callout[data-callout="unyielding"], .unyielding, [unyielding], [data-href*="unyielding" i], .tag[href*="unyielding" i] {
-	--callout-color: 241, 200, 146;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #e79e5a;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #e79e5a26;
+.callout[data-callout-metadata*="invis"] {
+	background-color: transparent;
+	border-inline-start: none;
+}
+.callout[data-callout-metadata*="invis"] > .callout-title {
+	display: none;
 }
 
-.callout[data-callout="noctis"], .noctis, [noctis], [data-href*="Noctis" i], .tag[href*="Noctis" i] {
-	--callout-color: 152, 54, 197;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #ba7ad1;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #ba7ad126;
+.callout[data-callout-metadata*="marginup"] {
+	margin-top: 15px !important;
+}
+.callout[data-callout-metadata*="margindown"] {
+	margin-bottom: 10px !important;
 }
 
-.callout[data-callout="radiance"], .radiance, [radiance], [data-href*="Radiance" i], .tag[href*="Radiance" i] {
-	--callout-color: 226, 173, 56;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #e2ad38;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #e2ad3826;
+.callout[data-callout-metadata*="halfpad"] {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	margin-right: 12px;
 }
 
-.callout[data-callout="blinded"], .blinded, [blinded], [data-href*="blinded" i], .tag[href*="blinded" i] {
-	--callout-color: 255, 250, 130;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #fffa82;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #fffa8226;
+.callout[data-callout="toc"] {
+	--callout-color: 90, 90, 90;
+	--callout-icon: none;
 }
 
-.callout[data-callout="daybroken"], .daybroken, [daybroken], [data-href*="daybroken" i], .tag[href*="daybroken" i],
-/* aliases */
-.callout[data-callout="daybreak"], .daybreak, [daybreak], [data-href*="daybreak" i], .tag[href*="daybreak" i] {
-
-	--callout-color: 192, 138, 22;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #181102;
-	--custom-color-2: #ffe4a9;
-	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
-	--tag-background-hover: black;
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
-
-	/* special to Void */
-	text-shadow: /* border */
-		1px 0px var(--custom-color-2),
-		0px 1px var(--custom-color-2),
-		-1px 0px var(--custom-color-2),
-		0px -1px var(--custom-color-2),
-		0.5px 0.5px var(--custom-color-2),
-		-0.5px -0.5px var(--custom-color-2),
-		0.5px -0.5px var(--custom-color-2),
-		-0.5px 0.5px var(--custom-color-2),
-		/*shadow */
-		0px 0px 5px var(--custom-color-3),
-		0px 0px 3px var(--custom-color-3),
-		0px 0px 2px var(--custom-color-3),
-		0px 0px 1px var(--custom-color-3);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #c08a1626;
+.callout[data-callout="toc"] > .callout-title-inner {
+	color: rgb(160, 160, 160);
 }
 
-.callout[data-callout="despair"], .despair, [despair], [data-href*="despair" i], .tag[href*="despair" i] {
-
-	--callout-color: 14, 13, 26;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #0e0d1a;
-	--custom-color-2: #313e8f;
-	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
-	--tag-background-hover: black;
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
-
-	/* special to Void */
-	text-shadow: /* border */
-		1px 0px var(--custom-color-2),
-		0px 1px var(--custom-color-2),
-		-1px 0px var(--custom-color-2),
-		0px -1px var(--custom-color-2),
-		0.5px 0.5px var(--custom-color-2),
-		-0.5px -0.5px var(--custom-color-2),
-		0.5px -0.5px var(--custom-color-2),
-		-0.5px 0.5px var(--custom-color-2),
-		/*shadow */
-		0px 0px 5px var(--custom-color-3),
-		0px 0px 3px var(--custom-color-3),
-		0px 0px 2px var(--custom-color-3),
-		0px 0px 1px var(--custom-color-3);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #313e8f26;
+.callout[data-callout="toc"] .internal-link {
+	--link-color: rgb(114, 114, 114);
+	--link-color-hover: rgb(160, 160, 160);
+	font-weight: bold;
 }
 
-.callout[data-callout="dark"], .dark, [dark], [data-href*="darkness" i], .tag[href*="dark" i] {
-	--callout-color: 123, 43, 180;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
-
-	--custom-color: #7b2bb4;
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, white 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 30%, transparent 100%);
-	--tag-background-hover: color-mix(in srgb, var(--custom-color) 40%, transparent 70%);
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, white 50%);
-
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #7b2bb426;
+span.no-ts {
+	text-shadow: none;
 }
 
-.callout[data-callout="adark"], .adark, [adark], [data-href*="Absolute Darkness" i], .tag[href*="adark" i] {
 
-	--callout-color: 0, 1, 5;
-	--callout-icon: '';
-    --color: rgba(var(--callout-color), 1);
-    --border: rgba(var(--callout-color), 0.267);
-    --bg: rgba(var(--callout-color), 0.063);
+	/*
+		CUSTOM STATUSES, MECHANICS & ODDITIES 
+	*/
 
-	--custom-color: #000105;
-	--custom-color-2: #35077a;
-	--custom-color-3: color-mix(in srgb, var(--custom-color) 50%, var(--custom-color-2) 50%);
-	--link-color: var(--custom-color);
-	--link-color-hover: color-mix(in srgb, var(--link-color) 50%, black 50%);
-	--tag-background: color-mix(in srgb, var(--custom-color) 20%, transparent 50%);
-	--tag-background-hover: black;
-	--tag-color-hover: color-mix(in srgb, var(--custom-color) 50%, black 50%);
+/* template */
+.custom, .aliases,
+[data-callout="custom"], [data-callout="aliases"],
+[data-href*="custom name" i], [data-href*="aliases" i], /* both data-href and href need the full name of the status, such as "death's door". 'i' stands for insensitive case. data-href can have spaces. */
+.tag[href*="custom-name" i], .tag[href*="aliases" i] /* href specifically needs hyphenated full names, like "death's-door". */
+{
+	--custom-color: 0, 0, 0; /* set your color here, in RGB */
+	--custom-color-2: 0, 0, 0; /* for text border & shadow in RGB, erase if not needed to avoid bloat. */
+	--custom-hover-mix-color: 255, 255, 255; /* determines how hover colors are mixed; white recommended (255, 255, 255). for darker palettes like Void, that use a dark inner color and bright outer color, i recommend black (0, 0, 0). */
 
-	/* special to Void */
-	text-shadow: /* border */
-		1px 0px var(--custom-color-2),
-		0px 1px var(--custom-color-2),
-		-1px 0px var(--custom-color-2),
-		0px -1px var(--custom-color-2),
-		0.5px 0.5px var(--custom-color-2),
-		-0.5px -0.5px var(--custom-color-2),
-		0.5px -0.5px var(--custom-color-2),
-		-0.5px 0.5px var(--custom-color-2),
-		/*shadow */
-		0px 0px 5px var(--custom-color-3),
-		0px 0px 3px var(--custom-color-3),
-		0px 0px 2px var(--custom-color-3),
-		0px 0px 1px var(--custom-color-3);
+	--custom-font-weight: bold; /* default is normal (if this line is erased it will not be bold). */
+	--custom-font-style: normal; /* accepts italic or oblique for italicized text, default is normal. erase if not needed to avoid bloat. */
+	--custom-font-variant: normal; /* accepts small-caps, default is normal. erase if not needed to avoid bloat. */
 
-	color: var(--custom-color);
-	font-weight:bold;
-	--highlight: #35077a26;
+	--text-shadow-1: rgba(var(--custom-color), 0); /* set to 1 if you want text-shadow, erase if not needed to avoid bloat. */
+	--text-shadow-2: rgba(var(--custom-color-2), 0); /* set to 1 if you want text-shadow, erase if not needed to avoid bloat. */
+	--text-shadow-3: rgba(var(--custom-color-2), 0); /* set to 0.5 if you want text-shadow, erase if not needed to avoid bloat. */
+	text-shadow: none; /* use only if no text-shadow is being used; prevents other things from applying text-shadow to your things. erase if not needed to avoid bloat. /*
+	color: rgb(var(--custom-color)); /* necessary to make stuff work */
+
+	--callout-icon: ''; /* use lucide icons. erase if not needed to avoid bloat. */
+}
+/*
+
+--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+	--custom-font-style: normal; 
+	--custom-font-variant: normal; 
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+*/
+
+
+	/*
+		non status/mechanic icons,
+		for anything with shared colors
+		(to avoid bloat)
+	*/
+[data-callout="signature"] {
+	--callout-icon: lucide-signature;
+}
+[data-callout="biography"], [data-callout="neutral"], [data-callout="reflex"] {
+	--callout-icon: lucide-eye;
+}
+[data-callout="humlow"], [data-callout="hum"] {
+	--callout-icon: lucide-person-standing;
+}
+[data-callout="body"] {
+	--callout-icon: lucide-biceps-flexed;
+}
+[data-callout="tech"] {
+	--callout-icon: lucide-cpu;
+}
+[data-callout="intel"] {
+	--callout-icon: lucide-brain-cog;
+}
+[data-callout="cool"] {
+	--callout-icon: lucide-scale;
+}
+[data-callout="rolls"] {
+	--callout-icon: lucide-dices;
+}
+[data-callout="soulstats"] {
+	--callout-icon: lucide-flame;
+}
+[data-callout="passives"] {
+	--callout-icon: lucide-dna;
 }
 
-/* do NOT touch */
+	/*
+		anything grey (RGB 153, 153, 153 or HEX 999999)
+	*/
+.signature, .biography, .menuu, .passives, .neutral,
+[data-callout="signature"], [data-callout="biography"], [data-callout="menuu"], [data-callout="passives"], [data-callout="neutral"], 
+[data-href*="signature" i], [data-href*="biography" i], [data-href*="menuu" i], [data-href*="passives" i], [data-href*="neutral" i],
+.tag[href*="signature" i], .tag[href*="biography" i], .tag[href*="menuu" i], .tag[href*="passives" i], .tag[href*="neutral" i],
+[data-href*="Floor Power" i], [data-href*="Ceiling Power" i], [data-href*="Final Power" i]
+{
+	--custom-color: 153, 153, 153;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
 
-.callout p:not(.no-mix, [data-callout-metadata*="no-mix"], ul, li) {
-		color: var(--mixed-color);
-		--mixed-color: color-mix(in srgb, var(--custom-color) 30%, white 70%);
-		font-weight:normal;
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
 }
 
-.callout strong:not(.no-mix, [data-callout-metadata*="no-mix"]), .callout em:not(.no-mix, [data-callout-metadata*="no-mix"]), .callout b:not(.no-mix, [data-callout-metadata="no-mix"]), .callout i:not(.no-mix, [data-callout-metadata="no-mix"]) {
-		color: var(--mixed-color);
-		  --mixed-color: color-mix(in srgb, var(--custom-color) 80%, white 20%);
+/*
+.inv,
+[data-callout="inv"],
+[data-href*="Inventory" i],
+.tag[href*="Inventory" i]
+{
+	--custom-color: 145, 101, 72;
+	--custom-color-2: 0, 0, 0, 0; 
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+	--custom-font-style: normal;
+
+	--custom-font-variant: normal;
+
+	--callout-icon: lucide-backpack;
+}
+*/
+
+.inv,
+[data-callout="inv"],
+[data-href*="Inventory" i],
+.tag[href*="Inventory" i]
+{
+	--custom-color: 145, 101, 72;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-backpack;
+}
+
+.cyber,
+[data-callout="cyber"],
+[data-href*="Cyberware" i],
+.tag[href*="Cyberware" i]
+{
+	--custom-color: 189, 155, 46;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-square-activity;
+}
+
+.hum,
+.callout[data-callout="hum"],
+[data-href*="Humanity" i],
+.tag[href*="Humanity" i]
+{
+	--custom-color: 80, 196, 37; 
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.humlow,
+[data-callout="humlow"],
+[data-href*="Low Humanity" i], [data-href*="Humanity Loss" i],
+.tag[href*="Low Humanity" i], .tag[href*="Humanity Loss" i]
+{
+	--custom-color: 208, 67, 57;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.stats,
+[data-callout="stats"],
+[data-href*="stats" i],
+.tag[href*="stats" i]
+{
+	--custom-color: 46, 189, 110;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-waypoints;
+}
+
+.plus, .positive,
+[data-callout="plus"], [data-callout="positive"],
+[data-href*="plus" i], [data-href*="positive" i],
+.tag[href*="plus" i], .tag[href*="positive" i]
+{
+	--custom-color: 66, 196, 37;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-plus;
+}
+
+.minus, .negative,
+[data-callout="minus"], [data-callout="negative"],
+[data-href*="minus" i], [data-href*="negative" i],
+.tag[href*="minus" i], .tag[href*="negative" i]
+{
+	--custom-color: 196, 37, 66;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-minus;
+}
+.rolls, .body, .reflex, .tech, .int, .intel, .cool,
+[data-callout="rolls"], [data-callout="body"], [data-callout="reflex"], [data-callout="tech"], [data-callout="int"], [data-callout="intel"], [data-callout="cool"],
+[data-href*="rolls" i], [data-href*="body" i], [data-href*="reflexes" i], [data-href*="technicality" i], [data-href*="intelligence" i], [data-href*="cool" i],
+.tag[href*="rolls" i], .tag[href*="body" i], .tag[href*="reflexes" i], .tag[href*="technicality" i], .tag[href*="intelligence" i], .tag[href*="cool" i]
+{
+	--custom-color: 69, 179, 124;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+ 
+.combat,
+[data-callout="combat"],
+[data-href*="combat" i],
+.tag[href*="combat" i]
+{
+	--custom-color: 230, 96, 96;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-sword;
+}
+
+.sneak,
+[data-callout="sneak"],
+[data-href*="sneak" i],
+.tag[href*="sneak" i]
+{
+	--custom-color: 154, 96, 230;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-eye-closed;
+}
+
+.mental,
+[data-callout="mental"],
+[data-href*="mental" i],
+.tag[href*="mental" i]
+{
+	--custom-color: 96, 165, 230;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-brain;
+}
+
+.defense,
+[data-callout="defense"],
+[data-href*="defense" i],
+.tag[href*="defense" i]
+{
+	--custom-color: 230, 172, 96;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+
+	--callout-icon: lucide-shield;
+}
+
+.soulstats,
+[data-callout="soulstats"], [data-callout-metadata*="s."],
+[data-href*="soul stats" i],
+.tag[href*="soul stats" i]
+{
+	--custom-color: 114, 81, 190;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));;
+}
+
+	/*
+		status customs
+	*/
+.actions, .action, .stun,
+[data-callout="actions"], [data-callout="action"], [data-callout="stun"],
+[data-href*="actions" i], [data-href*="action" i], [data-href*="stun" i],
+.tag[href*="actions" i], .tag[href*="action" i], .tag[href*="stun" i]
+{
+	--custom-color: 235, 147, 32;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.poise,
+[data-callout="poise"],
+[data-href*="poise" i],
+.tag[href*="poise" i]
+{
+	--custom-color: 200,208,208;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.scorch,
+[data-callout="scorch"],
+[data-href*="scorching" i],
+.tag[href*="scorching" i]
+{
+	--custom-color: 200,208,208;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.burn,
+[data-callout="burn"],
+[data-href$="burn" i],
+.tag[href$="burn" i]
+{
+	--custom-color: 255,120,31;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.igni,
+[data-callout="igni"],
+[data-href*="Ignition" i],
+.tag[href*="Ignition" i]
+{
+	--custom-color: 251, 174, 9;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.bleed, .vengeance, .onimark, .unbreak,
+[data-callout="bleed"], [data-callout="vengeance"], [data-callout="onimark"], [data-callout="unbreak"], 
+[data-href*="Bloodloss" i], [data-href*="vengeance" i], [data-href*="Mark of the Oni" i], [data-href*="Unbreakable" i], [data-href*="Unbreakables" i], [data-href*="Unbreakable Skill" i], [data-href*="Unbreakable Skills" i], 
+.tag[href*="Bloodloss" i], .tag[href*="vengeance" i], .tag[href*="Mark of the Oni" i], .tag[href*="Unbreakable" i], .tag[href*="Unbreakables" i], .tag[href*="Unbreakable Skill" i], .tag[href*="Unbreakable Skills" i]
+{
+	--custom-color: 223, 21, 7;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.hemo, .cracked,
+[data-callout="hemo"], [data-callout="cracked"],
+[data-href*="Hemorrhage" i], [data-href*="cracked" i], 
+.tag[href*="Hemorrhage" i], .tag[href*="cracked" i]
+{
+	--custom-color: 198,16,0;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.bf, .bloodflame,
+[data-callout="bf"], [data-callout="bloodflame"],
+[data-href*="bloodflame" i], [data-href*="Seared" i], [data-href*="Enflamed" i],
+.tag[href*="bloodflame" i], .tag[href*="Seared" i], .tag[href*="Enflamed" i]
+{
+	--custom-color: 71, 0, 0; 
+	--custom-color-2: 224, 6, 2;
+	--custom-hover-mix-color: 0, 0, 0; 
+
+	--custom-font-weight: bold;
+
+
+	/* set 0 to 1 for shadow & border */
+	--text-shadow-1: rgba(var(--custom-color), 1);
+	--text-shadow-2: rgba(var(--custom-color-2), 1);
+	--text-shadow-3: rgba(var(--custom-color-2), 0.5);
+	color: rgb(var(--custom-color));
+}
+
+.vital,
+[data-callout="vital"],
+[data-href*="vitality" i],
+.tag[href*="vitality" i]
+{
+	--custom-color: 12,230,141;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.downed,
+[data-callout="downed"],
+[data-href*="downed" i],
+.tag[href*="downed"]
+ {
+	--custom-color: 234, 95, 29;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.dd,
+[data-callout="dd"],
+[data-href*="Death's Door" i],
+.tag[href*="Death's door" i]
+{
+	--custom-color: 224, 0, 0;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.ddrec,
+[data-callout="ddrec"],
+[data-href*="Death's Door Recovery" i],
+.tag[href*="Death's door recovery" i]
+{
+	--custom-color: 191, 187, 187;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.cog,
+[data-callout="cog"],
+[data-href*="cognitive" i],
+.tag[href*="cognitive" i]
+{
+	--custom-color:33, 132, 237;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.phys,
+[data-callout="phys"],
+[data-href*="Physical" i]
+.tag[href*="Physical" i]
+{
+	--custom-color: 224, 26, 30;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.guardbreak, .guardbroken,
+[data-callout="guardbreak"], [data-callout="guardbroken"],
+[data-href*="Guardbreak" i], [data-href*="Guardbroken" i], 
+.tag[href*="Guardbreak" i], .tag[href*="Guardbroken" i]
+{
+	--custom-color: 116, 6, 2;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.tremor,
+[data-callout="tremor"],
+[data-href*="Tremor" i],
+.tag[href*="Tremor" i]
+{
+	--custom-color: 236, 182, 121;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.shock,
+[data-callout="shock"],
+[data-href*="Seisimic Shock" i], 
+.tag[href*="Seisimic-Shock" i]
+{
+	--custom-color: 242, 168, 84;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.hemoshock,
+[data-callout="hemoshock"], 
+[data-href*="Seisimic Hemorrhage" i], 
+.tag[href*="Seisimic-Hemorrhage" i]
+{
+	--custom-color: 159, 45, 30;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.tox,
+[data-callout="tox"], 
+[data-href*="Toxin" i],
+.tag[href*="Toxin" i]
+{
+	--custom-color: 62, 212, 60;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.stealth, .cloaked,
+[data-callout="stealth"], [data-callout="cloaked"],
+[data-href*="Stealth" i], [data-href*="Cloaked" i],
+.tag[href*="Stealth" i], .tag[href*="Cloaked" i] 
+{
+	--custom-color: 117, 73, 204;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.void,
+[data-callout="void"],
+[data-href*="void" i],
+.tag[href*="void" i]
+{
+	--custom-color: 12, 12, 22;
+	--custom-color-2: 62, 30, 204;
+    --custom-hover-mix-color: 0, 0, 0; 
+
+	--custom-font-weight: bold;
+
+	/* set 0 to 1 for shadow & border */
+	--text-shadow-1: rgba(var(--custom-color), 1);
+	--text-shadow-2: rgba(var(--custom-color-2), 1);
+	--text-shadow-3: rgba(var(--custom-color-2), 0.5);
+	color: rgb(var(--custom-color));
+}
+
+.deathblight, .db,
+[data-callout="deathblight"], [data-callout="db"],
+[data-href*="deathblight" i], 
+.tag[href*="deathblight" i] {
+	--custom-color: 13, 13, 14;
+	--custom-color-2: 108, 107, 121;
+	--custom-hover-mix-color: 0, 0, 0; 
+
+	--custom-font-weight: bold;
+
+	/* set 0 to 1 for shadow & border */
+	--text-shadow-1: rgba(var(--custom-color), 1);
+	--text-shadow-2: rgba(var(--custom-color-2), 1);
+	--text-shadow-3: rgba(var(--custom-color-2), 0.5);
+	color: rgb(var(--custom-color));
+}
+
+.venom,
+[data-callout="venom"],
+[data-href*="Venom" i], 
+.tag[href*="Venom" i]
+{
+	--custom-color: 62, 30, 204;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.poiseven,
+[data-callout="poiseven"],
+[data-href*="Envenoming" i], 
+.tag[href*="Envenoming" i]
+{
+	--custom-color: 68, 4, 151;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.poiseburn, 
+[data-callout="poiseburn"],
+[data-href*="Poise" i][data-href*="Scorching" i],
+.tag[href*="Poise-Scorching" i]
+{
+	--custom-color: 234, 93, 35;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.poisebleed, .poisehemo,
+[data-callout="poisebleed"], [data-callout="poisehemo"],
+[data-href*="Poise" i][data-href*="Hemorrhage" i],
+.tag[href*="Poise-Hemorrhage" i]
+{
+	--custom-color: 68, 4, 151;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.tremorhemo, 
+[data-callout="tremorhemo"],
+[data-href*="Tremor" i][data-href*="Hemorrhage" i],
+.tag[href*="Tremor-Hemorrhage" i]
+{
+	--custom-color: 210, 74, 40;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.crit, 
+[data-callout="crit"],
+[data-href*="Critical" i],
+.tag[href*="Critical" i]
+{
+	--custom-color: 248, 219, 155;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.stance,
+[data-callout="stance"],
+[data-href*="Stance" i],
+.tag[href*="Stance" i]
+{
+	--custom-color: 213, 162, 32;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.stancebreak, 
+[data-callout="stancebreak"], 
+[data-href*="Stancebreak" i], [data-href*="Stancebroken" i],
+.tag[href*="Stancebreak" i], .tag[href*="Stancebroken" i]
+{
+	--custom-color: 245, 199, 36;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.sheath, 
+[data-callout="sheath"],
+[data-href*="Sheathed" i],
+.tag[href*="Sheathed" i]
+{
+	--custom-color: 199, 210, 224;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.unsheath, 
+[data-callout="unsheath"],
+[data-href*="Unsheathed" i],
+.tag[href*="Unsheathed" i]
+{
+	--custom-color: 141, 178, 226;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.awakened, 
+[data-callout="awakened"], 
+[data-href*="Awakened" i], 
+.tag[href*="Awakened" i]
+{
+	--custom-color: 197, 9, 15;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.soul,
+[data-callout="soul"], 
+[data-href*="Soul" i],
+.tag[href*="Soul" i]
+{
+	--custom-color: 180, 133, 249;
+    --custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.shatt, .shattered, .frag,
+[data-callout="shatt"], [data-callout="shattered"], [data-callout="frag"],
+[data-href*="Shattered" i], [data-href*="fragility" i],
+.tag[href*="Shattered" i], .tag[href*="fragility" i]
+{
+	--custom-color: 179, 11, 18;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+
+.frac1,
+[data-callout="frac1"],
+[data-href*="Soul Fracture I" i],
+.tag[href="Soul Fracture I" i]
+{
+	--custom-color: 156, 85, 163;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.frac2, 
+[data-callout="frac2"],
+[data-href*="Soul Fracture II" i],
+.tag[href="Soul Fracture II" i]
+{
+	--custom-color: 147, 58, 118;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.frac3,
+[data-callout="frac3"], 
+[data-href*="Soul Fracture III" i],
+.tag[href="Soul Fracture III" i]
+{
+	--custom-color: 174, 35, 84;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.frac4,
+[data-callout="frac4"],
+[data-href*="Soul Fracture IV" i],
+.tag[href="Soul Fracture IV" i] {
+	--custom-color: 175, 22, 50;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.nimius, .infernal,
+[data-callout="nimius"], [data-callout="infernal"],
+[data-href*="Nimius" i], [data-href*="infernal" i],
+.tag[href*="Nimius" i], .tag[href*="infernal" i]
+{
+	--custom-color: 167, 7, 28;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.aether, .indomitable,
+[data-callout="aether"], [data-callout="indomitable"],
+[data-href*="Aether" i], [data-href*="indomitable" i],
+.tag[href*="Aether" i], .tag[href*="indomitable" i]
+{
+	--custom-color: 93, 161, 217;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.aurora, .unyielding,
+[data-callout="aurora"], [data-callout="unyielding"],
+[data-href*="aurora" i], [data-href*="unyielding" i],
+.tag[href*="Aurora" i], .tag[href*="unyielding" i] 
+{
+	--custom-color: 241, 200, 146;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.noctis, 
+[data-callout="noctis"],
+[data-href*="Noctis" i],
+.tag[href*="Noctis" i]
+{
+	--custom-color: 152, 54, 197;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.radiance, 
+[data-callout="radiance"],
+[data-href*="Radiance" i],
+.tag[href*="Radiance" i] {
+	--custom-color: 226, 173, 56;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.blinded,
+[data-callout="blinded"],
+[data-href*="blinded" i], 
+.tag[href*="blinded" i] 
+{
+	--custom-color: 255, 250, 130;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.daybreak, .daybroken,
+[data-callout="daybreak"], [data-callout="daybroken"], 
+[data-href*="daybreak" i], [data-href*="daybroken" i], 
+.tag[href*="daybreak" i], .tag[href*="daybroken" i]
+{
+
+	--custom-color: 24, 17, 2;
+	--custom-color-2: 236, 204, 134;
+    --custom-hover-mix-color: 0, 0, 0; 
+
+	--custom-font-weight: bold;
+
+	/* set 0 to 1 for shadow & border */
+	--text-shadow-1: rgba(var(--custom-color), 1);
+	--text-shadow-2: rgba(var(--custom-color-2), 1);
+	--text-shadow-3: rgba(var(--custom-color-2), 0.5);
+	color: rgb(var(--custom-color));
+}
+
+.despair, 
+[data-callout="despair"],
+[data-href*="despair" i],
+.tag[href*="despair" i]
+{
+
+	--custom-color: 14, 13, 26;
+	--custom-color-2: 49, 62, 143;
+    --custom-hover-mix-color: 0, 0, 0; 
+
+	--custom-font-weight: bold;
+
+	/* set 0 to 1 for shadow & border */
+	--text-shadow-1: rgba(var(--custom-color), 1);
+	--text-shadow-2: rgba(var(--custom-color-2), 1);
+	--text-shadow-3: rgba(var(--custom-color-2), 0.5);
+	color: rgb(var(--custom-color));
+}
+
+.dark, 
+[data-callout="dark"],
+[data-href*="darkness" i],
+.tag[href*="darkness" i]
+{
+	--custom-color: 123, 43, 180;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.adark,
+[data-callout="adark"],
+[data-href*="Absolute Darkness" i],
+.tag[href*="Absolute Darkness" i]
+{
+	--custom-color: 0, 1, 5;
+	--custom-color-2: 53, 7, 122;
+    --custom-hover-mix-color: 0, 0, 0; 
+
+	--custom-font-weight: bold;
+
+	/* set 0 to 1 for shadow & border */
+	--text-shadow-1: rgba(var(--custom-color), 1);
+	--text-shadow-2: rgba(var(--custom-color-2), 1);
+	--text-shadow-3: rgba(var(--custom-color-2), 0.5);
+	color: rgb(var(--custom-color));
+}
+
+.charge,
+[data-callout="charge"],
+[data-href*="charge" i],
+.tag[href*="charge" i]
+{
+	--custom-color: 49, 150, 242;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.overcharge, 
+[data-callout="overcharge"],
+[data-href*="overcharge" i],
+.tag[href*="overcharge" i] {
+	--custom-color: 93, 246, 246;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.san, .sanity, .calm,
+[data-callout="san"], [data-callout="sanity"], [data-callout="calm"],
+[data-href*="san" i], [data-href*="sanity" i], [data-href*="calm" i], 
+.tag[href*="san" i], .tag[href*="sanity" i], .tag[href*="calm" i] 
+{
+	--custom-color: 136, 219, 255;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.san2, 
+[data-callout="san2"], 
+[data-href*="composed" i],
+.tag[href*="composed" i] 
+{
+	--custom-color: 142, 169, 199;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.san3, 
+[data-callout="san3"], 
+[data-href*="Nervous" i], 
+.tag[href*="Nervous" i] 
+{
+	--custom-color: 147, 127, 151;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.san4,
+[data-callout="san4"],
+[data-href*="Delirous" i],
+.tag[href*="Delirous" i]
+{
+	--custom-color: 152, 85, 103;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.san5, .panic, .panicking,
+[data-callout="san5"], [data-callout="panic"], [data-callout="panicking"], 
+[data-href*="Panic" i], [data-href*="Panicking" i], 
+.tag[href*="panic" i], .tag[href*="panicking" i]
+{
+	--custom-color: 158, 35, 47;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.psy, .psychosis, .psychotic, .der, .deranged,
+[data-callout="psy"], [data-callout="psychotic"], [data-callout="psychosis"], [data-callout="der"], [data-callout="deranged"], 
+[data-href*="psychosis" i], [data-href*="psychotic" i], [data-href*="deranged" i],
+.tag[href*="psychosis" i], .tag[href*="psychotic" i], .tag[href*="deranged" i]
+{
+	--custom-color: 139, 16, 28;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.expertise, .exp,
+[data-callout="expertise"], [data-callout="exp"],
+[data-href*="expertise" i],
+.tag[href*="expertise" i] 
+{
+	--custom-color: 138, 190, 255;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
+}
+
+.tactic, .tactics, .tac,
+[data-callout="tactic"], [data-callout="tactics"], [data-callout="tac"],
+[data-href*="tactic" i], [data-href*="tactics" i],
+.tag[href*="tactic" i], .tag[href*="tactics" i]
+{
+	--custom-color: 96, 157, 241;
+	--custom-color-2: none;
+	--custom-hover-mix-color: 255, 255, 255; 
+
+	--custom-font-weight: bold;
+
+	text-shadow: none;
+	color: rgb(var(--custom-color));
 }

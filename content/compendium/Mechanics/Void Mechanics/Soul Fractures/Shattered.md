@@ -13,7 +13,7 @@ tags:
 <h1 class="shatt"> Shattered </h1>
 
 > [!shatt|status|none]
-><img src="shattered.png" class="floatl"><span> <i class="shatt no-b no-mix">"You are a husk of who you once were. You still have a chance to be put out of your misery before you become like the rest of them."</i> </span>
+><img src="shattered.png" class="floatl"><span> <i class="shatt pure">"You are a husk of who you once were. You still have a chance to be put out of your misery before you become like the rest of them."</i> </span>
 > 
 > Whatever remains of your soul, a hollow core.
 > 

@@ -29,7 +29,7 @@ p {
     --bg: transparent;
     --border: transparent;
     --color: transparent;
-    --callout-icon: 'content/contents/icons/na.svg';
+    --callout-icon: '';
     
     & > .callout-title, & > .callout-title > .callout-icon {
         display: none;
@@ -307,8 +307,8 @@ a:not(.folder-title), a[role=anchor], a.tag-link, a.internal {
         color: #999999;
 	--highlight: #99999926;
         };
-    &[href$="Rolls"], &[href$="Body"], &[href$="Reflexes"], &[href$="Technical"], &[href$="Intelligence"], &[href$="Cool"],
-    &[href$="rolls"], &[href$="body"], &[href$="reflexes"], &[href$="technical"], &[href$="intelligence"], &[href$="cool"] {
+    &[href$="Rolls"], &[href$="Attributes"], &[href$="Body"], &[href$="Reflexes"], &[href$="Technical"], &[href$="Intelligence"], &[href$="Cool"],
+    &[href$="rolls"], &[href$="attributes"], &[href$="body"], &[href$="reflexes"], &[href$="technical"], &[href$="intelligence"], &[href$="cool"] {
         color: #45b37c;
 	--highlight: #45b37c26;
         };
@@ -487,22 +487,20 @@ a, a[role=anchor] {
 	--highlight: #bfbbbb26;
 	font-weight:bold;
   };
-  /* read changelog; deprecated
-    &[href$="Mental-Power-Down"], &[href$="Combat-Power-Up"], &[href$="Defense-Power-Up"],
-    &[href$="mental-power-down"], &[href$="combat-power-up"], &[href$="defense-power-up"] {
+  
+    &[href$="Physical"], &[href$="physical"] {
     color: #e11414;
 	--highlight: #e1141426;
 	font-weight:bold;
   };
-    &[href$="Mental-Power-Up"], &[href$="Combat-Power-Down"], &[href$="Defense-Power-Down"],
-    &[href$="mental-power-up"], &[href$="combat-power-down"], &[href$="defense-power-down"] {
+    &[href$="Cognitive"], &[href$="cognitive"] {
     color: #1e84f1;
 	--highlight: #1e84f126;
 	font-weight:bold;
   };
-  */
+  
     &[href$="Neutral"], &[href$="neutral"],
-    &[href*="Base"][href*="Power"], &[href*="base"][href*="power"],
+    &[href*="Floor"][href*="Power"], &[href*="Floor"][href*="power"],
     &[href*="Ceiling"][href*="Power"], &[href*="ceiling"][href*="power"],
     &[href*="Final"][href*="Power"], &[href*="final"][href*="power"]
      {
@@ -781,6 +779,50 @@ a, a[role=anchor] {
 		0px 0px 1px var(--custom-color-3);
     color: var(--custom-color);
     --highlight: color-mix(in srgb, var(--custom-color-2) 17%, transparent 100%);
+  };
+  &[href$="Charge"], &[href$="charge"] {
+    color: #3196f2;
+	--highlight: #3196f226;
+	font-weight:bold; 
+  };
+  &[href$="Overcharge"], &[href$="overcharge"] {
+    color: #5df6f6;
+	--highlight: #5df6f626;
+	font-weight:bold; 
+  };
+  &[href$="Sanity"], &[href$="sanity"],
+  &[href$="Sane"], &[href$="sane"] {
+    color: #88dbff;
+	--highlight: #88dbff26;
+	font-weight:bold; 
+  };
+  &[href$="Composed"], &[href$="composed"] {
+    color: #8ea9c7;
+	--highlight: #8ea9c726;
+	font-weight:bold; 
+  };
+  &[href$="Nervous"], &[href$="nervous"] {
+    color: #937f97;
+	--highlight: #937f9726;
+	font-weight:bold; 
+  };
+  &[href$="Delirious"], &[href$="delirious"] {
+    color: #985567;
+	--highlight: #98556726;
+	font-weight:bold; 
+  };
+  &[href$="Panicking"], &[href$="panicking"],
+  &[href$="Panic"], &[href$="panic"] {
+    color: #9e232f;
+	--highlight: #9e232f26;
+	font-weight:bold; 
+  };
+  &[href$="Psychosis"], &[href$="psychosis"],
+  &[href$="Psychotic"], &[href$="psychotic"],
+  &[href$="Deranged"], &[href$="deranged"] {
+    color: #8b101c;
+	--highlight: #8b101c26;
+	font-weight:bold; 
   };
 }
 

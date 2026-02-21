@@ -4,7 +4,7 @@ tags:
   - mechanics
 ---
 
-<h1 class=actions>Actions</h1>
+<h1 class="actions">Actions</h1>
 
 > [!actions|status|none]
 > <img src="action.png" class="floatl"> <span>An <span class=actions>Action</span> is defined by attempting to perform any type of roll, check, or initiate a clash, regardless if the unit <span class=plus>succeeds</span> or <span class=minus>fails</span> to do so.</span>

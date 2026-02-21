@@ -13,7 +13,7 @@ tags:
 <h1 class=frac4>Soul Fracture IV</h1>
 
 > [!frac4|status|none]
-> <img src="soulfrac4.png" class=floatl> <i class="frac4 no-b">"Quote."</i>
+> <img src="soulfrac4.png" class=floatl> <i class="frac4 pure">"Quote."</i>
 > 
 > Soul Integrity is compromised. Any further is the point of no return.
 > <br>Gain 8 ![[comup.png|icon]] [[Combat Power Up]], 10 ![[defdown.png|icon]] [[Defense Power Down]] and 10 ![[mendown.png|icon]] [[Mental Power Down]]

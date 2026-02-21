@@ -8,7 +8,7 @@ tags:
 - soul-fracture-II
 ---
 
-<h1 class=adark>Absolute Darkness</h1>
+<h1 class="adark no-mix">Absolute Darkness</h1>
 
 > [!adark|status|none|no-mix]
 > <img src="adark.png" class=floatl> <i class="adark no-b no-mix">"Quote here."</i>

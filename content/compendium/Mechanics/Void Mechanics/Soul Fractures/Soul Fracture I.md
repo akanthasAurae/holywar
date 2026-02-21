@@ -12,7 +12,7 @@ tags:
 <h1 class=frac1>Soul Fracture I</h1>
 
 > [!frac1|status|none]
-> <img src="soulfrac1.png" class=floatl> <i class="frac1 no-b">"Something's off, feels like something's slipping your mind."</i>
+> <img src="soulfrac1.png" class=floatl> <i class="frac1 pure">"Something's off, feels like something's slipping your mind."</i>
 > 
 > Soul Integrity is reduced by 25%
 > <br>Gain 2 ![[defdown.png|icon]] [[Defense Power Down]] and 2 ![[mendown.png|icon]] [[Mental Power Down]]

@@ -13,7 +13,14 @@ content/.obsidian/appearance.json
 content/.obsidian/graph.json
 content/.obsidian/hotkeys.json
 content/.obsidian/workspace.json
-!content/.obsidian/plugins/css-inserter
-!content/.obsidian/plugins/obsidian-html-tags-autocomplete
-content/.obsidian/plugins
+!content/.obsidian/themes/
+!content/.obsidian/themes/**
+content/.obsidian/plugins/*
+!content/.obsidian/plugins/
+!content/.obsidian/plugins/css-inserter/
+!content/.obsidian/plugins/css-inserter/**
+!content/.obsidian/snippets/
 !content/.obsidian/snippets/**
+.kra
+.png~
+content/_fit

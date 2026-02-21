@@ -10,10 +10,10 @@ tags:
   - todo
 ---
 
-<h1 class=daybreak>Daybreak</h1>
+<h1 class="daybreak no-mix">Daybreak</h1>
 
 > [!daybroken|status|none|no-mix]
-> <img src="daybroken.png" class=floatl> <i class="daybreak no-mix">"I burn with the wrath and scorn of a thousand suns! You will never fathom what I've endured, from disgrace to contempt!"</i>
+> <img src="daybroken.png" class=floatl> **<i class="daybreak">"I burn with the wrath and scorn of a thousand suns! You will never fathom what I've endured, from disgrace to contempt!"</i>**
 > 
 > <span class=daybreak>Daybreak</span> builds through three levels — <span class=daybreak>Minor</span>, <span class=daybreak>Moderate</span>, and <span class=daybreak>Major</span>. Any ![[daybroken.png|icon]] <span class=daybreak>Daybreak</span> applied while in ![[daybroken.png|icon]] <span class=daybreak>Major Daybreak</span> immediately triggers ![[eruption.png|icon]] <span class=daybreak>Eruption</span>.
 > 

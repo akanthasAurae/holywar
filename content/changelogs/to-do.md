@@ -1,17 +1,25 @@
-- [x] [[compendium/Statuses/index|Statuses]] REALLY needs clean-up
-- [x] need to do soul statuses next & soul mechanics as a sub-folder of [[compendium/Mechanics/index|Mechanics]] + add css rule concerning naming that index
+%% don't link anything here except changelogs (mostly) unless they're a to-do item. if completed, remove link %%
+- [v] ~~[[compendium/Statuses/index|Statuses]] REALLY needs clean-up~~ finished in [[changelog v0.1.7]]
+- [v] ~~need to do soul statuses next & soul mechanics as a sub-folder of [[compendium/Mechanics/index|Mechanics]] + add css rule concerning naming that index~~ done in [[changelog v0.1.7.2]]
 - [ ] character templates being functional (ie multi-column outputting actual multi-columns in Quartz)
-- [x] actually do soul modifiers oops
-- [x] uhhhhhhhhhhhhhhhhhhh void statuses yeag
+- [v] ~~actually do soul modifiers oops~~ fully implemented in [[changelog v0.1.7.2]]
+- [v] ~~uhhhhhhhhhhhhhhhhhhh void statuses yeag~~ all existing ones implemented in [[changelog v0.1.7.2]]
 - [ ] figure out stealth (mechanic) vs cloaked (status), we currently have 2 existing classes for technically the same thing (sneak is lighter, stealth is darker) & cloaked is using stealth's class colours atm
-- [x] update templates to current statuses
-- [x] fix all mentions of Vital States & tags
-- [ ] add Sinking
-- [ ] add Charge
+- [-] update templates to current statuses *(ongoing)*
+- [-] ensure ``custom.scss`` and ``customcolors.css`` are simplified (to avoid severe bloat)
+	- [h] additionally, port this theme to the website?
+- [v] fix all mentions of Vital States & tags into Vitality
+- [h] add Sinking *(after Sanity mechanics)*
+- [v] ~~add Charge~~ added: [[changelog v0.1.8]]
+	- [v] make charge/full charge/overcharge icons
 - [ ] figure out:
-	- [ ] Sanity?
-	- [ ] Panic A? Panic B? Intelligence/Technical?
-	- [ ] Additional sanity-related mechanic for Panic B's attribute? (ie. Reflexes -> Stance, Body -> Vitality, Ref > Body = Down, Body > Ref = DD)
+	- [v] ~~Sanity?~~ added in [[changelog v0.1.8]]
+	- [v] ~~Panic A? Panic B? Intelligence/Technical?~~ added in [[changelog v0.1.8]]
+	- [ ] ~~Additional sanity-related mechanic for Panic B's attribute? (ie. Reflexes -> Stance, Body -> Vitality, Ref > Body = Down, Body > Ref = DD)~~ added in [[changelog v0.1.8]]
+		- [v] ~~tech -> Tactic~~ 
+		- [v] ~~int -> Expertise~~
+		- [v] ~~panic Tech~~
+		- [v] ~~panic Int~~
 - [ ] add quotes to:
 	- [ ] [[Soul Fragility]]
 	- [ ] [[Flicker of Despair]]
@@ -21,3 +29,5 @@
 	- [ ] [[Radiance]]? i have it marked as WIP for some reason
 	- [ ] [[Daybreak]]
 	- [ ] [[Soul]]
+- [ ] add:
+	- [ ] shields?

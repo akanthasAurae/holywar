@@ -13,7 +13,8 @@ hello! this comment will not show up (i believe) on Quartz pages, but it is reco
    metadata tells obsidian and quartz how the callout should behave, and metadata is used in links for display text, as well as icons in images, like so: `![[nonsense.png|icon]]` or `[[Status|Statuses]]`. you can also use `no-mix` as metadata in callouts to avoid text-shadow.
    
 3. first paragraph
-   after your `<img>` is the first thing you put in there, your text needs to then be entirely wrapped in a `<span>` tag. (in most cases, if your sentence begins with the word of the status itself, you can just not put any icons before it.)
+   after your `<img>` is the first thing you put in there, your text needs to then be entirely wrapped in a `<span class="no-b no-ts">` tag. (in most cases, if your sentence begins with the word of the status itself, you can just not put any icons before it.)
+   the no-b and no-ts classes serve to avoid bold & text-shadow. sometimes not needed.
    **any and all effects inside this first paragraph are 100% html.**
 
 4. second paragraph onwards
@@ -29,11 +30,11 @@ hello! this comment will not show up (i believe) on Quartz pages, but it is reco
 we work with strict markdown breaks, so if you need a breakline instead of a new paragraph, use `<br>`.
 %%
 
-<h1 class=down>Status Title</h1>
+<h1 class=mental>Status Title</h1>
 
-> [!down|status|none]
-> <img src="sinkdeluge.png" class=floatl> <i class="down no-b no-mix">"This is a quote."</i>
+> [!mental|status|none]
+> <img src="sinkdeluge.png" class=floatl> <i class="burn no-b pure">"This is a quote."</i>
 > 
-> Any *italicized* or **bold** text will also have colors, and most status classes are bold, but you can use the classes no-b, no-i and no-mix to avoid those. <i class=no-mix>I'm free! <b class=no-mix>Free as the wind!</b></i> You can also use status classes to <span class=burn>colour things</span>.
+> Any *italicized* or **bold** text will also have colors, and most status classes are bold, but you can use the classes ``no-b``, ``no-i`` and ``pure`` to avoid those, as well as ``no-mix`` for no color at all. <i class=no-mix>I'm free! <b class="no-mix no-i">Free as the wind!</b></i> You can also use status classes to <span class=burn>colour things</span>.
 > 
 > If you want to mention statuses like ![[noctis.png|icon]] [[Noctis|Noctis Aether]], links can be handled by markdown by here. Links are automatically colored. Icons must have the metadata/class 'icon'.

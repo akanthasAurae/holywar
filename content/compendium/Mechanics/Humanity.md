@@ -8,10 +8,10 @@ tags:
 <h1 class="hum">Humanity</h1>
 
 > [!hum|none]
-> <span class="hum">Humanity</span> is what keeps one sane.
+> *<b class="hum pure">Humanity</b> is what keeps one sane.*
 > 
 > As a stat, it has a base of **100** alongside a <span class="hum">Humanity Modifier</span>.
-> <br>**`(Technical + Intelligence) / ((Body/5) + (Reflexes/5)) = Humanity Modifier`**
+> <br>`(Technical + Intelligence) / ((Body/5) + (Reflexes/5)) = Humanity Modifier`
 > <br>This modifier is then multiplied by the unit’s level; which will then be added to the base. 
 > 
 > It can be gained and lowered via actions that impact one’s psyche. If one reaches their <span class="humlow">Low Humanity Threshold</span>, they will become unstable and will start showing proper <span class="cyber">Cyberpsychosis</span> symptoms. If by chance the value reaches zero, then the unit will become indiscriminate and will be labelled as a <span class="cyber">Cyberpsycho</span>.
@@ -69,4 +69,3 @@ tags:
 > ><br>• Lose 15 <span class="hum">Humanity</span>
 > ><br>• All allies lose 10 <span class="hum">Humanity</span>
 
-^3cc5de

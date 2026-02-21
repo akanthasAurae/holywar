@@ -1,0 +1,46 @@
+{
+  "css": [
+    {
+      "name": "datalink",
+      "tag": "a",
+      "attribute": "data-href=\"{selection}\", href=\"{selection}\"",
+      "class": "internal-link",
+      "style": "",
+      "contextMenu": true
+    },
+    {
+      "name": "spanclass",
+      "tag": "span",
+      "attribute": "",
+      "class": " {selection}",
+      "style": "",
+      "contextMenu": true
+    },
+    {
+      "name": "spanonly",
+      "tag": "span",
+      "attribute": "",
+      "class": "",
+      "style": "",
+      "contextMenu": true
+    },
+    {
+      "name": "icon",
+      "tag": "img",
+      "attribute": "src=\"{selection}.png\"",
+      "class": "icon",
+      "style": "",
+      "contextMenu": true,
+      "voidTag": true
+    },
+    {
+      "name": "floatl",
+      "tag": "img",
+      "attribute": "src=\"{selection}.png\"",
+      "class": "floatl",
+      "style": "",
+      "contextMenu": true,
+      "voidTag": true
+    }
+  ]
+}

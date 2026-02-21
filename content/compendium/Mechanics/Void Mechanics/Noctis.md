@@ -9,7 +9,7 @@ tags:
 <h1 class=noctis>Noctis</h1>
 
 > [!noctis|status|none] 
-> <img src="noctis.png" class=floatl> <span><i class="no-b">Also known as Noctis Aether.</i></span>
+> <img src="noctis.png" class=floatl> <span><i>Also known as Noctis Aether.</i></span>
 >
 > bla bla void awakened cores smths mth
 >

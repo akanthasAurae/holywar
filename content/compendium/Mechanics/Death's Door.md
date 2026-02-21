@@ -12,7 +12,7 @@ tags:
 <h1 class="dd"> Death's Door </h1>
 
 > [!dd|status|none] 
-> <img src="dd.png" class="floatl"><i class="no-b dd no-mix">The bells are tolling. Your body pushes onwards, and your will ignores the call... at what cost?</i>
+> <img src="dd.png" class="floatl"><i class="dd pure">The bells are tolling. Your body pushes onwards, and your will ignores the call... at what cost?</i>
 > 
 > When this unit takes fatal damage, a check *(DC 5)* is rolled towards the **Body**.
 > 

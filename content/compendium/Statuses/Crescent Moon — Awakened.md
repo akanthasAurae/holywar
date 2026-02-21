@@ -13,7 +13,7 @@ tags:
 <h1 class=awakened>Crescent Moon — Awakened Flames of Crimson 【血は燃料だ】</h1>
 
 > [!awakened|status|none]
-> <img src="awakened.png" class=floatl> <i class="awakened no-b no-mix">“Power does not answer the weak. It answers those willing to burn for it; to stand bleeding, unyielding, as the flames take hold.”</i>
+> <img src="awakened.png" class=floatl> <i class="awakened pure">“Power does not answer the weak. It answers those willing to burn for it; to stand bleeding, unyielding, as the flames take hold.”</i>
 > 
 > 
 > +5 ![[comminup.png|icon]] [[Combat Floor Up]], +10 ![[commaxup.png|icon]] [[Combat Ceiling Up]], +1 ![[stance.png|icon]] [[Stance]].

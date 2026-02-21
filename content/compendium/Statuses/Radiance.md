@@ -14,7 +14,7 @@ tags:
 <h1 class=radiance>Radiance</h1>
 
 > [!radiance|status|none]
-> <img src="radiance.png" class=floatl> <i class="radiance no-b no-mix">"Used to debilitate and neutralize rather than kill, a trademark of an angel's virtues and values, but exploitable nonetheless."</i>
+> <img src="radiance.png" class=floatl> <i class="radiance pure">"Used to debilitate and neutralize rather than kill, a trademark of an angel's virtues and values, but exploitable nonetheless."</i>
 > 
 > <span class=radiance>Radiance</span> advances through three levels — <span class=radiance>Minor</span>, <span class=radiance>Moderate</span> and <span class=radiance>Major</span>. Any ![[radiance.png|icon]] <span class=radiance>Radiance</span> applied while in ![[radiance.png|icon]] <span class=radiance>Major Radiance</span> triggers ![[blinded.png|icon]] <span class=blinded>Blinded</span>. Unlike other status effects, ![[radiance.png|icon]] <span class=radiance>Radiance</span> does not expire when ![[blinded.png|icon]] <span class=blinded>Blinded</span> is triggered.
 > 
