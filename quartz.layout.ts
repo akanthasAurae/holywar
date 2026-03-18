@@ -29,7 +29,6 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.SubMarquee(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
