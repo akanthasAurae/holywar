@@ -2,7 +2,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { classNames } from "../util/lang"
 
 const SubMarquee: QuartzComponent = ({ cfg, displayClass }: QuartzComponentProps) => {
-  const content = cfg?.subMarquee
+  const content = cfg?.SubMarquee
 
   if (!content) return null
 
