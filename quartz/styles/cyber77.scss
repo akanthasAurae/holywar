@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Play', 'Source Code Pro', monospace;
+    font-stretch: 100%;
+    font-weight: 200 900;
+    src:
+        local("Play"), local("Source Code Pro"),
+        url('../../content/.obsidian/themes/Cyber77/Play-Regular.ttf') format("truetype"),
+        url('../../content/.obsidian/themes/Cyber77/Play-Bold.ttf') format("truetype"),
+        url('../../content/.obsidian/themes/Cyber77/SourceCodePro-Italic-VariableFont_wght.ttf') format("truetype"),
+        url('../../content/.obsidian/themes/Cyber77/SourceCodePro-VariableFont_wght.ttf') format("truetype"),
+}
+
+body {
+    background-color: #00000041;
+    background-image: linear-gradient(360deg, #040408, #100305);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    --theme-color-1: #FDF7CD;
+    --theme-color-2: #bddf44;
+    --theme-color-3: #00ECD8;
+    --theme-color-4: #3EC840;
+    --theme-color-5: #E92741;
+    --theme-color-6: #418FDD;
+    --theme-color-7: #FF9900;
+    --theme-color-8: #f3c738;
+    --darkgray: var(--theme-color-1);
+    --dark:var(--theme-color-3);
+
+    a {
+        color: var(--theme-color-5);
+        --highlight: color-mix(in hsl, var(--theme-color-5, var(--custom-color)) 10%, transparent 50%);
+        &:hover {
+            color: var(--theme-color-2);
+            --highlight: color-mix(in hsl, var(--theme-color-2, var(--custom-color)) 40%, transparent 60%);
+        }
+    }
+    h2 > a {
+        color:var(--theme-color-8);
+        &:hover {
+            color: var(--theme-color-5);
+        }
+    }
+    p.content-meta {
+        font-variant: small-caps;
+        font-size: 1em;
+    }
+
+    --codeFont: 'Source Code Pro';
+    --bodyFont: 'Play';
+    .callout, a.internal, a.internal.tag-link, .graph>.graph-outer, .search>.search-button {
+        border-radius: 0px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-variant: small-caps;
+        background-color: transparent;
+        background-image: linear-gradient(-45deg, transparent 25%, color-mix(in srgb, rgb(var(--custom-color)) 10%, transparent 80%));
+        border-left: 0.5vh solid rgb(var(--custom-color));
+        padding-left: 1vh;
+
+        a.internal-link {
+            --link-color: rgb(var(--custom-color));
+            background-color: transparent;
+            background-image: linear-gradient(-45deg, transparent 25%, color-mix(in srgb, rgb(var(--custom-color)) 10%, transparent 80%));
+            border-left: 0.5vh solid rgb(var(--custom-color));
+            padding-left: 1vh;
+        }
+        &.no-mix {
+        background-image: linear-gradient(-45deg, transparent 25%, color-mix(in srgb, rgb(var(--custom-color-2)) 10%, transparent 80%));
+        border-left: 0.5vh solid rgb(var(--custom-color-2));
+        }
+    }
+    code {
+        font-size: 0.8em;
+        background-color: #00000025;
+        color: var(--theme-color-3);
+        
+    }
+    div.folder-container {
+        background-color: color-mix(in hsl, color-mix(in srgb, black 50%, var(--theme-color-6) 90%) 50%, transparent 90%);
+        border-top: 1px solid var(--theme-color-3);
+        color: var(--theme-color-1);
+        &:hover {
+            background-color: color-mix(in hsl, color-mix(in srgb, transparent 50%, var(--theme-color-6) 50%) 50%, black 90%);
+        }
+    }
+}   
