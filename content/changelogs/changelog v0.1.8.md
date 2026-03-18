@@ -27,13 +27,16 @@ tags:
 <h2 class=cyber>[mike] modified:</h2>
 
 - goo
-
+- [[this]] <- link
+  - ![[tox.png|icon]]
+	- [[tox.png|icon]]
 <h2 class=cyber>[vyx] modified:</h2>
 
 - finally began cleaning up `customcolors.css`, should hopefully be able to point `custom.scss` colors towards variables in ``customcolors.css``
 - ``down`` and ``up`` classes have been renamed to ``cog`` and ``phys`` accordingly
-- added class ``pure`` and modified how ``no-mix`` works. pure will return the pure color of the class, no-mix will default it to the callout's normal, mixed color.
-- did a whole lot of maintenance (ouch)
+- added class ``pure`` and modified how ``no-mix`` works. pure will return the pure color of the class, no-mix will default it to the callout's normal, mixed color. currently in-progress of adding this towards Quartz
+- did a whole lot of maintenance (ouch)! `customcolors.css` is functional~
+- began work on porting Cyber77 to Quartz as a theme
 
 <h2 class=minus>[mike] removed:</h2>
 
@@ -41,7 +44,7 @@ tags:
 
 <h2 class=minus>[vyx] removed:</h2>
 
-- tall
+- accidentally fucked up the whole repo. fixed!
 
 <h2 class=burn>pending:</h2>
 

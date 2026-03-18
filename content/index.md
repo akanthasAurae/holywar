@@ -1,7 +1,7 @@
 ---
 title: The Holy War
 tags:
-- meta
+  - meta
 ---
 
 <h1 class=aurora>it's so fucking joever</h1>

@@ -10,8 +10,9 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      "Source": "https://github.com/jackyzha0/quartz",
+      "Discord (Quartz)": "https://discord.gg/cRFFHYye7t",
+      "Github": "https://github.com/akanthasAurae/holywar",
     },
   }),
 }
@@ -28,6 +29,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
+    Component.SubMarquee(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [

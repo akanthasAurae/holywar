@@ -396,10 +396,10 @@ span.no-ts {
 
 	--callout-icon: lucide-minus;
 }
-.rolls, .body, .reflex, .tech, .int, .intel, .cool,
-[data-callout="rolls"], [data-callout="body"], [data-callout="reflex"], [data-callout="tech"], [data-callout="int"], [data-callout="intel"], [data-callout="cool"],
-[data-href*="rolls" i], [data-href*="body" i], [data-href*="reflexes" i], [data-href*="technicality" i], [data-href*="intelligence" i], [data-href*="cool" i],
-.tag[href*="rolls" i], .tag[href*="body" i], .tag[href*="reflexes" i], .tag[href*="technicality" i], .tag[href*="intelligence" i], .tag[href*="cool" i]
+.rolls, .body, .reflex, .tech, .int, .intel, .cool, .attributes,
+[data-callout="rolls"], [data-callout="body"], [data-callout="reflex"], [data-callout="tech"], [data-callout="int"], [data-callout="intel"], [data-callout="cool"], [data-callout="attributes"],
+[data-href*="rolls" i], [data-href*="body" i], [data-href*="reflexes" i], [data-href*="technicality" i], [data-href*="intelligence" i], [data-href*="cool" i], [data-href*="attributes" i], [data-href*="attribute" i],
+.tag[href*="rolls" i], .tag[href*="body" i], .tag[href*="reflexes" i], .tag[href*="technicality" i], .tag[href*="intelligence" i], .tag[href*="cool" i], .tag[href*="attributes" i], .tag[href*="attribute" i]
 {
 	--custom-color: 69, 179, 124;
 	--custom-color-2: none;

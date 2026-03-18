@@ -1,5 +1,9 @@
 /* utilities */
 
+code, .cm-s-obsidian span.cm-inline-code {
+	font-size: 1em;
+}
+
 div.el-h1 > h1 {
 		margin-top: var(--heading-spacing);
 		--heading-spacing: 0px;
@@ -124,9 +128,13 @@ li.task-list-item {
 	display:none;
 }
 
+body > div.modal-container.mod-dim > div.modal {
+	flex-direction: column-reverse;
+}
+
 .soundscapesroot {
 	.soundscapesroot-volumeIcons {
-		margin-top: 5px;
+		margin-top: 0.3vh;
 	}
 	input {
 		background-color: #0000008c;
@@ -138,29 +146,27 @@ li.task-list-item {
 		width: 100px;
 		background-color: #0000008c;
 		.soundscapesroot-nowplaying-text {
-			animation: marquee 5s linear infinite;
-			display: block;
 			min-width: fit-content;
 			height: 15px;
 			text-align: left;
 			padding-top: 2px;
 		}
 	}
-	button:nth-of-type(2) {
-		&[style="display: none;"] ~ .soundscapesroot-nowplaying .soundscapesroot-nowplaying-text {
-			&:before {
-				content: "NOW PLAYING — "
-			}
-		}
+	.soundscapesroot-loopbutton.soundscapesroot-loopbutton--off {
+    	background-color: color-mix(in srgb, var(--color-4) 10%, #131017 90%);
+		color: color-mix(in srgb, var(--color-2) 50%, transparent 50%);
 	}
-	button:nth-of-type(3) {
-		&[style="display: none;"] ~ .soundscapesroot-nowplaying .soundscapesroot-nowplaying-text {
-			&:before {
+	.soundscapesroot-pausebutton[style="display: none;"] ~ .soundscapesroot-nowplaying .soundscapesroot-nowplaying-text:before {
 				content: "PAUSED — "
-			}
+		}
+	.soundscaperoot-playbutton[style="display: none;"] ~ .soundscapesroot-nowplaying .soundscapesroot-nowplaying-text:before {
+				content: "NOW PLAYING — "
 		}
 	}
-}
+	.soundscapesroot-previousbutton, .soundscaperoot-playbutton, .soundscapesroot-pausebutton, .soundscapesroot-nextbutton, .soundscapesroot-loopbutton, .soundscapesroot-refreshbutton, .soundscapesroot-changesoundscapebutton {
+		padding-left: 0.8vh;
+		padding-right: 0.8vh;
+	}
 
 iframe.soundscapesroot-player {
 	filter: drop-shadow(1px -1px 0px var(--color-2));

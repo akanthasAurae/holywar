@@ -1,5 +1,15 @@
 @use "./base.scss";
+@use "./cyber77.scss";
 @use "../../content/.obsidian/snippets/customcolors.css" as *;
+
+:root * {
+  --border: rgba(var(--custom-color), 0.267);
+  --bg: rgba(var(--custom-color), 0.063);
+}
+.callout {
+  border-color: var(--border);
+  background-color: var(--bg);
+}
 
 p {
     margin-top: 0.4em;
